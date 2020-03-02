@@ -1,0 +1,45 @@
+<!--全局导航-Start-->
+<div style="height:50px; line-height:50px; clear:both;"></div>
+<div class="v_nav">
+<div class="vf_nav">
+<ul>
+<li><a href="supplier_catalog.php?act=dianpufeilie&suppId={$suppid}">
+<!--    <i class="vf_3"></i>-->
+<!--    <i class="fa fa-list"></i>-->
+	<img src="themesmobile/68ecshopcom_mobile/images/menu-footer/catstore.svg" alt=""/>
+<!--    <span>{$lang.category}</span>-->
+    </a></li>
+<li><a href="tel:{$service_phone}">
+<!--    <i class="vf_2"></i>-->
+<!--	<i class="fa fa-headset"></i>-->
+    <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/chat.svg" alt=""/>
+<!--    <span>{$lang.m_1}</span>-->
+    </a></li>
+<li> <a href="supplier.php?act=about&suppId={$suppid}">
+<!--    <i class="vf_1"></i>-->
+    <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/store.svg" alt=""/>
+<!--    <span>{$lang.home}</span>-->
+    </a></li>
+<li>
+<a href="flow.php">
+   <em class="global-nav__nav-shop-cart-num" id="ECS_CARTINFO" style="right:9px;">{insert name='cart_info'}</em>
+<!--   <i class="vf_4"></i>-->
+<!--   <i class="fa fa-shopping-cart"></i>-->
+   <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-cart-01.png" alt=""/>
+<!--   <span>{$lang.cart}</span>-->
+
+   </a></li>
+<li><a href="user.php">
+<!--    <i class="vf_5"></i>-->
+<!--    <i class="fa fa-user"></i>-->
+    <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-user-01.png" alt=""/>
+<!--    <span>{$lang.m_2}</span>-->
+    </a></li>
+</ul>
+</div>
+</div>
+
+
+
+
+    

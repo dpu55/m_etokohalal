@@ -1,0 +1,247 @@
+{if $full_page}
+
+<!-- $Id: users_list.htm 17053 2010-03-15 06:50:26Z sxc_shop $ -->
+
+{include file="pageheader.htm"}
+
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+
+
+<div class="form-div">
+
+  <form action="javascript:searchUser()" name="searchForm">
+
+	{$lang.x_342}<input type="text" name="keyword" /> 
+
+	{$lang.x_343}
+
+	<select name="from_id">
+
+		<option value="0">{$lang.x_344}</option>
+
+		{foreach item=item from=$list}
+
+		<option value="{$item.id}">{$item.title}</option>
+
+		{/foreach}
+
+	</select>
+
+	<input type="submit" value="{$lang.button_search}" />
+
+  </form>
+
+</div>
+
+<form method="POST" action="" name="listForm" onsubmit="return confirm_bath()">
+
+<!-- start users list -->
+
+<form method="get" action="weixin.php?act=fans">
+
+<div class="list-div" id="listDiv">
+
+{/if}
+
+<table width="100%" cellspacing="1" cellpadding="3" id="list-table">
+
+  <tr>
+
+    <th>{$lang.x_345}</th>
+
+    <th>{$lang.x_346}</th>
+
+	<th>{$lang.x_347}</th>
+
+	<th>{$lang.x_348}</th>
+
+	<th>{$lang.x_349}</th>
+
+	<th>{$lang.x_350}</th>
+
+	<th>{$lang.x_351}</th>
+
+	<th>{$lang.x_352}</th>
+
+	<th>{$lang.x_353}</th>
+
+	<th>{$lang.x_354}</th>
+
+	<th>{$lang.x_355}</th>
+
+  </tr>
+
+	{foreach item=item from=$user_list}
+
+  <tr>
+
+	<td>{$item.fake_id}</td>
+
+	<td>{$item.nickname}</td>
+
+	<td>
+
+	{if $item.sex eq 1}{$lang.x_356}{/if}
+
+	{if $item.sex eq 2}{$lang.x_357}{/if}
+
+	{if $item.sex eq 0}{$lang.x_358}{/if}
+
+	</td>
+
+	<td>
+
+	{$item.country} {$item.province} {$item.city}
+
+	</td>
+
+	<td>
+
+	{$item.Latitude} {$item.Longitude} {$item.Precision}
+
+	</td>
+
+	<td>{if $item.isfollow eq 1}{$lang.x_359}{else}{$lang.x_360}{/if}</td>
+
+	<td>{if $item.ecuid gt 0}<a href="users.php?act=edit&id={$item.ecuid}">{$lang.x_361}</a>{else}{$lang.x_362}{/if}</td>
+
+	<td>{$item.user_name}</td>
+
+	<td>{$item.createymd}</td>
+
+	<td><a href="weixin.php?act=fansmsg&fake_id={$item.fake_id}">{$lang.view}</a>|<a href="weixin.php?act=fans&fake_id={$item.fake_id}">{$lang.drop}</a></td>
+
+	<td>{$from.$item.from_id}</td>
+
+  </tr>
+
+	{foreachelse}
+
+  <tr><td class="no-records" colspan="8">{$lang.no_records}</td></tr>
+
+  {/foreach}
+
+  <tr>
+
+		<td colspan="2">
+
+      <input type="hidden" name="act" value="fans" /></td>
+
+      <td align="right" nowrap="true" colspan="6">
+
+      {include file="page.htm"}
+
+      </td>
+
+  </tr>
+
+  </table>
+
+<!-- end users list -->
+
+{if $full_page}
+
+</div>
+
+</form>
+
+<script type="text/javascript" language="JavaScript">
+
+<!--
+
+listTable.recordCount = {$record_count};
+
+listTable.pageCount = {$page_count};
+
+
+
+{foreach from=$filter item=item key=key}
+
+listTable.filter.{$key} = '{$item}';
+
+{/foreach}
+
+
+
+{literal}
+
+onload = function()
+
+{
+
+    document.forms['searchForm'].elements['keyword'].focus();
+
+    // 开始检查订单
+
+    startCheckOrder();
+
+}
+
+
+
+/**
+
+ * 搜索用户
+
+ */
+
+function searchUser()
+
+{
+
+    listTable.filter['keywords'] = Utils.trim(document.forms['searchForm'].elements['keyword'].value);
+
+	listTable.filter['from_id'] = Utils.trim(document.forms['searchForm'].elements['from_id'].value);
+
+    listTable.filter['page'] = 1;
+
+    listTable.loadList();
+
+}
+
+
+
+function confirm_bath()
+
+{
+
+  userItems = document.getElementsByName('checkboxes[]');
+
+
+
+  cfm = '{$lang.list_remove_confirm}';
+
+
+
+  for (i=0; userItems[i]; i++)
+
+  {
+
+    if (userItems[i].checked && userItems[i].notice == 1)
+
+    {
+
+      cfm = '{$lang.list_still_accounts}' + '{$lang.list_remove_confirm}';
+
+      break;
+
+    }
+
+  }
+
+
+
+  return confirm(cfm);
+
+}
+
+//-->
+
+</script>
+
+{/literal}
+
+{include file="pagefooter.htm"}
+
+{/if}

@@ -1,0 +1,52 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{$page_title}</title>
+  <meta name="Keywords" content="{$keywords}" />
+  <meta name="Description" content="{$description}" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/css/loginxin.css">
+  <link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/css/public.css" >
+<!--Font Awesome-->
+<link rel="stylesheet" href="../../../	themes/68ecshopcom_360buy/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<!--/Font Awesome-->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/goods.css"/>  
+<!--Custom CSS -->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
+<!--/Custom CSS -->
+  </head>
+
+<body class="eth_v1_mobile page-message">
+    <header class="header_03">
+      <div class="nl-login-title">
+        <div class="h-left">
+          <a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}"><i class="fa fa-chevron-leftt"></i></a>
+        </div>
+        <span style="text-align:center">{$lang.sys_msg}</span>
+      </div>
+    </header>
+
+  <div class="ng-form-zhu" style="text-align: center;font-size:16px;">
+
+    <div class="tips_a"><img src="../themesmobile/68ecshopcom_mobile/images/xin/icogantanhao.png"></div>
+    <div class="tips tips_message">{$message.content}</div>
+    {if $message.url_info}
+    <div class="tips">
+      {foreach from=$message.url_info key=info item=url}
+      <a href="{$url}" style="color: #666;">
+        <span class="tishi">{$info}</span>
+      </a>
+      {/foreach}
+    </div>
+    {/if}
+  </div>
+
+</body>
+
+</html>

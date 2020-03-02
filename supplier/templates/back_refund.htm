@@ -1,0 +1,84 @@
+{if $full_page eq 1}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {include file='html_header.htm'}
+    <script>
+    var shipping_fee = new Number({$refund.shipping_fee});
+    function change_shipping(is_shipping)
+    {
+    if (is_shipping == '1')
+    {
+      document.forms['theForm'].elements['refund_shipping_fee'].value = shipping_fee.toFixed(2);
+    }
+     else
+    {
+      document.forms['theForm'].elements['refund_shipping_fee'].value = '0.00';
+    }
+
+    }
+    function check()
+    {
+      if ( document.forms['theForm'].elements['action_note'].value == '')
+      {
+        $.zalert.add("{$lang.y_111}",1);
+        return false;
+      }
+    if (document.forms['theForm'].elements['refund_money_1'].value == '')
+    {
+      $.zalert.add("{$lang.y_112}",1);
+      return false;
+    }
+      return true;
+    }
+    </script>
+  </head>
+  <body>
+    <div id='container'>
+      {/if}
+      {include file='page_header.htm'}
+      <section>
+        <form name="theForm" method="get" action="back.php" onsubmit="return check()">
+<div class="list-div">
+<table>
+  <tr>
+    <th width="120">{$lang.y_113}</th>
+    <td><textarea name="action_note" cols="60" rows="3"></textarea>
+    <span class="require-field">*</span></td>
+  </tr>
+  <tr>
+    <th>{$lang.y_114}</th>
+    <td>
+	{$lang.Amount of money:}<input type="text" name="refund_money_2"  value="{$refund.refund_money_1}" />&nbsp;{$lang.y_116}<input type="text" name="refund_shipping_fee" value="0.00">&nbsp;<input type="radio" name="refund_shipping" value="0" onclick="javascript:change_shipping(0);" checked=checked />{$lang.y_117}<input type="radio" name="refund_shipping" value="1" onclick="javascript:change_shipping(1);" />{$lang.y_118}
+	</td>
+  </tr>
+    <tr>
+    <th>{$lang.y_119}</th>
+    <td>
+	<p><label><input type="radio" name="refund_type" value="1"  />{$lang.y_120}</label><br>      <label><input type="radio" name="refund_type" value="2" checked=checked />{$lang.y_121}</label><br>   
+    </p>
+	</td>
+  </tr>
+  <tr>
+    <th>{$lang.y_122}</th>
+    <td><textarea name="refund_desc" cols="60" rows="3" id="refund_desc"></textarea></td>
+  </tr>
+    <tr>
+    <td colspan="2">
+      <div align="center">
+        <input type="submit" name="submit" value=" {$lang.y_123} " class="button" />
+        <input type="hidden" name="back_id" value="{$back_id}" />
+        <input type="hidden" name="act" value="operate_refund" />
+        </div></td>
+  </tr>
+</table>
+</div>
+</form>
+      </section>
+      {include file='page_footer.htm'}
+      {if $full_page eq 1}
+    </div>
+    {include file='static_div.htm'}
+  </body>
+</html>
+{/if}

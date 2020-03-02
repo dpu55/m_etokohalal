@@ -1,0 +1,71 @@
+{include file="pageheader.htm"}
+
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<div id="tabbody-div">
+
+<form name="theForm" method="post" action="weixin.php?act=addqcode&id={$qcode.id}">
+
+  <table width="100%" cellpadding="3" cellspacing="1">
+
+  <tbody>
+
+  <tr><th colspan="2" align="center">{$lang.x_325}</th></tr>
+
+  <tr>
+
+  <td class="label">{$lang.x_326}</td>
+
+  	<td><select name="type">
+
+		<option value="1" {if $qcode.type eq 1}selected{/if}>{$lang.x_327}</option>
+
+		<option value="2" {if $qcode.type eq 2}selected{/if}>{$lang.x_328}</option>
+
+		<option value="3" {if $qcode.type eq 3}selected{/if}>{$lang.x_329}</option>
+
+	</select></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="label">{$lang.x_330}</td>
+
+    <td><input type="text" name="content" size="32" value="{$qcode.content}">{$lang.x_330}</td>
+
+  </tr>
+
+  {if $qcode.qcode}
+
+  <tr>
+
+  	<td class="label">{$lang.x_331}</td>
+
+  	<td><img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket={$qcode.qcode}" height="250"></td>
+
+  </tr>
+
+  {/if}
+
+  <tr>
+
+    <td colspan="2" align="center">
+
+      <input type="submit" value="{$lang.button_submit}" class="button" />
+
+    <input type="reset" value="{$lang.button_reset}" class="button" />
+
+    </td>
+
+  </tr>
+
+</tbody></table>
+
+</form>
+
+</div>
+
+{/literal}
+
+{include file="pagefooter.htm"}

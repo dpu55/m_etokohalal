@@ -1,0 +1,6 @@
+<p class="page">
+  <a href="javascript:prev_page()" class="prev">{$lang.page_prev}</a>
+  <span>{if $filter.page && $filter.page gte 0}{$filter.page}{else}0{/if}/{if $filter.page_count && $filter.page_count gte 0}{$filter.page_count}{else}0{/if}</span>
+  <a href="javascript:next_page()">{$lang.page_next}</a>
+  
+</p>

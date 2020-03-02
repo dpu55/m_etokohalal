@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<link rel="stylesheet" type="text/css" href="store/css/dianpu.css">
+<!--Font Awesome-->
+<link rel="stylesheet" href="../../../	themes/68ecshopcom_360buy/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<!--/Font Awesome-->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/goods.css"/>  
+<!--Custom CSS -->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
+<!--/Custom CSS -->
+<script src="store/js/run_common-min.js" charset="utf-8" type="text/javascript" itemid="run_common.js"></script>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js,transport.js'}
+<!--Custom JS -->
+<script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/eth_v1/eth_v1_mobile.js"></script>
+<!--/Custom JS -->
+<script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/jquery.js"></script>
+</head>
+<body class="eth_v1_mobile page-category">
+<header>
+      <div class="tab_nav">
+        <div class="header">
+          <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)"><i class="fa fa-chevron-leftt"></i></a></div>
+          <div class="h-mid">{$lang.all_goods} {$cat_name}
+          </div>
+          <div class="h-right">
+            <aside class="top_bar">
+              <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      </header>
+<!-- #BeginLibraryItem "/library/up_menu.lbi" --><!-- #EndLibraryItem --> <!--弹出菜单-->
+
+<!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->
+  <!--分页-->
+<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+<div style=" height:40px;"></div> 
+<div class="bottm_nav">
+ <ul>
+ <li class="bian"><a href="supplier_catalog.php?act=dianpufeilie&suppId={$suppid}"><i class="fa fa-home"></i> {$lang.m_693}</a></li>
+ <li class="bian"><a href="supplier.php?act=about&suppId={$suppid}"><i class="fa fa-store"></i> {$lang.m_694}</a></li>
+ <li><a href="tel:{$service_phone}"><i class="fa fa-phone"></i> {$lang.m_695}</a></li>
+ </ul>
+ </div>
+</body>
+</html>

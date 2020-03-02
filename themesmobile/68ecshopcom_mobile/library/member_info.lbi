@@ -1,0 +1,5 @@
+{if $user_info}
+<a href="user.php"><span>{$user_info.username}</span></a><a href="user.php?act=logout"><span>{$lang.m_26}</span></a><a href="javascript:window.scrollTo(0,0);"><span>{$lang.m_27}</span></a>
+{else}
+	<a href="user.php"><span>{$lang.m_28}</span></a><a href="register.php"><span>{$lang.m_29}</span></a><a href="#"><span>{$lang.m_30}</span></a><a href="javascript:window.scrollTo(0,0);"><span>{$lang.m_27}</span></a>
+{/if}

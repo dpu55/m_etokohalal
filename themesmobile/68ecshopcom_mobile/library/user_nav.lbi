@@ -1,0 +1,79 @@
+
+<div class="user_com">
+<!--top-->
+<div class="com_top">
+<h2><a href="user.php?act=profile">{$lang.m_111}</a></h2>
+<dl>
+<dt>{if $headimgurl neq ''}<img src="{$img_url}{$headimgurl}">{else}<img src="themesmobile/68ecshopcom_mobile/images/user_pic.jpg">{/if}
+    <span>{$info.username}</span>
+    <dd>{$rank_name}</dd>
+    </dt>
+
+</dl>
+</div>
+<div class="uer_topnav">
+<ul>
+<li class="bain"><a href="user.php?act=order_list" ><span>{$order_count}</span>{$lang.m_112}</a></li>
+<li class="bain"><a href="user.php?act=collection_list"><span>{$collect_count}</span>{$lang.m_113}</a></li>
+<li><a href="user.php?act=my_comment"><span>{$comment_count}</span>{$lang.m_114}</a></li>
+</ul>
+</div>
+<!--我的钱包-->
+<div class="Wallet">
+<ul>
+ {insert name='member_info1'}
+</ul>
+<a href="user.php?act=account_detail">
+<!--<em class="Icon Icon1"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-saldo-01.png" alt=""/>
+<dl><dt>{$lang.m_115}</dt><dd style="color:#aaaaaa;">{$lang.m_116}</dd></dl></a>
+</div>
+
+<!--菜单-->
+<div class="Wallet">
+<a href="user.php?act=order_list">
+<!--<em class="Icon Icon2"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-pesanan-01.png" alt=""/>
+<dl class="b"><dt>{$lang.m_117}</dt><dd>{$lang.m_118}</dd></dl></a>
+<a href="user.php?act=bonus">
+<!--<em class="Icon Icon3"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-cashback-01.png" alt=""/>
+<dl class="b"><dt>{$lang.m_119}</dt><dd>&nbsp;</dd></dl></a>
+<a href="user.php?act=my_comment">
+<!--<em class="Icon Icon4"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-ulasan-01.png" alt=""/>
+<dl class="b"><dt>{$lang.m_114}</dt><dd>{$lang.m_120}</dd></dl></a>
+<a href="user.php?act=collection_list">
+<!--<em class="Icon Icon10"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-favorit-01.png" alt=""/>
+<dl><dt>{$lang.m_121}</dt><dd>&nbsp;</dd></dl></a>
+</div>
+<div class="Wallet">
+{if $is_distrib eq 1}
+<a href="v_user.php">
+<!--<em class="Icon Icon6"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-alamat-01.png" alt=""/>
+<dl class="b"><dt>{$lang.m_122}</dt><dd>&nbsp;</dd></dl></a>
+{/if}
+<a href="user.php?act=address_list">
+<!--<em class="Icon Icon5"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-alamat-01.png" alt=""/>
+<dl class="b"><dt>{$lang.m_123}</dt><dd>&nbsp;</dd></dl></a>
+<!--<a href="user.php?act=affiliate"><em class="Icon Icon6"></em><dl class="b"><dt>{$lang.m_124}</dt><dd>&nbsp;</dd></dl></a>-->
+<a href="user.php?act=message_list">
+<!--<em class="Icon Icon7"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-chat-01.png" alt=""/>
+<dl class="b"><dt>{$lang.m_125}</dt><dd>&nbsp;</dd></dl></a>
+<a href="user.php?act=vc_login">
+<!--<em class="Icon Icon9"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-isidompet-01.png" alt=""/>
+<dl><dt>{$lang.m_126}</dt><dd>&nbsp;</dd></dl></a>
+</div>
+<div class="Wallet">
+<a href="javascript:void(0)" onClick="window.location.href='user.php?act=logout'" >
+<!--<em class="Icon Icon8"></em>-->
+<img src="themesmobile/68ecshopcom_mobile/images/user-center/icon-user-logout-01.png" alt=""/>
+<dl><dt>{$lang.m_127}</dt></dl></a>
+</div>
+</div>
+

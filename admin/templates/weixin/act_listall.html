@@ -1,0 +1,27 @@
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<div class="list-div" id="listDiv">
+<table width="100%" cellspacing="1" cellpadding="2">
+  <tr>
+    <th>{$lang.x_94}</th>
+	<th>{$lang.x_275}</th>
+    <th>{$lang.x_276}</th>
+    <th>{$lang.x_278}</th>
+    <th>{$lang.x_279}</th>
+	<th>{$lang.handler}</th>
+  </tr>
+  {foreach item=item from=$actList}
+   <tr align="center">
+	<td>{$item.title}</td>
+	<td>{$item.awardname}</td>
+	<td>{if $item.isopen == 1}{$lang.enabled}{else}{$lang.disabled}{/if}</td>
+	<td>{$item.randnum}%</td>
+	<td>{$item.num}</td>
+	<td><a href="weixin_egg.php?act=add&lid={$item.lid}">{$lang.edit}</a></td>
+  </tr>
+  {foreachelse}
+  <tr><td colspan="7"><a href="weixin_egg.php?act=add&aid={$smarty.get.aid}">{$lang.x_92}</a></td></tr>
+  {/foreach}
+</table>
+</div>
+{include file="pagefooter.htm"}

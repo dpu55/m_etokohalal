@@ -1,0 +1,77 @@
+{include file="pageheader.htm"}
+
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<script type="text/javascript" src="../js/calendar.php"></script>
+
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+
+<div id="tabbody-div">
+
+<form name="theForm" method="post" action="weixin.php?act=qiandao">
+
+  <table width="100%" cellpadding="3" cellspacing="1">
+
+  <tbody>
+
+  <tr>
+
+    <td class="label">{$lang.x_292}</td>
+
+    <td><input type="text" name="num" value="{$sign.num}"></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="label">{$lang.x_293}</td>
+
+    <td><input type="text" name="addnum" value="{$sign.addnum}">{$lang.x_294}</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="label">{$lang.x_295}</td>
+
+    <td><input type="text" name="bignum" value="{$sign.bignum}">{$lang.x_296}</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="label">{$lang.x_297}</td>
+
+    <td><input type="text" name="startymd" size="25" id="startymd" value="{$sign.startymd}"><input name="selbtn1" type="button" id="selbtn1" onclick="return showCalendar('startymd', '%Y-%m-%d ', false, false, 'selbtn1');" value="{$lang.btn_select}" class="button"/></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="label">{$lang.x_298}</td>
+
+    <td><input type="text" name="endymd" size="25" id="endymd" value="{$sign.endymd}"><input name="selbtn2" type="button" id="selbtn2" onclick="return showCalendar('endymd', '%Y-%m-%d ', false, false, 'selbtn2');" value="{$lang.btn_select}" class="button"/></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" align="center">
+
+      <input type="submit" value="{$lang.button_submit}" class="button" />
+
+    <input type="reset" value="{$lang.button_reset}" class="button" />
+
+    </td>
+
+  </tr>
+
+</tbody></table>
+
+</form>
+
+</div>
+
+{/literal}
+
+{include file="pagefooter.htm"}

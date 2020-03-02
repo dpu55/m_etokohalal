@@ -1,0 +1,130 @@
+{if $full_page eq 1}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {include file='html_header.htm'}
+	<script src='js/touch.js'></script>
+    <script>
+	;(function($)
+	{
+		Zepto(function($)
+        {
+			init();
+			$.zcontent.add_success(init);
+        });
+	    function init()
+	    {
+			$('#rebate_paytime_start').intimidatetime({format:'yyyy-MM-dd'});
+			$('#rebate_paytime_end').intimidatetime({format:'yyyy-MM-dd'});
+	    }
+	})(Zepto)
+     
+      function search_commission()
+      {
+        if(check_form_empty('theForm'))
+        {
+          $.zalert.add("{$lang.y_99}",1)
+        }
+        else
+        {
+          $.zcontent.set('rebate_paytime_start',$('#rebate_paytime_start').val());
+          $.zcontent.set('rebate_paytime_end',$('#rebate_paytime_end').val());
+          search();
+        }
+        return false;
+      }
+      
+      function change_is_pay_ok(is_pay_ok)
+      {
+        $.zcontent.set('is_pay_ok',is_pay_ok);
+        search();
+      }
+	  
+    </script>
+  </head>
+  <body>
+    <div id='container'>
+      {/if}
+      {include file='page_header.htm'}
+      <section>
+        {include file='menu_list.htm'}
+        <div class="order_con" id="con_order_manage_2" style="display:none">
+          <div class="order_pd">
+            <div class="order order_t">
+              <form name="theForm" method="" action="" class="order_search" onsubmit='return search_commission();'>
+                <table width="100%" border="0">
+                  <tr>
+                    <td>
+                      <input type="text" name="rebate_paytime_start" id='rebate_paytime_start' class="inputBg" placeholder="{$lang.y_228}" {if $filter.rebate_paytime_start}value='{$filter.rebate_paytime_start}'{/if}/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="rebate_paytime_end" id='rebate_paytime_end' class="inputBg" placeholder="{$lang.y_229}" {if $filter.rebate_paytime_end}value='{$filter.rebate_paytime_end}'{/if}/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" name="" class="button2" value="{$lang.y_101}"/>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="order_con" id="con_order_manage_1">
+          <ul class="rebate_type">
+            <li {if $filter.is_pay_ok eq 0}class="curr"{/if} id="type1" onclick="change_is_pay_ok('0')">{$lang.y_230}</li>
+            <li {if $filter.is_pay_ok eq 1}class="curr"{/if} id="type2" onclick="change_is_pay_ok('1')">{$lang.y_231}</li>
+          </ul>
+          <div class="order_pd"  id="con_type_1">
+            <div class="order">
+              <ul class="order_list">
+                {foreach from=$supplier_list item=item}
+                <li>
+                  <table width="100%" cellpadding="3" cellspacing="1" >
+                    <tr>
+                      <td align="left" class="font2" width='50%'>{$lang.y_232}{$item.sign}</td>
+                      <td align="left" width='50%'>{$lang.y_233}{$item.rebate_paytime_start}-{$item.rebate_paytime_end}</td>
+                    </tr>
+                    <tr>
+                      <td align="left" >{$lang.y_234}{$item.all_money_formated}</td>
+                      <td align="left">{$lang.y_214}{$item.rebate_money_formated}</td>
+                    </tr>
+                    <tr>
+                      <td align="left">{$lang.y_235}{$item.pay_money_formated}</td>
+                      <td align="left">{$lang.y_236}{$item.status_name}</td>
+                    </tr>
+                    <tr>
+                      <td align="left">{$lang.y_237}{if $item.pay_time}{$item.pay_time}{else}<font style='color:red'>{$lang.y_238}/font>{/if}</td>
+                      <td align="left">
+                        <a href="supplier_rebate.php?act=view&rid={$item.rebate_id}" class="font">{$lang.y_239}</a>
+                        <span>&nbsp;/&nbsp;</span>
+                        <a href="supplier_order.php?act=view&rid={$item.rebate_id}" class="font">{$lang.y_240}</a>
+                      </td>
+                    </tr>
+                  </table>
+                </li>
+                {foreachelse}
+                <li>
+                  <table width="100%" cellpadding="3" cellspacing="1" >
+                    <tr>
+                      <td align="center" class="font2" width='100%'>{$lang.y_241}</td>
+                    </tr>
+                  </table>
+                </li>
+                {/foreach}
+              </ul>
+            </div>
+            {include file='page.htm'}
+          </div>
+        </div>
+      </section>
+      {include file='page_footer.htm'}
+      {if $full_page eq 1}
+    </div>
+    {include file='static_div.htm'}
+  </body>
+</html>
+{/if}

@@ -1,0 +1,65 @@
+{include file="pageheader.htm"}
+
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+
+
+<form name="theForm" method="post" action="weixin.php?act=notice">
+
+  <table width="100%" cellpadding="3" cellspacing="1">
+
+  <tbody>
+
+ <tr>
+
+    <td class="label">{$lang.x_386} :</td>
+
+    <td><input type="radio" name="buynotice" value="1" {if $buynotice eq 1}checked{/if} />{$lang.x_106}<input type="radio" name="buynotice" value="0" {if $buynotice eq 0}checked{/if} />{$lang.x_107}</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="label">{$lang.x_387} :</td>
+
+    <td><textarea name="buymsg" rows="5" cols="40">{$buymsg}</textarea></td>
+
+  </tr>
+
+ <tr>
+
+    <td class="label">{$lang.x_388} :</td>
+
+    <td><input type="radio" name="sendnotice" value="1" {if $sendnotice eq 1}checked{/if} />{$lang.x_106}<input type="radio" name="sendnotice" value="0" {if $sendnotice eq 0}checked{/if} />{$lang.x_107}</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="label">{$lang.x_389} :</td>
+
+    <td><textarea name="sendmsg" rows="5" cols="40">{$sendmsg}</textarea><br/>({$lang.x_390} order_sn {$lang.x_391} shoping_code {$lang.x_392} shoping_type {$lang.x_393})</td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" align="center">
+
+      <input type="submit" value="{$lang.button_submit}" class="button" />
+
+    <input type="reset" value="{$lang.button_reset}" class="button" />
+
+    </td>
+
+  </tr>
+
+</tbody></table>
+
+</form>
+
+
+
+{/literal}
+
+{include file="pagefooter.htm"}

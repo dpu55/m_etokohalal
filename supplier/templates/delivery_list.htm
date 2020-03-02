@@ -1,0 +1,105 @@
+{if $full_page eq 1}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {include file='html_header.htm'}
+    <script>
+      function search_delivery()
+      {
+        if(check_form_empty('theForm'))
+        {
+          $.zalert.add("{$lang.y_99}",1)
+        }
+        else
+        {
+          $.zcontent.set('delivery_sn',$('#delivery_sn').val());
+          $.zcontent.set('order_sn',$('#order_sn').val());
+          $.zcontent.set('consignee',$('#consignee').val());
+          search();
+        }
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div id='container'>
+      {/if}
+      {include file='page_header.htm'}
+      <section>
+        {include file='menu_list.htm'}
+        <div class="order_con" id="con_order_manage_2" style="display:none">
+          <div class="order_pd">
+            <div class="order order_t">
+              <form name="theForm" method="" action="" class="order_search" onsubmit='search_delivery();return false;'>
+                <table width="100%" border="0">
+                  <tr>
+                    <td>
+                      <input type="text" name="delivery_sn" id='delivery_sn' class="inputBg" placeholder="{$lang.Please enter the flow number of the invoice.}" {if $filter.delivery_sn}value='{$filter.delivery_sn}'{/if}/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="order_sn" id='order_sn' class="inputBg" placeholder="{$lang.y_62}" {if $filter.order_sn}value='{$filter.order_sn}'{/if}//>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="consignee" id='consignee' class="inputBg" placeholder="{$lang.y_129}" {if $filter.consignee}value='{$filter.consignee}'{/if}//>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" name="" class="button2" value="{$lang.y_101}"/>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="order_con order_con1" id="con_order_manage_1">
+		{include file='store_menu.htm'}
+          <div class="order_pd">
+            <div class="order">
+              <ul class="order_list">
+                {foreach from=$delivery_list item=delivery}
+                <li>
+                  <table width="100%" cellpadding="3" cellspacing="1" >
+                    <tr>
+                      <td colspan="2" align="left">{$lang.y_130}{$delivery.delivery_sn}</td>
+                    </tr>
+                    <tr>
+                      <td align="left">{$lang.y_131}{$delivery.order_sn}</td>
+                      <td align="right">{$lang.y_132}{$delivery.consignee}</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" align="left">{$lang.y_133}{$delivery.add_time}</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" align="left">{$lang.y_134}{$delivery.update_time}</td>
+                    </tr>
+                    <tr>
+                      <td align="left">{$lang.y_135}{$delivery.status_name}</td>
+                      <td align="right">
+                        <a href="order.php?act=delivery_info&delivery_id={$delivery.delivery_id}" class="font">{$lang.view}</a>
+                        <a href="order.php?act=remove_delivery&delivery_id={$delivery.delivery_id}" class="font font1">{$lang.remove}</a>
+                      </td>
+                    </tr>
+                  </table>
+                </li>
+                {foreachelse}
+                <li><div class="no_order">{$lang.y_136}</div></li>
+                {/foreach}
+              </ul>
+            </div>
+            {include file='page.htm'}
+          </div>
+        </div>
+      </section>
+      {include file='page_footer.htm'}
+      {if $full_page eq 1}
+    </div>
+    {include file='static_div.htm'}
+  </body>
+</html>
+{/if}

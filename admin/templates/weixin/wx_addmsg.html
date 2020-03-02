@@ -1,0 +1,77 @@
+{include file="pageheader.htm"}
+
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<script type="text/javascript" src="../js/calendar.php"></script>
+
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+
+<div id="tabbody-div">
+
+<form name="theForm" method="post" action="weixin.php?act=news&id={$corn.id}">
+
+  <table width="100%" cellpadding="3" cellspacing="1">
+
+  <tbody>
+
+  <tr><th colspan="2" align="center">{$lang.x_319}</th></tr>
+
+ <tr>
+
+    <td class="label">{$lang.x_320}</td>
+
+    <td>
+
+    <select name="msgtype">
+
+		<option value="1" {if $msgtype eq 'news'}selected{/if}>{$lang.x_321}</option>
+
+		<option value="2" {if $msgtype eq 'text'}selected{/if}>{$lang.x_322}</option>
+
+	</select>
+
+    </td>
+
+  </tr>
+
+  <!--
+
+  <tr>
+
+    <td class="label">推送时间:</td>
+
+    <td><input type="text" name="sendtime" size="25" id="sendtime" value="{$sendymd}"><input name="selbtn1" type="button" id="selbtn1" onclick="return showCalendar('sendtime', '%Y-%m-%d %H:00:00', false, false, 'selbtn1');" value="选择" class="button"/></td>
+
+  </tr>
+
+  -->
+
+  <tr>
+
+    <td class="label">{$lang.x_323}</td>
+
+    <td><textarea name="artid" rows="5" cols="40">{$artid}</textarea><br />{$lang.x_324}</td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2" align="center">
+
+      <input type="submit" value="{$lang.button_submit}" class="button" />
+
+    <input type="reset" value="{$lang.button_reset}" class="button" />
+
+    </td>
+
+  </tr>
+
+</tbody></table>
+
+</form>
+
+</div>
+
+{/literal}
+
+{include file="pagefooter.htm"}

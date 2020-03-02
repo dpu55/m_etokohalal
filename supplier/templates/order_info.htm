@@ -1,0 +1,265 @@
+{if $full_page eq 1}
+<!DOCTYPE html>
+<html>
+  <head>
+    {include file='html_header.htm'}
+    <script type="text/javascript">
+        function open_surplus()
+        {
+           $('#hidebg').css('height',$(document).height());
+           $('#hidebg').css('display','block');
+           $('#popup_window').css('display','block');
+        }
+        
+        function close_surplus()
+        {
+           $('#hidebg').css('display','none');
+           $('#popup_window').css('display','none');
+        }
+      
+        function quick_delivery()
+        {
+          if($.trim($('#express_no').val()) == '')
+          {
+            $.zalert.add("{$lang.y_61}",1);
+            return false;
+          }
+          else
+          {
+            return true;
+          }
+        }
+    </script> 
+  </head>
+  <body>
+    <div id='container'>
+      {/if}
+      <!-- 显示购货人信息 start -->
+      <div id="hidebg" onclick='close_surplus()'></div>
+      <div id="popup_window" style="position:fixed;display:none;">
+        <a class='close' onclick="close_surplus()"></a>
+        <div class="buyer">
+          <h4>{$lang.y_174}</h4>
+          <div class="info">
+            <table width="100%" >
+              <tr>
+                <td width="30%">{$lang.y_175}</td>
+                <td><a href='mailto:{$user.email}' class='phone'>{$user.email}</a></td>
+              </tr>
+              <tr>
+                <td>{$lang.y_176}</td>
+                <td>{$user.user_money}</td>
+              </tr>
+              <tr>
+                <td>{$lang.y_177}</td>
+                <td>{$user.pay_points}</td>
+              </tr>
+              <tr>
+                <td>{$lang.y_178}</td>
+                <td>{$user.rank_points}</td>
+              </tr>
+              <tr>
+                <td>{$lang.y_179}</td>
+                <td>{$user.rank_name}</td>
+              </tr>
+              <tr>
+                <td>{$lang.y_180}</td>
+                <td>{$user.bonus_count}</td>
+              </tr>
+            </table>
+          </div>
+          <div class="info">
+          {foreach from=$address_list item=address}
+  <table width="100%" border="0">
+    <caption><strong> {$lang.consignee} : {$address.consignee|escape} </strong></caption>
+    <tr>
+      <td> {$lang.email} </td>
+      <td> <a href="mailto:{$address.email|escape}">{$address.email|escape}</a> </td>
+    </tr>
+    <tr>
+      <td> {$lang.address} </td>
+      <td> {$address.address|escape} </td>
+    </tr>
+    <tr>
+      <td> {$lang.zipcode} </td>
+      <td> {$address.zipcode|escape} </td>
+    </tr>
+    <tr>
+      <td> {$lang.tel} </td>
+      <td> {$address.tel|escape} </td>
+    </tr>
+    <tr>
+      <td> {$lang.mobile} </td>
+      <td> {$address.mobile|escape} </td>
+    </tr>
+  </table>
+  {/foreach}
+          </div>
+        </div>
+      </div>
+      {include file='page_header.htm'}
+      <section style="padding-bottom:90px;">
+         {if $order.pay_status == 2 && $order.shipping_status != 1 && $order.order_status == 1 }
+        <form method='POST' action='order.php' onsubmit='return quick_delivery();'>
+          <div class="order_info_con">
+            <p class="one_delivery">
+              <input type="text" name="express_no" id='express_no' placeholder="{$lang.y_61}" class="inputBg"/>
+              <input type='hidden' name='order_id' value='{$order.order_id}'/>
+			  <input type='hidden' name='act' value='quick_delivery'/>
+              <input type="submit" value="{$lang.y_181}" class="one_delivery_btn" />
+			  
+            </p>
+          </div>
+        </form>
+        {/if}
+        <div class="order_info_con">
+          <div class="order_fee">
+            <p class="edit" id="order_fee" onclick='$(".fee_info").slideToggle()'><span>{$lang.y_272}<a href="order.php?act=edit&order_id={$order.order_id}&step=money" class="special">{$lang.edit}</a></span> <i></i></p>
+            <div class="fee_info">
+              <p>{$lang.y_186}{$order.formated_goods_amount} - {$lang.y_187} {$order.formated_discount} + {$lang.y_188}{$order.formated_tax} + {$lang.y_190} {$order.formated_shipping_fee} + {$lang.y_192} {$order.formated_insure_fee} + {$lang.y_193} {$order.formated_pay_fee} + {$lang.y_194} {$order.formated_pack_fee} + {$lang.y_195} {$order.formated_card_fee}</p>
+              <p>= {$lang.y_189} {$order.formated_total_fee}</p>
+              <p>- {$lang.y_191} {$order.formated_money_paid} - {$lang.y_196} {$order.formated_surplus} - {$lang.y_273} {$order.formated_integral_money} - {$lang.y_197} {$order.formated_bonus}</p>
+            </div>
+            <p class="order_amount">= {if $order.order_amount >= 0}{$lang.y_198}{$order.formated_order_amount}{else}{$lang.y_274}{$order.formated_money_refund}{/if}</p>
+          </div>
+          <div class="consignee_info">
+            <p class="edit"><span>{$lang.y_275}<a href="order.php?act=edit&order_id={$order.order_id}&step=consignee" class="special">{$lang.edit}</a></span></p>
+            <div class="order_consign">
+              <table width="100%" >
+                <tr>
+                  <td>{$lang.y_132}{$order.consignee}</td>
+                  <td><a href="tel:{$order.mobile}" class="phone">{$order.mobile}</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2">{$lang.y_249}{$order.country_name}&nbsp;{$order.city_name}&nbsp;{$order.district_name}&nbsp;{$order.address}<a href='navigate.php?act=navigate&order_id={$order.order_id}' target='_blank'><img src='images/location.png' style='height:15px;'/></a>&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                  <td colspan="2">{$lang.y_276} {$order.best_time}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="goods_info">
+            <p class="edit"><span>{$lang.y_277}</span></p>
+            <div class="order_goods">
+              {if $goods_list}
+              {foreach from=$goods_list item=goods}
+              <table width="100%" >
+                <tr>
+                  <td colspan="3">{if $goods.brand_name}[{$goods.brand_name}]{/if}{$goods.goods_name}<span class="attr">{$goods.goods_attr}</span></td>
+                </tr>
+                <tr>
+                  <td>{$goods.formated_goods_price} X <span>{$goods.goods_number}（{$lang.y_278}）</span></td>
+                  <td>{$lang.y_147} {$goods.storage}</td>
+                  <td>{$lang.y_279} {$goods.formated_subtotal}</td>
+                </tr>
+              </table>
+              {/foreach}
+              {else}
+              <table width="100%" >
+                <tr>
+                  <td colspan="3"><span class="attr">{$lang.y_280}</span></td>
+                </tr>
+              </table>
+              {/if}
+            </div>
+          </div>
+          <div class="order_base">
+            <p class="edit" id="order_base"  onclick='$(".base_info_one").slideToggle()'><span>{$lang.y_207}</span> <i></i></p>
+            <div class="base_info_one">
+              <p>{$lang.y_131}{$order.order_sn}</p>
+              <p>{$lang.y_281} {$order.user_name} <a href="javascript:open_surplus();" class="">{$lang.y_282}</a><a href="user_msg.php?act=add&order_id={$order.order_id}&user_id={$order.user_id}">{$lang.send_message}</a></p>
+              <p>{$lang.y_133} {$order.formated_add_time}</p>
+              <p>{$lang.y_283} {if $order.pay_time gt 0}{$order.formatted_pay_time}{else}{$lang.y_284}{/if}</p>
+              <p>{$lang.y_134} {if $order.shipping_time gt 0}{$order.formatted_shipping_time}{else}{$lang.y_285}{/if}</p>
+            </div>
+            <div class="base_info">
+              <p>{$lang.y_184} {$lang.os[$order.order_status]},{$lang.ps[$order.pay_status]},{$lang.ss[$order.shipping_status]}</p>
+              <p>{$lang.02_payment_list} {$order.pay_name}<a href="order.php?act=edit&order_id={$order.order_id}&step=payment" class="special">{$lang.edit}</a></p>
+              <p>{$lang.03_shipping_list} {$order.shipping_name}<a href="order.php?act=edit&order_id={$order.order_id}&step=shipping" class="special">{$lang.edit}</a></p>
+              <!--如果配送方式是“门店自提”，则显示以下自提点 star-->
+              {if $order.is_pickup eq 1 && $order.pickup_point gt 0}
+              <p>{$lang.y_286} [{$order.pickup_point_info.province_name}&nbsp;{$order.pickup_point_info.city_name}&nbsp;{$order.pickup_point_info.district_name}&nbsp;{$order.pickup_point_info.address}]{$order.pickup_point_info.shop_name}</p>
+              {/if}
+              <!--如果配送方式是“门店自提”，则显示以下自提点 end-->
+              {if $order.invoice_no gt 0}
+              <p>{$lang.y_287} {$order.invoice_no}</p>
+              {/if}
+            </div>
+          </div>
+          <div class="order_qita">
+            <p class="edit" id="order_qita"  onclick='$(".qita_info").slideToggle()'>
+              <span>{$lang.y_288}
+              {if $order.inv_type}
+              <a href="" class="special">{$lang.$order.inv_type}</a>
+              {/if}
+              </span>
+              <i></i>
+            </p>
+            <div class="qita_info">
+              <!--{如果有普通发票 start*}-->
+              {if $order.inv_type}
+              <p>{$lang.y_289} {$lang.$order.inv_type}</p>
+              {/if}
+              {if $order.inv_type eq 'normal_invoice'}
+              <p>{$lang.y_290} {$order.inv_payee}</p>
+              <p>{$lang.y_291} {$order.inv_content}</p>
+              {elseif $order.inv_type eq 'vat_invoice'}
+              <h4>{$lang.y_292}</h4>
+              <p>{$lang.y_293}{$order.vat_inv_company_name}</p>
+              <p>{$lang.y_294}{$order.vat_inv_taxpayer_id}</p>
+              <p>{$lang.y_295}{$order.vat_inv_registration_address}</p>
+              <p>{$lang.y_296}{$order.vat_inv_registration_phone}</p>
+              <p>{$lang.y_297} {$order.vat_inv_deposit_bank}</p>
+              <p>{$lang.y_298}{$order.vat_inv_bank_account}</p>
+              <h4>{$lang.y_299}</h4>
+              <p>{$lang.y_300}{$order.inv_consignee_name}</p>
+              <p>{$lang.y_301}{$order.inv_consignee_phone}</p>
+              <p>{$lang.y_302}[{$order.inv_consignee_province_name}&nbsp;{$order.inv_consignee_city_name}&nbsp;{$order.inv_consignee_district_name}]{$order.inv_consignee_address}</p>
+              {/if}
+              <!--{如果有发票 end }-->
+              {if $order.postscript}
+              <p>{$lang.y_303} {$order.postscript}</p>
+              {/if}
+              <p>{$lang.y_304}</p>
+              {if $order.to_buyer}
+              <p>{$lang.y_305} {$order.to_buyer}</p>
+              {/if}
+            </div>
+          </div>
+            
+            <div class="order_history">
+            <p class="edit" id="order_history"  onclick='$(".history_info").slideToggle()'>
+              <span>{$lang.handler} </span>
+              <i></i>
+            </p>
+            <div class="history_info">
+                <table width='100%'>
+                    <tr>
+                        <th>{$lang.y_267}</th>
+                       <!-- <th>操作时间</th>-->
+                        <th>{$lant.y_184}</th>
+                        <th>{$lang.y_270}</th>
+                        <th>{$lang.y_271}</th>
+                    </tr>
+              {foreach from=$action_list item=action}
+                <tr>
+                  <td><div align="center">{$action.action_user}</div></td>
+                 <!-- <td><div align="center">{$action.action_time}</div></td>-->
+                  <td><div align="center">{$action.order_status}</div></td>
+                  <td><div align="center">{$action.pay_status}</div></td>
+                  <td><div align="center">{$action.shipping_status}</div></td>
+                  <td>{$action.action_note|nl2br}</td>
+                </tr>
+            {/foreach}
+                </table>
+        </div>
+       </div>
+      </section>
+      {include file='page_footer.htm'}
+      {if $full_page eq 1}
+    </div>
+    {include file='static_div.htm'}
+  </body>
+</html>
+{/if}

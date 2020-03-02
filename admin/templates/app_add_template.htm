@@ -1,0 +1,134 @@
+{include file="pageheader.htm"}
+<style>
+input:read-only
+{ 
+background-color: #999999;
+}
+</style>
+<script>
+function select_template_type(obj){
+	var type = obj.value
+	if(typeof default_value[type] === 'undefined'){
+		var name = ''
+		var order = '0'
+		var number = '0'
+		var show = 'on'
+		var id = 'custom'
+	}
+	else{
+		var name = default_value[type]['name']
+		var order = default_value[type]['order']
+		var number = default_value[type]['number']
+		var show = default_value[type]['show']
+		var id = default_value[type]['id']
+	}
+	document.forms[0].name.value = name
+	document.forms[0].order.value = order
+	document.forms[0].number.value = number
+	document.forms[0].show.checked = show == 'on'
+	document.forms[0].id.value = id
+	if(typeof default_value[type] != 'undefined' && default_value[type]['editable'] === 'false'){
+		document.forms[0].id.readOnly = true
+	}
+	else{
+		document.forms[0].id.readOnly = false
+	}
+}
+function validate(){
+	if(document.forms[0].name.value == ''){
+		alert("{$lang.x_401}");
+		return false;
+	}
+	if(document.forms[0].order.value == ''){
+		alert("{$lang.x_402}");
+		return false;
+	}
+	if(document.forms[0].type.value == '-1'){
+		alert("{$lang.x_403}");
+		return false;
+	}
+	if(document.forms[0].number.value == ''){
+		alert("{$lang.x_404}");
+		return false;
+	}
+	if(document.forms[0].id.value == ''){
+		alert("{$lang.x_405}");
+		return false;
+	}
+	return true;
+}
+var default_value = new Object();
+{foreach from=$default_value item=values key=type}
+default_value.{$type} = new Object();
+default_value.{$type}.id = "{$type}";
+{foreach from=$values item=item key=key}
+default_value.{$type}.{$key} = "{$item}";
+{/foreach}
+{/foreach}
+</script>
+<div class="main-div">
+{$lang.x_406} <span style="color:red;">{$lang.x_407}</span> {$lang.x_408}
+</div>
+<div class="list-div">
+<form name="theForm" action="app_manage.php" enctype="multipart/form-data" method="post" onsubmit="return validate()">
+<table>
+  <tr>
+  	<td align="left" class="label">{$lang.x_409}</td>
+    <td><input type="text" id="name" name="name" value="{$template.name}" />
+	<label>{$lang.x_410}</label>
+	</td>
+  </tr>
+  <tr>
+  	<td align="left" class="label">{$lang.x_411}</td>
+    <td>
+     <input type="text" name="order" value="{$template.order}" />
+    </td>
+  </tr>
+  <tr>
+  	<td align="left" class="label">{$lang.x_412}</td>
+    <td>
+		<select name="type" onchange="select_template_type(this)">
+		<option value="-1">{$lang.x_73}</option>
+		{foreach from=$template_type item=item key=key}
+		<option value="{$key}" {if $template.type eq $key}selected{/if} >{$item.name}</option>
+		{/foreach}
+		</select>
+		<label>{$lang.x_413}</label>
+	</td>
+  </tr>
+  <tr>
+  	<td align="left" class="label">{$lang.x_414}</td>
+    <td><input type="text" name="number" value="{$template.number}"/></td>
+  </tr>
+  <tr>
+  	<td align="left" class="label">{$lang.x_415}</td>
+    <td><input type="checkbox" name="show" {if $template.show eq 'on'}checked=true{/if}/></td>
+  </tr>
+  <tr>
+  	<td align="left" class="label">{$lang.x_416}</td>
+    <td>
+		<input type="text" name="id" value="{$template.id}"/>
+		<label>{$lang.x_417} <font style="color:red">menu</font>，{$lang.x_418}/app/themes/default/library/index_<font style="color:red">menu</font>.lib{$lang.x_419}</label>
+		</td>
+  </tr>
+  <tr>
+  <td>&nbsp;</td>
+    <td>
+    <input type="submit" value="{$lang.x_124}" class="button"/>
+     <input type="hidden" name="act" value="save_template" />
+	 <input type="hidden" name="prev_id" value="{$prev_id}" />
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+<script>
+	var type = document.forms[0].type.value
+	if(typeof default_value[type] != 'undefined' && default_value[type]['editable'] === 'false'){
+		document.forms[0].id.readOnly = true
+	}
+	else{
+		document.forms[0].id.readOnly = false
+	}
+</script>
+{include file="pagefooter.htm"}

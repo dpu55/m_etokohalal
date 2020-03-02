@@ -1,0 +1,50 @@
+ {if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<div class="list-div" id="listDiv">
+<p>{$lang.x_424}</p>
+{/if}
+<form name="theForm" action="menu.php" enctype="multipart/form-data" method="post">
+<table cellpadding="3" cellspacing="1">
+  <tr>
+	<th width="20%">{$lang.x_425}</th>
+    <th width="20%">{$lang.x_426}</th>
+    <th width="20%">{$lang.x_427}</th>
+    <th width="20%">{$lang.x_428}</th>
+    <th width="20%">{$lang.handler}</th>
+  </tr>
+   {foreach from=$menu_list key=key item=list}
+  <tr>
+    <td align="center">{$list.name}</td>
+    <td align="center">
+		<img src="{$url}{$list.image}?{$rand}" width="100" height="100" style="border:none"/>
+	</td>
+    <td align="center">{$list.link}</td>
+    <td align="center">{$list.order}</td>
+    <td align="center">
+		<a href="app_manage.php?act=edit_menu&id={$key}">
+			<img src="../images/icon_edit.gif" style="border:none" alt="{$lang.edit}"/>
+		</a>
+		<a href="app_manage.php?act=delete_menu&id={$key}">
+			<img src="../images/icon_drop.gif" style="border:none" alt="{$lang.drop}"/>
+		</a>
+    </td>
+  </tr>
+  {foreachelse}
+  <tr><td colspan="5" align="center">{$lang.x_429}<a href="app_manage.php?act=add_menu" style="color:red;">{$lang.x_430}</a></td></tr>
+  {/foreach}
+</table>
+</form>
+{if $full_page}
+</div>
+<script type="text/javascript" language="JavaScript">
+  {literal}
+  onload = function()
+  {
+    // 开始检查订单
+    startCheckOrder();
+  }
+  {/literal}
+</script>
+{include file="pagefooter.htm"}
+{/if}

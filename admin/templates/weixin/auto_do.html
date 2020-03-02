@@ -1,0 +1,15 @@
+<td style="font-size: 14px; font-weight: bold"><p id="sendMsgAjaxId">{$lang.x_280}<a hret='../weixin/auto_do.php?type=1'>{$lang.x_281}</a> {$lang.x_282}</p></td>
+<script>
+function sendMsgAjax(){
+	Ajax.call('../weixin/auto_do.php?type=1&ajax=1','', sendMsgAjaxResponse, 'GET', 'JSON');
+}
+function sendMsgAjaxResponse(result){
+	document.getElementById('sendMsgAjaxId').innerHTML = "{$lang.x_280}<a hret='../weixin/auto_do.php?type=1'>{$lang.x_281}</a> {$lang.x_282}";
+	if (result.error == 0){
+		document.getElementById('sendMsgAjaxId').innerHTML = "{$lang.x_283}";
+	}else{
+		document.getElementById('sendMsgAjaxId').innerHTML = "{$lang.x_284}<a hret='../weixin/auto_do.php?type=1'>{$lang.x_281}</a> {$lang.x_282}";
+	}
+}
+sendMsgAjax();
+</script>

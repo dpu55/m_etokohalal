@@ -1,0 +1,43 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--{foreach from=$shop_list item=shop name=shop_list}--> 
+<section class="rzs_info" {if $smarty.foreach.shop_list.first} style=" margin-top:-40px;"{/if}>
+<dl>
+<dt style="margin-left:2.5%;display:flex;align-items:center;"><a href="supplier.php?suppId={$shop.supplier_id}" title="{$shop.shop_name}">
+ <img alt="" src="{$img_url}{$shop.shop_logo}"/></a></dt>
+<dd><strong><a href='supplier.php?suppId={$shop.supplier_id}'>{$shop.shop_name|truncate:9}</a>
+<em onclick='guanzhu({$shop.supplier_id});' class="guanzhu">
+<!---{if $shop.shop_closed}-->Dalam perbaikan.. <!---{else}-->Favorit<!---{/if}-->
+</em>
+</strong>
+<p>{$shop.shop_city_name}<br>{$shop.shop_address}</p>
+</dd>
+</dl>
+<ul style="width:90%;">
+<li><span>{$lang.m_58}</span><strong>:&nbsp;{if $shop.c_rank > 0}{$shop.c_rank}{else}5.0{/if}</strong><em style="display:none;">{if $shop.c_rank gt 0}{if $shop.c_rank <= 2}{$lang.m_59}{elseif $shop.c_rank > 2 && $shop.c_rank <= 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></li>
+<li><span>{$lang.m_62}</span><strong>:&nbsp;{if $shop.serv_rank > 0}{$shop.serv_rank}{else}5.0{/if}</strong><em style="display:none;">{if $shop.serv_rank gt 0}{if $shop.serv_rank <= 2}{$lang.m_59}{elseif $shop.serv_rank > 2 && $shop.serv_rank <= 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></li>
+<li><span>{$lang.m_63}</span><strong>:&nbsp;{if $shop.shipp_rank > 0}{$shop.shipp_rank}{else}5.0{/if}</strong><em style="display:none;">{if $shop.shipp_rank gt 0}{if $shop.shipp_rank <= 2}{$lang.m_59}{elseif $shop.shipp_rank > 2 && $shop.shipp_rank <= 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></li>
+</ul>
+<div class="index_taocan" style="margin-bottom:0em;">
+    <h2 style="margin-bottom:1em;background-image: none;"><a class="inherit" href="supplier.php?go=search&suppId={$shop.supplier_id}&keywords=">{$lang.m_64}&nbsp;{$shop.goods_number}&nbsp;{$lang.m_65}<i class="fa fa-chevron-right arrow" ></i></a></h2>
+     {foreach from=$shop.goodlist item=goods name=goods key=i}
+ {if $i lt 4}
+        <a href="goods.php?id={$goods.goods_id}" title="{$goods.goods_name}">             
+          <dl style="width:50%;">
+          <dt style="border: 1px solid #eeeeee;"><img src="{$img_url}{$goods.goods_thumb}"></dt>
+          <dd style="height:auto;line-height:1.3;margin-top:0px;">{$goods.goods_name}<br><i style="font-size:11px;color:green;">{$goods.shop_price}</i></dd>
+           </dl>
+           </a>
+           {/if}
+   {/foreach}
+  </div>
+<div class="shopbtn">
+<span><a href="tel:{$shop.service_phone}" style=" margin-left:7%">{$lang.m_66}</a></span>
+<span><a href="supplier.php?suppId={$shop.supplier_id}" style=" margin-left:3%"></em>{$lang.m_67}</a></span>
+</div>
+</section>
+<!--{foreachelse}-->
+<div class="flow_wrap">
+{$lang.m_68}
+</div>
+<!--{/foreach}-->	

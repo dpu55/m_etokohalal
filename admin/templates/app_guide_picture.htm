@@ -1,0 +1,40 @@
+<!-- $Id: shop_config.htm 16865 2009-12-10 06:05:32Z sxc_shop $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js"}
+<form method='POST' action='app_manage.php' enctype="multipart/form-data">
+<div class='main-div' id='main_div'>
+<p>{$lang.x_420}</p>
+<p>
+{$lang.x_421} 
+{if $guide_picture}
+{foreach from=$guide_picture key=key item=item}
+<img id="img_{$key}" src="{$item}?{$rand}" style="width:300px;" />
+{/foreach}
+{else}
+{$lang.x_422}
+{/if}
+</p>
+<p>
+<input id="file_{$key}" type='file' name="guide_picture[]" value="{$lang.x_423}"/>
+<input id="file_{$key}" type='file' name="guide_picture[]" value="{$lang.x_423}"/>
+<input id="file_{$key}" type='file' name="guide_picture[]" value="{$lang.x_423}"/>
+<input id="file_{$key}" type='file' name="guide_picture[]" value="{$lang.x_423}"/>
+<input id="file_{$key}" type='file' name="guide_picture[]" value="{$lang.x_423}"/>
+<input id="file_{$key}" type='file' name="guide_picture[]" value="{$lang.x_423}"/>
+</p>
+<p id='submit_area'>
+<input type='hidden' name='act' value='save_guide_picture'/> 
+<input type='submit' id='submit_button' class='button' value='{$lang.x_124}'/>
+</p>
+</div>
+</form>
+{literal}
+<script language="JavaScript">
+onload = function()
+{
+    // 开始检查订单
+    startCheckOrder();
+}
+</script>
+{/literal}
+{include file="pagefooter.htm"}

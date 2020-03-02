@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/bottom_nav.css"/>
+<div style="height:50px; line-height:50px; clear:both;"></div>
+<div class="v_nav">
+<div class="vf_nav">
+<ul>
+<li> <a href="./">
+<!--    <i class="footer_nav1"></i>-->
+       <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-home-01.png" alt=""/>
+<!--    <span>{$lang.home}</span>-->
+    </a></li>
+<li><a href="v_shop.php?user_id={$user_id}">
+<!--   <i class="footer_nav2"></i>-->
+       <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-chat-01.png" alt=""/>
+<!--    <span>{$lang.m_18}</span>-->
+    </a></li>
+<li><a href="v_user.php">
+<!--    <i class="footer_nav3"></i>-->
+	<img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-catalog-01.png" alt=""/>
+<!--    <span>{$lang.m_19}</span>-->
+    </a></li>
+<li><a href="flow.php">
+<!--   <i class="footer_nav4"></i>-->
+      <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-cart-01.png" alt=""/>
+<!--
+   <span>{$lang.cart}</span>
+   <em class="global-nav__nav-shop-cart-num" id="ECS_CARTINFO" style=" margin-top:2px; margin-left:-1px;">{insert name='cart_info'}</em>
+-->
+   </a></li>
+<li><a href="user.php">
+<!--    <i class="footer_nav5"></i>-->
+        <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-user-01.png" alt=""/>
+<!--    <span>{$lang.m_2}</span>-->
+    </a></li>
+</ul>
+</div>
+</div>
+
+

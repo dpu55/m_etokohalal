@@ -1,0 +1,107 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/login.css"/>  
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<!--/Font Awesome-->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/goods.css"/>  
+<!--Custom CSS -->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
+<!--/Custom CSS -->
+
+<script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/jquery.js"></script>
+{insert_scripts files='common.js,utils.js,user.js,transport.js'}
+</head>
+<body class="eth_v1_mobile page-user-passport">
+  <!--登录--->
+  <div>
+	<header id="header" class='header'>
+    <div class="h-left"><a href="javascript:history.back(-1)" class="sb-back"></a></div>
+	<div class="h-mid">{if $action eq 'login'}{$lang.m_312}{/if} {if $action eq 'register'}{$lang.label_regist}{/if} {if $action eq 'get_password'}{$lang.get_password}{/if} {if $action eq 'get_passwd_question'}{$lang.get_password}{/if} {if $action eq 'reset_password'}{$lang.get_password}{/if} {if $action eq 'qpassword_name'}{$lang.get_password}{/if}</div>
+ </header>
+  <!--  {if $action eq 'login'}-->
+				<div class="denglu">
+						<form action="user.php" method="post">
+                            <div class="Login">
+								<dl>
+									<dt>{*$lang.m_155*}</dt>
+									<dd><input type="text" name="username" placeholder="{$lang.m_313}" value="" /></dd>
+								</dl>
+                                <dl style=" margin-top:15px;">
+                                <dt>{*$lang.m_149*}</dt>
+								<dd><input type="password" name="password" placeholder="{$lang.password}"/></dd>
+                                </dl>
+								<!-- {if $enabled_captcha} -->
+									<div class="yanzheng">
+                                    
+										<div class="codeTxt">
+											<input type="text" name="captcha" placeholder="{$lang.comment_captcha}" />
+										</div>
+										<div class="codePhoto">
+											<img class="check-code-img" src="captcha.php?is_login=1&{$rand}" alt="{$lang.comment_captcha}" title="{$lang.captcha_tip}" onClick="this.src='captcha.php?is_login=1&'+Math.random()" height="35" />
+										</div>
+									</div>
+								<!-- {/if} -->
+								<div class="field submit-btn">
+								
+								<div>
+								  <div class="ng-cookie-area" >
+									<label class="bf1 login_ffri">
+										<input type="checkbox" name="remember" value="1" checked=""> &nbsp;{$lang.m_314} 
+									</label>
+								  </div>
+								</div>
+								<div>
+									<div><input type="submit" class="btn_big1" onclick="member_login()" value="{$lang.m_28}" /></div>
+									<input type="hidden" name="act" value="act_login" />
+									<input type="hidden" name="back_act" value="{$back_act}" />
+								</div>
+								</div>
+                                  <div class="ng-foot">
+              
+             
+              <div class="third-area ">
+                <div class="third-area-a"><span>{$lang.m_316}</span><div class="border"></div></div>
+<!--
+                <a class="ta-qq" href="user.php?act=oath&type=qq" target="_blank" title="QQ"></a>
+                <a class="ta-weibo" href="user.php?act=oath&type=weibo" target="_blank" title="weibo"></a>
+                <a class="ta-alipay" href="user.php?act=oath&type=alipay" target="_blank" title="alipay"></a>
+-->
+             	<a href="{$googleURL}"><img src="themesmobile/68ecshopcom_mobile/images/google.png"/></a>
+             	<a href="{$facebookURL}"><img src="themesmobile/68ecshopcom_mobile/images/facebook.png"/></a>
+              </div>
+              
+               <div class="ng-link-area" >
+                <span style="text-align:left;">Belum punya akun? 
+                  <a href="register.php" >{$lang.m_315}</a>
+                </span>
+                <span><br></span>
+                 <span class="user_line"></span>
+                   <span style="float:left;">Lupa password?
+                  <a href="findPwd.php" >{$lang.forgot_password}</a>
+                </span>
+              </div>
+              
+            </div>
+								
+                              </div>
+						</form>
+			</div>
+		<!-- {/if} -->
+		</div>
+
+</body>
+</html>

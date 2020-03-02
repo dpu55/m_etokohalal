@@ -1,0 +1,13 @@
+<ul class="order_tab" style="position:relative">
+  <li id="order_manage1" class="first" onclick="toggle_menu();">{$ur_here}
+    <i id="menu_list_marker" class='on'></i>
+    <ul class="order_type" style="display:none" id='menu_list'>
+      <li {if $ur_here eq $_LANG['01_order_list'] }class='curr'{/if}><a href="order.php?act=list">{$lang.01_order_list}</a></li>
+      <li {if $ur_here eq $_LANG['09_delivery_order'] }class='curr'{/if}><a href="order.php?act=delivery_list">{$lang.09_delivery_order}</a></li>
+      <li {if $ur_here eq $_LANG['y_165'] }class='curr'{/if}><a href="supplier_rebate.php?act=list">{$lang.y_165}</a></li>
+      <li {if $ur_here eq $_LANG['y_49'] }class='curr'{/if}><a href="goods_stock.php?act=list">{$lang.y_49}</a></li>
+      <li {if $ur_here eq $_LANG['y_37'] }class='curr'{/if}><a href="back.php?act=back_list">{$LANG.y_166}</a></li>
+    </ul>
+  </li>
+  <li id="order_manage2" onclick="toggle_search();">{$lang.y_167}<i class='search'></i></li>
+</ul>

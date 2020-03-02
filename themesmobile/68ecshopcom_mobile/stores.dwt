@@ -1,0 +1,132 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/css/stores.css">
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/goods.css"/> 
+<!--Font Awesome-->
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<!--/Font Awesome-->
+<!--Custom CSS -->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
+<!--/Custom CSS -->
+<script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/jquery.js"></script>
+<style>
+@media screen {
+	*{-webkit-tap-highlight-color:transparent;overflow:hidden}
+.goods_nav{ width:30%; float:right; right:5px; overflow:hidden; position:fixed;margin-top:-20px; z-index:9999999}
+</style>
+
+</head>
+<body class="eth_v1_mobile page-stores">
+<span class="sanjiao"></span>
+
+      <header>
+      <div class="tab_nav">
+        <div class="header">
+          <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}"><i class="fa fa-chevron-leftt"></i></a></div>
+          <div class="h-mid">{$lang.m_176}</div>
+          <div class="h-right">
+            <aside class="top_bar">
+              <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      </header>
+       	<!-- #BeginLibraryItem "/library/up_menu.lbi" --><!-- #EndLibraryItem --> <!--弹出菜单-->
+        <!--店铺分类--->        
+<div class="Packages">
+<div class="all"><a {if !$smarty.request.id} class="sele" {/if} target="_self" href="stores.php" style="color:#FFF"><span>{$lang.m_177} <i class="fa fa-chevron-right"></i></span></a></div>
+ <div class="page_guide_slider">
+	<div class="page_guide_balloon" style=" display:none">
+		<div class="page_guide_bar">
+			<div class="page_guide_progress">
+				<div></div>
+			</div>
+		</div>
+	</div>	
+	<div class="page_guide_container" onMouseDown="pageGuideMousedown(this,event)" onMouseMove="pageGuideMousemove(this,event)" onMouseUp="pageGuideMouseup(this,event)" onMouseOut="pageGuideMouseout(this,event)" ontouchstart="pageGuideTouchstart(this,event)" ontouchmove="pageGuideTouchmove(this,event)" ontouchend="pageGuideTouchend(this,event)">
+	
+        	<div class="page_guide_items" style=" position:relative">		 
+       
+	{foreach from=$all item=cat key=i} 
+            <div  class="page_guide_item">
+		<div class="page_guide_item_text"><a class="{if $smarty.request.id == $cat.str_id} sele {/if}" target="_self" href="{$cat.url}#street_cat{$i}">{$cat.str_name}</a></div>
+            </div>
+            <div id="street_cat{$i}"></div>
+        {/foreach}
+   
+		</div>
+	</div>
+	
+</div>  
+</div>
+<!--main--->
+{foreach from=$shops_list item=shop name=shop}
+<section class="rzs_info">
+<dl>
+<dt> <a href="supplier.php?suppId={$shop.supplier_id}" class="flow-datu" title="{$shop.shop_name}" style="background-image:url({$img_url}{$shop.shop_logo})"> </a></dt>
+<dd><strong><a href="supplier.php?suppId={$shop.supplier_id}"><span>{$lang.m_91}</span> {$shop.shop_name}</a></strong>
+<p>{$lang.m_57} {$shop.address}</p>
+</dd>
+</dl>
+<ul>
+<li><span>{$lang.m_58}</span><strong>:{if $shop.comment_rand gt 0}{$shop.comment_rand}{else}5.0{/if}</span></strong><em>{if $shop.comment_rand gt 0}{if $shop.comment_rand lte 2}{$lang.m_59}{elseif $shop.comment_rand gt 2 && $shop.comment_rand lte 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></li>
+<li><span>{$lang.m_62}</span><strong>:{if $shop.server gt 0}{$shop.server}{else}5.0{/if}</strong><em>{if $shop.server gt 0}{if $shop.server lte 2}{$lang.m_59}{elseif $shop.server gt 2 && $shop.server lte 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></em></li>
+<li><span>{$lang.m_63}</span><strong>:{if $shop.shipping gt 0}{$shop.shipping}{else}5.0{/if}</strong><em>{if $shop.shipping gt 0}{if $shop.shipping lte 2}{$lang.m_59}{elseif $shop.shipping gt 2 && $shop.shipping lte 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></em></li>
+</ul>
+ {if $shop.goods_info}
+<div class="index_taocan">
+    <h2>{$lang.m_64} {$shop.goods_number} {$lang.m_65}</h2>
+{foreach from=$shop.goods_info item=goods name=goods}
+ <a href="{$goods.url}"> 
+    <dl>
+        <dt><img src="{$img_url}{$goods.goods_thumb}" class="B_eee" ></dt>
+        <div>
+			<dd>{$goods.goods_name}</dd>
+			<div class="shop_p"><em>{$goods.shop_p}</em></div>
+        </div>
+    </dl>
+    </a>
+{/foreach}
+  </div>
+{/if}
+<div class="s_dianpu">
+<span><a href="tel:{$shop.service_phone}" style=" margin-left:7%"><em class="bg1"></em>{$lang.m_66}</a></span>
+<span><a href="supplier.php?suppId={$shop.supplier_id}" style=" margin-left:3%"><em class="bg2"></em>{$lang.m_67}</a></span>
+</div>
+</section>
+{/foreach}
+
+
+<!--翻页-->
+<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+<!---footer--->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
+<!---返回顶部-->
+<script>
+function goTop(){
+	$('html,body').animate({'scrollTop':0},600);
+}
+</script>
+<!--<a href="javascript:goTop();" class="gotop"><img src="themesmobile/68ecshopcom_mobile/images/topup.png"></a> -->
+<a href="javascript:goTop();" class="gotop"><i class="fa fa-chevron-up"></i></a> 
+
+<!--滑动js-->
+<script type="text/javascript">
+/*reg_package();*/
+</script>
+<script src="themesmobile/68ecshopcom_mobile/js/slider.js" type="text/javascript"></script>
+</body>
+</html>

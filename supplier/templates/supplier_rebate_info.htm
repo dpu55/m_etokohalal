@@ -1,0 +1,194 @@
+{if $full_page eq 1}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {include file='html_header.htm'}
+    <link rel='stylesheet' href='styles/intimidatetime.css'/>
+    <script src='js/intimidatetime.js'></script>
+    <script src='js/intimidatetime.zh_CN.js'></script>
+    <script>
+      Zepto(function($)
+      {
+        $('#order_add_time_start').intimidatetime({format:'yyyy-MM-dd'});
+        $('#order_add_time_end').intimidatetime({format:'yyyy-MM-dd'});
+        $.zcontent.set('extra',cb_extra);
+      });
+      function cb_extra(result)
+      {
+        if(result === 'success')
+        {
+          $('#order_add_time_start').intimidatetime({format:'yyyy-MM-dd'});
+          $('#order_add_time_end').intimidatetime({format:'yyyy-MM-dd'});
+        }
+      }
+      function search_commission_order()
+      {
+        $.zcontent.set('order_sn',$('#order_sn').val());
+        $.zcontent.set('order_add_time_start',$('#order_add_time_start').val());
+        $.zcontent.set('order_add_time_end',$('#order_add_time_end').val());
+        search();
+        return false;
+      }
+      function change_otype(otype)
+      {
+        $.zcontent.set('otype',otype);
+        search();
+      }
+    </script>
+  </head>
+  <body>
+  <div id='container'>
+    {/if}
+    {include file='page_header.htm'}
+    <section>
+      <div class="order_info_con">
+        <div class="stock_query">
+          <p class="edit" id="goods_list" onclick="toggle_search();">{$lang.y_201}<i></i></p>
+        </div>
+      </div>
+      <div class="order_con" id="con_order_manage_2" style="display:none">
+        <div class="order_pd">
+          <div class="order order_t">
+            <form name="" method="" action="" class="order_search" onsubmit='return search_commission_order()'>
+              <table width="100%" border="0">
+                <tr>
+                  <td>
+                    <input type="text" name="order_sn" id='order_sn' class="inputBg" placeholder="{$lang.y_202}" {if $order_sn}value='{$order_sn}'{/if}/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="text" name="order_add_time_start" id='order_add_time_start' class="inputBg" placeholder="{$lang.y_203}" {if $order_add_time_start}value='{$order_add_time_start}'{/if}/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="text" name="order_add_time_end" id='order_add_time_end' class="inputBg" placeholder="{$lang.y_204}" {if $order_add_time_end}value='{$order_add_time_end}'{/if}/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="submit" name="" class="button2" value="{$lang.y_101}"/>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="order_info_con order_pd" id="con_order_manage_1">
+        <ul class="rebate_type" style='width:100%;padding:0'>
+          <li {if !$filter.otype || $filter.otype neq 2 }class="curr"{/if} id="type1" style='margin-left:0' onclick="change_otype(0)">{$lang.y_205}</li>
+          <li {if $filter.otype eq 2}class="curr"{/if} id="type2" onclick="change_otype('2')">{$lang.y_206}</li>
+        </ul>
+        <div class="order_base">
+          <p class="edit"><span>{$lang.y_207}</span></p>
+          <div class="base_info base_info_search">
+            <p class="first">{$lang.y_208}{$rebate.sign}</p>
+            <p>{$lang.y_209}{$rebate.rebate_paytime_start}-{$rebate.rebate_paytime_end}</p>
+          </div>
+        </div>
+        <div class="order_base" >
+          <p class="edit"><span>{$lang.y_210}</span></p>
+          <div class="base_info base_info_search">
+            <table width="100%" >
+              {foreach from=$money_info item=money key=key}
+              <tr>
+                <td align="left" width='33%'>{if $key eq 'online'}{$lang.y_211}{else}{$lang.y_212}{/if}{$money.allmoney}</td>
+                <td align='left' width='33%'>{$lang.y_213}{$money.supplier_rebate}%</td>
+                <td align="left" width='33%'>{$lang.y_214}{$money.rebatemoney}</td>
+              </tr>
+              {/foreach}
+            </table>
+          </div>
+        </div>
+        {if $filter.otype eq 2}
+        <div class="order_base" >
+          <p class="edit"><span>{$lang.y_215}</span></p>
+          <div class="base_info base_info_search">
+            <table width="100%" cellpadding="3" cellspacing="1">
+              <tr>
+                <td>{$lang.y_216}{$back_money.all}（{$lang.y_211}{$back_money.online}, {$lang.y_217}{$back_money.onout}）
+                <td>{$lang.y_218}{$back_money.finish}</td>
+                <td>{$lang.y_219}{$back_money.nofinish}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        {/if}
+        <div class="order_base"  id="con_type_1">
+          <div class="order">
+            <p class="edit"><span>{$lang.y_220}</span></p>
+            <ul class="order_list">
+              {if !$filter.otype || $filter.otype neq 2 }
+              {foreach from=$order_list item=order key=okey}
+              <li>
+                <table width="100%" cellpadding="3" cellspacing="1">
+                  <tr>
+                    <td align='left' width='50%'>{$lang.y_221}{$order.order_sn}</td>
+                    <td align='left' width='50%'>{$lang.y_133}{$order.short_order_time}</td>
+                  </tr>
+                  <tr>
+                    <td align='left' width='50%'>{$lang.y_222}{$order.order_sn}</td>
+                    <td align='left' width='50%'>{$lang.y_223}{$order.total_fee}</td>
+                  </tr>
+                  <tr>
+                    <td align='left' width='50%'>{$lang.y_224}{$order.formated_rebate_fee}</td>
+                    <td align='left' width='50%'>{$lang.y_184}{$lang.os[$order.order_status]},{$lang.ps[$order.pay_status]},{$lang.ss[$order.shipping_status]}</td>
+                  </tr>
+                  <tr>
+                    <td align='left' width='50%'>&nbsp;</td>
+                    <td align='right' width='50%'><a href="order.php?act=info&order_id={$order.order_id}">{$lang.y_225}</td>
+                  </tr>
+                </table>
+              </li>
+              {foreachelse}
+              <li>
+                <table width="100%" cellpadding="3" cellspacing="1">
+                  <tr>
+                    <td align='center' width='100%'>{$lang.y_226}</td>
+                  </tr>
+                </table>
+              </li>
+              {/foreach}
+              {elseif $filter.otype eq 2}
+              {foreach from=$order_list item=order key=okey}
+              <li>
+                <table width="100%" cellpadding="3" cellspacing="1">
+                  <tr>
+                    <td align='left' width='50%'>{$lang.y_221}{$order.order_sn}</td>
+                    <td align='left' width='50%'>{$lang.y_133}{$order.short_order_time}</td>
+                  </tr>
+                  <tr>
+                    <td align='left' width='50%'>{$lang.y_227}{$order.order_sn}</td>
+                    <td align='left' width='50%'>{$lang.y_223}{$order.total_fee}</td>
+                  </tr>
+                  <tr>
+                    <td align='left' width='50%'>{$lang.y_184}{$lang.os[$order.order_status]},{$lang.ps[$order.pay_status]},{$lang.ss[$order.shipping_status]}</td>
+                    <td align='right' width='50%' style="border:1px red solid"><a href="order.php?act=info&order_id={$order.order_id}">{$lang.y_225}</td>
+                  </tr>
+                </table>
+              </li>
+              {foreachelse}
+              <li>
+                <table width="100%" cellpadding="3" cellspacing="1">
+                  <tr>
+                    <td align='center' width='100%'>{$lang.y_226}</td>
+                  </tr>
+                </table>
+              </li>
+              {/foreach}
+              {/if}
+            </ul>
+          </div>
+          {include file='page.htm'}
+        </div>
+      </div>
+    </section>
+    {include file='page_footer.htm'}
+    {if $full_page eq 1}
+    </div>
+    {include file='static_div.htm'}
+  </body>
+</html>
+{/if}
