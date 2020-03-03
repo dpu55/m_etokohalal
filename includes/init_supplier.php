@@ -25,6 +25,10 @@ if (__FILE__ == '')
     die('Fatal error code: 0');
 }
 
+// added by wandi
+$img_url = 'https://test.etokohalal.com/';
+
+
 /* 取得当前ecshop所在的根目录 */
 define('ROOT_PATH', str_replace('includes/init_supplier.php', '', str_replace('\\', '/', __FILE__)));
 
@@ -53,7 +57,7 @@ else
     @ini_set('include_path', '.:' . ROOT_PATH);
 }
 
-require(ROOT_PATH . '/../data/config.php');
+require(ROOT_PATH . '/data/config.php');
 
 if (defined('DEBUG_MODE') == false)
 {
@@ -229,6 +233,8 @@ if (!defined('INIT_NO_SMARTY'))
     $smarty->assign('lang', $_LANG);
     $smarty->assign('ecs_charset', EC_CHARSET);
     $smarty->assign('template_dir',$_CFG['template']);
+    $smarty->assign('img_url',$img_url);
+    
     if (!empty($_CFG['stylename']))
     {
         $smarty->assign('ecs_css_path', 'themesmobile/' . $_CFG['template'] . '/style_' . $_CFG['stylename'] . '.css');
