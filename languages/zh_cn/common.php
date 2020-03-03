@@ -1400,6 +1400,7 @@ $_LANG['a_5'] = 'Kecepatan logistik';
 $_LANG['a_6'] = 'Cari produk kami';
 $_LANG['m_f_738'] = 'Sikap pelayanan';
 
+
 // Added by wandi
 $_LANG['err_0001'] = 'Maaf Tidak ditemukan, silakan pilih yang lain.';
 $_LANG['err_tracking'] = 'Data tidak tersedia.';

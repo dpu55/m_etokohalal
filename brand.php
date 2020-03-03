@@ -270,8 +270,8 @@ function brand_recommend_goods($type, $brand, $cat = 0)
             $goods[$idx]['market_price'] = price_format($row['market_price']);
             $goods[$idx]['shop_price']   = price_format($row['shop_price']);
 			//yyy修改start
-            $goods[$idx]['thumb']        = '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-            $goods[$idx]['goods_img']    = '../'.get_image_path($row['goods_id'], $row['goods_img']);
+            $goods[$idx]['thumb']        = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+            $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
 			//yyy修改end
             $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
 
@@ -367,8 +367,8 @@ function brand_get_goods($brand_id, $cate, $size, $page, $sort, $order, $limit='
         $arr[$row['goods_id']]['promote_price'] = ($promote_price > 0) ? price_format($promote_price) : '';
         $arr[$row['goods_id']]['goods_brief']   = $row['goods_brief'];
 		//yyy修改start
-        $arr[$row['goods_id']]['goods_thumb']   = '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-        $arr[$row['goods_id']]['goods_img']     = '../'.get_image_path($row['goods_id'], $row['goods_img']);
+        $arr[$row['goods_id']]['goods_thumb']   = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $arr[$row['goods_id']]['goods_img']     = get_image_path($row['goods_id'], $row['goods_img']);
 		$arr[$row['goods_id']]['is_best']          = $row['is_best'];
 		$arr[$row['goods_id']]['is_hot']           = $row['is_hot'];
 		$arr[$row['goods_id']]['is_new']           = $row['is_new'];

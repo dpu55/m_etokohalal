@@ -28,8 +28,12 @@
 <header class="header">
   <div class="tab_nav">
     <div class="header">
-      <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}"><i class="fa fa-chevron-left"></i></a></div>
-      <div class="h-mid">{$lang.m_414}</div>
+      <div class="h-left">
+        <a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}">
+        <!-- <i class="fa fa-chevron-left"></i> -->
+        </a>
+      </div>
+      <div class="h-mid">{$lang.brand_name}</div>
       <div class="h-right">
         <aside class="top_bar">
           <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
@@ -43,7 +47,7 @@
 
 <!-- 商品品牌广告图片 start--> 
 {foreach from=$brand_list item=brand_data name=brand_list_foreach}
-    	{if $brand_data.brand_img}
+      {if $brand_data.brand_img}
 <div class="u-brand"><!--品牌1-->
   <div class="p-relative"> <a href="{$brand_data.url}"> <img src="{$img_url}{$brand_data.brand_img}"> </a></div>
   <div class="u-brand-msg e-border-b clearfix">
@@ -68,7 +72,7 @@
     <?php
 $child_cat_index = $child_cat_index +1;
 $GLOBALS['smarty']->assign('child_cat_index', $child_cat_index);
-	?>
+  ?>
     <a href="{$brand_data.url}" {if $child_cat_index%4 neq 0}class="brandLink"{else}class="brandRightLink"{/if}> <img src="{$brand_data.brand_logo}" alt="{$brand_data.brand_name}" width="100%"> </a> {/if}
     {/foreach} </div>
   <?php
@@ -80,7 +84,7 @@ $GLOBALS['smarty']->assign('child_cat_index', $child_cat_index);
     <?php
 $child_cat_index = $child_cat_index1 +1;
 $GLOBALS['smarty']->assign('child_cat_index1', $child_cat_index);
-	?>
+  ?>
     <a href="{$brand_data.url}" {if $child_cat_index1%4 neq 0}class="brandLink"{else}class="brandRightLink"{/if}>{$brand_data.brand_name}</a> {/if}
     {/foreach} </div>
 </div>
@@ -88,7 +92,7 @@ $GLOBALS['smarty']->assign('child_cat_index1', $child_cat_index);
 <!---返回顶部-->
 <script>
 function goTop(){
-	$('html,body').animate({'scrollTop':0},600);
+  $('html,body').animate({'scrollTop':0},600);
 }
 </script>
 <a href="javascript:goTop();" class="gotop"><i class="fa fa-chevron-up"></i></a> 
