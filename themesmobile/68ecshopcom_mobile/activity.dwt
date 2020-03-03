@@ -27,7 +27,7 @@
 
 {insert_scripts files='common.js,}
 </head>
-<body class="eth_v1_mobile page-stores"  style="background:#f4f2f3>
+<body class="eth_v1_mobile page-stores"  style="background:#f4f2f3">
   <header>
   <div class="tab_nav">
     <div class="header">

@@ -3269,3 +3269,25 @@
   padding: 0 auto;
   background-color: #ffffff;
 }
+
+.img-box-groupby {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 69%;
+  text-align: center;
+}
+
+.B_eee {
+  margin: 0 auto;
+}
+
+.desc-price {
+  text-align: center;
+  line-height: 21px;
+}
+
+.extend {
+  line-height: 22px;
+  height: 76px;
+}

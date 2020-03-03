@@ -14,8 +14,20 @@
 {insert_scripts files='jquery.json.js,transport.js'}
 <script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/touchslider.dev.js"></script>
 {insert_scripts files='common.js'}
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<!--/Font Awesome-->
+<!--Custom CSS -->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
+<!--/Custom CSS -->
+
 </head>
-<body style="background: rgb(255, 255, 255);">
+<!-- <body style="background: rgb(255, 255, 255);"> -->
+<body class="eth_v1_mobile page-stores"  style="background:#f4f2f3">
 <script type="text/javascript">
         /*µÚÒ»ÖÖÐÎÊ½ µÚ¶þÖÖÐÎÊ½ ¸ü»»ÏÔÊ¾ÑùÊ½*/
         function setGoodsTab(name,cursel,n){
@@ -64,8 +76,7 @@
  });
 </script> 
 
-
- <div class="main" id="user_goods_ka_1" style="display:block; ">
+<div class="main" id="user_goods_ka_1" style="display:block; margin-top: 7px;">
 
 <div id="wrapper" class="xm_app">
   <div id="viewport" class="viewport">
@@ -75,33 +86,33 @@
           <a href="{$gb_goods.url}"><img src="{$img_url}{$gb_goods.goods_img}" alt="{$gb_goods.goods_name|escape:html}"  width="100%"/></a>
         </div>
         <div class="product_info">
-          <div class="info info_right">
+          <div class="info info_right extend">
             <h3 class="name">{$group_buy.goods_name|escape:html}</h3>
           </div>
      <span class="price" >{$group_buy.formated_cur_price}</span>
      <div class="group_details newclass">
       <!-- {if $cfg.show_goodssn && 0} -->
-      {$lang.goods_sn} {$gb_goods.goods_sn}<br>
+      <p>{$lang.goods_sn} {$gb_goods.goods_sn}</p>
       <!-- {/if} -->
       <!-- {if $cfg.goods.brand_name && $show_brand && 0} -->
-      {$lang.goods_brand} {$gb_goods.brand_name}<br>
+      <p>{$lang.goods_brand} {$gb_goods.brand_name}</p>
       <!--{/if}-->
       <!-- {if $cfg.show_goodsweight && 0} -->
-      {$lang.goods_weight} {$gb_goods.goods_weight}<br>
+      <p>{$lang.goods_weight} {$gb_goods.goods_weight}</p>
       <!-- {/if} -->
-        {$lang.act_time} : {$group_buy.formated_start_date} -- {$group_buy.formated_end_date}<br>
+        <p style="line-height: 20px;">{$lang.act_time} : <br/>{$group_buy.formated_start_date} -- {$group_buy.formated_end_date}</p>
     <!-- {if $group_buy.deposit > 0} ±£Ö¤½ð¶î-->
-      {$lang.gb_deposit} {$group_buy.formated_deposit}<br />
+      <p>{$lang.gb_deposit} {$group_buy.formated_deposit}</p>
       <!--{/if}-->
 
       <!--{if $group_buy.restrict_amount > 0} ÏÞ¹ºÊýÁ¿-->
-      {$lang.gb_restrict_amount} {$group_buy.restrict_amount}<br />
+      <p>{$lang.gb_restrict_amount} {$group_buy.restrict_amount}</p>
       <!--{/if}-->
 
       <!--{if $group_buy.gift_integral > 0} ËÍ»ý·Ö-->
-      {$lang.gb_gift_integral} {$group_buy.gift_integral}<br />
+      <p>{$lang.gb_gift_integral} {$group_buy.gift_integral}</p>
       <!--{/if}-->
-		{insert_scripts files='lefttime.js'}
+    {insert_scripts files='lefttime.js'}
       <!-- {if $group_buy.status eq 0} Î´¿ªÊ¼ -->
       {$lang.gbs_pre_start}
       <!-- {elseif $group_buy.status eq 1} ½øÐÐÖÐ -->
@@ -156,7 +167,7 @@
                                 </div>
                                 {/foreach}
                                 {/if}
-      		</div>
+          </div>
            <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
               <!-- {if $smarty.session.user_id > 0} Èç¹ûµÇÂ¼ÁË£¬ÏÔÊ¾¹ºÂò°´Å¥ -->
               <tr>
@@ -180,43 +191,43 @@
 <section class="s-buy open ui-section-box" id="search_ka">
     <div class="fields">
               <script type="text/jscript">
-			  function click_search (){
-				  var search_ka = document.getElementById("search_ka");
-				  if (search_ka.className == "s-buy open ui-section-box"){
-					  search_ka.className = "s-buy ui-section-box";
-					  }else {
-						  search_ka.className = "s-buy open ui-section-box";
-						  }
-				  }
-				function changeAtt(t) {
-				t.lastChild.checked='checked';
-				for (var i = 0; i<t.parentNode.childNodes.length;i++) {
-						if (t.parentNode.childNodes[i].className == 'hover') {
-							t.parentNode.childNodes[i].className = '';
-							t.childNodes[0].checked="checked";
-						}
-					}
-				t.className = "hover";
-				changePrice();
-				}
-				function changeAtt1(t) {
-				t.lastChild.checked='checked';
-				for (var i = 0; i<t.parentNode.childNodes.length;i++) {
-						if (t.className == 'hover') {
-							t.className = '';
-							t.childNodes[0].checked = false;
-						}
-						else{
-							t.className="hover";
-							t.childNodes[0].checked = true;
-						}
-						
-					
-				}
-				
-				changePrice();
-				}
-				</script>
+        function click_search (){
+          var search_ka = document.getElementById("search_ka");
+          if (search_ka.className == "s-buy open ui-section-box"){
+            search_ka.className = "s-buy ui-section-box";
+            }else {
+              search_ka.className = "s-buy open ui-section-box";
+              }
+          }
+        function changeAtt(t) {
+        t.lastChild.checked='checked';
+        for (var i = 0; i<t.parentNode.childNodes.length;i++) {
+            if (t.parentNode.childNodes[i].className == 'hover') {
+              t.parentNode.childNodes[i].className = '';
+              t.childNodes[0].checked="checked";
+            }
+          }
+        t.className = "hover";
+        changePrice();
+        }
+        function changeAtt1(t) {
+        t.lastChild.checked='checked';
+        for (var i = 0; i<t.parentNode.childNodes.length;i++) {
+            if (t.className == 'hover') {
+              t.className = '';
+              t.childNodes[0].checked = false;
+            }
+            else{
+              t.className="hover";
+              t.childNodes[0].checked = true;
+            }
+            
+          
+        }
+        
+        changePrice();
+        }
+        </script>
     </div>
     
 </section>
@@ -239,9 +250,7 @@
       </section>
     </div>
     <div id="productViewWeixinTip" class="weixin_share_tip"></div>
-    
-    <!-- #BeginLibraryItem "/library/page_footer.lbi" -->    
-    <!-- #EndLibraryItem -->    
+       
 
   <!-- #BeginLibraryItem "/library/footer_nav.lbi" -->
   <!-- #EndLibraryItem -->
