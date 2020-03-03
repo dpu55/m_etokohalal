@@ -3259,3 +3259,13 @@
   background-color: #ffcc00;
   color: white;
 } 
+
+/* added by wandi */
+.actvity_box {
+  width: 87%;
+  border: 1px solid #c1c3c9;
+  border-radius: 8px;
+  padding: 7px;
+  padding: 0 auto;
+  background-color: #ffffff;
+}

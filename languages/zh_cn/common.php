@@ -1416,3 +1416,5 @@ $_LANG['ship_history'] = 'Histori Pengiriman';
 $_LANG['etd'] = 'Estimasi Pengiriman';
 $_LANG['total_weight'] = 'Total Berat';
 $_LANG['unit_g'] = 'gram';
+$_LANG['new_promo'] = 'Promo Terbaru';
+$_LANG['brand_name'] = 'Merek Ternama';

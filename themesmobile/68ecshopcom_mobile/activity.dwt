@@ -14,30 +14,44 @@
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/activity.css"/>   
 <script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/jquery.js"></script>
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<!--/Font Awesome-->
+<!--Custom CSS -->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
+<!--/Custom CSS -->
+
 {insert_scripts files='common.js,}
 </head>
-<body style="background:#f4f2f3">
-      <!----------------------------------header----------------------------------->
-      <div class="tab_nav">
-        <div class="header">
-          <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}"></a></div>
-          <div class="h-mid">{$lang.new_promo}</div>
-          <div class="h-right">
-            <aside class="top_bar">
-              <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
-            </aside>
-          </div>
-        </div>
+<body class="eth_v1_mobile page-stores"  style="background:#f4f2f3>
+  <header>
+  <div class="tab_nav">
+    <div class="header">
+      <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}">
+        <!-- <i class="fa fa-chevron-left"></i> -->
+      </a></div>
+      <div class="h-mid">{$lang.new_promo}</div>
+      <div class="h-right">
+        <aside class="top_bar">
+          <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+        </aside>
       </div>
-       	<!-- #BeginLibraryItem "/library/up_menu.lbi" --><!-- #EndLibraryItem --> <!--弹出菜单-->
+    </div>
+  </div>
+  </header>
+  <!-- #BeginLibraryItem "/library/up_menu.lbi" --><!-- #EndLibraryItem --> <!--弹出菜单-->
         
 
 <div style=" width:100%; height:30px;"></div>
    <!-- {foreach from=$list item=val} -->
    <div class="huodong">
-  <div class="huodong_mid">
+  <div class="huodong_mid huodong_mid_box">
   <div class="h_left">{$lang.m_381}</div>
-  <div class="h_right">
+  <div class="h_right actvity_box">
   <p><img src="themesmobile/68ecshopcom_mobile/images/youhui.png">{$val.act_name|truncate:14}</p>
    <div class="img"><img src="{if $val.supplier_id >0}{$img_url}{else}{$img_url}{/if}{$val.logo|default:images/ceshi.jpg}" width="100%" />
    <span>{$val.start_time}~{$val.end_time}</span>
@@ -69,7 +83,7 @@
      <h4><em>|</em>&nbsp;{$lang.m_502}</h4>
       <!-- {foreach from=$val.gift item=goods} -->
       <dl>
-      <dt><a href="goods.php?id={$goods.id}"><img src="../../{$goods.thumb}" alt="{$goods.name}" /></a></dt>
+      <dt><a href="goods.php?id={$goods.id}"><img src="{$img_url}{$goods.thumb}" alt="{$goods.name}" /></a></dt>
       <dd><a href="goods.php?id={$goods.id}" class="f6">{$goods.name|truncate:30}</a>
            <strong> <!-- {if $goods.price > 0} -->
             {$lang.m_682}{$goods.price}{$lang.unit_yuan}
