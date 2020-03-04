@@ -7721,10 +7721,12 @@ function action_collect()
 		if($GLOBALS['db']->GetOne($sql) > 0)
 
 		{
+			$sql = "DELETE FROM " . $GLOBALS['ecs']->table('collect_goods') . " WHERE user_id='$_SESSION[user_id]' AND goods_id = '$goods_id'";
+			$GLOBALS['db']->query($sql);
 
 			$result['error'] = 1;
 
-			$result['message'] = $GLOBALS['_LANG']['collect_existed'];
+			$result['message'] = $GLOBALS['_LANG']['collect_deleted'];
 
 			die($json->encode($result));
 

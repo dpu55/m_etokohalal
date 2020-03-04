@@ -157,6 +157,7 @@ $_LANG['comment_num'] = "Ulasan Pengguna %d Catatan";
 $_LANG['login_please'] = 'Karena Anda belum masuk, Anda tidak akan dapat menggunakan fitur ini.';
 $_LANG['collect_existed'] = 'Item ini sudah ada di favorit Anda.';
 $_LANG['collect_success'] = 'Item ini telah berhasil ditambahkan ke favorit Anda.';
+$_LANG['collect_deleted'] = 'Item ini berhasil dihapus dari favorit Anda.';
 $_LANG['copyright'] = "&copy; %s %s";
 $_LANG['no_ads_id'] = 'Tidak ada ID dari iklan yang ditentukan dan URL lompatan!';
 $_LANG['remove_collection_confirm'] = 'Apakah Anda yakin ingin menghapus item yang dipilih dari favorit Anda?';

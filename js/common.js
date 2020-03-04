@@ -383,11 +383,16 @@ function collect(goodsId)
  */
 
 function collectResponse(result)
-
 {
+  var element = document.getElementById("heart");
+
+  if(result.error == '0') {
+    element.classList.add("favorited");
+  }else if(result.error == '1') {
+    element.classList.remove("favorited");
+  }
 
   alert(result.message);
-
 }
 
 

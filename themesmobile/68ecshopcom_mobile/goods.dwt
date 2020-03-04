@@ -585,8 +585,11 @@ function goTop(){
 <!-- <li><a href="javascript:collect({$goods.goods_id})" id="favorite_add"><em class="goods_nav3"></em><span>{$lang.btn_collect}</span></a></li>-->
   <li>
   	<a href="javascript:collect({$goods.goods_id})" id="favorite_add">
-  		<i class="fa fa-heart"></i>
-<!--  		<span>{$lang.btn_collect}</span>-->
+  		<!-- {if $is_favorit eq 0} -->
+  		<i class="fa fa-heart" id="heart"></i>
+  		<!-- {else} -->
+  		<i class="fa fa-heart favorited" id="heart"></i>
+  		<!-- {/if} -->
   	</a>
   </li>
  </ul>

@@ -791,7 +791,8 @@
 }
 
 .eth_v1_mobile.page-goods .footer_nav ul li:nth-child(3) a i {
-  color: red;
+  /*color: red;*/
+  color: #828385;
 }
 
 .eth_v1_mobile.page-goods .footer_nav ul li a:first-child {
@@ -3291,3 +3292,8 @@
   line-height: 22px;
   height: 76px;
 }
+
+.favorited {
+  color: red ! important;
+}
+/*end wandi*/
