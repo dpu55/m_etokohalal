@@ -3142,7 +3142,8 @@
 }
 
 .eth_v1_mobile.page-user-transaction .Personal .innercontent1 .name span {
-  width: 110px;
+  /*width: 110px;*/
+  width: 32%;
   color: #a0a3ac;
 }
 

@@ -56,7 +56,7 @@
        <div class="sd_img">
         <dl id="gallery">
         {foreach from=$shaidan.shaidan_img item=shaidan_img}
-            <dd><a href="./../{$shaidan_img.image}">
+            <dd><a href="{$img_url}{$shaidan_img.image}">
                <img src="{$img_url}{$shaidan_img.thumb}">
             </a></dd>
     {/foreach}
