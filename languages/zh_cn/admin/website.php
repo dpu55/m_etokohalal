@@ -4,16 +4,16 @@
 /*
 **/
 
-$_LANG['website_name'] = 'Plugin name';
+$_LANG['website_name'] = 'Plug-in name';
 $_LANG['website_qq'] = 'Author QQ';
-$_LANG['website_author'] = 'Author';
-$_LANG['website_email'] = 'Email';
+$_LANG['website_author'] = 'author';
+$_LANG['website_email'] = 'E-mail address';
 $_LANG['ur_here'] = 'Third party login plug-in';
 $_LANG['ur_view']  =  'View third-party plug-ins';
 $_LANG['ur_install'] =  'Install third-party plug-ins';
 $_LANG['webstte_list'] = 'Plugin list';
 $_LANG['user_rank'] = 'User level name';
-$_LANG['yes_install'] = 'Installation is complete';
+$_LANG['yes_install'] = 'installation is complete';
 $_LANG['yes_update'] = 'Successful modification of plug-in';
 $_LANG['version'] = 'Edition';
 
@@ -36,11 +36,11 @@ $_LANG['is_show_name'] = 'Display login name';
 $_LANG['is_show_title'] = 'Display window title';
 $_LANG['js_languages']['confrim_uninstall'] = 'Are you sure to unload in batches?';
 $_LANG['batch_yes'] = 'Successful batch processing';
-$_LANG['qita'] = 'Other login method';
+$_LANG['qita'] = 'Other login modes';
 
 $_LANG['is_show_help'] = 'Display bubbles';
 $_LANG['is_open'] = 'Pop-up window';
-$_LANG['login'] = 'Login';
+$_LANG['login'] = 'Sign in';
 
 $_LANG['eavl'] = 'Code execution results';
 

@@ -1,31 +1,45 @@
 <?php
+
+/**
+ * 鸿宇多用户商城 虚拟卡管理
+ * ============================================================================
+ * 版权所有 2015-2018 鸿宇多用户商城科技有限公司，并保留所有权利。
+ * 网站地址: http://bbs.hongyuvip.com;
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 踏踏实实做事，堂堂正正做人。
+ * ============================================================================
+ * $Author: derek $
+ * $Id: virtual_card.php 17217 2016-01-19 06:29:08Z derek $
+*/
+
 /*------------------------------------------------------ */
 //-- 卡片信息
 /*------------------------------------------------------ */
-$_LANG['virtual_card_list'] = 'Virtual product list';
-$_LANG['lab_goods_name'] = 'Product name';
+$_LANG['virtual_card_list'] = 'Virtual goods list';
+$_LANG['lab_goods_name'] = 'product name';
 $_LANG['replenish'] = 'Replenishment';
-$_LANG['lab_card_id'] = 'ID';
+$_LANG['lab_card_id'] = 'Numbering';
 $_LANG['lab_card_sn'] = 'Card serial number';
 $_LANG['lab_card_password'] = 'Card password';
 $_LANG['lab_end_date'] = 'As of date of use';
 $_LANG['lab_is_saled'] = 'Has it been sold?';
-$_LANG['lab_order_sn'] = 'Order ID';
+$_LANG['lab_order_sn'] = 'order number';
 $_LANG['action_success'] = 'Successful operation';
-$_LANG['action_fail'] = 'Operation failed';
+$_LANG['action_fail'] = 'operation failed';
 $_LANG['card'] = 'Card list';
 
 $_LANG['batch_card_add'] = 'Bulk replenishment';
 $_LANG['download_file'] = 'Download batch CSV files';
 $_LANG['separator'] = 'Separator';
 $_LANG['uploadfile'] = 'Upload files';
-$_LANG['sql_error'] = 'Error in message %s: <br/> ';
+$_LANG['sql_error'] = 'Error in message %s ：<br /> ';
 
 /* 提示信息 */
 $_LANG['replenish_no_goods_id'] = 'Missing item ID parameter, unable to replenish operation';
 $_LANG['replenish_no_get_goods_name'] = 'The product ID parameter is incorrect, and the product name cannot be obtained.';
 $_LANG['drop_card_success'] = 'The record has been successfully deleted';
-$_LANG['batch_drop'] = 'Batch deletion';
+$_LANG['batch_drop'] = 'batch deletion';
 $_LANG['drop_card_confirm'] = 'Are you sure you want to delete this record?';
 $_LANG['card_sn_exist'] = 'Card serial number %s already exists, please re-enter';
 $_LANG['go_list'] = 'Return to the replenishment list';

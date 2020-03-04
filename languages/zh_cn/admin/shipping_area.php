@@ -1,9 +1,23 @@
 <?php
+
+/**
+ * 鸿宇多用户商城 管理中心配送方式管理语言文件
+ * ============================================================================
+ * 版权所有 2015-2018 鸿宇多用户商城科技有限公司，并保留所有权利。
+ * 网站地址: http://bbs.hongyuvip.com;
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 踏踏实实做事，堂堂正正做人。
+ * ============================================================================
+ * $Author: derek $
+ * $Id: shipping_area.php 17217 2016-01-19 06:29:08Z derek $
+*/
+
 $_LANG['shipping_area_name'] = 'Delivery area name';
 $_LANG['shipping_area_districts'] = 'Area list';
 $_LANG['shipping_area_regions'] = 'Area under its jurisdiction';
 $_LANG['shipping_area_assign'] = 'Delivery Method';
-$_LANG['area_region'] = 'Area';
+$_LANG['area_region'] = 'area';
 $_LANG['area_shipping'] = 'Delivery Method';
 $_LANG['fee_compute_mode'] = 'Cost calculation method';
 $_LANG['fee_by_weight'] = 'By weight';
@@ -17,12 +31,12 @@ $_LANG['label_district'] = 'District/county：';
 $_LANG['delete_selected'] = 'Remove selected shipping area';
 $_LANG['btn_add_region'] = 'Add selected area';
 $_LANG['free_money'] = 'Free quota:';
-$_LANG['pay_fee'] = 'Payment on delivery:';
-$_LANG['edit_area'] = 'Edit Distribution Area';
+$_LANG['pay_fee'] = 'Cash on delivery payment：';
+$_LANG['edit_area'] = 'Edit delivery area';
 
-$_LANG['add_continue'] = 'Continue to add distribution areas';
-$_LANG['back_list'] = 'Return to List Page';
-$_LANG['empty_regions'] = 'There are no associated areas in the current region.';
+$_LANG['add_continue'] = 'Continue to add shipping areas';
+$_LANG['back_list'] = 'Return to list page';
+$_LANG['empty_regions'] = 'There are no associated regions under the current region.';
 
 /* 提示信息 */
 $_LANG['repeat_area_name'] = 'There is already a delivery area with the same name.';
@@ -44,7 +58,7 @@ $_LANG['js_languages']['lang_remove_confirm'] = 'Are you sure you want to remove
 $_LANG['js_languages']['lang_disabled'] = 'Disable';
 $_LANG['js_languages']['lang_enabled'] = 'Enable';
 $_LANG['js_languages']['lang_setup'] = 'Setting';
-$_LANG['js_languages']['lang_region'] = 'Area';
+$_LANG['js_languages']['lang_region'] = 'area';
 $_LANG['js_languages']['lang_shipping'] = 'Delivery Method';
 $_LANG['js_languages']['region_exists'] = 'The selected area already exists.';
 ?>

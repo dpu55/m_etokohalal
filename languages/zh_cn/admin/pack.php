@@ -1,11 +1,25 @@
 <?php
-$_LANG['pack_name'] = 'Name of product package';
-$_LANG['pack_fee'] = 'Fee';
-$_LANG['free_money'] = 'Free quota';
-$_LANG['pack_img'] = 'Package drawings';
-$_LANG['pack_desc'] = 'Package description';
 
-$_LANG['pack_edit'] = 'Edit';
+/**
+ * 鸿宇多用户商城 包装管理语言项
+ * ============================================================================
+ * 版权所有 2015-2018 鸿宇多用户商城科技有限公司，并保留所有权利。
+ * 网站地址: http://bbs.hongyuvip.com;
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 踏踏实实做事，堂堂正正做人。
+ * ============================================================================
+ * $Author: derek $
+ * $Id: pack.php 17217 2016-01-19 06:29:08Z derek $
+*/
+
+$_LANG['pack_name'] = 'Name of commodity packaging';
+$_LANG['pack_fee'] = 'Cost';
+$_LANG['free_money'] = 'Free Quota';
+$_LANG['pack_img'] = 'Packaging drawings';
+$_LANG['pack_desc'] = 'Packaging description';
+
+$_LANG['pack_edit'] = 'Editor packaging';
 
 $_LANG['drop_pack_img'] = 'Delete packing drawings';
 $_LANG['confirm_pack_img'] = 'Are you sure you want to delete the greeting card drawings?';
@@ -16,7 +30,7 @@ $_LANG['pack_list_lnk'] = 'Return to List Page';
 
 /*帮助信息*/
 $_LANG['notice_packfee'] = 'The cost of using this package is set to zero free of charge.';
-$_LANG['notice_freemoney'] = 'When the users consumption exceeds this value, the package will be used free of charge. Setting <br/> to 0 indicates that packing charges must be paid';
+$_LANG['notice_freemoney'] = 'When the user\'s consumption exceeds this value, the package will be used free of charge. Setting < br /> to 0 indicates that packing charges must be paid';
 
 $_LANG['warn_packimg'] = 'You have uploaded pictures. The original image will be overwritten when uploaded again';
 

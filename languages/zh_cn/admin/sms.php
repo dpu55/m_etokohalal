@@ -1,23 +1,37 @@
 <?php
+/**
+ * 鸿宇多用户商城 短信模块语言文件
+ * ============================================================================
+ * 版权所有 2015-2018 鸿宇多用户商城科技有限公司，并保留所有权利。
+ * 网站地址: http://bbs.hongyuvip.com;
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 踏踏实实做事，堂堂正正做人。
+ * ============================================================================
+ * $Author: derek $
+ * $Id: sms.php 17217 2016-01-19 06:29:08Z derek $
+*/
+
+/* 导航条 */
 $_LANG['register_sms'] = 'Register or enable SMS accounts';
 
 /* 注册和启用短信功能 */
-$_LANG['email'] = 'Email';
-$_LANG['password'] = 'Password';
-$_LANG['domain'] = 'Domain';
+$_LANG['email'] = 'Mail box';
+$_LANG['password'] = 'Login password';
+$_LANG['domain'] = 'Shop domain name';
 $_LANG['register_new'] = 'Register a new account';
-$_LANG['error_tips'] = 'Please set up the Shop -> Short Message Settings. Register the Short Message Service first and configure the Short Message Service correctly!';
+$_LANG['error_tips'] = 'Please set up the Shop - > Short Message Settings. Register the Short Message Service first and configure the Short Message Service correctly!';
 $_LANG['enable_old'] = 'Enabling existing accounts';
 
 /* 短信特服信息 */
-$_LANG['sms_user_name'] = 'User name:';
-$_LANG['sms_password'] = 'Password:';
-$_LANG['sms_domain'] = 'Domain:';
-$_LANG['sms_num'] = 'Short message service number:';
-$_LANG['sms_count'] = 'Number of messages sent:';
-$_LANG['sms_total_money'] = 'Total impulse value:';
-$_LANG['sms_balance'] = 'Balance:';
-$_LANG['sms_last_request'] = 'Last request time:';
+$_LANG['sms_user_name'] = 'User name：';
+$_LANG['sms_password'] = 'Password：';
+$_LANG['sms_domain'] = 'domain name：';
+$_LANG['sms_num'] = 'Short Message Service Number：';
+$_LANG['sms_count'] = 'Number of messages sent：';
+$_LANG['sms_total_money'] = 'Total impulse value：';
+$_LANG['sms_balance'] = 'balance：';
+$_LANG['sms_last_request'] = 'Last request time：';
 $_LANG['disable'] = 'Cancellation of short message service';
 
 /* 发送短信 */
@@ -25,19 +39,19 @@ $_LANG['phone'] = 'Receive mobile phone number';
 $_LANG['user_rand'] = 'Sending Short Messages at User Level';
 $_LANG['phone_notice'] = 'Multiple cell phone numbers are separated by half-horn commas';
 $_LANG['msg'] = 'Message content';
-$_LANG['msg_notice'] = 'The longest 67 characters, the signature has been defaulted, do not need to add a signature.(If no signature click is set <a href="sms.php?act=sms_sign">setup</a>)';
+$_LANG['msg_notice'] = 'The longest 67 characters, the signature has been defaulted, do not need to add a signature.（If no signature click is set <a href="sms.php?act=sms_sign">setup</a>）';
 $_LANG['send_date'] = 'Timed Delivery Time';
-$_LANG['send_date_notice'] = 'The format is YYYY-MM-DD HH:ii. Null means send immediately.';
+$_LANG['send_date_notice'] = 'Format isYYYY-MM-DD HH:II。Null means send immediately.';
 $_LANG['back_send_history'] = 'Returns the Send History List';
 $_LANG['back_charge_history'] = 'Returns a recharge history list';
 
 /* 记录查询界面 */
 $_LANG['start_date'] = 'Start date';
-$_LANG['date_notice'] = 'The format is YYYY-MM-DD. It can be empty.';
+$_LANG['date_notice'] = 'Format is YYYY-MM-DD。It can be empty.';
 $_LANG['end_date'] = 'End date';
 $_LANG['page_size'] = 'Number of pages displayed';
 $_LANG['page_size_notice'] = 'Can be empty, indicating that 20 records are displayed per page';
-$_LANG['page'] = 'pages';
+$_LANG['page'] = 'page';
 $_LANG['page_notice'] = 'Can be empty, showing 1 page';
 $_LANG['charge'] = 'Please enter the amount you want to recharge.';
 
@@ -56,24 +70,24 @@ $_LANG['error_msg'] = 'Wrong description';
 $_LANG['empty_info'] = 'Your SMS service information is empty.';
 
 /* 充值记录 */
-$_LANG['order_id'] = 'Order Id';
+$_LANG['order_id'] = 'Order number';
 $_LANG['money'] = 'Recharge amount';
 $_LANG['log_date'] = 'Recharge date';
 
 /* 发送记录 */
 $_LANG['sent_phones'] = 'Send mobile phone number';
-$_LANG['content'] = 'Send content';
+$_LANG['content'] = 'send content';
 $_LANG['charge_num'] = 'Billing count';
 $_LANG['sent_date'] = 'Sending date';
-$_LANG['send_status'] = 'Sending status';
-$_LANG['status'][0] = 'Fail';
+$_LANG['send_status'] = 'Sending State';
+$_LANG['status'][0] = 'fail';
 $_LANG['status'][1] = 'Success';
 $_LANG['user_list'] = 'All members';
 $_LANG['please_select'] = 'Please select membership level';
 
 /* 提示 */
 $_LANG['test_now'] = '<span style="color:red;"></span>';
-$_LANG['msg_price'] = '<span style="color:green;">Rp300 per text message</span>';
+$_LANG['msg_price'] = '<span style="color:green;">0.1 yuan per text message(RMB)</span>';
 
 /* API返回的错误信息 */
 //--注册
@@ -107,7 +121,7 @@ $_LANG['server_errors'][3] = 'The message was sent incorrectly.';//ERROR_INVALID
 $_LANG['server_errors'][4] = 'The inquiry information is incorrect.';//ERROR_INVALID_HISTORY_QUERY
 $_LANG['server_errors'][5] = 'Invalid identity information.';//ERROR_INVALID_PASSPORT
 $_LANG['server_errors'][6] = 'URL wrong.';//ERROR_INVALID_URL
-$_LANG['server_errors'][7] = 'The HTTP response volume is empty.';//ERROR_EMPTY_RESPONSE
+$_LANG['server_errors'][7] = 'HTTPThe response volume is empty.';//ERROR_EMPTY_RESPONSE
 $_LANG['server_errors'][8] = 'Invalid XML file.';//ERROR_INVALID_XML_FILE
 $_LANG['server_errors'][9] = 'Invalid node name.';//ERROR_INVALID_NODE_NAME
 $_LANG['server_errors'][10] = 'Storage failed.';//ERROR_CANT_STORE

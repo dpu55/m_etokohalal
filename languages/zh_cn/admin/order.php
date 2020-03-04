@@ -1,18 +1,32 @@
 <?php
-/* 订单搜索 */
-$_LANG['order_sn'] = 'Order ID';
-$_LANG['consignee'] = 'Penerima';
-$_LANG['all_status'] = 'Status Pesanan';
 
-$_LANG['cs'][OS_UNCONFIRMED] = 'Tunggu Konfirmasi';
-$_LANG['cs'][CS_AWAIT_PAY] = 'Pembayaran Tertahan';
-$_LANG['cs'][CS_AWAIT_SHIP] = 'Tunggu Kirim';
-$_LANG['cs'][CS_FINISHED] = 'Lengkap';
+/**
+ * 鸿宇多用户商城 订单管理语言文件
+ * ============================================================================
+ * 版权所有 2015-2018 鸿宇多用户商城科技有限公司，并保留所有权利。
+ * 网站地址: http://bbs.hongyuvip.com;
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 踏踏实实做事，堂堂正正做人。
+ * ============================================================================
+ * $Author: derek $
+ * $Id: order.php 17217 2016-01-19 06:29:08Z derek $
+ */
+
+/* 订单搜索 */
+$_LANG['order_sn'] = 'Order number';
+$_LANG['consignee'] = 'Consignee';
+$_LANG['all_status'] = 'Order status';
+
+$_LANG['cs'][OS_UNCONFIRMED] = 'To be confirmed';
+$_LANG['cs'][CS_AWAIT_PAY] = 'To be confirmed';
+$_LANG['cs'][CS_AWAIT_SHIP] = 'To be shipped';
+$_LANG['cs'][CS_FINISHED] = 'Completed';
 $_LANG['cs'][PS_PAYING] = 'In payment';
 $_LANG['cs'][OS_CANCELED] = 'Cancel';
-$_LANG['cs'][OS_INVALID] = 'Tidak Lengkap';
-$_LANG['cs'][OS_RETURNED] = 'Produk Dikembalikan';
-$_LANG['cs'][OS_SHIPPED_PART] = 'Pengiriman Terpisah';
+$_LANG['cs'][OS_INVALID] = 'Invalid';
+$_LANG['cs'][OS_RETURNED] = 'Return goods';
+$_LANG['cs'][OS_SHIPPED_PART] = 'Partial shipment';
 
 /* 订单状态 */
 $_LANG['os'][OS_UNCONFIRMED] = 'Unconfirmed';
@@ -27,7 +41,7 @@ $_LANG['ss'][SS_UNSHIPPED] = 'Unshipped';
 $_LANG['ss'][SS_PREPARING] = 'In distribution';
 $_LANG['ss'][SS_SHIPPED] = 'Shipped';
 $_LANG['ss'][SS_RECEIVED] = 'Receipt confirmation';
-$_LANG['ss'][SS_SHIPPED_PART] = 'Shipped (partial goods)';
+$_LANG['ss'][SS_SHIPPED_PART] = 'Shipped(Some commodities)';
 $_LANG['ss'][SS_SHIPPED_ING] = 'Delivery';
 
 $_LANG['ps'][PS_UNPAYED] = 'Unpaid';
@@ -36,9 +50,8 @@ $_LANG['ps'][PS_PAYED] = 'Paid';
 
 $_LANG['ss_admin'][SS_SHIPPED_ING] = 'Shipment in progress (Front Desk Status: Unshipped)';
 /* 订单操作 */
-$_LANG['label_operable_act'] = 'Current executable operation:';
-$_LANG['label_action_note'] = 'Operation notes:';
-$_LANG['label_resi']='Masukkan Nomor Resi:';
+$_LANG['label_operable_act'] = 'Current executable operation：';
+$_LANG['label_action_note'] = 'Operation notes：';
 $_LANG['label_invoice_note'] = 'Shipping notes：';
 $_LANG['label_invoice_no'] = 'Invoice No.：';
 $_LANG['label_cancel_note'] = 'Reasons for cancellation：';
@@ -69,37 +82,37 @@ $_LANG['op_split'] = 'Generating invoices';
 $_LANG['op_to_delivery'] = 'To deliver goods';
 
 /* 订单列表 */
-$_LANG['order_amount'] = 'Pembayaran';
-$_LANG['total_fee'] = 'Total';
-$_LANG['shipping_name'] = 'Metode Pengiriman';
-$_LANG['pay_name'] = 'Metode Pembayaran';
-$_LANG['address'] = 'Alamat';
-$_LANG['order_time'] = 'Waktu ditambahkan';
+$_LANG['order_amount'] = 'Amount payable';
+$_LANG['total_fee'] = 'Total sum';
+$_LANG['shipping_name'] = 'Distribution mode';
+$_LANG['pay_name'] = 'Payment method';
+$_LANG['address'] = 'Address';
+$_LANG['order_time'] = 'Order time';
 $_LANG['detail'] = 'View';
-$_LANG['Telepon'] = 'Telepon';
+$_LANG['phone'] = 'Telephone';
 $_LANG['group_buy'] = '(group buying)';
-$_LANG['error_get_goods_info'] = 'Error in obtaining order product information';
+$_LANG['error_get_goods_info'] = 'Error in obtaining order merchandise information';
 $_LANG['exchange_goods'] = '(Integral Exchange)';
 
 $_LANG['js_languages']['remove_confirm'] = 'Deleting an order clears all information about the order. Are you sure you want to do that?';
 
 /* 订单搜索 */
-$_LANG['label_order_sn'] = 'Order ID:';
-$_LANG['label_all_status'] = 'Status Pesanan:';
-$_LANG['label_user_name'] = 'Purchaser:';
-$_LANG['label_consignee'] = 'Penerima:';
-$_LANG['label_email'] = 'Email';
-$_LANG['label_address'] = 'Alamat:';
-$_LANG['label_zipcode'] = 'Kode Pos:';
-$_LANG['label_tel'] = 'Telepon:';
-$_LANG['label_mobile'] = 'Mobile';
-$_LANG['label_shipping'] = 'Metode Pengiriman:';
-$_LANG['label_payment'] = 'Metode Pembayaran:';
-$_LANG['label_order_status'] = 'Status Pesanan:';
-$_LANG['label_pay_status'] = 'Metode Pembayaran:';
-$_LANG['label_shipping_status'] = 'Status Pengiriman:';
-$_LANG['label_area'] = 'Location:';
-$_LANG['label_time'] = 'Waktu Pemesanan:';
+$_LANG['label_order_sn'] = 'Order NO.：';
+$_LANG['label_all_status'] = 'Order status：';
+$_LANG['label_user_name'] = 'Purchaser：';
+$_LANG['label_consignee'] = 'Receiver：';
+$_LANG['label_email'] = 'E-mail：';
+$_LANG['label_address'] = 'address：';
+$_LANG['label_zipcode'] = 'Zip code：';
+$_LANG['label_tel'] = 'Telephone：';
+$_LANG['label_mobile'] = 'Mobile phone：';
+$_LANG['label_shipping'] = 'Distribution mode：';
+$_LANG['label_payment'] = 'Payment method：';
+$_LANG['label_order_status'] = 'Order status：';
+$_LANG['label_pay_status'] = 'Payment status：';
+$_LANG['label_shipping_status'] = 'Delivery status：';
+$_LANG['label_area'] = 'Location：';
+$_LANG['label_time'] = 'Order time：';
 
 /* 订单详情 */
 $_LANG['prev'] = 'The previous order';
@@ -109,7 +122,7 @@ $_LANG['print_shipping'] = 'Print courier bill';
 $_LANG['print_order_sn'] = 'Order number：';
 $_LANG['print_buy_name'] = 'Purchaser：';
 $_LANG['label_consignee_address'] = 'Purchaser：';
-$_LANG['no_print_shipping'] = 'I am sorry, you have not set up a template for printing courier sheets yet. It cannot be printed.';
+$_LANG['no_print_shipping'] = 'I\'m sorry, you haven\'t set up a template for printing courier sheets yet. It can\'t be printed.';
 $_LANG['suppliers_no'] = 'Do not specify the supplier to handle the store itself';
 $_LANG['restaurant'] = 'Our shop';
 
@@ -138,19 +151,18 @@ $_LANG['label_postscript'] = 'Customer Messages to Businessmen：';
 $_LANG['label_region'] = 'Location：';
 
 $_LANG['label_shop_url'] = 'Website：';
-$_LANG['label_shop_address'] = 'Address：';
+$_LANG['label_shop_address'] = 'address：';
 $_LANG['label_service_phone'] = 'Telephone：';
 $_LANG['label_print_time'] = 'Printing time：';
 
 $_LANG['label_suppliers'] = 'Selection of suppliers：';
 $_LANG['label_agency'] = 'Office：';
-$_LANG['suppliers_name'] = 'Supplier';
+$_LANG['suppliers_name'] = 'supplier';
 
-$_LANG['product_sn'] = 'Product No.';
-$_LANG['goods_info'] = 'Product information';
-$_LANG['goods_name'] = 'Product name';
-$_LANG['goods_name_brand'] = 'Product Name [Brand]';
-$_LANG['goods_shouhou']='after-sale';
+$_LANG['product_sn'] = 'Goods No.';
+$_LANG['goods_info'] = 'Commodity information';
+$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name_brand'] = 'Commodity Name [Brand]';
 $_LANG['goods_sn'] = 'Item number';
 $_LANG['goods_price'] = 'Price';
 $_LANG['goods_number'] = 'Number';
@@ -198,35 +210,35 @@ $_LANG['return_list'] = 'Returns the order list';
 
 /* 订单处理提示 */
 $_LANG['surplus_not_enough'] = 'The order is paid with a %s balance, and the user balance is insufficient now.';
-$_LANG['integral_not_enough'] = 'The order is paid with %s integral, but the users integral is insufficient now.';
+$_LANG['integral_not_enough'] = 'The order is paid with %s integral, but the user\'s integral is insufficient now.';
 $_LANG['bonus_not_available'] = 'The order is paid in red envelope, which is not available now.';
 
 /* 购货人信息 */
 $_LANG['display_buyer'] = 'Display buyer information';
 $_LANG['buyer_info'] = 'Buyer Information';
 $_LANG['pay_points'] = 'Consumption points';
-$_LANG['rank_points'] = 'Rank points';
+$_LANG['rank_points'] = 'Rank integral';
 $_LANG['user_money'] = 'Account balance';
 $_LANG['email'] = 'E-mail';
 $_LANG['rank_name'] = 'Membership level';
-$_LANG['bonus_count'] = 'Number of voucher';
+$_LANG['bonus_count'] = 'Number of red packets';
 $_LANG['zipcode'] = 'Zip code';
 $_LANG['tel'] = 'Telephone';
-$_LANG['mobile'] = 'Standby phone';
+$_LANG['mobile'] = 'Standby telephone';
 
 /* 合并订单 */
 $_LANG['order_sn_not_null'] = 'Please fill in the order number to be merged.';
 $_LANG['two_order_sn_same'] = 'The two order numbers to be merged cannot be the same';
 $_LANG['order_not_exist'] = 'Order %s does not exist';
-$_LANG['os_not_unconfirmed_or_confirmed'] = '%s the order status is not "unacknowledged" or "confirmed"';
+$_LANG['os_not_unconfirmed_or_confirmed'] = '%s the order status of S is not "unacknowledged" or "confirmed"”';
 $_LANG['ps_not_unpayed'] = 'Payment status of order %s is not "unpaid"';
 $_LANG['ss_not_unshipped'] = 'The shipment status of order %s is not "undelivered"';
 $_LANG['order_user_not_same'] = 'Two orders to be merged are not placed by the same user';
 $_LANG['merge_invalid_order'] = 'Sorry, the merged order you choose is not allowed to merge.';
 
 $_LANG['from_order_sn'] = 'Sub order：';
-$_LANG['to_order_sn'] = 'Main order：';
-$_LANG['merge'] = 'Merge';
+$_LANG['to_order_sn'] = 'Master order：';
+$_LANG['merge'] = 'merge';
 $_LANG['notice_order_sn'] = 'When the two orders are inconsistent, the combined order information (such as payment method, distribution method, packaging, greeting card, red envelope, etc.) is based on the main order.';
 $_LANG['js_languages']['confirm_merge'] = 'Are you sure you want to merge the two orders?';
 
@@ -243,7 +255,7 @@ $_LANG['remove_order'] = 'The following order cannot be removed';
 /* 编辑订单打印模板 */
 $_LANG['edit_order_templates'] = 'Edit order print template';
 $_LANG['template_resetore'] = 'Reduction template';
-$_LANG['edit_template_success'] = 'Edit the order print template successfull!';
+$_LANG['edit_template_success'] = 'Edit the order print template successfully!';
 $_LANG['remark_fittings'] = '(accessories)';
 $_LANG['remark_gift'] = '(gift)';
 $_LANG['remark_favourable'] = '(Preferences)';
@@ -252,29 +264,29 @@ $_LANG['remark_package'] = '(gift package)';
 /* 订单来源统计 */
 $_LANG['from_order'] = 'Order source：';
 $_LANG['from_ad_js'] = 'Advertisement：';
-$_LANG['from_goods_js'] = 'JS placement outside the product station';
+$_LANG['from_goods_js'] = 'JS placement outside the merchandise station';
 $_LANG['from_self_site'] = 'From this station';
-$_LANG['from'] = 'From the site:';
+$_LANG['from'] = 'From the site：';
 
 /* 添加、编辑订单 */
 $_LANG['add_order'] = 'Add order';
 $_LANG['edit_order'] = 'Edit order';
 $_LANG['step']['user'] = 'Please choose which member you want to place an order for.';
-$_LANG['step']['goods'] = 'Choose product';
+$_LANG['step']['goods'] = 'Rank integral';
 $_LANG['step']['consignee'] = 'Setting up consignee information';
-$_LANG['step']['shipping'] = 'Choose shipping method';
+$_LANG['step']['shipping'] = 'Choosing Distribution Mode';
 $_LANG['step']['payment'] = 'Choose payment method';
 $_LANG['step']['other'] = 'Setting up other information';
 $_LANG['step']['money'] = 'Setup cost';
-$_LANG['anonymous'] = 'Anonymous';
+$_LANG['anonymous'] = 'anonymous';
 $_LANG['by_useridname'] = 'Search by membership number or name';
 $_LANG['button_prev'] = 'Previous step';
 $_LANG['button_next'] = 'Next step';
-$_LANG['button_finish'] = 'Complete';
-$_LANG['button_cancel'] = 'Cancel';
+$_LANG['button_finish'] = 'complete';
+$_LANG['button_cancel'] = 'cancel';
 $_LANG['name'] = 'Name';
-$_LANG['desc'] = 'Description';
-$_LANG['shipping_fee'] = 'Shipping fee';
+$_LANG['desc'] = 'describe';
+$_LANG['shipping_fee'] = 'Distribution fee';
 $_LANG['free_money'] = 'Free Quota';
 $_LANG['insure'] = 'Value insured fee';
 $_LANG['pay_fee'] = 'Service Charge';
@@ -288,27 +300,27 @@ $_LANG['available_surplus'] = 'Available balance：';
 $_LANG['available_integral'] = 'Available integral：';
 $_LANG['available_bonus'] = 'Available red envelope：';
 $_LANG['admin'] = 'Administrator adds';
-$_LANG['search_goods'] = 'Search by product number or product name or product number';
+$_LANG['search_goods'] = 'Search by commodity number or commodity name or commodity number';
 $_LANG['category'] = 'Category';
-$_LANG['brand'] = 'Brand';
+$_LANG['brand'] = 'brand';
 $_LANG['user_money_not_enough'] = 'Insufficient user balance';
 $_LANG['pay_points_not_enough'] = 'Insufficient User Integral';
 $_LANG['money_paid_enough'] = 'The amount paid is more than the sum of the total amount of the goods and all kinds of expenses. Please refund it first.';
-$_LANG['price_note'] = 'Note: Attribute price increases have been included in product prices.';
+$_LANG['price_note'] = 'Note: Attribute price increases have been included in commodity prices.';
 $_LANG['select_pack'] = 'Selective packaging';
 $_LANG['select_card'] = 'Choosing greeting cards';
 $_LANG['select_shipping'] = 'Please choose the mode of distribution first.';
 $_LANG['want_insure'] = 'I want to protect the price.';
-$_LANG['update_goods'] = 'Update product';
+$_LANG['update_goods'] = 'Update commodity';
 $_LANG['notice_user'] = '<strong>note:</strong>Search results only show the top 20 records, if no phase is found' .
         'For members, please find more accurately. In addition, if the member is registered from the forum and has not logged in at the mall,' .
-        'Also cannot find it, you need to log in at the mall first.';
+        'Also can\'t find it, you need to log in at the mall first.';
 $_LANG['amount_increase'] = 'Since you have modified your order, the total order amount has increased and you need to pay again.';
 $_LANG['amount_decrease'] = 'Since you have modified your order, the total order amount is reduced and a refund is required.';
-$_LANG['continue_shipping'] = 'Since you have modified the consignees location, the original shipping method is no longer available, please re-select the shipping method.';
+$_LANG['continue_shipping'] = 'Since you have modified the consignee\'s location, the original shipping method is no longer available, please re-select the shipping method.';
 $_LANG['continue_payment'] = 'Since you have modified the shipping method, the original payment method is no longer available, please re-select the shipping method.';
 $_LANG['refund'] = 'refund';
-$_LANG['cannot_edit_order_shipped'] = 'You cannot modify the order that has been shipped.';
+$_LANG['cannot_edit_order_shipped'] = 'You can\'t modify the order that has been shipped.';
 $_LANG['address_list'] = 'Select from the existing receiving address：';
 $_LANG['order_amount_change'] = 'Total order amount changed from %s to %s ';
 $_LANG['shipping_note'] = 'Note: Because the order has been shipped, modifying the distribution mode will not change the distribution fee and premium.';
@@ -346,8 +358,8 @@ $_LANG['return_user_money'] = 'Return user balance';
 $_LANG['create_user_account'] = 'Generate a refund application';
 $_LANG['not_handle'] = 'No processing, select this item when misoperation occurs';
 
-$_LANG['order_refund'] = 'Order refund:%s';
-$_LANG['order_pay'] = 'Order payment:%s';
+$_LANG['order_refund'] = 'Order refund：%s';
+$_LANG['order_pay'] = 'Order payment：%s';
 
 $_LANG['send_mail_fail'] = 'Failed to send mail';
 
@@ -355,7 +367,7 @@ $_LANG['send_message'] = 'Send/View Messages';
 
 /* 发货单操作 */
 $_LANG['delivery_operate'] = 'Invoice operation:';
-$_LANG['delivery_sn_number'] = 'Shipment order No.';
+$_LANG['delivery_sn_number'] = 'Flow Number of Invoice：';
 $_LANG['invoice_no_sms'] = 'Please fill in the invoice number!';
 
 /* 发货单搜索 */
@@ -364,11 +376,11 @@ $_LANG['delivery_sn'] = 'Invoice';
 /* 发货单状态 */
 $_LANG['delivery_status'][0] = 'Shipped';
 $_LANG['delivery_status'][1] = 'Return goods';
-$_LANG['delivery_status'][2] = 'Normal';
+$_LANG['delivery_status'][2] = 'normal';
 
 /* 发货单标签 */
 $_LANG['label_delivery_status'] = 'State of invoice';
-$_LANG['label_suppliers_name'] = 'Supplier';
+$_LANG['label_suppliers_name'] = 'supplier';
 $_LANG['label_delivery_time'] = 'Generation time';
 $_LANG['label_delivery_sn'] = 'Flow Number of Invoice';
 $_LANG['label_add_time'] = 'Order time';
@@ -379,28 +391,21 @@ $_LANG['label_send_number'] = 'Quantity shipped';
 $_LANG['tips_delivery_del'] = 'Delete the invoice successfully!';
 
 /* 退货单操作 */
-$_LANG['back_operate'] = 'Return order operation:';
+$_LANG['back_operate'] = 'Return order operation：';
 
 /* 退货单标签 */
-$_LANG['return_time'] = 'Return time:';
+$_LANG['return_time'] = 'Return time：';
 $_LANG['label_return_time'] = 'Return time';
 
 /* 退货单提示 */
 $_LANG['tips_back_del'] = 'Return slip deletion success!';
 
 $_LANG['goods_num_err'] = 'Insufficient stock, please re-select!';
-$_LANG['label_pickup_point'] = 'Selected pick-up points:';
-$_LANG['p_shop_name'] = 'Nama Toko:';
-$_LANG['p_address'] = 'Alamat:';
-$_LANG['p_contact'] = 'Kontak';
-$_LANG['p_phone'] = 'No Telepon';
-$_LANG['order_type'] = 'Order type';
-$_LANG['pickup_order'] = 'Self order';
-$_LANG['normal_order'] = 'General order';
+
 /*发票列表新增*/
 $_LANG['unprovided'] = 'Unbilled';
 $_LANG['provided'] = 'Invoiced';
-$_LANG['provide_invoice'] = 'Invoice';
+$_LANG['provide_invoice'] = 'Billing';
 $_LANG['export'] = 'Export';
 $_LANG['export_to_excel'] = 'Export to Excel';
 $_LANG['export_all_to_excel'] = 'Export all to Excel';
@@ -411,40 +416,39 @@ $_LANG['inv_type'] = 'Invoice type';
 $_LANG['inv_info'] = 'Invoice information';
 $_LANG['inv_payee'] = 'Invoice rise';
 $_LANG['inv_content'] = 'Invoice contents';
-$_LANG['company_name1'] = 'Company name';
+$_LANG['company_name1'] = 'Unit name';
 $_LANG['taxpayer_id'] = 'Taxpayer identification number';
 $_LANG['registration_address'] = 'Registered address';
-$_LANG['registration_phone'] = 'Register phone';
+$_LANG['registration_phone'] = 'Registered telephone';
 $_LANG['deposit_bank'] = 'Bank of deposit';
 $_LANG['bank_account'] = 'Bank account';
 $_LANG['inv_consignee_info'] = 'Receiver information';
 $_LANG['inv_consignee_name'] = 'Name of the drawee';
-$_LANG['inv_consignee_phone'] = 'Ticket Receivers Mobile Phone';
-$_LANG['inv_consignee_address'] = 'Receivers address';
+$_LANG['inv_consignee_phone'] = 'Ticket Receiver\'s Mobile Phone';
+$_LANG['inv_consignee_address'] = 'Receiver\'s address';
 $_LANG['inv_status'] = 'Invoice status';
 $_LANG['inv_money'] = 'Invoice amount';
 $_LANG['edit_invoice'] = 'Edit invoice';
 $_LANG['check_invoice'] = 'View invoice';
-$_LANG['individual'] = 'Personal';
+$_LANG['individual'] = 'personal';
 $_LANG['unit'] = 'Company';
 
-$_LANG['label_inv_info'] = 'Invoice information: ';
-$_LANG['label_company_name1'] = 'Unit name: ';
-$_LANG['label_taxpayer_id'] = 'Taxpayer identification number: ';
-$_LANG['label_registration_address'] = 'Registered address: ';
-$_LANG['label_registration_phone'] = 'Registered telephone: ';
-$_LANG['label_deposit_bank'] = 'Bank of deposit: ';
-$_LANG['label_bank_account'] = 'Bank account: ';
-$_LANG['label_inv_consignee_info'] = 'Receiver information: ';
-$_LANG['label_inv_consignee_name'] = 'Name of the receiver: ';
-$_LANG['label_inv_consignee_phone'] = 'Receivers mobile phone: ';
-$_LANG['label_inv_consignee_address'] = 'Receivers address: ';
-$_LANG['label_inv_status'] = 'Invoice status: ';
-$_LANG['label_inv_money'] = 'Invoice amount: ';
-$_LANG['label_action_note2'] = 'Remarks: ';
+$_LANG['label_inv_info'] = 'Invoice information：';
+$_LANG['label_company_name1'] = 'Unit name：';
+$_LANG['label_taxpayer_id'] = 'Taxpayer identification number：';
+$_LANG['label_registration_address'] = 'Registered address：';
+$_LANG['label_registration_phone'] = 'Registered telephone：';
+$_LANG['label_deposit_bank'] = 'Bank of deposit：';
+$_LANG['label_bank_account'] = 'Bank account：';
+$_LANG['label_inv_consignee_info'] = 'Receiver information：';
+$_LANG['label_inv_consignee_name'] = 'Name of the drawee：';
+$_LANG['label_inv_consignee_phone'] = 'Ticket Receiver\'s Mobile Phone：';
+$_LANG['label_inv_consignee_address'] = 'Receiver\'s address：';
+$_LANG['label_inv_status'] = 'Invoice status：';
+$_LANG['label_inv_money'] = 'Invoice amount：';
+$_LANG['label_action_note2'] = 'Remarks：';
 $_LANG['js_languages']['remove_invoice_confirm'] = 'Are you sure you want to delete the invoice information for this order?';
 
-$_LANG['b_142'] = 'Pengiriman sekali klik';
 $_LANG['sch_stats'][0] = 'Not divided into';
 $_LANG['sch_stats'][1] = 'Have been divided into';
 $_LANG['sch_stats'][2] = 'Abolition';
