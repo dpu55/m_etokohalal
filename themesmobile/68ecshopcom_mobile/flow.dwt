@@ -164,7 +164,7 @@
             <div class="info">
               <span class="hot" id="cart_amount_desc"><em>{$lang.m_183}</em> {$shopping_money}</span>
               <br>
-              <span class="hot_text">{$lang.m_184}</span>
+              <!-- <span class="hot_text">{$lang.m_184}</span> -->
             </div>
             <div class="right">
               {* 代码修改_start  By bbs.hongyuvip.com *}

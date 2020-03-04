@@ -1,7 +1,7 @@
 <ul class="ct-list order_total_ul" id="ECS_ORDERTOTAL" >
   <li class="order_total_li" > 
 *{$lang.complete_acquisition}
-    {if $config.use_integral}<span class="price">{$total.will_get_integral}</span>{$points_name}{/if}
+    {if $config.use_integral}<span class="price">{$total.formated_will_get_integral}</span>{$points_name}{/if}
     {if $total.will_get_bonus neq $option.price_zero_format}
     {if $config.use_integral and $config.use_bonus}<br/>{$lang.with_price}{/if}{if $config.use_bonus} {$lang.de}{$lang.bonus}: <span class="price">{$total.will_get_bonus}</span>{/if}{/if}
     {if $total.discount gt 0}<br/>- {$lang.discount}：<span class="price">{$total.discount_formated}</span>{/if}

@@ -29,7 +29,7 @@
 <!--   <span>{$lang.cart}</span>-->
 
    </a></li>
-<li><a href="user.php">
+<li {if $path eq '/user.php'} class="active" {/if}><a href="user.php">
 <!--    <i class="vf_5"></i>-->
 <!--    <i class="fa fa-user"></i>-->
     <img src="themesmobile/68ecshopcom_mobile/images/menu-footer/footer-menu-user-01.png" alt=""/>

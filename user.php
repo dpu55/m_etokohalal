@@ -35,6 +35,9 @@ require (dirname(__FILE__) . '/includes/init.php');
 require_once (ROOT_PATH . 'languages/' . $_CFG['lang'] . '/user.php');
 
 
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+$path = parse_url($actual_link, PHP_URL_PATH);
 
 $user_id = $_SESSION['user_id'];
 
@@ -56,6 +59,7 @@ $affiliate = unserialize($GLOBALS['_CFG']['affiliate']);
 
 $smarty->assign('affiliate', $affiliate);
 $smarty->assign('img_url', $img_url);
+$smarty->assign('path', $path);
 
 $back_act = '';
 
