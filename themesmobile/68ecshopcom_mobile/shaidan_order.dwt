@@ -27,7 +27,7 @@
 <input type="hidden" value="{$goods.goods_id}" name="goods_id">
 <div class="pj">
 <dl>
-<dt><img src="./../{$goods.goods_thumb}" width="50"/></dt>
+<dt><img src="{$img_url}{$goods.goods_thumb}" width="50"/></dt>
 <dd>
 <p>{$goods.goods_name|truncate:35}</p>
 <span>{$goods.supplier_name}</span>
@@ -35,7 +35,7 @@
 </dl>
 <div class="shaidan">
 <h2>{$lang.m_344}</h2>
-<input type="text" name="title" id="title"  class="title"/></div>
+<input type="text" name="title" id="title"  class="title" style="width: 78%;" /></div>
 <div class="p_main">
 <h2>{$lang.m_345}</h2><textarea id="content_13" class="inputBorder" name="message"></textarea>
 </div>

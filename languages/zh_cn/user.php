@@ -139,7 +139,7 @@ $_LANG['pay_desc'] = 'Deskripsi';
 $_LANG['pay_fee'] = 'Biaya penanganan';
  
 /* 收货地址 */ 
-$_LANG['consignee_name'] = 'Nama penerima barang';
+$_LANG['consignee_name'] = 'Nama penerima';
 $_LANG['country_province'] = 'Area distribusi';
 $_LANG['please_select'] = 'Silakan pilih ';
 $_LANG['city_district'] = 'Kota/Wilayah';
@@ -306,7 +306,7 @@ $_LANG['ss'][SS_SHIPPED_ING] = 'Stok'; // telah didistribusikan
  
 $_LANG['ps'][PS_UNPAYED] = 'Tidak dibayar';
 $_LANG['ps'][PS_PAYING] = 'Pembayaran';
-$_LANG['ps'][PS_PAYED] = 'dibayar';
+$_LANG['ps'][PS_PAYED] = 'Dibayar';
  
 $_LANG['shipping_not_need'] = 'Tidak perlu menggunakan metode pengiriman';
 $_LANG['current_os_not_unconfirmed'] = 'Status pesanan saat ini tidak "belum dikonfirmasi". ';

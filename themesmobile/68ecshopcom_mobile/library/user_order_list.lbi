@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--{if $orders}-->
-  <div class="order">
+  <div class="order" style="margin-top:55px;">
     <!--{foreach from=$orders item=item}-->
       <div class="order_list">
         <h2> 

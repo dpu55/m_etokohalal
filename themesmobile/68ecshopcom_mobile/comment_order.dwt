@@ -49,7 +49,7 @@
 <input type="hidden" name="o_id" value="{$order_id}" />
 <div class="pj">
 <dl>
-<dt><img src="./../{$goods.goods_thumb}" width="50"/></dt>
+<dt><img src="{$img_url}{$goods.goods_thumb}" width="50"/></dt>
 <dd>
 <p>{$goods.goods_name|truncate:35}</p>
 <span>{$goods.supplier_name}</span>
@@ -78,9 +78,9 @@ $(".jsstar li").click(function(){
     });
 });
 </script>
-<h2>{$lang.m_394}:</h2>
+<h2>{$lang.m_394}: </h2>
 <ul>	
-<li>{$lang.m_395}</li>
+<li>{$lang.m_395} </li>
     <ul class="jsstar" style=" width:80%"> <span></span>
     <input name="comment_rank" value="0" type="hidden">
         <li  title="1"></li>
@@ -91,7 +91,7 @@ $(".jsstar li").click(function(){
     </ul>
 </ul>
  <ul>	
-<li>{$lang.m_396}</li> 
+<li>{$lang.m_396} </li> 
     <ul class="jsstar" style=" width:80%"> <span></span>
     <input name="server" value="0" type="hidden">
         <li title="1"></li>
@@ -102,8 +102,8 @@ $(".jsstar li").click(function(){
     </ul>
 </ul>
  <ul>	
-<li>{$lang.m_397}</li>
-    <ul class="jsstar" style=" width:80%"><span></span>
+<li>{$lang.m_397} </li>
+    <ul class="jsstar" style=" width:78%"><span></span>
     <input name="send" value="0" type="hidden">
         <li title="1"></li>
         <li title="2"></li>
@@ -113,7 +113,7 @@ $(".jsstar li").click(function(){
     </ul>
 </ul>
  <ul>	
-<li>{$lang.m_398}</li>
+<li>{$lang.m_398} </li>
     <ul class="jsstar" style=" width:80%"><span></span>
     <input name="shipping" value="0" type="hidden">
         <li title="1"></li>
