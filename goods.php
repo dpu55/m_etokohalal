@@ -502,6 +502,8 @@ if(empty($_SESSION['user_id'])) {
 }
 
 $smarty->assign('now_time',  gmtime());           // 当前系统时间
+$smarty->assign('img_url',  $img_url);           // 当前系统时间
+
 $smarty->display('goods.dwt',      $cache_id);
 
 /*------------------------------------------------------ */
