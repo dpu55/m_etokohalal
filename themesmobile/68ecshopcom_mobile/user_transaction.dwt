@@ -188,7 +188,26 @@ function submit_surplus_form(){
         <div class="header">
           <div class="h-left"><a href="javascript:history.back(-1)" class="back"><i class="fa fa-chevron-leftt"></i></a></div>
 <!--          <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}"></a></div>-->
-          <div class="h-mid">{if $action eq 'profile'}{$lang.m_167}{elseif  $action eq 'default'}{$lang.user_center}{elseif  $action eq 'bonus'}{$lang.bonus}{elseif $action eq 'order_list'}{$lang.m_112}{elseif $action eq 'order_detail'}{$lang.m_168}{elseif $action eq 'account_log' or $action eq 'account_deposit' or $action eq 'account_raply' or $action eq 'account_detail' or $action eq 'act_account' or $action eq 'pay'}{$lang.m_169}{elseif $action eq 'address_list'}{$lan.gm_123}{elseif $action eq 'address'}{$lan.gm_123}{elseif $action eq 'vc_login'}{$lang.m_126}{/if}</div>
+          <div class="h-mid">
+          {if $action eq 'profile'}
+            {$lang.m_167}
+          {elseif  $action eq 'default'}
+            {$lang.user_center}
+          {elseif  $action eq 'bonus'}
+            {$lang.bonus}
+          {elseif $action eq 'order_list'}
+            {$lang.m_112}
+          {elseif $action eq 'order_detail'}
+            {$lang.m_168}
+          {elseif $action eq 'account_log' or $action eq 'account_deposit' or $action eq 'account_raply' or $action eq 'account_detail' or $action eq 'act_account' or $action eq 'pay'}
+            {$lang.m_169}
+          {elseif $action eq 'address_list'}
+            {$lang.m_123}
+          {elseif $action eq 'address'}
+            {$lang.m_123}
+          {elseif $action eq 'vc_login'}
+            {$lang.m_126}
+          {/if}</div>
           <div class="h-right">
             <aside class="top_bar">
               <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
@@ -228,7 +247,9 @@ function submit_surplus_form(){
 		{if $action eq "vc_login"}
 		{include file='library/user_vclogin.lbi'}
 		{/if}
-        {if $action eq 'address'}{include file='library/user_address.lbi'}{/if}
+        {if $action eq 'address'}
+        {include file='library/user_address.lbi'}
+        {/if}
         {if $action neq 'order_detail'}{elseif $action eq 'address_list'}
 {/if}
 

@@ -141,7 +141,7 @@ $_LANG['pay_fee'] = 'Biaya penanganan';
 /* 收货地址 */ 
 $_LANG['consignee_name'] = 'Nama penerima barang';
 $_LANG['country_province'] = 'Area distribusi';
-$_LANG['please_select'] = 'Silakan pilih';
+$_LANG['please_select'] = 'Silakan pilih ';
 $_LANG['city_district'] = 'Kota/Wilayah';
 $_LANG['email_address'] = 'Alamat email';
 $_LANG['detailed_address'] = 'Alamat lengkap';
