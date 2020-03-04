@@ -44,13 +44,9 @@ else
     @ini_set('include_path',      '.:' . ROOT_PATH);
 }
 
-if (file_exists('../../data/config.php'))
+if (file_exists('../data/config.php'))
 {
-    include('../../data/config.php');
-}
-else
-{
-    include('../../includes/config.php');
+    include('../data/config.php');
 }
 
 /* 取得当前ecshop所在的根目录 */
