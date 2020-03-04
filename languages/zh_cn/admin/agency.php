@@ -22,10 +22,10 @@ $_LANG['label_admins'] = 'The administrator responsible for the office:';
 $_LANG['notice_admins'] = 'Administrators marked with asterisks (*) indicate that they are already in charge of other offices.';
 $_LANG['label_regions'] = 'Areas under the jurisdiction of the Office:';
 $_LANG['add_region'] = 'Select the area from the list below and add the plus button to the area under the jurisdiction of the Office';
-$_LANG['label_country'] = 'Country:';
-$_LANG['label_province'] = 'Negara:';
+$_LANG['label_country'] = 'Negara:';
+$_LANG['label_province'] = 'Provinsi:';
 $_LANG['label_city'] = 'Kota:';
-$_LANG['label_district'] = 'Area:';
+$_LANG['label_district'] = 'Kecamatan:';
 
 $_LANG['no_regions'] = 'No area set up';
 $_LANG['add_agency_ok'] = 'Successful addition of offices';

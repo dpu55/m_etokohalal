@@ -9,11 +9,11 @@ $_LANG['promotion'] = 'Promotion';
 $_LANG['pickup_point'] = 'Self-lifting point';
 
 //商品管理部分的权限
-$_LANG['goods_list'] = 'List of Commodities Audited/Not Audited/Audited Not Passed';
+$_LANG['goods_list'] = 'List of Products Audited/Not Audited/Audited Not Passed';
 $_LANG['category_list'] = 'Kategori Produk';
 $_LANG['comment_manage'] = 'User reviews';
 $_LANG['order_comment_priv'] = 'Order review management';//代码增加  订单评论
-$_LANG['goods_trash'] = 'Commodity Recycling Bin';
+$_LANG['goods_trash'] = 'Product Recycling Bin';
 
 $_LANG['goods_manage'] = 'Product add/edit';
 $_LANG['remove_back'] = 'Product delete/recovery';

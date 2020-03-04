@@ -1,8 +1,8 @@
 <?php
 $_LANG['cron_name'] = 'Planned Task Name';
 $_LANG['cron_code'] = 'This planned task';
-$_LANG['if_open'] = 'open';
-$_LANG['version'] = 'Edition';
+$_LANG['if_open'] = 'Open';
+$_LANG['version'] = 'Version';
 $_LANG['cron_desc'] = 'Planned Task Description';
 $_LANG['cron_author'] = 'Plugin author';
 $_LANG['cron_time'] = 'Planning Task Execution Time';

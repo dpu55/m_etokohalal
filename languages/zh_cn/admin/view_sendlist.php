@@ -12,11 +12,11 @@ $_LANG['pri'][0] = 'General';
 $_LANG['pri'][1] = 'Hight';
 $_LANG['type']['name'] = 'Mail type';
 $_LANG['type']['magazine'] = 'Magazine subscription';
-$_LANG['type']['template'] = 'Subscribe to subscriptions';
+$_LANG['type']['template'] = 'Follow subscription';
 $_LANG['button_remove'] = 'Delete';
-$_LANG['batch_send'] = 'Select Send';
-$_LANG['all_send'] = 'Kirim Semua';
-$_LANG['mailsend_null'] = 'Mail Delivery List Empty!';
-$_LANG['mailsend_finished'] = 'Full mail delivery completed!';
-$_LANG['send_end'] = 'Select Mail Delivery Completion!';
+$_LANG['batch_send'] = 'Choose to send';
+$_LANG['all_send'] = 'Send all';
+$_LANG['mailsend_null'] = 'The mailing list is empty!';
+$_LANG['mailsend_finished'] = 'All mail is sent!';
+$_LANG['send_end'] = 'Select mail to be sent!';
 ?>

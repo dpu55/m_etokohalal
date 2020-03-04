@@ -5,14 +5,14 @@ $_LANG['shipping_desc'] = 'Deskripsi ekspedisi pengiriman';
 $_LANG['shipping_author'] = 'Plugin author';
 $_LANG['insure'] = 'Asuransi';
 $_LANG['support_cod'] = 'COD';
-/* 代码增加_start   By bbs.hongyuvip.com */
+
 $_LANG['support_pickup'] = 'Store self mention?';
-/* 代码增加_send   By bbs.hongyuvip.com */
+
 $_LANG['shipping_area'] = 'Set area';
 $_LANG['shipping_pups'] = 'Self-lifting point management';
 $_LANG['shipping_print_edit'] = 'Edit Print Template';
 $_LANG['shipping_print_template'] = 'Express Bill Template';
-$_LANG['shipping_template_info'] = 'The order template variable specifies: <br/>{shop_name} denotes the shop name <br/>{province} denotes the province where the shop belongs <br/>{city} denotes the city where the shop belongs <br/>{shop_address} denotes the shop address <br/>{service_phone} denotes the shop contact telephone <br/>{$order.amount} denotes the order amount <br/>{order.number} denotes the recipient area <br/> {order.tel denotes the recipient area <br/>.{$ Order.mobile} denotes the recipients mobile phone <br/> {order.zipcode} denotes the recipients postal code <br/> {order.address} denotes the recipients detailed address <br/> {order.consignee} denotes the recipients name <br/> {order.sn denotes the order number.';
+$_LANG['shipping_template_info'] = 'Order template variable description:<br/>{$shop_name}Shop name<br/>{$province}Shop provinces<br/>{$city}Shop city<br/>{$shop_address}Shop address<br/>{$service_phone}Shop contact number<br/>{$order.order_amount}Order amount<br/>{$order.region}Recipient area<br/>{$order.tel}Recipient telephone<br/>{$order.mobile}Recipient Cell Phone<br/>{$order.zipcode}Recipients postcode<br/>{$order.address}receivers address<br/>{$order.consignee}Recipient name<br/>{$order.order_sn}order number';
 
 /* 表单部分 */
 $_LANG['shipping_install'] = 'Install shipping method';
@@ -24,30 +24,30 @@ $_LANG['save_setting'] = 'Save settings';
 $_LANG['recovery_default'] = 'Restore default';
 
 /* 快递单部分 */
-$_LANG['lable_select_notice'] = '--Select Insert Tag--';
-$_LANG['lable_box']['shop_country'] = 'Online Shop - Country';
-$_LANG['lable_box']['shop_province'] = 'Online Shop - State';
-$_LANG['lable_box']['shop_city'] = 'Online Shop - City';
-$_LANG['lable_box']['shop_name'] = 'Online Shop - name';
-$_LANG['lable_box']['shop_district'] = 'Online Shop - Area';
-$_LANG['lable_box']['shop_tel'] = 'Online Shop - Contact phone';
-$_LANG['lable_box']['shop_address'] = 'Online Shop - Address';
+$_LANG['lable_select_notice'] = '--Select insert tag--';
+$_LANG['lable_box']['shop_country'] = 'shop-country';
+$_LANG['lable_box']['shop_province'] = 'shop-province';
+$_LANG['lable_box']['shop_city'] = 'shop-city';
+$_LANG['lable_box']['shop_name'] = 'shop-name';
+$_LANG['lable_box']['shop_district'] = 'shop-district / county';
+$_LANG['lable_box']['shop_tel'] = 'shop-phone';
+$_LANG['lable_box']['shop_address'] = 'shop-address';
 $_LANG['lable_box']['customer_country'] = 'Recipient-country';
-$_LANG['lable_box']['customer_province'] = 'Recipient-state';
-$_LANG['lable_box']['customer_city'] = 'Recipient-city';
-$_LANG['lable_box']['customer_district'] = 'Recipient-area';
-$_LANG['lable_box']['customer_tel'] = 'Recipient-phone';
-$_LANG['lable_box']['customer_mobel'] = 'Recipient-mobile';
-$_LANG['lable_box']['customer_post'] = 'Recipient-Kode Pos';
-$_LANG['lable_box']['customer_address'] = 'Recipient-address';
-$_LANG['lable_box']['customer_name'] = 'Recipient-name';
-$_LANG['lable_box']['year'] = 'Year - Date of the Day';
-$_LANG['lable_box']['months'] = 'Month - Date of the Day';
-$_LANG['lable_box']['day'] = 'day-Date';
-$_LANG['lable_box']['order_no'] = 'Order ID-Orders';
-$_LANG['lable_box']['order_postscript'] = 'Note-Orders';
-$_LANG['lable_box']['order_best_time'] = 'Delivery time-Orders';
-$_LANG['lable_box']['pigeon'] = '√-Check mark';
+$_LANG['lable_box']['customer_province'] = 'Recipient-province';
+$_LANG['lable_box']['customer_city'] = 'Recipient-City';
+$_LANG['lable_box']['customer_district'] = 'Recipient-District/County';
+$_LANG['lable_box']['customer_tel'] = 'Recipient-Telephone';
+$_LANG['lable_box']['customer_mobel'] = 'Recipient-Phone';
+$_LANG['lable_box']['customer_post'] = 'Recipient-Zip Code';
+$_LANG['lable_box']['customer_address'] = 'Recipient-Address';
+$_LANG['lable_box']['customer_name'] = 'Recipient-Name';
+$_LANG['lable_box']['year'] = 'Year-the Day';
+$_LANG['lable_box']['months'] = 'Month-the Day';
+$_LANG['lable_box']['day'] = 'Date-the day';
+$_LANG['lable_box']['order_no'] = 'Order Number-Order';
+$_LANG['lable_box']['order_postscript'] = 'Remarks-orders';
+$_LANG['lable_box']['order_best_time'] = 'Delivery time-order';
+$_LANG['lable_box']['pigeon'] = '√-mark';
 //$_LANG['lable_box']['custom_content'] = '自定义内容';
 
 /* 提示信息 */

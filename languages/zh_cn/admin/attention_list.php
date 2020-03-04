@@ -1,5 +1,5 @@
 <?php
-$_LANG['goods_name'] = 'Nama Produk';
+$_LANG['goods_name'] = Product name';
 $_LANG['goods_last_update'] = 'Update time';
 $_LANG['attention_addtolist'] = 'Insert send queue';
 $_LANG['attention_ckaddtolist'] = 'Determine to send the latest product information to the user concerned about the product? This operation will send the latest product information to the user concerned about the product.';

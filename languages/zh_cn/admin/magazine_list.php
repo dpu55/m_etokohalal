@@ -2,7 +2,7 @@
 $_LANG['add_new'] = 'Add';
 $_LANG['magazine_name'] = 'Magazine title';
 $_LANG['magazine_edit'] = 'Edit';
-$_LANG['magazine_del'] = 'Hapus';
+$_LANG['magazine_del'] = 'Delete';
 $_LANG['ck_del'] = 'Confirm delete?';
 $_LANG['finish_list'] = 'The %s record has been inserted. Please wait a moment~';
 $_LANG['finishing'] = 'Generating, please wait a moment';

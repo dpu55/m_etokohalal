@@ -1,11 +1,11 @@
 <?php
 $_LANG['shophelp_add'] = 'Add new help articles';
-$_LANG['cat_add'] = 'Adding Tambah Kategori';
-$_LANG['cat_name'] = 'Kategori Produk';
+$_LANG['cat_add'] = 'Adding new categories';
+$_LANG['cat_name'] = 'category name';
 $_LANG['title'] = 'Article name';
 $_LANG['article_type'] = 'Article type';
-$_LANG['add_time'] = 'Waktu ditambahkan';
-$_LANG['sort'] = 'Sortir';
+$_LANG['add_time'] = 'Adding time';
+$_LANG['sort'] = 'sort';
 $_LANG['article_add'] = 'Add new help articles';
 $_LANG['cat'] = 'Article category';
 $_LANG['article_list'] = 'Online Shop Helps Information Management';
@@ -18,8 +18,8 @@ $_LANG['page'] = 'Article quantity';
 $_LANG['cat_name_empty'] = 'Category name cannot be empty!';
 
 $_LANG['article_list'] = 'List of Help Articles';
-$_LANG['cat_list'] = 'Help category list';
-$_LANG['select_plz'] = 'Silahkan pilih...';
+$_LANG['cat_list'] = 'Help Category List';
+$_LANG['select_plz'] = 'Please choose...';
 
 /* 提示信息 */
 $_LANG['catname_exist'] = 'This category name already exists!';
@@ -36,13 +36,13 @@ $_LANG['not_emptycat'] = 'There are also articles under the category. No deletio
 
 /*JS 语言项*/
 $_LANG['js_languages']['no_catname'] = 'No category name was entered';
-$_LANG['js_languages']['lang_remove'] = 'Remove';
-$_LANG['js_languages']['lang_sort'] = 'Sortir:';
+$_LANG['js_languages']['lang_remove'] = 'remove';
+$_LANG['js_languages']['lang_sort'] = 'sort:';
 $_LANG['js_languages']['lang_article_add'] = 'Add new help articles';;
 $_LANG['js_languages']['lang_article_list'] = 'List of Help Articles';;
 $_LANG['js_languages']['remove_confirm'] = 'Are you sure you want to delete the record?';;
-$_LANG['js_languages']['no_title'] = 'No entry of Judul Artikel';;
-$_LANG['js_languages']['no_cat'] = 'No choice to help with Article category';
+$_LANG['js_languages']['no_title'] = 'No entry of article title';;
+$_LANG['js_languages']['no_cat'] = 'No choice to help with Article categorization';
 $_LANG['js_languages']['chap'] = 'piece';
 
 ?>

@@ -8,7 +8,7 @@ $_LANG['join_time'] = 'Waktu ditambahkan';
 $_LANG['last_time'] = 'Terakhir login';
 $_LANG['last_ip'] = 'Last accessed IP';
 $_LANG['action_list'] = 'Operation authority';
-$_LANG['nav_list'] = 'Navigasi Bar';
+$_LANG['nav_list'] = 'Navigation bar';
 $_LANG['language'] = 'Language used';
 
 $_LANG['allot_priv'] = 'Assign authority';
@@ -66,7 +66,7 @@ $_LANG['modif_info'] = 'Edit Personal Data';
 $_LANG['edit_navi'] = 'Setting up personal navigation';
 
 /* 帮助信息 */
-$_LANG['password_notic'] = 'Bila anda ingin mengubah password, mohon isi password sebelumnya. Bila tidak diisi maka password tidak akan berubah';
+$_LANG['password_notic'] = 'If you want to change your password, please fill in the old password first. If you leave it blank, the password will remain unchanged.';
 $_LANG['email_notic'] = 'Enter the Administrators Email Mailbox, which must be in Email format';
 $_LANG['confirm_notic'] = 'Enter Administrators Confirmation Password. Enter the same password twice.';
 

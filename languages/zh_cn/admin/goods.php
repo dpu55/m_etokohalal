@@ -24,8 +24,8 @@ $_LANG['batch_new_confirm'] = 'Are you sure you want to make the selected produc
 $_LANG['batch_not_new_confirm'] = 'Are you sure you want to cancel the new product?';
 $_LANG['batch_hot_confirm'] = 'Are you sure you want to make the selected item a hot seller?';
 $_LANG['batch_not_hot_confirm'] = 'Are you sure you want to cancel the hot sale of the selected goods?';
-$_LANG['cannot_found_goods'] = 'The specified commodity could not be found.';
-$_LANG['sel_goods_type'] = 'Silahkan pilih tipe produk .';
+$_LANG['cannot_found_goods'] = 'The specified product could not be found.';
+$_LANG['sel_goods_type'] = 'Please choose the type of goods.';
 $_LANG['sel_goods_suppliers'] = 'Please select supplier';
 /*------------------------------------------------------ */
 //-- 图片处理相关提示信息
@@ -62,7 +62,7 @@ $_LANG['item_list'] = 'List of goods';
 
 $_LANG['integral'] = 'Integral limit';
 $_LANG['on_sale'] = 'Tampilkan';
-$_LANG['not_on_sale'] = 'Lower shelf';
+$_LANG['not_on_sale'] = 'Tidak dijual';
 $_LANG['best'] = 'Direkomendasikan';
 $_LANG['not_best'] = 'Cancel the Direkomendasikan';
 $_LANG['new'] = 'New';
@@ -78,7 +78,7 @@ $_LANG['not_pass_audit'] = 'Audit failed';
 // ajax
 $_LANG['goods_name_null'] = 'Please enter the name of the product.';
 $_LANG['goods_sn_null'] = 'Please enter the goods number.';
-$_LANG['shop_price_not_number'] = '价格不是数字';
+$_LANG['shop_price_not_number'] = 'Price is not a number';
 $_LANG['shop_price_invalid'] = 'You entered an illegal market price.';
 $_LANG['goods_sn_exists'] = 'The number you entered already exists. Please change it.';
 
@@ -110,7 +110,7 @@ $_LANG['lab_thumb'] = 'Upload Produk Thumbnails:';
 $_LANG['auto_thumb'] = 'Automatically generate product thumbnails';
 $_LANG['lab_keywords'] = 'Kata Kunci Produk:';
 $_LANG['lab_goods_brief'] = 'Deskripsi Singkat';
-$_LANG['lab_seller_note'] = 'Commerce Notes:';
+$_LANG['lab_seller_note'] = 'Seller Notes:';
 $_LANG['lab_goods_type'] = 'Tipe Produk:';
 $_LANG['lab_picture_url'] = 'External URL of Product picture';
 $_LANG['lab_thumb_url'] = 'External URL of Product thumbnail';
@@ -124,16 +124,16 @@ $_LANG['lab_integral'] = 'Amount of integral purchase:';
 $_LANG['lab_give_integral'] = 'Gift consumption points:';
 $_LANG['lab_rank_integral'] = 'Gift grade points:';
 $_LANG['lab_intro'] = 'Join the recommendation:';
-$_LANG['lab_is_on_sale'] = 'Shelves:';
-$_LANG['lab_is_alone_sale'] = 'Can be sold as an ordinary commodity:';
+$_LANG['lab_is_on_sale'] = 'Dijual:';
+$_LANG['lab_is_alone_sale'] = 'Can be sold as an ordinary product:';
 $_LANG['lab_is_free_shipping'] = 'Bebas biaya pengiriman?';
 
-$_LANG['compute_by_mp'] = 'Kalkulasi Harga Pasar';
+$_LANG['compute_by_mp'] = 'Calculated at market price';
 
 $_LANG['notice_goods_sn'] = 'Jika Anda tidak memasukkan ID produk, maka secara otomatis system akan membuat ID produk ';
 $_LANG['notice_integral'] = '(The amount to be filled in here) The maximum amount of points that can be used when purchasing the goods';
 $_LANG['notice_give_integral'] = 'When purchasing the product, give away the consumption integral, -1 means give away according to the price of the product.';
-$_LANG['notice_rank_integral'] = 'When purchasing this commodity, the grade integral is given, -1 is given at the price of the commodity.';
+$_LANG['notice_rank_integral'] = 'When purchasing this product, the grade integral is given, -1 is given at the price of the product.';
 $_LANG['notice_seller_note'] = 'Informasi Mengenai Produk';
 $_LANG['notice_storage'] = 'Nilai persediaan tergantung pada jumlah stok barang.';
 $_LANG['notice_keywords'] = 'Dipisahkan ole spasi';
@@ -146,11 +146,11 @@ $_LANG['free_shipping'] = 'Produk ini bebas biaya pengiriman';
 
 $_LANG['invalid_goods_img'] = 'The format of the product pictures is incorrect!';
 $_LANG['invalid_goods_thumb'] = 'The product thumbnail format is incorrect!';
-$_LANG['invalid_img_url'] = 'The format of the %s picture in the merchandise album is incorrect!';
+$_LANG['invalid_img_url'] = 'The format of the %s picture in the product album is incorrect!';
 
 $_LANG['goods_img_too_big'] = 'The product image file is too large (maximum: %s) to upload.';
 $_LANG['goods_thumb_too_big'] = 'The product thumbnail file is too large (maximum: %s) to upload.';
-$_LANG['img_url_too_big'] = 'The %s image file in the merchandise album is too large (maximum:%s) to upload.';
+$_LANG['img_url_too_big'] = 'The %s image file in the product album is too large (maximum:%s) to upload.';
 
 $_LANG['integral_market_price'] = 'Pembulatan';
 $_LANG['upload_images'] = 'Upload Gambar';
@@ -182,7 +182,7 @@ $_LANG['lab_to_shopex']         = 'Transfer to online store';
 /*------------------------------------------------------ */
 
 $_LANG['all_goods'] = 'Optional product';
-$_LANG['link_goods'] = 'Goods associated with the commodity';
+$_LANG['link_goods'] = 'Goods associated with the product';
 $_LANG['single'] = 'Unidirectional Association';
 $_LANG['double'] = 'Bidirectional correlation';
 $_LANG['all_article'] = 'Optional articles';
@@ -271,12 +271,12 @@ $_LANG['batch_product_edit'] = 'Batch editing';
 $_LANG['products_title'] = 'Nama Produk: %s';
 $_LANG['products_title_2'] = 'Item No.:%s';
 $_LANG['good_shop_price'] = '(Product price:%d)';
-$_LANG['good_goods_sn'] = '(Commodity No.%s)';
+$_LANG['good_goods_sn'] = '(Product No.%s)';
 $_LANG['exist_same_goods_sn'] = 'No duplication with product number is allowed';
 $_LANG['exist_same_product_sn'] = 'Item number duplication';
 $_LANG['cannot_add_products'] = 'Failure to add goods';
 $_LANG['exist_same_goods_attr'] = 'Repetition of specifications and attributes of goods';
-$_LANG['cannot_goods_number'] = 'This commodity is in stock and cannot be modified.';
+$_LANG['cannot_goods_number'] = 'This product is in stock and cannot be modified.';
 $_LANG['not_exist_goods_attr'] = 'This product does not have specifications. Please add specifications for it.';
 $_LANG['goods_sn_exists'] = 'The number you entered already exists. Please change it.';
 ?>

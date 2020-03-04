@@ -5,7 +5,7 @@ $_LANG['schp_imgdesc'] = 'Caption';
 $_LANG['schp_sort'] = 'Sortir';
 $_LANG['trash_img_confirm'] = 'Would you like to delete this picture?';
 $_LANG['custom_del_confirm'] = 'Are you sure you want to delete this advertisement?';
-$_LANG['tab_change_alert'] = 'Please "close" all custom advertisements first, \n\n then you can click on the default system.';
+$_LANG['tab_change_alert'] = 'Please "close" all the custom advertisements before clicking on the default system.';
 $_LANG['trash_img'] = 'Delete this rotation picture';
 $_LANG['custom_drop_img'] = 'Delete this advertisement';
 $_LANG['custom_change_img'] = 'Modify state';
@@ -15,14 +15,14 @@ $_LANG['add_ad'] = 'Custom Added Advertisement';
 $_LANG['add_picad'] = 'Add Picture Advertisement';
 $_LANG['edit_picad'] = 'Editing Picture Advertisements';
 $_LANG['edit_ad'] = 'Custom Editing Advertisement';
-$_LANG['title_flash_name'] = 'Advertising name';
+$_LANG['title_flash_name'] = 'Advertisement name';
 $_LANG['title_flash_type'] = 'Advertising type';
-$_LANG['title_flash_time'] = 'Waktu ditambahkan';
+$_LANG['title_flash_time'] = 'Adding time';
 $_LANG['title_flash_status'] = 'Status';
 $_LANG['title_upload_notice'] = 'Upload the image file of the advertisement, or you can specify a remote URL address as the image of the advertisement.';
 
 $_LANG['img_src'] = 'Image address';
-$_LANG['img_url'] = 'Link gambar';
+$_LANG['img_url'] = 'Image URL';
 $_LANG['form_none'] = 'Incomplete form information, add failure';
 $_LANG['web_url_no'] = 'Remote address error. Please fill in the complete URL address!';
 $_LANG['src_empty'] = 'Address error.';
@@ -42,14 +42,14 @@ $_LANG['current_theme'] = 'Current style';
 $_LANG['install_success'] = 'Flash style enabled successfully.';
 $_LANG['ad_img'] = 'Images';
 $_LANG['ad_flash'] = 'Flash';
-$_LANG['ad_html'] = 'Cpde';
+$_LANG['ad_html'] = 'HTML Code';
 $_LANG['ad_text'] = 'Written words';
 
 
 /* 内容页标签 */
 $_LANG['lable_flash_name'] = 'Advertising name:';
 $_LANG['lable_flash_type'] = 'Advertising types:';
-$_LANG['lable_flash_status'] = 'Statis:';
+$_LANG['lable_flash_status'] = 'Status:';
 $_LANG['lable_upload'] = 'Upload:';
 $_LANG['lable_url'] = 'Link Address:';
 $_LANG['lable_from_web'] = 'Or remote URL address:';

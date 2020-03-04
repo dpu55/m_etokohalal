@@ -1,5 +1,4 @@
 <?php
-/* 导航条 */
 $_LANG['register_sms'] = 'Register or enable SMS accounts';
 
 /* 注册和启用短信功能 */
@@ -7,7 +6,7 @@ $_LANG['email'] = 'Email';
 $_LANG['password'] = 'Password';
 $_LANG['domain'] = 'Domain';
 $_LANG['register_new'] = 'Register a new account';
-$_LANG['error_tips'] = 'Please contact QQ: 394263347';
+$_LANG['error_tips'] = 'Please set up the Shop -> Short Message Settings. Register the Short Message Service first and configure the Short Message Service correctly!';
 $_LANG['enable_old'] = 'Enabling existing accounts';
 
 /* 短信特服信息 */
@@ -26,7 +25,7 @@ $_LANG['phone'] = 'Receive mobile phone number';
 $_LANG['user_rand'] = 'Sending Short Messages at User Level';
 $_LANG['phone_notice'] = 'Multiple cell phone numbers are separated by half-horn commas';
 $_LANG['msg'] = 'Message content';
-$_LANG['msg_notice'] = 'Maximum 70 characters';
+$_LANG['msg_notice'] = 'The longest 67 characters, the signature has been defaulted, do not need to add a signature.(If no signature click is set <a href="sms.php?act=sms_sign">setup</a>)';
 $_LANG['send_date'] = 'Timed Delivery Time';
 $_LANG['send_date_notice'] = 'The format is YYYY-MM-DD HH:ii. Null means send immediately.';
 $_LANG['back_send_history'] = 'Returns the Send History List';
@@ -69,12 +68,12 @@ $_LANG['sent_date'] = 'Sending date';
 $_LANG['send_status'] = 'Sending status';
 $_LANG['status'][0] = 'Fail';
 $_LANG['status'][1] = 'Success';
-$_LANG['user_list'] = 'Semua Member';
+$_LANG['user_list'] = 'All members';
 $_LANG['please_select'] = 'Please select membership level';
 
 /* 提示 */
 $_LANG['test_now'] = '<span style="color:red;"></span>';
-$_LANG['msg_price'] = '<span style="color:green;">SMS 0.1 yuan per message(RMB)</span>';
+$_LANG['msg_price'] = '<span style="color:green;">Rp300 per text message</span>';
 
 /* API返回的错误信息 */
 //--注册
@@ -133,5 +132,26 @@ $_LANG['js_languages']['end_date_format_error'] = 'The end date is not in the ri
 //--充值
 $_LANG['js_languages']['money_empty_error'] = 'Please enter the amount you want to recharge.';
 $_LANG['js_languages']['money_format_error'] = 'The amount format is incorrect.';
+
+
+
+$_LANG['insert_sign'] = 'Please enter short message signature';
+$_LANG['insert_succ'] = 'Add success';
+$_LANG['error_smg'] = 'Information error';
+$_LANG['edit_succ'] = 'Modified success';
+$_LANG['default_succ'] = 'Signature succeeds by default';
+$_LANG['no_default'] = 'No default value';
+$_LANG['add_sign'] = 'New Short Message Signature';
+$_LANG['new_default_sign'] = 'The current default signature is';
+$_LANG['default_sign'] = 'Original signature';
+$_LANG['add'] = 'Add';
+$_LANG['edited'] = 'Modified to';
+$_LANG['edit'] = 'Modified';
+$_LANG['set_default_sign'] = 'Set to default signature';
+
+
+
+
+
 
 ?>

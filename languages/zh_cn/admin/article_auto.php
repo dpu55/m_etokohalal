@@ -1,12 +1,12 @@
 <?php
  $_LANG['id'] = 'ID';
 
-$_LANG['starttime'] = 'Waktu ditambahkan';
-$_LANG['endtime'] = 'Cancel time';
+$_LANG['starttime'] = 'Start time';
+$_LANG['endtime'] = 'End time';
 $_LANG['goods_name'] = 'Article name';
 $_LANG['ok'] = 'Confirm';
 $_LANG['edit_ok'] = 'Successful operation';
-$_LANG['delete'] = 'Revoke';
+$_LANG['delete'] = 'Delete';
 $_LANG['deleteck'] = 'Are you sure you want to delete the auto-publish/cancel the publish process of this article? This action will not affect the article itself.';
 $_LANG['enable_notice'] = 'You need to go to the System Settings - > Scheduling Task to turn on this feature before you can use it.';
 $_LANG['button_start'] = 'Batch release';

@@ -104,7 +104,7 @@ $_LANG['order_time'] = 'Waktu ditambahkan';
 $_LANG['detail'] = 'View';
 $_LANG['phone'] = 'Telepon';
 $_LANG['group_buy'] = '(group buying)';
-$_LANG['error_get_goods_info'] = 'Error in obtaining order merchandise information';
+$_LANG['error_get_goods_info'] = 'Error in obtaining order product information';
 $_LANG['exchange_goods'] = '(Credit Exchange)';
 
 $_LANG['js_languages']['remove_confirm'] = 'Deleting an order clears all information about the order. Are you sure you want to do that?';
@@ -174,7 +174,7 @@ $_LANG['label_agency'] = 'Office:';
 $_LANG['suppliers_name'] = 'Supplier';
 
 $_LANG['product_sn'] = 'Goods No.';
-$_LANG['goods_info'] = 'Original Order-Commodity Information';
+$_LANG['goods_info'] = 'Original Order-Product Information';
 $_LANG['goods_name'] = 'Nama Produk';
 $_LANG['goods_name_brand'] = 'Nama Produk [ Brand ]';
 $_LANG['goods_sn'] = 'Item number';
@@ -278,7 +278,7 @@ $_LANG['remark_package'] = '(gift package)';
 /* 订单来源统计 */
 $_LANG['from_order'] = 'Source of order:';
 $_LANG['from_ad_js'] = 'Advertisement:';
-$_LANG['from_goods_js'] = 'JS Delivery Outside Commodity Station';
+$_LANG['from_goods_js'] = 'JS Delivery Outside Product Station';
 $_LANG['from_self_site'] = 'From this station';
 $_LANG['from'] = 'From the site:';
 
@@ -314,13 +314,13 @@ $_LANG['available_surplus'] = 'Available balance:';
 $_LANG['available_integral'] = 'Available integrals:';
 $_LANG['available_bonus'] = 'Available in red envelopes:';
 $_LANG['admin'] = 'Administrator adds';
-$_LANG['search_goods'] = 'Search by commodity number or commodity name or commodity number';
+$_LANG['search_goods'] = 'Search by product number or product name or product number';
 $_LANG['category'] = 'Category';
 $_LANG['brand'] = 'Brand';
 $_LANG['user_money_not_enough'] = 'Insufficient user balance';
 $_LANG['pay_points_not_enough'] = 'Insufficient User Integral';
 $_LANG['money_paid_enough'] = 'The amount paid is more than the sum of the total amount of the goods and all kinds of expenses. Please refund it first.';
-$_LANG['price_note'] = 'Note: Attribute price increases have been included in commodity prices.';
+$_LANG['price_note'] = 'Note: Attribute price increases have been included in product prices.';
 $_LANG['select_pack'] = 'Selective packaging';
 $_LANG['select_card'] = 'Choosing greeting cards';
 $_LANG['select_shipping'] = 'Please choose the mode of distribution first.';

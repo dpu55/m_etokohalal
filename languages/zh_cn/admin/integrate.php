@@ -1,6 +1,6 @@
 <?php
 $_LANG['integrate_name'] = 'Name';
-$_LANG['integrate_version'] = 'Versi';
+$_LANG['integrate_version'] = 'Edition';
 $_LANG['integrate_author'] = 'Author';
 
 /* 插件列表 */
@@ -27,29 +27,28 @@ $_LANG['lost_install_log'] = 'No installation log found';
 $_LANG['empty_install_log'] = 'Installation log is empty';
 
 /* 表单相关语言项 */
-$_LANG['db_notice'] = 'Clicking on <font color=" 000000"> Next step </font> will guide you to synchronize mall user data to the integration forum. If you do not need to synchronize data, click "<font color="#000000"> to save configuration information directly </font>"';
-$_LANG['lable_db_host']='Database server host name:';
-$_LANG['lable_db_name']='Database name:';
-$_LANG['lable_db_chartset']='Database character set:';
-$_LANG['lable_is_latin1']='whether it is Latin1 encoding';
-$_LANG['lable_db_user']='Database account:';
-$_LANG['lable_db_pass']='Database password:';
-$_LANG['lable_prefix']='data table prefix:';
-$_LANG['lable_url']='The complete URL of the integrated system:';
-
+$_LANG['db_notice'] = 'Click“<font color="#000000">next step</font>”It will guide you to synchronize the user data of the mall to the integration forum.If you do not need to synchronize data, Click“<font color="#000000">Save configuration information directly</font>”';
+$_LANG['lable_db_host'] = 'Database Server Host Name：';
+$_LANG['lable_db_name'] = 'Database name：';
+$_LANG['lable_db_chartset'] = 'Database Character Set：';
+$_LANG['lable_is_latin1'] = 'Is it Latin1 encoding?';
+$_LANG['lable_db_user'] = 'Database Account：';
+$_LANG['lable_db_pass'] = 'Database password：';
+$_LANG['lable_prefix'] = 'Table Prefix：';
+$_LANG['lable_url'] = 'Complete URL of the integrated system：';
 /* 表单相关语言项(discus5x) */
 $_LANG['cookie_prefix']='COOKIE prefix:';
 $_LANG['cookie_salt']='COOKIE encryption string:';
 $_LANG['button_next']='next';
-$_LANG['button_force_save_config']='save configuration information directly';
+$_LANG['button_force_save_config']='Save configuration information directly';
 $_LANG['save_confirm']='Are you sure you want to save configuration information directly? ';
-$_LANG['button_save_config']='save configuration information';
-$_LANG['error_db_msg']='incorrect database address, user or password';
+$_LANG['button_save_config']='Save configuration information';
+$_LANG['error_db_msg']='Incorrect database address, user or password';
 $_LANG['error_db_exist']='Database does not exist';
 $_LANG['error_table_exist']='Integration Forum key data sheet does not exist, the information you filled in is incorrect';
 $_LANG['notice_latin1']='This option may cause Chinese username to be unavailable when it is filled in incorrectly';
 $_LANG['error_not_latin1']='Integrated database detection is not Latin1 encoding! Please re-select';
-$_LANG['error_is_latin1']='integrated database detected lantin1 encoding! Please re-select';
+$_LANG['error_is_latin1']='Integrated database detected lantin1 encoding! Please re-select';
 $_LANG['invalid_db_charset']='The integrated database detected a %s character set, not a %s character set';
 $_LANG['error_latin1']='The integration information you fill in will lead to serious errors and will not be able to complete the integration';
 
@@ -57,80 +56,85 @@ $_LANG['error_latin1']='The integration information you fill in will lead to ser
 $_LANG['conflict_username_check']='Check if Mall users and Integration Forum users have renames';
 $_LANG['check_notice']='This page will check whether the existing users and forum users in the mall have renames. Click "Before checking", Please choose a default processing method for the users with renames in the mall'.
 $_LANG['default_method']='If you detect duplicate users in the mall, please select a default processing method for these users';
-$_LANG['shop_user_total']='Mall has %s users to be checked';
+$_LANG['shop_user_total']='Etokohalal has %s users to be checked';
 $_LANG['lable_size']='Number of users checked each time';
 $_LANG['start_check']='Start checking';
 $_LANG['next']='next';
 $_LANG['checking']='Checking... (Please do not close the browser)';
 $_LANG['notice']='Checked %s/%s';
-$_LANG['check_complete']='check completed';
+$_LANG['check_complete']='Check completed';
 
 /* 同名用户处理 */
-$_LANG['conflict_username_modify']='Mall Named User List';
-$_LANG['modify_notice']='lists all the duplicate users and processing methods of the malls and forums below. If you have confirmed all the operations, please click "Start Integration". You need to click the button "Save the page changes" to change the operation of the renamed user to take effect. ';
-$_LANG['page_default_method']='Default processing method for renamed users in this page';
-$_LANG['lable_rename']='Mall rename user plus suffix';
-$_LANG['lable_delete']='Delete duplicate users and related data of malls';
-$_LANG['lable_ignore']='Reserve the retail users with the same name, and the forum users with the same name will be regarded as the same user';
-$_LANG['short_rename']='Mall user renamed';
-$_LANG['short_delete']='delete mall users';
-$_LANG['short_ignore']='Keep Mall Users';
-$_LANG['user_name']='mall user name';
-$_LANG['email']='email';
-$_LANG['reg_date']='registration date';
-$_LANG['all_user']='All mall renamed users';
-$_LANG['error_user']='Mall user who needs to re-select operation';
-$_LANG['rename_user']='Mall users who need to be renamed';
-$_LANG['delete_user']='Mall users that need to be deleted';
-$_LANG['ignore_user']='Mall users that need to be retained';
+$_LANG['conflict_username_modify'] = 'Mall Name User List';
+$_LANG['modify_notice'] = 'Following is a list of all retail stores and forums with duplicate names of users and processing methods. If you have confirmed all the operations, please click "Start Integration". You need to click the button "Save the page changes" to change the operation of the renamed user to take effect.';
+$_LANG['page_default_method'] = 'Default processing method for renamed users in this page';
+$_LANG['lable_rename'] = 'Mall duplicate users with suffixes';
+$_LANG['lable_delete'] = 'Delete duplicate users and related data in malls';
+$_LANG['lable_ignore'] = 'Retain the same name user in the mall, and the same name user in the forum will be regarded as the same user.';
+$_LANG['short_rename'] = 'Mall users renamed';
+$_LANG['short_delete'] = 'Delete Mall Users';
+$_LANG['short_ignore'] = 'Retain Mall Users';
+$_LANG['user_name'] = 'Mall User Name';
+$_LANG['email'] = 'email';
+$_LANG['reg_date'] = 'Registration date';
+$_LANG['all_user'] = 'All retail users';
+$_LANG['error_user'] = 'Mall users who need to re-select operations';
+$_LANG['rename_user'] = 'Shopping Mall Users Need to Rename';
+$_LANG['delete_user'] = 'Mall users need to be deleted';
+$_LANG['ignore_user'] = 'Mall users need to be retained';
 
 $_LANG['submit_modify'] = 'Save changes to this page';
 $_LANG['button_confirm_next'] = 'Start integration';
 
 
 /* 用户同步 */
-$_LANG['user_sync']='Synchronize mall data to forum and complete integration';
-$_LANG['button_pre']='last step';
-$_LANG['task_name']='task name';
-$_LANG['task_status']='task status';
-$_LANG['task_del']='%s number of mall users to be deleted';
-$_LANG['task_rename']='%s Mall users need to rename';
-$_LANG['task_sync']='%s Mall users need to synchronize to the forum';
-$_LANG['task_save']='Save configuration information and complete integration';
-$_LANG['task_uncomplete']='incomplete';
-$_LANG['task_run']='In execution (%s/%S)';
-$_LANG['task_complete']='Lengkap';
-$_LANG['start_task']='Start task';
-$_LANG['sync_status']='synchronized %s/%s';
-$_LANG['sync_size']='Number of users per process';
-$_LANG['sync_ok']='Congratulations. Successful integration';
-$_LANG['save_ok'] = 'Save success';
+$_LANG['user_sync'] = 'Synchronize Mall Data to Forum and Complete Integration';
+$_LANG['button_pre'] = 'last step';
+$_LANG['task_name'] = 'Task name';
+$_LANG['task_status'] = 'Task status';
+$_LANG['task_del'] = 'Number of users in %s malls to be deleted';
+$_LANG['task_rename'] = 'Number of users in %s malls to be rename';
+$_LANG['task_sync'] = '%s mall users need to synchronize to the Forum';
+$_LANG['task_save'] = 'Save configuration information and complete integration';
+$_LANG['task_uncomplete'] = 'Uncomplete';
+$_LANG['task_run'] = 'In execution (%s / %s)';
+$_LANG['task_complete'] = 'Complete';
+$_LANG['start_task'] = 'Start task';
+$_LANG['sync_status'] = 'Already synchronized %s / %s';
+$_LANG['sync_size'] = 'Number of users processed at a time';
+$_LANG['sync_ok'] = 'Congratulations. Integration success';
+
+
+$_LANG['save_ok'] = 'Save successfully';
 
 /* 积分设置 */
-$_LANG ['no_points']='No convertible points were detected in the forum';
-$_LANG['bbs']='Forum';
-$_LANG['shop_pay_points']='shopping mall consumption integral';
-$_LANG['shop_rank_points']='Mall Grade Integral';
-$_LANG['add_rule']='New rule';
-$_LANG['modify']='modify';
-$_LANG['rule_name']='exchange rule';
-$_LANG['rule_rate']='conversion ratio';
+$_LANG['no_points'] = 'No convertible points were detected in the forum.';
+$_LANG['bbs'] = 'Forum';
+$_LANG['shop_pay_points'] = 'Consumption Point of Mall';
+$_LANG['shop_rank_points'] = 'Grade Point of Mall';
+$_LANG['add_rule'] = ' Add new rules';
+$_LANG['modify'] = 'Modify';
+$_LANG['rule_name'] = 'Exchange rules';
+$_LANG['rule_rate'] = 'Subscription ratio';
 
 /* JS语言项 */
-$_LANG['js_languages']['no_host']='The database server host name cannot be empty. ';
-$_LANG['js_languages']['no_user']='The database account cannot be empty. ';
-$_LANG['js_languages']['no_name']='The database name cannot be empty. ';
-$_LANG['js_languages']['no_integration_url']='Please enter the complete URL of the integration object';
-$_LANG['js_languages']['install_confirm']='Please do not change integration objects at will while the system is running. \ Are you sure you want to install the member data integration plug-in? ';
-$_LANG['js_languages']['num_invalid']='The number of records of synchronized data is not an integer';
-$_LANG['js_languages']['start_invalid']='The starting position of synchronized data is not an integer';
-$_LANG['js_languages']['sync_confirm']='Synchronizing membership data will rebuild the target data table. Please backup your data before performing synchronization. \ Are you sure you want to start synchronizing membership data? ';
-$_LANG['cookie_prefix_notice']='UTF8 version cookie prefix defaults to xnW_ and GB2312/GBK version cookie prefix defaults to KD9_. ';
-$_LANG['js_languages']['no_method']='Please choose a default processing method';
-$_LANG['js_languages']['rate_not_null']='The ratio cannot be empty';
-$_LANG['js_languages']['rate_not_int']='Ratio can only fill in integers';
-$_LANG['js_languages']['rate_invailed']='You filled in an invalid ratio';
-$_LANG['js_languages']['user_importing']='Importing users into UCenter...';
+$_LANG['js_languages']['no_host'] = 'The database server host name cannot be empty.';
+$_LANG['js_languages']['no_user'] = 'The database account cannot be empty.';
+$_LANG['js_languages']['no_name'] = 'The database name cannot be empty.';
+$_LANG['js_languages']['no_integrate_url'] = 'Enter the integrity of the integration object URL';
+$_LANG['js_languages']['install_confirm'] = 'Please do not change the integration object at will in the system operation. \r\nAre you sure you want to install the member data integration plug-in?';
+$_LANG['js_languages']['num_invalid'] = 'The number of records of synchronized data is not an integer';
+$_LANG['js_languages']['start_invalid'] = 'The starting position of synchronous data is not an integer';
+$_LANG['js_languages']['sync_confirm'] = 'Synchronizing membership data will rebuild the target data table. Please backup your data before performing synchronization.\r\n Are you sure you want to start synchronizing membership data?';
+
+$_LANG['cookie_prefix_notice'] = 'UTF8 versions cookie the prefix defaults toxnW_，GB2312/GBK versions cookieThe prefix defaults toKD9_.';
+
+$_LANG['js_languages']['no_method'] = 'Choose a default processing method';
+
+$_LANG['js_languages']['rate_not_null'] = 'Proportion cannot be empty';
+$_LANG['js_languages']['rate_not_int'] = 'Proportion can only be filled in integers';
+$_LANG['js_languages']['rate_invailed'] = 'You filled in an invalid ratio.';
+$_LANG['js_languages']['user_importing'] = 'Importing users into UCenter...';
 
 /* UCenter设置语言项 */
 $_LANG['ucenter_tab_base'] = 'Basic setup';
@@ -140,12 +144,12 @@ $_LANG['ucenter_lab_key'] = 'UCenter Communication key:';
 $_LANG['ucenter_lab_url'] = 'UCenter Access address:';
 $_LANG['ucenter_lab_ip'] = 'UCenter IP address:';
 $_LANG['ucenter_lab_connect'] = 'UCenter Connection mode:';
-$_LANG['ucenter_lab_db_host'] = 'UCenter database server:';
+$_LANG['ucenter_lab_db_host'] = 'UCenter Database server:';
 $_LANG['ucenter_lab_db_user'] = 'UCenter Database username:';
 $_LANG['ucenter_lab_db_pass'] = 'UCenter Database password:';
 $_LANG['ucenter_lab_db_name'] = 'UCenter Database name:';
 $_LANG['ucenter_lab_db_pre'] = 'UCenter Table Prefix:';
-$_LANG['ucenter_lab_tag_number'] = 'TAG Display Quantity:';
+$_LANG['ucenter_lab_tag_number'] = 'TAG Label Display Quantity:';
 $_LANG['ucenter_lab_credit_0'] = 'Name of Grade Integral:';
 $_LANG['ucenter_lab_credit_1'] = 'Name of Consumption Integral:';
 $_LANG['ucenter_opt_database'] = 'Database mode';
@@ -173,9 +177,9 @@ $_LANG['uc_members_merge'] = 'Membership merger';
 $_LANG['user_startid_intro'] = '<p> This initial membership ID is %s. Members whose original ID is 888 will be changed to %s + 888. </p>';
 $_LANG['uc_members_merge_way1'] = 'Force the same user with the same UC username and password';
 $_LANG['uc_members_merge_way2'] = 'Users with the same UC username and password are not imported into UC users';
-$_LANG['start_import'] = 'Start import';
+$_LANG['start_import'] = 'Start importing';
 $_LANG['import_user_success'] = 'Successfully imported membership data to UCenter';
-$_LANG['uc_points'] = 'UCenter Integral Exchange Settings need to be done in the UCenter management background.';
+$_LANG['uc_points'] = 'UCenter points exchange settings need to be done in the UCenter management background';
 $_LANG['uc_set_credits'] = 'Setting up Integral Exchange Scheme';
 $_LANG['uc_client_not_exists'] = 'The uc_client directory does not exist. Please upload the uc_client directory to the root directory of the mall and then integrate it.';
 $_LANG['uc_client_not_write'] = 'The uc_client/data directory is not writable. Please set the uc_client/data directory permission to 777 first.';
@@ -183,6 +187,6 @@ $_LANG['uc_lang']['credits'][0][0] = 'Rank integral';
 $_LANG['uc_lang']['credits'][0][1] = '';
 $_LANG['uc_lang']['credits'][1][0] = 'Consumption points';
 $_LANG['uc_lang']['credits'][1][1] = '';
-$_LANG['uc_lang']['exchange'] = 'UCenter Integral Conversion';
+$_LANG['uc_lang']['exchange'] = 'UCenter exchange';
 
 ?>

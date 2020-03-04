@@ -7,15 +7,15 @@ $_LANG['send_comment'] = 'Send comment';
 $_LANG['user_name'] = 'User name';
 $_LANG['email'] = 'Email';
 $_LANG['anonymous'] = 'Anonymous';
-$_LANG['send_email_notice'] = 'Notifikasi email';
-$_LANG['remail'] = 'Kirim ulang';
+$_LANG['send_email_notice'] = 'Mail notification';
+$_LANG['remail'] = 'Resend mail';
 
 $_LANG['comment_type'] = 'Type';
-$_LANG['comment_obj'] = 'Produk Komentar';
+$_LANG['comment_obj'] = 'Comment object';
 $_LANG['content'] = 'Comment content';
-$_LANG['comment_time'] = 'Waktu komentar';
-$_LANG['reply_content'] = 'Balas komentar';
-$_LANG['comment_flag'] = 'Status';
+$_LANG['comment_time'] = 'Commentary time';
+$_LANG['reply_content'] = 'Reply content';
+$_LANG['comment_flag'] = 'State';
 $_LANG['no_reply'] = 'Unanswered';
 $_LANG['yes_reply'] = 'Recovered';
 $_LANG['admin_user_name'] = 'Admin';
@@ -38,7 +38,7 @@ $_LANG['comment_list'] = 'Comment list';
 
 $_LANG['drop_select'] = 'Delete comments';
 $_LANG['reply'] = 'Reply';
-$_LANG['check'] = 'check';
+$_LANG['check'] = 'Check';
 $_LANG['allow'] = 'Allow display';
 $_LANG['forbid'] = 'Forbidden display';
 $_LANG['display'] = 'Show';
@@ -53,7 +53,7 @@ $_LANG['back_list'] = 'Return to the comment list';
 
 /* JS提示信息 */
 $_LANG['js_languages']['no_content'] = 'Comments in response should not be empty!';
-$_LANG['have_reply_content'] = 'Komentar ini telah dijawab, jika Anda terus membalas, Anda akan memperbarui balasan aslinya!';
+$_LANG['have_reply_content'] = 'Tip: This comment has been answered, if you continue to reply, you will update the content of the original reply!';
 
 
 $_LANG['cfm_allow'] = 'Are you sure you want to allow the selected comments to be displayed?';

@@ -7,7 +7,7 @@ $_LANG['pack_desc'] = 'Package description';
 
 $_LANG['pack_edit'] = 'Edit';
 
-$_LANG['drop_pack_img'] = 'Delete packe drawings';
+$_LANG['drop_pack_img'] = 'Delete packing drawings';
 $_LANG['confirm_pack_img'] = 'Are you sure you want to delete the greeting card drawings?';
 $_LANG['drop_pack_img_success'] = 'Successful deletion of packaged pictures';
 
@@ -21,20 +21,20 @@ $_LANG['notice_freemoney'] = 'When the users consumption exceeds this value, the
 $_LANG['warn_packimg'] = 'You have uploaded pictures. The original image will be overwritten when uploaded again';
 
 /*提示信息*/
-$_LANG['packname_exist'] ='Package name %s already exists';
+$_LANG['packname_exist'] ='Package name %s already exist';
 $_LANG['packadd_succed'] ='Successfully added';
-$_LANG['packedit_succed'] ='Successful modification of packe %s';
-$_LANG['packedit_falure'] ='Packe %s Modification Failed';
+$_LANG['packedit_succed'] ='Packing %s Modified success';
+$_LANG['packedit_falure'] ='Packing %s Modification failed';
 $_LANG['packremove_falure'] ='Delete failed';
 $_LANG['enter_num'] ='Please enter a number!';
-$_LANG['no_packname'] ='The packe name you entered is empty!';
+$_LANG['no_packname'] ='The packing name you entered is empty!';
 
-$_LANG['back_list'] ='Return to the packe list';
-$_LANG['continue_add'] ='Continue to add';
+$_LANG['back_list'] ='Return to the packing list';
+$_LANG['continue_add'] ='Continue to add new packaging';
 
 /*JS 语言项*/
 $_LANG['js_languages']['no_packname'] = 'No package name entered';
-$_LANG['js_languages']['packfee_un_num'] = 'Packe charges are empty or not numeric';
-$_LANG['js_languages']['packmoney_un_num'] = 'Free package quota is empty or not digital';
+$_LANG['js_languages']['packfee_un_num'] = 'Packing charges are empty or not numeric';
+$_LANG['js_languages']['packmoney_un_num'] = 'Free packaging quota is empty or not digital';
 
 ?>
