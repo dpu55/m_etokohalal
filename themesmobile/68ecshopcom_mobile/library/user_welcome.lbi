@@ -8,13 +8,8 @@
           <input type="text" name="user_name" value="{$profile.user_name}" placeholder="{$lang.m_155}" class="c-f-text">
         </div>
         <div class="name"> <span>{$lang.birthday}</span> {html_select_date field_order=YMD prefix=birthday start_year=-60 end_year=+1 display_days=true month_format=%m day_value_format=%02d time=$profile.birthday}</div>
-        <div class="name1"> <span>{$lang.sex}</span>
+        <div class="name1"> <span style="width: 32%;margin-top: 6px;">{$lang.sex}</span>
           <ul>
-           <li {if $profile.sex eq '0'} class="on" {/if} style="visibility: hidden;">
-              <label for="sex0">
-               <input type="radio" name="sex" value="0" tabindex="2" class="radio" id="sex0" {if $profile.sex eq '0'}checked=true{/if}/>
-                {$lang.secrecy}</label>
-            </li>
             <li {if $profile.sex eq '1'} class="on" {/if} >
               <label for="sex1">
                 <input type="radio" name="sex" value="1"  tabindex="3" class="radio" id="sex1" {if $profile.sex eq '1'} checked=true{/if}/>
@@ -29,9 +24,8 @@
         </div>
         
         <div class="name">
-          <label for="email_ep"> <span>{$lang.m_156}</span>
-            <input name="email" value="{$profile.email}" id="email_ep" placeholder="*{$lang.email}" type="text" />
-          </label>
+          <span>{$lang.m_156}</span>
+          <input name="email" value="{$profile.email}" id="email_ep" placeholder="*{$lang.email}" type="email" />
         </div>
         
         {foreach from=$extend_info_list item=field}

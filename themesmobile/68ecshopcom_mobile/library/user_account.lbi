@@ -6,7 +6,7 @@
 		var {$key} = "{$item}";
 	{/foreach}
 </script>
-<div style="background:#fff;">
+<div style="background:#fff; margin-top:50px;">
 <!-- {/if}--> 
 <div class="user_login_title"><h2><em>{$lang.m_83}</em><span>{$surplus_amount}</span></h2></div>
 <!--{if $account_log}-->

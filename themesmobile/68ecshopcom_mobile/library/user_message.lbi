@@ -35,7 +35,7 @@
             </div>
           {else}
           <div>
-            <div class="form_search"><span>{$lang.message_type}：</span>
+            <div class="form_search"><span>{$lang.message_type}:</span>
             <div class="anniu">
             <ul>
             <li class="on">
@@ -74,12 +74,12 @@
               <input type="text" name="msg_title" id="msg_title" placeholder="*{$lang.message_title}"/>
           </div>
           </label>
+          <label for="msg_content"> 
           <div class="field_else">
-              <label for="msg_content"> 
-              <span>{$lang.message_content}：</span>
+              <span>{$lang.message_content}</span>
                <textarea name="msg_content" id="msg_content" style="height:100px;"></textarea>
-              </label>
           </div>
+          </label>
           <div style="padding-top:20px;padding-bottom:10px;">
             <input type="submit" value="{$lang.submit_message}" class="btn_big1"/>
           </div>
