@@ -46,7 +46,7 @@ $_LANG['batch_drop_success'] = 'Successfully deleted %d pick-up vouchers';
 $_LANG['gen_excel'] = 'Export EXCEL';
 $_LANG['tg_sn'] = 'Bill of lading number';
 
-$_LANG['addgoods'] = 'Configure commodity';
+$_LANG['addgoods'] = 'Configure product';
 $_LANG['custom_goods_cat'] = 'Semua Kategori';
 $_LANG['custom_goods_brand'] = 'Semua Merek';
 $_LANG['custom_keyword'] = 'Kata Kunci';

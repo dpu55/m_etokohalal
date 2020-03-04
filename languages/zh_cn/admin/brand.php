@@ -3,8 +3,8 @@ $_LANG['brand_name'] = 'Brand name';
 $_LANG['site_url'] = 'Brand url';
 $_LANG['brand_desc'] = 'Brand description';
 $_LANG['brand_logo'] = 'Brand LOGO';
-$_LANG['sort_order'] = 'Sortir';
-$_LANG['is_show'] = 'Tampilkan';
+$_LANG['sort_order'] = 'Sort';
+$_LANG['is_show'] = 'Whether to display';
 $_LANG['drop_brand_logo'] = 'delete icon';
 $_LANG['confirm_drop_logo'] = 'Are you sure you want to delete the icon?';
 $_LANG['drop_brand_logo_success'] = 'Delete Brand Logo Successfully';
@@ -36,7 +36,7 @@ $_LANG['continue_add'] = 'Add brand';
 $_LANG['upfile_type_error'] = "Only upload jpg, gif, PNG type pictures";
 $_LANG['upfile_error'] = "Pictures cannot be uploaded, please ensure the writability of all subdirectories in the data directory!";
 
-$_LANG['visibility_notes'] = 'When there is no commodity under the brand, the brand area on the home page and the classification page will not show the brand.';
+$_LANG['visibility_notes'] = 'When there is no product under the brand, the brand area on the home page and the category page will not show the brand.';
 
 /*JS 语言项*/
 $_LANG['js_languages']['no_brandname'] = 'You must enter the brand name!';

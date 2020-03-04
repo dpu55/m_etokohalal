@@ -1,5 +1,5 @@
 <?php
-$_LANG['virtual_card_list']='virtual commodity list';
+$_LANG['virtual_card_list']='virtual product list';
 $_LANG['lab_goods_name']='Nama Produk';
 $_LANG['replenish']='replenish';
 $_LANG['lab_card_id']='number';
@@ -16,8 +16,8 @@ $_LANG['download_file']='Unduh batch csv file ';
 $_LANG['separator']='separator';
 $_LANG['upload file']='upload file';
 $_LANG['sql_error']='Article %s information error: <br/>';
-$_LANG['replenish_no_goods_id']='No replenishment operation due to lack of commodity ID parameters';
-$_LANG['replenish_no_get_goods_name']='The commodity ID parameter is incorrect and the commodity name cannot be obtained';
+$_LANG['replenish_no_goods_id']='No replenishment operation due to lack of product ID parameters';
+$_LANG['replenish_no_get_goods_name']='The product ID parameter is incorrect and the product name cannot be obtained';
 $_LANG['drop_card_success']='The record was deleted successfully';
 $_LANG['batch_drop']='batch deletion';
 $_LANG['drop_card_confirm']='Are you sure you want to delete the record? ';
@@ -45,7 +45,7 @@ $_LANG['use_help'] = 'Instruksi penggunaan:'.
 $_LANG['virtual_card_change'] = 'Change the encryption string';
 $_LANG['user_guide'] = 'Instruksi penggunaan:'.
 '<ol>'.
-'<li> Encryption string is used to encrypt the card number and password of virtual card commodities</li>'.
+'<li> Encryption string is used to encrypt the card number and password of virtual card products</li>'.
 '<li> Encrypted string is stored in file data/config.php, and the corresponding constant is AUTH_KEY</li>'.
 '<li> If you want to change the encrypted string, enter the original encrypted string and the new encrypted string in the text box below, click "confirm" button</ol>';
 
@@ -91,7 +91,7 @@ $_LANG['ss'][SS_UNSHIPPED]='Unshipped';
 $_LANG['ss'][SS_PREPARING]='in-stock';
 $_LANG['ss'][SS_SHIPPED]='shipped';
 $_LANG['ss'][SS_RECEIVED]='Acceptance Confirmation';
-$_LANG['ss'][SS_SHIPPED_PART]='Shipped (partial commodities)';
+$_LANG['ss'][SS_SHIPPED_PART]='Shipped (partial products)';
 $_LANG['ss'][SS_SHIPPED_ING]='In delivery';
 $_LANG['ps'][PS_UNPAYED]='unpaid';
 $_LANG['ps'][PS_PAYING]='In payment';
@@ -140,7 +140,7 @@ $_LANG['order_time']='order_time';
 $_LANG['detail']='view';
 $_LANG['phone']='phone';
 $_LANG['group_buy']='(group purchase)';
-$_LANG['error_get_goods_info']='error in obtaining order merchandise information';
+$_LANG['error_get_goods_info']='error in obtaining order product information';
 $_LANG['exchange_goods']='(integral exchange)';
 $_LANG['js_languages']['remove_confirm']='Deleting an order clears all information about the order. Are you sure you want to do that? ';
 $_LANG['label_order_sn']='Nomor Order:';
@@ -200,7 +200,7 @@ $_LANG['label_suppliers']='Select supplier:';
 $_LANG['label_agency']='office:';
 $_LANG['suppliers_name']='supplier';
 $_LANG['product_sn']='Nomor Produk';
-$_LANG['goods_info']='commodity information';
+$_LANG['goods_info']='product information';
 $_LANG['goods_name']='Nama Produk:';
 $_LANG['goods_name_brand']='Nama Produk [Merek]';
 $_LANG['goods_shouhou']='after-sale';
@@ -290,7 +290,7 @@ $_LANG['remark_favorable']='(special offer)';
 $_LANG['remark_package']='(gift package)';
 $_LANG['from_order']='source of order:';
 $_LANG['from_ad_js']='advertising:';
-$_LANG['from_goods_js']='JS put out outside commodity stations';
+$_LANG['from_goods_js']='JS put out outside product stations';
 $_LANG['from_self_site']='from this site';
 $_LANG['from']='from the site:';
 $_LANG['add_order']='add order';
@@ -324,18 +324,18 @@ $_LANG['available_surplus']='available balance:';
 $_LANG['available_integral']='Available integral:';
 $_LANG['available_bonus']='Available red envelope:';
 $_LANG['admin']='Administrator Add';
-$_LANG['search_goods']='Search by commodity number or commodity name or commodity number';
-$_LANG['category']='classification';
+$_LANG['search_goods']='Search by product number or product name or product number';
+$_LANG['category']='category';
 $_LANG['brand']='brand';
 $_LANG['user_money_not_enough']='insufficient user balance';
 $_LANG['pay_points_not_enough']='insufficient user integrals';
 $_LANG['money_paid_enough']='Payment amount is more than the total amount of goods and the sum of various expenses, please refund first';
-$_LANG['price_note']='Note: Attribute premium has been included in commodity prices';
+$_LANG['price_note']='Note: Attribute premium has been included in product prices';
 $_LANG['select_pack']='select package';
 $_LANG['select_card']='select greeting card';
 $_LANG['select_shipping']='Please choose the delivery mode first';
 $_LANG['want_insure']='I want to insure';
-$_LANG['update_goods']='update commodities';
+$_LANG['update_goods']='update products';
 $_LANG['notice_user'] = '<strong> Note: </strong> Search results show only the first 20 records, if no phase is found.
 Members, please search more accurately. In addition, if the member is registered from the forum and has not logged in at the mall,'.
 'It cannot be found either. You need to log in at the mall first.';
@@ -360,7 +360,7 @@ $_LANG['js_languages']['input_price']='custom price';
 $_LANG['js_languages']['pls_search_user']='Search and select members';
 $_LANG['js_languages']['confirm_drop']='Does Confirm that you want to delete the item? ';
 $_LANG['js_languages']['invalid_goods_number']='incorrect quantity of goods';
-$_LANG['js_languages']['pls_search_goods']='Please search and select commodities';
+$_LANG['js_languages']['pls_search_goods']='Please search and select products';
 $_LANG['js_languages']['pls_select_area']='Please select the area in its entirety';
 $_LANG['js_languages']['pls_select_shipping']='Please choose the delivery method';
 $_LANG['js_languages']['pls_select_payment']='Please choose the payment method';

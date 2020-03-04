@@ -16,10 +16,10 @@ $_LANG['stop_sev'] = 'Temporarily Out of Service';
 $_LANG['open_sev'] = 'Opening service';
 $_LANG['open_again'] = 'Application for reopening';
 $_LANG['no-open'] = 'You have not opened this service yet.';
-$_LANG['col_goods_num'] = 'Produ';
+$_LANG['col_goods_num'] = 'Product';
 $_LANG['item'] = 'item';
 
 /* JS提示 */
-$_LANG['js_languages']['sev_stop'] = 'After the suspension of service, your store and merchandise information will stop updating to the search engine. Are you sure you want to suspend it?';
+$_LANG['js_languages']['sev_stop'] = 'After the suspension of service, your store and product information will stop updating to the search engine. Are you sure you want to suspend it?';
 
 ?>

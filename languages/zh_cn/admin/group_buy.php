@@ -5,23 +5,23 @@ $_LANG['add_group_buy'] = 'Add';
 $_LANG['edit_group_buy'] = 'Edit';
 
 /* 活动列表页 */
-$_LANG['goods_name'] = 'Nama Produk';
-$_LANG['start_date'] = 'Waktu Mulai';
-$_LANG['end_date'] = 'Waktu Berakhir';
+$_LANG['goods_name'] = 'Product name';
+$_LANG['start_date'] = 'Start time';
+$_LANG['end_date'] = 'End time';
 $_LANG['deposit'] = 'Bond';
-$_LANG['restrict_amount'] = 'Batas Pembayaran';
+$_LANG['restrict_amount'] = 'Home purchase restrictions';
 $_LANG['gift_integral'] = 'Presentation points';
 $_LANG['valid_order'] = 'Order';
-$_LANG['valid_goods'] = 'Pesanan Produk';
-$_LANG['current_price'] = 'Harga saat ini';
+$_LANG['valid_goods'] = 'Order goods';
+$_LANG['current_price'] = 'Current price';
 $_LANG['current_status'] = 'Status';
 $_LANG['view_order'] = 'View order';
 
 /* 添加/编辑活动页 */
-$_LANG['goods_cat'] = 'Kategori Produk';
-$_LANG['all_cat'] = 'Semua kategori';
+$_LANG['goods_cat'] = 'Product category';
+$_LANG['all_cat'] = 'All categories';
 $_LANG['goods_brand'] = 'Product brand';
-$_LANG['all_brand'] = 'Semua Merek';
+$_LANG['all_brand'] = 'All brands';
 
 $_LANG['label_goods_name'] = 'Group Purchase products:';
 $_LANG['notice_goods_name'] = 'Search for items first, and generate a list of options here.';
@@ -78,7 +78,7 @@ $_LANG['js_languages']['error_goods_null'] = 'You did not choose group-buying go
 $_LANG['js_languages']['error_deposit'] = 'The deposit you entered is not a number!';
 $_LANG['js_languages']['error_restrict_amount'] = 'The limited purchase quantity you entered is not an integer!';
 $_LANG['js_languages']['error_gift_integral'] = 'The free integral you entered is not an integer!';
-$_LANG['js_languages']['search_is_null'] = 'No merchandise was found. Please search again.';
+$_LANG['js_languages']['search_is_null'] = 'No product was found. Please search again.';
 
 /* 删除团购活动 */
 $_LANG['js_languages']['batch_drop_confirm'] = 'Are you sure you want to delete the selected group buying activities?';

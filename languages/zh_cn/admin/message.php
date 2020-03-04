@@ -5,15 +5,15 @@ $_LANG['receiver_id'] = 'Recipient';
 $_LANG['send_date'] = 'Send date';
 $_LANG['read_date'] = 'Read date';
 $_LANG['readed'] = 'Is it read?';
-$_LANG['deleted'] = 'Hapus';
+$_LANG['deleted'] = 'Delete';
 $_LANG['title'] = 'Subject';
 $_LANG['message'] = 'Message';
 
 $_LANG['view_msg'] = 'View messages';
 $_LANG['reply_msg'] = 'Reply message';
 $_LANG['send_msg'] = 'Send message';
-$_LANG['edit_msg'] = 'Edit';
-$_LANG['drop_msg'] = 'Hapus';
+$_LANG['edit_msg'] = 'Edit message';
+$_LANG['drop_msg'] = 'Delete message';
 $_LANG['all_amdin'] = 'All Administrators';
 $_LANG['msg_list'] = 'Message list';
 $_LANG['no_read'] = 'Unread';
@@ -24,8 +24,8 @@ $_LANG['back_list'] = 'Return to the message list';
 $_LANG['continue_send_msg'] = 'Continue send';
 
 /* 提示信息 */
-$_LANG['js_languages']['title_empty'] = 'Please fill in the topic of the message.!';
-$_LANG['js_languages']['message_empty'] = 'Please fill in the message.!';
+$_LANG['js_languages']['title_empty'] = 'Please fill in the topic of the message!';
+$_LANG['js_languages']['message_empty'] = 'Please fill in the message!';
 
 $_LANG['select_msg_type'] = 'Select View Type';
 

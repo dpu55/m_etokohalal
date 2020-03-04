@@ -1,23 +1,24 @@
 <?php
 $_LANG['qjt'] = 'All static file updates are complete!';
 $_LANG['shop_guide'] = 'Shop guide';
+$_LANG['more_products'] = 'More Hongyu Multiuser Mall Products';
 $_LANG['set_navigator'] = 'Setting up navigation bar';
 $_LANG['about'] = 'About us';
 $_LANG['preview'] = 'View shop';
 $_LANG['menu'] = 'Menu';
 $_LANG['help'] = 'Help';
-$_LANG['signout'] = 'Keluar';
-$_LANG['profile'] = 'Profile';
-$_LANG['view_message'] = 'Feedback';
+$_LANG['signout'] = 'Sign out';
+$_LANG['profile'] = 'Personal settings';
+$_LANG['view_message'] = 'Management message';
 $_LANG['send_msg'] = 'Send message';
 $_LANG['toggle_calculator'] = 'Application tools';
-$_LANG['expand_all'] = 'Open';
+$_LANG['expand_all'] = 'Expand';
 $_LANG['collapse_all'] = 'Close';
 $_LANG['no_help'] = 'This part is not yet available.';
 $_LANG['license_free'] = 'Unauthorized users';
 $_LANG['license_commercial'] = 'Green card users';
-$_LANG['license_invalid'] = 'unauthorized user';
-$_LANG['license_failed'] = 'illegal user';
+$_LANG['license_invalid'] = 'Unauthorized user';
+$_LANG['license_failed'] = 'Illegal user';
 $_LANG['license_oem'] = 'Authorized Business Users';
 $_LANG['license_oemtest'] = 'Experience users';
 //
@@ -30,7 +31,7 @@ $_LANG['license_T'] = 'Experience';
 $_LANG['license_no'] = 'Free';
 $_LANG['license_test'] = 'Free';
 $_LANG['js_languages']['expand_all'] = 'Open';
-$_LANG['js_languages']['collapse_all'] = 'close';
+$_LANG['js_languages']['collapse_all'] = 'Close';
 
 /*------------------------------------------------------ */
 //-- 计算器
@@ -43,28 +44,28 @@ $_LANG['backspace'] = 'Backspace';
 /*------------------------------------------------------ */
 //-- 起始页
 /*------------------------------------------------------ */
-$_LANG['pm_title'] = 'Title';
+$_LANG['pm_title'] = 'Message title';
 $_LANG['pm_username'] = 'commenter';
 $_LANG['pm_time'] = 'Time';
 
 $_LANG['order_stat'] = 'Order statistics';
-$_LANG['unconfirmed'] = 'Unconfirmed order';
-$_LANG['await_ship'] = 'Pesanan Tertahan';
-$_LANG['await_pay'] = 'Order Tertahan';
-$_LANG['finished'] = 'Pesanan Selesai';
-$_LANG['new_booking'] = 'Produk yang Ditunggu';
-$_LANG['new_reimburse'] = 'Permintaan Pengembalian';
-$_LANG['shipped_part'] = 'Pengiriman Sebagian Pesanan';
+$_LANG['unconfirmed'] = 'Unconfirmed order:';
+$_LANG['await_ship'] = 'Standby order:';
+$_LANG['await_pay'] = 'Pending orders:';
+$_LANG['finished'] = 'Number of completed orders:';
+$_LANG['new_booking'] = 'New shortage registration:';
+$_LANG['new_reimburse'] = 'Refund application:';
+$_LANG['shipped_part'] = 'Partial delivery orders:';
 
-$_LANG['goods_stat'] = 'Entity Commodity Statistics';
-$_LANG['virtual_card_stat'] = 'Virtual Card Commodity Statistics';
-$_LANG['goods_count'] = 'Total products';
-$_LANG['sales_count'] = 'Produk Promosi';
-$_LANG['new_goods'] = 'Produk yang Direkomendasikan';
-$_LANG['recommed_goods'] = 'Produk yang Direkomendasikan';
-$_LANG['hot_goods'] = 'Hot Product';
-$_LANG['warn_goods'] = 'Total Stok Menipis';
-$_LANG['clear_cache'] = 'Refresh';
+$_LANG['goods_stat'] = 'Entity Product Statistics';
+$_LANG['virtual_card_stat'] = 'Virtual Card Product Statistics';
+$_LANG['goods_count'] = 'Total products:';
+$_LANG['sales_count'] = 'Number of Promotional Goods:';
+$_LANG['new_goods'] = 'New product recommendation:';
+$_LANG['recommed_goods'] = 'Recommendation Number of Excellent Products:';
+$_LANG['hot_goods'] = 'Number of hot products:';
+$_LANG['warn_goods'] = 'Number of Warning Goods in Stock:';
+$_LANG['clear_cache'] = 'Clear cache';
 $_LANG['ebao_commend'] = 'Yi Bao recommends';
 
 $_LANG['acess_stat'] = 'Access statistics';
@@ -105,20 +106,20 @@ $_LANG['cardimg_cannt_write'] = 'You will not be able to upload the picture file
 $_LANG['feedbackimg_cannt_write'] = 'Users will not be able to upload files via messages.';
 $_LANG['packimg_cannt_write'] = 'You will not be able to upload packaged image files.';
 $_LANG['cert_cannt_write'] = 'You will not be able to upload the ICP Filing Certificate file.';
-$_LANG['images_cannt_write']= 'You will not be able to upload any merchandise pictures.';
+$_LANG['images_cannt_write']= 'You will not be able to upload any product pictures.';
 $_LANG['imagesupload_cannt_write']= 'You will not be able to upload any pictures through the editor.';
 $_LANG['tpl_cannt_write'] = 'Your website will not be accessible.';
 $_LANG['tpl_backup_cannt_write'] = 'You cannot back up the current template file.';
 $_LANG['order_print_canntwrite'] = 'The order_print. HTML file property in the data directory is not writable, and you will not be able to modify the order print template.';
-$_LANG['shop_closed_tips'] = 'Your shop has been temporarily closed. do not forget to open your store after setting it up.';
+$_LANG['shop_closed_tips'] = 'Your shop has been temporarily closed. Do not forget to open your store after setting it up.';
 $_LANG['empty_upload_tmp_dir'] = 'The current temporary upload directory is empty. You may not be able to upload files. Please check the settings in php.ini.';
 $_LANG['caches_cleared'] = 'The page cache has been cleared successfully.';
 
 /*------------------------------------------------------ */
 //-- 关于我们
 /*------------------------------------------------------ */
-$_LANG['team_member'] = 'Multiuser Mall Team Members';
-$_LANG['before_team_member'] = 'Contributor of Multiuser Mall';
+$_LANG['team_member'] = 'Etokohalal Team Members';
+$_LANG['before_team_member'] = 'Contributor of Etokohalal';
 
 $_LANG['director'] = 'Project planning';
 $_LANG['programmer'] = 'program development';
@@ -130,66 +131,66 @@ $_LANG['site_url'] = 'Website address:';
 $_LANG['support_center'] = 'Support Center:';
 $_LANG['support_forum'] = 'Support Forum:';
 // 邮件群发
-$_LANG['mailsend_fail'] = 'Email %s fail in send!';
-$_LANG['mailsend_ok'] = 'Email %s Send success! And %s Mail not sent!';
-$_LANG['mailsend_finished'] = 'Email %s Successful Send! Complete Send of All Mails!';
-$_LANG['mailsend_null'] = 'Mail Delivery List Empty!';
+$_LANG['mailsend_fail'] = 'Email %s send failed!';
+$_LANG['mailsend_ok'] = 'Email %s send successfully! And %s mail was not sent!';
+$_LANG['mailsend_finished'] = 'Email %s send successfully!Send all mail!';
+$_LANG['mailsend_null'] = 'The mailing list is empty!';
 $_LANG['mailsend_skip'] = 'Continue sending the next item...';
 $_LANG['email_sending'] = 'Processing mail delivery queue...';
 $_LANG['pause'] = 'Suspend';
 $_LANG['conti'] = 'Continue';
-$_LANG['str'] = 'It has been sent. %d Mail.';
+$_LANG['str'] = ' %d email has been sent.';
 
 //开店向导
-$_LANG['shop_name'] = 'Nama Toko';
-$_LANG['shop_title'] = 'Judul Toko';
-$_LANG['shop_country'] = 'Negara';
-$_LANG['shop_province'] = 'Provinsi';
-$_LANG['shop_city'] = 'Kota';
-$_LANG['shop_address'] = 'Alamat';
-$_LANG['shop_ship'] = 'Metode Pengiriman';
-$_LANG['ship_name'] = 'Distribution Area Name';
-$_LANG['ship_country'] = 'Negara';
-$_LANG['ship_province'] = 'Provinsi';
-$_LANG['ship_city'] = 'Kota';
-$_LANG['ship_district'] = 'Area';
-$_LANG['shop_pay'] = 'Metode Pembayaran';
-$_LANG['select_please'] = 'Silahkan pilih...';
-$_LANG['good_name'] = 'Nama Produk';
-$_LANG['good_number'] = 'Jumlah Produk';
-$_LANG['good_category'] = 'Kategori Produk';
+$_LANG['shop_name'] = 'Shop name';
+$_LANG['shop_title'] = 'Shop title';
+$_LANG['shop_country'] = 'Country';
+$_LANG['shop_province'] = 'Province';
+$_LANG['shop_city'] = 'City';
+$_LANG['shop_address'] = 'Detailed address';
+$_LANG['shop_ship'] = 'Distribution mode';
+$_LANG['ship_name'] = 'Distribution area name';
+$_LANG['ship_country'] = 'Country';
+$_LANG['ship_province'] = 'Province';
+$_LANG['ship_city'] = 'City';
+$_LANG['ship_district'] = 'County/district';
+$_LANG['shop_pay'] = 'Payment method';
+$_LANG['select_please'] = 'Please choose...';
+$_LANG['good_name'] = 'Product name';
+$_LANG['good_number'] = 'Quantity of products';
+$_LANG['good_category'] = 'Product category';
 $_LANG['good_brand'] = 'Product brand';
 $_LANG['good_price'] = 'Product price';
 $_LANG['good_brief'] = 'Product description';
-$_LANG['good_image'] = 'Uploald images';
+$_LANG['good_image'] = 'Upload product pictures';
 $_LANG['is_new'] = 'New products';
-$_LANG['is_best'] = 'Terbaik';
+$_LANG['is_best'] = 'Best';
 $_LANG['is_hot'] = 'Hot';
-$_LANG['good_intro'] = 'Recommend';
+$_LANG['good_intro'] = 'Join recommendation';
 $_LANG['skip'] = 'Completing the wizard';
-$_LANG['next_step'] = 'Next';
+$_LANG['next_step'] = 'Next step';
 $_LANG['ur_add'] = 'Shop Guide - Adding Goods';
 $_LANG['ur_config'] = 'Shop Guide-Setting up Online Shop';
 $_LANG['shop_basic_first'] = "Some basic information about setting up shop <em> shop name, address, distribution method, payment method, etc.</em>";
-$_LANG['shop_basic_second'] = "Add the name, quantity, classification, brand, price, description of <em> to the store.</em>";
-$_LANG['shop_basic_third'] = "Congratulations, your online store is ready to use! <em> Here are some links aggregation of commonly used functions. After you close this page, you can still find it in the items related to the left menu.</em>";
-$_LANG['add_good'] = 'Tambah Produk';
-$_LANG['add_category'] = 'Add category';
+$_LANG['shop_basic_second'] = "Add the name, quantity, category, brand, price, description of <em> to the store.</em>";
+$_LANG['shop_basic_third'] = "Congratulations, your online store is ready to use! <em> Here are some links aggregation of commonly used functions. After you close this page, you can still find it in the items related to the left menu</em>";
+$_LANG['add_good'] = 'Add product';
+$_LANG['add_category'] = 'Adding category';
 $_LANG['add_type'] = 'Product type';
-$_LANG['add_favourable'] = 'Adding Preferential Activities';
-$_LANG['shop_config'] = 'Shop setting';
+$_LANG['add_favourable'] = 'Add promo';
+$_LANG['shop_config'] = 'Store setup';
 $_LANG['select_template'] = 'Select template';
 $_LANG['shop_back_in'] = 'Enter the Backstage of Online Store';
 $_LANG['goods_img_too_big'] = 'The product image file is too large (maximum:%s) to upload.';
-$_LANG['invalid_goods_img'] = 'The format of the merchandise pictures is incorrect!';
+$_LANG['invalid_goods_img'] = 'The format of the product images is incorrect!';
 
 
 //JS语言
 $_LANG['js_languages']['shop_name_not_null'] = 'Store name cannot be empty';
-$_LANG['js_languages']['good_name_not_null'] = 'Nama produk tidak boleh kosong';
-$_LANG['js_languages']['good_category_not_null'] = 'Classification of commodities should not be empty';
+$_LANG['js_languages']['good_name_not_null'] = 'Product name cannot be empty';
+$_LANG['js_languages']['good_category_not_null'] = 'Category of products should not be empty';
 $_LANG['js_languages']['good_number_not_number'] = 'Quantity of goods is not a numerical value';
-$_LANG['js_languages']['good_price_not_number'] = 'Commodity prices are not numerical values';
+$_LANG['js_languages']['good_price_not_number'] = 'Product prices are not numerical values';
 
 /*后台语言项*/
 $_LANG['send_mail_off'] = 'Auto Send Mail Close';

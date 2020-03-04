@@ -1,10 +1,10 @@
 <?php
 $_LANG['user_surplus'] = 'Advance charge';
-$_LANG['surplus_id'] = 'Id';
+$_LANG['surplus_id'] = 'ID';
 $_LANG['user_id'] = 'Customer name';
-$_LANG['surplus_amount'] = 'Amount';
+$_LANG['surplus_amount'] = 'Amount of balance';
 $_LANG['add_date'] = 'Operation date';
-$_LANG['pay_mothed'] = 'Metode Pembayaran';
+$_LANG['pay_mothed'] = 'Payment method';
 $_LANG['process_type'] = 'Type';
 $_LANG['confirm_date'] = 'Arrival date';
 $_LANG['surplus_notic'] = 'Administrators Notes';
@@ -14,15 +14,15 @@ $_LANG['surplus_type'] = 'Operation type';
 $_LANG['no_user'] = 'Anonymous purchase';
 
 $_LANG['surplus_type_0'] = 'Recharge';
-$_LANG['surplus_type_1'] = 'Cashout';
+$_LANG['surplus_type_1'] = 'Cash withdrawal';
 $_LANG['admin_user'] = 'Operator';
 
 $_LANG['status'] = 'Arrival status';
-$_LANG['confirm'] = 'Lengkap';
+$_LANG['confirm'] = 'Completed';
 $_LANG['unconfirm'] = 'Unconfirmed';
 $_LANG['cancel'] = 'Cancel';
 
-$_LANG['please_select'] = 'Silahkan pilih...';
+$_LANG['please_select'] = 'Please choose...';
 $_LANG['surplus_info'] = 'Membership Amount Information';
 $_LANG['check'] = 'Payment audit';
 
@@ -31,7 +31,7 @@ $_LANG['surplus_add'] = 'Add';
 $_LANG['surplus_edit'] = 'Edit';
 $_LANG['attradd_succed'] = 'Your operation has been successful!';
 $_LANG['username_not_exist'] = 'The membership name you entered does not exist!';
-$_LANG['cancel_surplus'] = 'Are you sure you want to cancel this record??';
+$_LANG['cancel_surplus'] = 'Are you sure you want to cancel this record?';
 $_LANG['surplus_amount_error'] = 'The amount to be withdrawn exceeds the members account balance, this operation will not be carried out!';
 $_LANG['edit_surplus_notic'] = 'The status is now complete. If you want to modify it, please set it to unacknowledged first.';
 $_LANG['back_list'] = 'Return recharge and cash withdrawal applications';

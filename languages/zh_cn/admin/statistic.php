@@ -1,9 +1,9 @@
 <?php
 /* 流量统计 */
-$_LANG['stats_off'] = 'Website traffic statistics have been closed. BR > If you need, please go to: System Settings - > Store Settings - > Basic Settings to open the site traffic statistics service.';
+$_LANG['stats_off'] = 'Website traffic statistics have been closed.<BR>If necessary, please go to: System Settings - > Store Settings - > Basic Settings to open the site traffic statistics service.';
 $_LANG['last_update'] = 'Last update date';
 $_LANG['now_update'] = 'Update record';
-$_LANG['update_success'] = 'Analysis records have been successfully updated!';
+$_LANG['update_success'] = 'The analysis record has been updated successfully!';
 $_LANG['view_log'] = 'View analysis records';
 $_LANG['select_year_month'] = 'Enquiry date';
 
@@ -16,103 +16,103 @@ $_LANG['key_analyse'] = 'Keyword analysis';
 
 $_LANG['start_date'] = 'Start date';
 $_LANG['end_date'] = 'End date';
-$_LANG['query'] = 'Cari';
+$_LANG['query'] = 'query';
 $_LANG['result_filter'] = 'Filtering results';
 $_LANG['compare_query'] = 'Comparison query';
-$_LANG['year_status'] = 'Year trend';
+$_LANG['year_status'] = 'Annual trend';
 $_LANG['month_status'] = 'Monthly trend';
 
-$_LANG['year'] = 'Year';
-$_LANG['month'] = 'Month';
-$_LANG['day'] = 'Dau';
+$_LANG['year'] = 'year';
+$_LANG['month'] = 'month';
+$_LANG['day'] = 'day';
 $_LANG['year_format'] = '%Y';
 $_LANG['month_format'] = '%c';
 
 $_LANG['from'] = 'from';
 $_LANG['to'] = 'to';
-$_LANG['view'] = 'View';
+$_LANG['view'] = 'view';
 
 /* 销售概况 */
-$_LANG['overall_sell_circs'] = 'Current Overall Sales';
-$_LANG['order_count_trend'] = 'Number of orders (units: units)';
-$_LANG['sell_out_amount'] = 'Quantity of products sold';
-$_LANG['period'] = 'Waktu';
+$_LANG['overall_sell_circs'] = 'Current overall sales';
+$_LANG['order_count_trend'] = 'Order number (unit: units)';
+$_LANG['sell_out_amount'] = 'Number of products sold';
+$_LANG['period'] = 'period';
 $_LANG['order_amount_trend'] = 'Turnover (unit: yuan)';
 $_LANG['order_status'] = 'Order trend';
-$_LANG['turnover_status'] = 'Sales Trend';
-$_LANG['sales_statistics']= 'Statistik Penjualan';
-$_LANG['down_sales_stats']= 'Sales Profile Report Download';
+$_LANG['turnover_status'] = 'Sales trend';
+$_LANG['sales_statistics']= 'Sales statistics';
+$_LANG['down_sales_stats']= 'Sales profile report download';
 
 /* 订单统计 */
-$_LANG['overall_sum'] = 'Total Valid Order Amount';
-$_LANG['overall_choose'] = 'Total hits';
-$_LANG['kilo_buy_amount'] = 'Total number of clicks per thousand clicks orders';
-$_LANG['kilo_buy_sum'] = 'Sales per 1,000 clicks';
-$_LANG["pay_type"] = "Metode Pembayaran";
+$_LANG['overall_sum'] = 'Total amount of valid orders';
+$_LANG['overall_choose'] = 'Total clicks';
+$_LANG['kilo_buy_amount'] = 'Number of orders per thousand clicks';
+$_LANG['kilo_buy_sum'] = 'Sales per thousand clicks';
+$_LANG["pay_type"] = "Payment method";
 $_LANG["succeed"] = "Completed transaction";
 $_LANG["confirmed"] = "Confirmed";
 $_LANG["unconfirmed"] = "Unconfirmed";
 $_LANG["invalid"] = "Invalid or cancelled";
 $_LANG['order_circs'] = 'Order overview';
-$_LANG['shipping_method'] = 'Metode Pengiriman';
-$_LANG['pay_method'] = 'Metode Pembayaran ';
-$_LANG['down_order_statistics'] = 'Order Statistics Report Download';
+$_LANG['shipping_method'] = 'Delivery method';
+$_LANG['pay_method'] = 'Payment method ';
+$_LANG['down_order_statistics'] = 'Order statistics report download';
 
 /* 销售排行 */
 $_LANG['order_by'] = 'Ranking';
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['sell_amount'] = 'Sales volume';
-$_LANG['sell_sum'] = 'Sales volume';
+$_LANG['sell_sum'] = 'Sales';
 $_LANG['percent_count'] = 'Average price';
-$_LANG["to"] = ' to ';
-$_LANG['order_by_goodsnum'] = 'Sort by qty';
+$_LANG["to"] = 'to';
+$_LANG['order_by_goodsnum'] = 'Sort by sales volume';
 $_LANG["order_by_money"] = 'Sort by sales';
-$_LANG["download_sale_sort"] = "Sales Ranking Report Download";
+$_LANG["download_sale_sort"] = "Sales ranking report download";
 
 /* 客户统计 */
-$_LANG['guest_order_sum'] = 'Average Order Amount for Anonymous Members';
-$_LANG['member_count'] = 'Total member';
+$_LANG['guest_order_sum'] = 'Anonymous member average order amount';
+$_LANG['member_count'] = 'Total number of members';
 $_LANG['member_order_count'] = 'Total number of member orders';
 $_LANG['guest_member_ordercount'] = 'Total number of anonymous member orders';
-$_LANG['guest_member_orderamount'] = 'Total Shopping Amount of Anonymous Members';
-$_LANG['percent_buy_member'] = 'Membership Purchase Rate ';
-$_LANG['buy_member_formula'] = '(Member purchase rate = total number of members with orders)';
-$_LANG['member_order_amount'] = '(Number of orders per member = total number of orders per member, total number of members)';
-$_LANG['member_buy_amount'] = '(The amount of shopping per member = the total number of members)';
-$_LANG["order_turnover_peruser"] = "Average Order Number and Shopping Amount per Member";
-$_LANG["order_turnover_percus"] = "Average Order Amount and Total Shopping Amount of Anonymous Members";
-$_LANG['guest_all_ordercount'] = '(Average order of anonymous members = total purchase of anonymous members; total order of anonymous members)';
+$_LANG['guest_member_orderamount'] = 'Anonymous member shopping total';
+$_LANG['percent_buy_member'] = 'Member purchase rate ';
+$_LANG['buy_member_formula'] = '(Member purchase rate = Number of order members ÷ Total number of members)';
+$_LANG['member_order_amount'] = '(Orders per member = Total number of member orders ÷ Total number of members)';
+$_LANG['member_buy_amount'] = '(Per member credit = Total member shopping ÷ Total number of members)';
+$_LANG["order_turnover_peruser"] = "Average order per member and amount of purchase";
+$_LANG["order_turnover_percus"] = "Anonymous member average order amount and total purchase amount";
+$_LANG['guest_all_ordercount'] = '(Anonymous member average order amount =  Anonymous member shopping total ÷ Total number of anonymous member orders)';
 
-$_LANG['average_member_order'] = 'Number of orders per member';
-$_LANG['member_order_sum'] = 'Amount of purchases per member';
-$_LANG['order_member_count'] = 'Number of members with orders';
-$_LANG['member_sum'] = 'Total Shopping Amount of Members';
+$_LANG['average_member_order'] = 'Orders per member';
+$_LANG['member_order_sum'] = 'Per member credit';
+$_LANG['order_member_count'] = 'Number of order members';
+$_LANG['member_sum'] = 'Total member shopping';
 
-$_LANG['order_all_amount'] = 'Total number of orders';
-$_LANG['order_all_turnover'] = 'Total shopping volume';
+$_LANG['order_all_amount'] = 'Total order';
+$_LANG['order_all_turnover'] = 'Total purchase amount';
 
-$_LANG['down_guest_stats']= 'Client Statistics Report Download';
+$_LANG['down_guest_stats']= 'Customer statistics report download';
 $_LANG['guest_statistics']= 'Customer statistics report';
 
 /* 会员排行 */
 $_LANG['show_num'] = 'Display quantity';
 $_LANG['member_name'] = 'Customer name';
-$_LANG['order_amount'] = 'Number of orders (units: units)';
-$_LANG['buy_sum'] = 'Shopping amount';
+$_LANG['order_amount'] = 'Number of orders (units: pcs)';
+$_LANG['buy_sum'] = 'Sales amount';
 
 $_LANG['order_amount_sort'] = 'Sort by order quantity';
 $_LANG['buy_sum_sort'] = 'Sort by purchase amount';
-$_LANG['download_amount_sort'] = 'Download Shopping Amount Statement';
+$_LANG['download_amount_sort'] = 'Download shopping amount report';
 
 /* 销售名细 */
-$_LANG['goods_name'] = 'Nama Produk';
-$_LANG['goods_sn'] = 'Product code';
-$_LANG['order_sn'] = 'Order ID';
-$_LANG['amount'] = 'Qty';
-$_LANG['to'] = ' to ';
-$_LANG['sell_price'] = 'Harga';
+$_LANG['goods_name'] = 'Product name';
+$_LANG['goods_sn'] = 'Item number';
+$_LANG['order_sn'] = 'Order number';
+$_LANG['amount'] = 'Amount';
+$_LANG['to'] = 'to';
+$_LANG['sell_price'] = 'Price';
 $_LANG['sell_date'] = 'Date of sale';
-$_LANG['down_sales'] = 'Download Sales Details';
+$_LANG['down_sales'] = 'Download sales details';
 $_LANG['sales_list'] = 'Sales details';
 
 /* 访问购买比例 */
@@ -121,13 +121,13 @@ $_LANG['buy_times'] = 'Purchase times';
 $_LANG['visit_buy'] = 'Visit Purchase Rate';
 $_LANG['download_visit_buy'] = 'Download Access Purchase Rate Report';
 
-$_LANG['goods_cat'] = 'Kategori Produk';
+$_LANG['goods_cat'] = 'Categories';
 $_LANG['goods_brand'] = 'Product brand';
 
 /* 搜索引擎 */
-$_LANG['down_search_stats'] = 'Download Search Keyword Report';
+$_LANG['down_search_stats'] = 'Download search keyword report';
 $_LANG['tab_keywords'] = 'Keyword statistics';
-$_LANG['keywords'] = 'Kata Kunci';
+$_LANG['keywords'] = 'Keyword';
 $_LANG['date'] = 'Date';
 $_LANG['hits'] = 'Search times';
 

@@ -1,7 +1,7 @@
 <?php
 $_LANG['field_name'] = 'Name of Member Registration Item';
 $_LANG['field_order'] = 'Sort weight';
-$_LANG['field_display'] = 'Tampilkan';
+$_LANG['field_display'] = 'Whether to display';
 $_LANG['field_need'] = 'Is it necessary to fill in?';
 $_LANG['add_reg_field'] = 'Adding Member Registration Items';
 $_LANG['reg_field_name'] = 'Name of registry entry';

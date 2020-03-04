@@ -11,7 +11,7 @@ $_LANG['edit_wholesale_ok'] = 'Editorial Wholesale Scheme Successful';
 $_LANG['save_wholesale_falid'] = 'Some specifications of commodities do not exist in the goods list of %s and cannot be preserved completely.';
 
 /* list */
-$_LANG['goods_name'] = 'Nama Produk';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['rank_name'] = 'Applicable membership level';
 $_LANG['wholesale_not_exist'] = 'The wholesale scheme you want to operate does not exist';
 $_LANG['js_languages']['batch_drop_confirm'] = 'Are you sure you want to delete the selected wholesale scheme?';
@@ -20,16 +20,16 @@ $_LANG['no_record_selected'] = 'No record selected';
 
 /* info */
 $_LANG['label_search_goods'] = 'Product ID, Name or Number';
-$_LANG['label_goods_name'] = 'Wholesale Nama Produk:';
-$_LANG['label_rank_name'] = 'Applicable membership level:';
-$_LANG['label_enabled'] = 'Whether to enable:';
+$_LANG['label_goods_name'] = 'Name of wholesale product: ';
+$_LANG['label_rank_name'] = 'Applicable membership level: ';
+$_LANG['label_enabled'] = 'Is it enabled?: ';
 $_LANG['js_languages']['pls_search_goods'] = 'Please search and select wholesale goods';
 $_LANG['pls_search_goods'] = 'Please search for goods first';
-$_LANG['search_result_empty'] = 'No merchandise found, please search again';
-$_LANG['quantity'] = 'Qty';
-$_LANG['price'] = 'Harga';
-$_LANG['custom_goods_cat'] = 'Semua Kategori';
-$_LANG['custom_goods_brand'] = 'Semua Merek';
+$_LANG['search_result_empty'] = 'No product found, please search again';
+$_LANG['quantity'] = 'Quantity';
+$_LANG['price'] = 'Price';
+$_LANG['custom_goods_cat'] = 'All categories';
+$_LANG['custom_goods_brand'] = 'All brands';
 
 $_LANG['js_languages']['act_name_not_null'] = 'Please enter the name of the wholesale scheme.';
 

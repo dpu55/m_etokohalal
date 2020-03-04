@@ -45,5 +45,5 @@ $_LANG['login'] = 'Login';
 $_LANG['eavl'] = 'Code execution results';
 
 $_LANG['copycode'] = 'Copy code';
-$_LANG['help_evaljavascript'] = 'Please copy this code to any location of your template, before placing it. <br> You must first copy the {insert_scripts files= "website.js"} code and execute it once in front of it! Otherwise, the consequences are at your own expense.';
+$_LANG['help_evaljavascript'] = 'Please copy this code to any location of your template, before placing it. <br> You have to copy it first. {insert_scripts files="website.js"} Execute this code to the front of this code once! Otherwise, the consequences are at your own expense.';
 ?>

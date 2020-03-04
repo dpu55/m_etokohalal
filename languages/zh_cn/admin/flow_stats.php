@@ -7,8 +7,8 @@ $_LANG['general_stats'] = 'Comprehensive Visit Statistics';
 $_LANG['area_stats'] = 'Regional distribution statistics';
 $_LANG['from_stats'] = 'Source website statistics';
 
-$_LANG['url'] = 'Alamat';
-$_LANG['area'] = 'Region';
+$_LANG['url'] = 'Address';
+$_LANG['area'] = 'Area';
 $_LANG['input_url'] = 'Direct Input Address';
 $_LANG['date'] = 'Date';
 $_LANG['access_count'] = 'Traffic volume';

@@ -13,16 +13,16 @@ $_LANG['copy_js_code'] = 'Copy JS code';
 $_LANG['adsense_code'] = 'JS Code Delivered Outside Station';
 $_LANG['label_charset'] = 'Select encoding:';
 
-$_LANG['no_position'] = 'You havenhave nott set up an advertisement location yet.';
-$_LANG['no_ads'] = 'You havenhave nott added an ad yet.';
+$_LANG['no_position'] = 'You have not set up an advertisement location yet.';
+$_LANG['no_ads'] = 'You haven not added an ad yet.';
 $_LANG['unit_px'] = 'pixel';
 $_LANG['ad_content'] = 'Advertising content';
 $_LANG['width_and_height'] = '(width*height)';
 
-$_LANG['position_name_empty'] = 'Advertising space name can not be empty!';
-$_LANG['ad_width_empty'] = 'Advertising space width can not be empty!';
-$_LANG['ad_height_empty'] = 'Advertising space height can not be empty!';
-$_LANG['position_desc_empty'] = 'Advertising space description can not be empty!';
+$_LANG['position_name_empty'] = 'Advertising space name cannot be empty！';
+$_LANG['ad_width_empty'] = 'Advertising space width should not be empty！';
+$_LANG['ad_height_empty'] = 'Advertising space height should not be empty！';
+$_LANG['position_desc_empty'] = 'Advertising space description should not be empty！';
 
 $_LANG['view_static'] = 'View statistics';
 $_LANG['add_js_code'] = 'Generate and copy JS code';
@@ -72,9 +72,9 @@ $_LANG['adsense_name'] = 'Name of Play';
 $_LANG['adsense_js_stats'] = 'JS Statistics Outside Station';
 $_LANG['gen_order_amount'] = 'Total number of orders generated';
 $_LANG['confirm_order'] = 'Number of valid orders';
-$_LANG['adsense_js_goods'] = 'Out-of-Station JS Call Commodity';
+$_LANG['adsense_js_goods'] = 'Out-of-Station JS Call Product';
 
-$_LANG['ad_name_empty'] = 'Advertising name can not be empty!';
+$_LANG['ad_name_empty'] = 'Advertising name cannot be empty!';
 $_LANG['ads_stats_info'] = 'Advertising statistics';
 
 $_LANG['flag'] = 'Status';
@@ -97,19 +97,19 @@ $_LANG['ad_html'] = 'Code';
 $_LANG['ad_text'] = 'Written words';
 
 $_LANG['upfile_flash'] = 'Upload Flash files';
-$_LANG['flash_url'] = '或flash网址';
+$_LANG['flash_url'] = 'Or flash website';
 $_LANG['upfile_img'] = 'Upload Advertising Pictures';
-$_LANG['img_url'] = 'Or Picture Web Site';
+$_LANG['img_url'] = 'Or picture link';
 $_LANG['enter_code'] = 'Enter the advertising code';
 
 /* JS语言提示 */
 $_LANG['js_languages']['ad_name_empty'] = 'Please enter the name of the advertisement!';
-$_LANG['js_languages']['ad_link_empty'] = 'Please enter the link URL of the advertisement!';
+$_LANG['js_languages']['ad_link_empty'] = 'Please enter a link to the advertisement URL!';
 $_LANG['js_languages']['ad_text_empty'] = 'Advertisements should not be empty!';
 $_LANG['js_languages']['ad_photo_empty'] = 'Advertising pictures should not be empty!';
-$_LANG['js_languages']['ad_flash_empty'] = 'Advertising flash canhave nott be empty!';
-$_LANG['js_languages']['ad_code_empty'] = 'Advertising code canhave nott be empty!';
-$_LANG['js_languages']['empty_position_style'] = 'The template of advertising space canhave nott be empty!';
+$_LANG['js_languages']['ad_flash_empty'] = 'Advertising flash cannot be empty!';
+$_LANG['js_languages']['ad_code_empty'] = 'Advertising code cannot be empty!';
+$_LANG['js_languages']['empty_position_style'] = 'The template of advertising space cannot be empty!';
 
 /* 提示语言项 */
 $_LANG['upfile_flash_type'] = 'The uploaded Flash file type is incorrect!';

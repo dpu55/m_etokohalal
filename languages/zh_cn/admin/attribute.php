@@ -1,7 +1,7 @@
 <?php
 /* 列表 */
-$_LANG['by_goods_type'] = 'According to the type of product:';
-$_LANG['all_goods_type'] = 'Semua Tipe Produk';
+$_LANG['by_goods_type'] = 'Display by product type：';
+$_LANG['all_goods_type'] = 'All product types';
 
 $_LANG['attr_id'] = 'ID';
 $_LANG['cat_id'] = 'Product type';
@@ -24,7 +24,7 @@ $_LANG['label_is_linked'] = 'Are goods of the same attribute value related?';
 $_LANG['no_index'] = 'No search is required';
 $_LANG['keywords_index'] = 'Keyword Retrieval';
 $_LANG['range_index'] = 'Range search';
-    $_LANG['note_attr_index'] = 'If you do not need this attribute to be the condition of searching commodities, please choose the case that you do not need to search. When you need this attribute to search commodities with keywords, choose the keyword search. If you want to specify a certain range, choose the range search.';
+$_LANG['note_attr_index'] = 'If you do not need this attribute to be the condition of searching products, please choose the case that you do not need to search. When you need this attribute to search products with keywords, choose the keyword search. If you want to specify a certain range, choose the range search.';
 $_LANG['label_attr_input_type'] = 'The input mode of the attribute value is as follows:';
 $_LANG['text'] = 'Manual entry';
 $_LANG['select'] = 'Select from the list below (one row represents an optional value)';
@@ -32,7 +32,7 @@ $_LANG['text_area'] = 'Multi-line text box';
 $_LANG['label_attr_values'] = 'Optional Value List:';
 $_LANG['label_attr_group'] = 'Attribute grouping:';
 $_LANG['label_attr_type'] = 'Is property optional';
-$_LANG['note_attr_type'] = 'When choosing the "Select/Check Attribute", we can set multiple values for the attribute of the commodity, and at the same time, we can assign different price increases for different attribute values. Users need to select specific attribute values when purchasing the commodity. When "Unique Attribute" is selected, only one value can be set for the attribute value of the commodity, and the user can only view the value.';
+$_LANG['note_attr_type'] = 'When choosing the "Select/Check Attribute", we can set multiple values for the attribute of the product, and at the same time, we can assign different price increases for different attribute values. Users need to select specific attribute values when purchasing the product. When "Unique Attribute" is selected, only one value can be set for the attribute value of the product, and the user can only view the value.';
 $_LANG['attr_type_values'][0] = 'Unique attribute';
 $_LANG['attr_type_values'][1] = 'Radio attribute';
 $_LANG['attr_type_values'][2] = 'Check attributes';
@@ -53,7 +53,7 @@ $_LANG['notice_drop_confirm'] = 'Already exist %s , do you really want to delete
 $_LANG['name_not_null'] = 'Property name cannot be empty.';
 
 $_LANG['no_select_arrt'] = 'You did not select the attribute name to delete';
-$_LANG['drop_ok'] = 'Successfully deleted %d srticle Commodity Attribute';
+$_LANG['drop_ok'] = ' %d item attributes were successfully deleted';
 
 $_LANG['js_languages']['name_not_null'] = 'Please enter the property name.';
 $_LANG['js_languages']['values_not_null'] = 'Please enter an optional value for this property.';

@@ -22,7 +22,7 @@ $_LANG['remark_info'] = '<ul>'.
 '<li> Please reset the advertisement; </li>'.
 '<li> Please reset the distribution mode; </li>'.
 '<li> Please reset the payment method; </li>'.
-'<li> Please transfer the goods that did not belong to the final classification to the final classification; </li>'.
+'<li> Please transfer the goods that did not belong to the final category to the final category; </li>'.
 '</ul>';
 
 $_LANG['connect_db_error'] = 'Unable to connect to the database, please check the configuration information.';

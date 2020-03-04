@@ -1,12 +1,12 @@
 <?php
 
-$_LANG['payment'] = 'Metode Pembayaran';
+$_LANG['payment'] = 'Payment method';
 $_LANG['payment_name'] = 'Payment method name';
 $_LANG['version'] = 'Plugin version';
 $_LANG['payment_desc'] = 'Payment Description';
 $_LANG['short_pay_fee'] = 'Fee';
 $_LANG['payment_author'] = 'Plugin author';
-$_LANG['payment_is_cod'] = 'COD';
+$_LANG['payment_is_cod'] = 'Cash on Delivery?';
 $_LANG['payment_is_online'] = 'Online payment?';
 $_LANG['payment_is_pickup'] = 'Does the store carry it by itself?';
 $_LANG['name_is_null'] = 'You did not enter the payment method name!';

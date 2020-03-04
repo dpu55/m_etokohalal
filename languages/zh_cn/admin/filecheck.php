@@ -17,9 +17,7 @@ $_LANG['filecheck_check_ok'] = 'Correct';
 $_LANG['jump_info'] = 'If your browser does not automatically jump, click here';
 $_LANG['tips'] = 'Tips: ';
 $_LANG['filecheck_tips'] = '<li> The files listed in <em class="edited"> modified </em> and <em class="del"> deleted </em> should be checked by FTP or other tools to ensure the normal use of ECSHOP functions. </li>
-
 <li> The files listed in <em class="unknown">unknown </em> please check whether the online store has been illegally placed in other files. </li>
-
 The files listed in <li style=">"<em class="unknown"> have been modified within one week </em> please confirm whether they have been modified recently. </li>';
 $_LANG['filename'] = 'File name';
 $_LANG['filesize'] = 'File size';

@@ -19,7 +19,7 @@ $_LANG['notice_of_cus_name'] = 'In order to ensure the beauty of the page, it is
 $_LANG['label_cus_no'] = 'Customer Service Number:';
 $_LANG['notice_of_cus_no'] = 'If the type of customer service is QQ, please enter QQ number, Aliwangwang customer service please enter Aliwangwang number.';
 $_LANG['label_is_master'] = 'Whether host or guest service:';
-$_LANG['notice_of_is_master'] = 'Host and customer service will be displayed in the customer service contact section on the right side of the commodity details page. In order to ensure the beauty of the page, it is recommended that only one customer service for each type of customer service be provided.';
+$_LANG['notice_of_is_master'] = 'Host and customer service will be displayed in the customer service contact section on the right side of the product details page. In order to ensure the beauty of the page, it is recommended that only one customer service for each type of customer service be provided.';
 
 /* 提示信息 */
 $_LANG['error_cus_name_empty'] = 'Customer service name cannot be empty';

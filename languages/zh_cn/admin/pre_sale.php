@@ -87,7 +87,7 @@ $_LANG['js_languages']['error_goods_null'] = 'You did not choose the pre-sale go
 $_LANG['js_languages']['error_deposit'] = 'The deposit you entered is not a number!';
 $_LANG['js_languages']['error_restrict_amount'] = 'The limited purchase quantity you entered is not an integer!';
 $_LANG['js_languages']['error_gift_integral'] = 'The free integral you entered is not an integer!';
-$_LANG['js_languages']['search_is_null'] = 'No merchandise was found. Please search again.';
+$_LANG['js_languages']['search_is_null'] = 'No product was found. Please search again.';
 
 /* 删除预售活动 */
 $_LANG['js_languages']['batch_drop_confirm'] = 'Are you sure you want to delete the selected pre-sale activities?';
