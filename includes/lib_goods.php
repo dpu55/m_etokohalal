@@ -168,7 +168,7 @@ function get_top10($cats = '')
         $arr[$i]['short_name'] = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
                                     sub_str($arr[$i]['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $arr[$i]['goods_name'];
         $arr[$i]['url']        = build_uri('goods', array('gid' => $arr[$i]['goods_id']), $arr[$i]['goods_name']);
-        $arr[$i]['thumb'] = '../'.get_image_path($arr[$i]['goods_id'], $arr[$i]['goods_thumb'],true);
+        $arr[$i]['thumb'] = get_image_path($arr[$i]['goods_id'], $arr[$i]['goods_thumb'],true);
         $arr[$i]['price'] = price_format($arr[$i]['shop_price']);
         $arr[$i]['shop_price'] = price_format($arr[$i]['shop_price']);
     }
@@ -325,8 +325,8 @@ function get_recommend_goods($type = '', $cats = '')
             $goods[$idx]['short_style_name']   = add_style($goods[$idx]['short_name'],$row['goods_name_style']);
             $goods[$idx]['market_price'] = price_format($row['market_price']);
             $goods[$idx]['shop_price']   = price_format($row['shop_price']);
-            $goods[$idx]['thumb']        = '../'. get_image_path($row['goods_id'], $row['goods_thumb'], true);
-            $goods[$idx]['goods_img']    = '../'. get_image_path($row['goods_id'], $row['goods_img']);
+            $goods[$idx]['thumb']        = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+            $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
             $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
 	    $goods[$idx]['sell_count']   =selled_count($row['goods_id']);
 	    $goods[$idx]['pinglun']   =get_evaluation_sum($row['goods_id']);
@@ -398,8 +398,8 @@ function get_promote_goods($cats = '')
         $goods[$idx]['short_style_name']   = add_style($goods[$idx]['short_name'],$row['goods_name_style']);
         $goods[$idx]['market_price'] = price_format($row['market_price']);
         $goods[$idx]['shop_price']   = price_format($row['shop_price']);
-        $goods[$idx]['thumb']        = '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-        $goods[$idx]['goods_img']    = '../'.get_image_path($row['goods_id'], $row['goods_img']);
+        $goods[$idx]['thumb']        = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
         $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
 		$goods[$idx]['sell_count']   =selled_count($row['goods_id']);
 		$goods[$idx]['pinglun']   =get_evaluation_sum($row['goods_id']);
@@ -497,8 +497,8 @@ function get_category_recommend_goods($type = '', $cats = '', $brand = 0, $min =
                                        sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
         $goods[$idx]['market_price'] = price_format($row['market_price']);
         $goods[$idx]['shop_price']   = price_format($row['shop_price']);
-        $goods[$idx]['thumb']        = get_pc_url().'/'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-        $goods[$idx]['goods_img']    = get_pc_url().'/'.get_image_path($row['goods_id'], $row['goods_img']);
+        $goods[$idx]['thumb']        = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
         $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
 
         $goods[$idx]['short_style_name'] = add_style($goods[$idx]['short_name'], $row['goods_name_style']);
@@ -610,8 +610,8 @@ function get_goods_info($goods_id)
 
         /* 修正商品图片 */
 		//yyy修改start
-        $row['goods_img']   = '../'.get_image_path($goods_id, $row['goods_img']);
-        $row['goods_thumb'] = '../'.get_image_path($goods_id, $row['goods_thumb'], true);
+        $row['goods_img']   = get_image_path($goods_id, $row['goods_img']);
+        $row['goods_thumb'] = get_image_path($goods_id, $row['goods_thumb'], true);
 		//yyy修改end
 
 
@@ -755,8 +755,8 @@ function get_goods_gallery($goods_id)
     foreach($row as $key => $gallery_img)
     {
 		//yyy修改start
-        $row[$key]['img_url'] = '../'.get_image_path($goods_id, $gallery_img['img_url'], false, 'gallery');
-        $row[$key]['thumb_url'] = '../'.get_image_path($goods_id, $gallery_img['thumb_url'], true, 'gallery');
+        $row[$key]['img_url'] = get_image_path($goods_id, $gallery_img['img_url'], false, 'gallery');
+        $row[$key]['thumb_url'] = get_image_path($goods_id, $gallery_img['thumb_url'], true, 'gallery');
 		//yyy修改end
     }
     return $row;
@@ -813,8 +813,8 @@ function assign_cat_goods($cat_id, $num = 0, $from = 'web', $order_rule = '')
         $goods[$idx]['short_name']   = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
                                         sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
         $goods[$idx]['shop_price']   = price_format($row['shop_price']);
-        $goods[$idx]['thumb']        =  '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-        $goods[$idx]['goods_img']    =  '../'.get_image_path($row['goods_id'], $row['goods_img']);
+        $goods[$idx]['thumb']        =  get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $goods[$idx]['goods_img']    =  get_image_path($row['goods_id'], $row['goods_img']);
         $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
 	$goods[$idx]['count'] = selled_count($row['goods_id']);
 	$goods[$idx]['click_count'] = $row['click_count'];
@@ -895,8 +895,8 @@ function assign_brand_goods($brand_id, $num = 0, $cat_id = 0,$order_rule = '')
         $goods[$idx]['shop_price']    = price_format($row['shop_price']);
         $goods[$idx]['promote_price'] = $promote_price > 0 ? price_format($promote_price) : '';
         $goods[$idx]['brief']         = $row['goods_brief'];
-        $goods[$idx]['thumb']         =  '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-        $goods[$idx]['goods_img']     =  '../'.get_image_path($row['goods_id'], $row['goods_img']);
+        $goods[$idx]['thumb']         =  get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $goods[$idx]['goods_img']     =  get_image_path($row['goods_id'], $row['goods_img']);
         $goods[$idx]['url']           = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
 
         $idx++;
@@ -1339,7 +1339,7 @@ function goods_info($goods_id)
             ($row['goods_weight'] * 1000) . $GLOBALS['_LANG']['gram'];
 
         /* 修正图片 */
-        $row['goods_img'] =  '../'.get_image_path($goods_id, $row['goods_img']);
+        $row['goods_img'] =  get_image_path($goods_id, $row['goods_img']);
     }
 
     return $row;
@@ -1492,8 +1492,8 @@ function get_goods_fittings($goods_list = array())
             sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];//配件显示的名称
         $arr[$temp_index]['fittings_price']    = price_format($row['goods_price']);//配件价格
         $arr[$temp_index]['shop_price']        = price_format($row['shop_price']);//配件原价格
-        $arr[$temp_index]['goods_thumb']       =  '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-        $arr[$temp_index]['goods_img']         =  '../'.get_image_path($row['goods_id'], $row['goods_img']);
+        $arr[$temp_index]['goods_thumb']       =  get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $arr[$temp_index]['goods_img']         =  get_image_path($row['goods_id'], $row['goods_img']);
         $arr[$temp_index]['url']               = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
         $temp_index ++;
     }

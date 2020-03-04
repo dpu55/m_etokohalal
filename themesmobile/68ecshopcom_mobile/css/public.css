@@ -144,7 +144,13 @@ a.redBtn { background-color:#E3010B; height: 30px; line-height: 30px; color: #ff
 
 /*pages.lbi翻页效果css*/
 
-.pagenav-wrapper .pagenav-content { width:100%; padding: 20px 0px 20px;  text-align: center; line-height: 29px; overflow: hidden; }
+.pagenav-wrapper .pagenav-content { 
+	width:100%; 
+	padding: 20px 0px 20px;  
+	text-align: center; 
+	line-height: 13px; /*line-height: 29px; */
+	overflow: hidden; 
+}
 .pagenav-wrapper .pagenav { }
 .pagenav-wrapper .pagenav a { color: #333; }
 .pagenav-wrapper .pagenav>div { background-color: #fff; border: 1px solid #ccc; line-height: 29px; white-space: nowrap; border-radius: 2px; cursor: pointer; display: inline-block; }

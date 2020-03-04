@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </script>
-<div id="tbh5v0">
+<div id="tbh5v0" style="margin-top:50px;">
  {insert_scripts files='region.js'}
   <script type="text/javascript">
               region.isAdmin = false;
@@ -35,6 +35,10 @@
 {/if}
 <!--{/foreach}-->
 
+<div class="list_footer">
+<a href="user.php?act=address">{$lang.m_87}</a>
+</div>
+
 <script type="text/javascript">
 {foreach from=$lang.flow_js item=item key=key}
 var {$key} = "{$item}";
@@ -47,14 +51,12 @@ onload = function() {
 </script>
 </div>
 <!--底部-->
-<div style=" width:100%; height:50px;"></div>
-<div class="list_footer">
-<a href="user.php?act=address">{$lang.m_87}</a>
-</div>
+
 <!---返回顶部-->
+
 <script>
 function goTop(){
-	$('html,body').animate({'scrollTop':0},600);
+  $('html,body').animate({'scrollTop':0},600);
 }
 </script>
-<a href="javascript:goTop();" class="gotop"><img src="themesmobile/68ecshopcom_mobile/images/topup.png"></a> 
+<a href="javascript:goTop();" class="gotop"><i class="fa fa-chevron-up"></i></a>  

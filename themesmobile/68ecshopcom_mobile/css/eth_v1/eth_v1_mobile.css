@@ -791,7 +791,8 @@
 }
 
 .eth_v1_mobile.page-goods .footer_nav ul li:nth-child(3) a i {
-  color: red;
+  /*color: red;*/
+  color: #828385;
 }
 
 .eth_v1_mobile.page-goods .footer_nav ul li a:first-child {
@@ -3259,3 +3260,55 @@
   background-color: #ffcc00;
   color: white;
 } 
+
+/* added by wandi */
+.actvity_box {
+  width: 87%;
+  border: 1px solid #c1c3c9;
+  border-radius: 8px;
+  padding: 7px;
+  padding: 0 auto;
+  background-color: #ffffff;
+}
+
+.img-box-groupby {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 69%;
+  text-align: center;
+}
+
+.B_eee {
+  margin: 0 auto;
+}
+
+.desc-price {
+  text-align: center;
+  line-height: 21px;
+}
+
+.extend {
+  line-height: 22px;
+  height: 76px;
+}
+
+.favorited {
+  color: red ! important;
+}
+
+.btn-od {
+  padding: 3px 10px;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 7px;
+  float: left;
+  display: block;
+}
+.payed {background-color: #008CBA;} /* Blue */
+.green {background-color: #4CAF50;} /* Red */ 
+.gray {background-color: #f44336;} /* Gray */
+.aqua {background-color: #69d9d7;} 
+
+/*end wandi*/

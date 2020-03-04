@@ -32,6 +32,7 @@ assign_dynamic('activity');
 $position = assign_ur_here(0, $_LANG['shopping_activity']);
 $smarty->assign('page_title',       $position['title']);    // 页面标题
 $smarty->assign('ur_here',          $position['ur_here']);  // 当前位置
+$smarty->assign('img_url',          $img_url);
 
 // 数据准备
 
@@ -139,7 +140,7 @@ while ($row = $db->fetchRow($res))
 	    	$row[$v['code']] = $v['value'];
 	    }
     }else{
-    	$row['shop_logo'] = '../themes/68ecshopcom_360buy/images/ziying.jpg';
+    	$row['shop_logo'] = 'themesmobile/68ecshopcom_mobile/images/ziying.jpg';
     }
     
 

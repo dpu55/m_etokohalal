@@ -30,7 +30,11 @@
 <header>
         
 <section class="header" >
-     <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}"><i class="fa fa-chevron-left"></i></a></div>
+    <div class="h-left">
+      <a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}">
+        <!-- <i class="fa fa-chevron-left"></i> -->
+      </a>
+    </div>
     <div class="h-mid">
 {$brand.brand_name}
           </div>

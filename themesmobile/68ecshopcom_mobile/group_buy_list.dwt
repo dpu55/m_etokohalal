@@ -1,90 +1,122 @@
 <!DOCTYPE html >
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>{$page_title}</title>
-  <meta name="Keywords" content="{$keywords}" />
-  <meta name="Description" content="{$description}" />
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-  <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
-  <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/group_buy.css" />
-
-  <script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/jquery.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/css/stores.css">
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/goods.css"/> 
+<!--Font Awesome-->
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<!--/Font Awesome-->
+<!--Custom CSS -->
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
+<!--/Custom CSS -->
+<script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/jquery.js"></script>
+<style>
+@media screen {
+  *{-webkit-tap-highlight-color:transparent;overflow:hidden}
+.goods_nav{ width:30%; float:right; right:5px; overflow:hidden; position:fixed;margin-top:-20px; z-index:9999999}
+</style>
 
 </head>
-<body class="eth_v1_mobile page-group-buy">
-<!----------------------------------header----------------------------------->
-<div class="tab_nav">
-    <header class="header">
+<body class="eth_v1_mobile page-stores"  style="background:#f4f2f3">
+  <header>
+  <div class="tab_nav">
+    <div class="header">
       <div class="h-left">
-        <a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}"></a>
-      </div>
-      <div class="h-mid">
-      {$lang.group_buy}
-      </div>
+        <a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_166}">
+        <!-- <i class="fa fa-chevron-left"></i> -->
+      </a></div>
+      <div class="h-mid">{$lang.group_by_goods}</div>
       <div class="h-right">
         <aside class="top_bar">
-          <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more">
-            <a href="javascript:;"></a>
-          </div>
+          <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
         </aside>
       </div>
-    </header>
-</div>
-<!-- #BeginLibraryItem "/library/up_menu.lbi" -->
-<!-- #EndLibraryItem -->
-<!--弹出菜单-->
-  
+    </div>
+  </div>
+  </header>
+
+  <div style=" width:100%; height:50px;"></div>
+
+<!--main--->
 {if $gb_list}
-<div id="tbh5v0">
-  <section class="innercontent"> 
-    <div class="main">
-     <!-- {if $gb_list} 如果有团购活动 -->
-         <div class="floor_body auction_hot">
-    
-        <div class="mc">
-     
-         
-          <ul>
-            <!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
-            <li>
-              
-                <a href="{$group_buy.url}" >
-                    <div class="products_kuang">
-                        <img src="{$img_url}{$group_buy_list}{$group_buy.goods_thumb}"></div>
-                    <div class="goods_name">{$group_buy.goods_name|escape:html}</div>
-                    <div class="price">
-                        <strong>{$group_buy.formated_cur_price}</strong>
-                        <a href="{$group_buy.url}" class="btns">{$lang.m_363}</a>
-                    </div>
-                  </a>
-            </li>
-            <!--{/foreach}--> 
-            </ul>
-          
+
+  <div id="tbh5v0">
+      <section class="innercontent"> 
+        <div class="main">
+          <!-- {if $gb_list} 如果有团购活动 -->
+            <div class="floor_body auction_hot">
+              <div class="mc">
+                <ul>
+                   
+                  {foreach from=$gb_list item=group_buy}
+                    <section class="rzs_info">
+                      <div class="index_taocan">
+                        <a href="{$group_buy.url}"> 
+                          <div class="img-box-groupby">
+                            <img src="{$img_url}{$group_buy_list}{$group_buy.goods_thumb}" class="B_eee">
+                          </div>
+                        </a>
+                      </
+                      <div class="index_taocan">
+                        <a href="{$group_buy.url}"> 
+                          <dl>
+                            <div class="desc-price">
+                              <div>{$group_buy.goods_name|escape:html}</div>
+                              <div style="color: red;"><b>{$group_buy.formated_cur_price}</b></div>
+                            </div>
+                          </dl>
+                        </a>
+                      </div>
+                      <div class="s_dianpu">
+                        <span>
+                          <a href="{$group_buy.url}" style=" margin-left:15%" class="btns">{$lang.m_363}</a>
+                        </span>
+                      </div>
+                    </section>
+                  {/foreach}
+                </ul>
+              </div>
+            </div>
+          <!-- {/if} --> 
         </div>
-  </div>
-  <!-- {/if} --> 
-  </div>
-  </section>
-  </div>
-  {else}
+      </section>
+    </div>
+
+    <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+{else}
   <div class="touchweb-com_searchListBox" id="goods_list">
-<div class="new_prom2">
-  <strong>{$lang.m_364}</strong>
-  </div>  
-</div>
+    <div class="new_prom2">
+      <strong>{$lang.m_364}</strong>
+    </div>  
+  </div>
 {/if}
-                
 
-<!-- #BeginLibraryItem "/library/pro_pages.lbi" -->
-<!-- #EndLibraryItem --> 
+<!---footer--->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
 
+<script>
+function goTop(){
+  $('html,body').animate({'scrollTop':0},600);
+}
+</script>
+<!--<a href="javascript:goTop();" class="gotop"><img src="themesmobile/68ecshopcom_mobile/images/topup.png"></a> -->
+<a href="javascript:goTop();" class="gotop"><i class="fa fa-chevron-up"></i></a> 
 
-  <!-- #BeginLibraryItem "/library/page_footer.lbi" -->
-  <!-- #EndLibraryItem -->
-  <!-- #BeginLibraryItem "/library/footer_nav.lbi" -->
-  <!-- #EndLibraryItem -->
+<!--滑动js-->
+<script type="text/javascript">
+/*reg_package();*/
+</script>
+<script src="themesmobile/68ecshopcom_mobile/js/slider.js" type="text/javascript"></script>
 </body>
 </html>

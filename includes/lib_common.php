@@ -711,7 +711,7 @@ function get_brands($cat = 0, $app = 'brand')
 		$row[$key]['wap_brand_desc'] = htmlspecialchars($val['wap_brand_desc'],ENT_QUOTES);
 		if($val['brand_logo'])
 		{
-			$row[$key]['brand_logo'] = "../data/brandlogo/".$val['brand_logo'];
+			$row[$key]['brand_logo'] = "data/brandlogo/".$val['brand_logo'];
 		}
 		if($val['brand_img'])
 		{

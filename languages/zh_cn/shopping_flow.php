@@ -100,19 +100,21 @@ $_LANG['flow_js']['mobile_not_null'] = 'Nomor ponsel tidak boleh kosong!';
 $_LANG['flow_js']['mobile_invaild'] = 'Nomor ponsel bukan nomor valid';
 $_LANG['flow_js']['mobile_or_tel_not_null'] = 'Nomor ponsel dan telepon rumah harus diisi setidaknya satu';
 
+
 $_LANG['new_consignee_address'] = 'Alamat pengiriman baru';
 $_LANG['consignee_address'] = 'Alamat pengiriman';
 $_LANG['consignee_name'] = 'Nama penerima';
 $_LANG['country_province'] = 'Area pengiriman';
-$_LANG['please_select'] = 'Silakan pilih';
+$_LANG['please_select'] = 'Silakan pilih ';
 $_LANG['city_district'] = 'Kota/Wilayah';
+
 $_LANG['email_address'] = 'Alamat email';
 $_LANG['detailed_address'] = 'Alamat lengkap';
 $_LANG['postalcode'] = 'Kode pos';
 $_LANG['phone'] = 'Telepon';
 $_LANG['mobile'] = 'Ponsel';
 $_LANG['backup_phone'] = 'Ponsel';
-$_LANG['sign_building'] = Tandatangan';
+$_LANG['sign_building'] = 'Tandatangan';
 $_LANG['deliver_goods_time'] = 'Waktu pengiriman terbaik';
 $_LANG['default'] = 'Default';
 $_LANG['default_address'] = 'Alamat default';

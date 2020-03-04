@@ -952,6 +952,7 @@ function order_fee($order, $goods, $consignee)
     $total['formated_goods_price']  = price_format($total['goods_price'], false);
     $total['formated_market_price'] = price_format($total['market_price'], false);
     $total['formated_saving']       = price_format($total['saving'], false);
+    $total['formated_will_get_integral']       = price_format($total['will_get_integral'], false);
 
     if ($order['extension_code'] == 'exchange_goods')
     {

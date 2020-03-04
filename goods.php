@@ -491,7 +491,19 @@ else
 /* 更新点击次数 */
 $db->query('UPDATE ' . $ecs->table('goods') . " SET click_count = click_count + 1 WHERE goods_id = '$_REQUEST[id]'");
 
+if(empty($_SESSION['user_id'])) {
+    $smarty->assign('is_favorit',  0);
+}else {
+    $sql = "SELECT COUNT(*) FROM " . $GLOBALS['ecs']->table('collect_goods') . " WHERE user_id='$_SESSION[user_id]' AND goods_id = '$goods_id'";
+    if($GLOBALS['db']->GetOne($sql) > 0) {
+       $smarty->assign('is_favorit',  1); 
+    }
+
+}
+
 $smarty->assign('now_time',  gmtime());           // 当前系统时间
+$smarty->assign('img_url',  $img_url);           // 当前系统时间
+
 $smarty->display('goods.dwt',      $cache_id);
 
 /*------------------------------------------------------ */

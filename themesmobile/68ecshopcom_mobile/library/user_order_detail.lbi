@@ -1,11 +1,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="order">
+<div class="order" style="margin-top:55px;">
 <!--详情顶部-->
 <div class="detail_top">
 <div class="lan">
 <dl>
 <dt class="dingdan_1"></dt>
-<dd><span>{$order.pay_status}&nbsp;&nbsp;&nbsp;&nbsp;{$lang.m_128}{$order.shipping_status}</span><br>
+<dd>
+	<span class="btn-od payed">{$order.pay_status}</span>
+	<span class="btn-od green">{$lang.m_128}</span>
+	<span class="btn-od gray">{$order.shipping_status}</span><br>
+
     <span class="dingdanhao">{$lang.detail_order_sn}&nbsp;:&nbsp;{$lang.colon}{$order.order_sn}</span><br>
     <span>{if $order.shipping_fee > 0}{$lang.shipping_fee}{$lang.colon}&nbsp;:{$order.formated_shipping_fee}{/if}</span>
 </dd>
@@ -84,10 +88,12 @@
 <!--收货信息-->
 <dl>
 <dt class="dingdan_3"></dt>
-<dd><h3>{$lang.consignee_name}&nbsp;:{$lang.colon}&nbsp;{$order.consignee}<em>{$order.mobile}</em></h3>
+<dd><h3>{$lang.consignee_name} :{$lang.colon}&nbsp;{$order.consignee}</h3>
 {if $order.exist_real_goods}
 <div class="adss">
-{$lang.detailed_address}{$lang.colon}&nbsp;:&nbsp;{$order.address}{if $order.zipcode}[{$lang.postalcode}{$lang.colon}{$order.zipcode}]{/if}
+{$lang.mobile} : {$order.mobile}<br/>
+{$lang.detailed_address}{$lang.colon} : {$order.address}
+{if $order.zipcode}<br/>{$lang.postalcode} :{$lang.colon}{$order.zipcode}{/if}
 </div>
 {/if}
 		</dd>

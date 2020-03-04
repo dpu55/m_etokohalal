@@ -160,7 +160,7 @@ $_LANG['pay_fee'] = 'Biaya penanganan';
 /* 收货地址 */
 $_LANG['consignee_name'] = 'Nama penerima';
 $_LANG['country_province'] = 'Area pengiriman';
-$_LANG['please_select'] = 'Silakan pilih';
+$_LANG['please_select'] = 'Silakan pilih ';
 $_LANG['city_district'] = 'Kota/Wilayah';
 $_LANG['email_address'] = 'Alamat email';
 $_LANG['detailed_address'] = 'Alamat lengkap';
@@ -243,7 +243,7 @@ $_LANG['img_type_list'] = 'Anda dapat mengunggah file dalam format berikut: <br/
 $_LANG['view_upload_file'] = 'Lihat file yang diunggah';
 $_LANG['upload_file_type'] = 'Jenis file yang Anda unggah salah. Harap unggah kembali! ';
 $_LANG['upload_file_error'] = 'Kesalahan unggahan file, harap unggah kembali! ';
-$_LANG['message_empty'] = ' = 'Kesalahan unggah file, harap unggah lagi!';
+$_LANG['message_empty'] = 'Kesalahan unggah file, harap unggah lagi!';
 $_LANG['message_empty'] = 'Anda tidak memiliki pesan sekarang! ';
 $_LANG['msg_success'] = 'Pesan Anda telah berhasil dikirim! ';
 $_LANG['confirm_remove_msg'] = 'Apakah Anda benar-benar ingin menghapus pesan ini sepenuhnya? ';

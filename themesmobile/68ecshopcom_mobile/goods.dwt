@@ -394,7 +394,7 @@ changePrice();
 <section class="rzs_info">
 <div class="top_info">
 <dl>
-<dt><a href="supplier.php?suppId={$suppid}"><div style="background-image:url(./../{$shoplogo})"></div></a></dt>
+<dt><a href="supplier.php?suppId={$suppid}"><div style="background-image:url({$img_url}{$shoplogo})"></div></a></dt>
 <dd><strong>{$lang.m_128} <a href="supplier.php?suppId={$suppid}" style="color:#333; font-size:18px;">{$shopname}</a></strong><em>{$userrank}</em></dd>
 </dl>
 <ul>
@@ -541,7 +541,7 @@ changePrice();
           <li>
             <a href="{$goods.url}">
               <div class="products_kuang">
-                <img src="{$goods.goods_thumb}"></div>
+                <img src="{$img_url}{$goods.goods_thumb}"></div>
               <div class="goods_name">{$goods.short_name|escape:html}</div>
               <div class="price" >
               <p href="{$goods.url}">{$goods.fittings_price} </p>
@@ -585,8 +585,11 @@ function goTop(){
 <!-- <li><a href="javascript:collect({$goods.goods_id})" id="favorite_add"><em class="goods_nav3"></em><span>{$lang.btn_collect}</span></a></li>-->
   <li>
   	<a href="javascript:collect({$goods.goods_id})" id="favorite_add">
-  		<i class="fa fa-heart"></i>
-<!--  		<span>{$lang.btn_collect}</span>-->
+  		<!-- {if $is_favorit eq 0} -->
+  		<i class="fa fa-heart" id="heart"></i>
+  		<!-- {else} -->
+  		<i class="fa fa-heart favorited" id="heart"></i>
+  		<!-- {/if} -->
   	</a>
   </li>
  </ul>

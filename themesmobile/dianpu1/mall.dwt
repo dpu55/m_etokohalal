@@ -848,7 +848,7 @@ panda(function () {
 <div class="dianpu_main">
 <dl>
 <p><a href="javascript:guanzhu({$suppid});" style=" color:#FFF">{$lang.btn_collect}</a></p>
-<dt><img src="../../{$shoplogo}" alt="{$shopname}"></dt>
+<dt><img src="{$img_url}{$shoplogo}" alt="{$shopname}"></dt>
 <dd><span>{$shopname}</span>
 </dd>
 </dl>
