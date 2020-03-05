@@ -19,7 +19,7 @@ $_LANG['free_money'] = 'Free quota for greeting cards';
 $_LANG['card_img'] = 'Greeting card drawings';
 $_LANG['card_desc'] = 'Greeting card description';
 
-$_LANG['card_edit'] = 'Editor\'s greeting card';
+$_LANG['card_edit'] = 'Editors greeting card';
 
 $_LANG['drop_card_img'] = 'Delete greeting card drawings';
 $_LANG['confirm_drop_card_img'] = 'Are you sure you want to delete the card drawings?';
@@ -30,7 +30,7 @@ $_LANG['card_list_lnk'] = 'Return to List Page';
 
 /*帮助信息*/
 $_LANG['notice_cardfee'] = 'The cost of using this card is set to zero free of charge.';
-$_LANG['notice_cardfreemoney'] = 'When the user\'s consumption amount exceeds this value, the free use of the card <br />setting to 0 indicates that greeting card fees must be paid';
+$_LANG['notice_cardfreemoney'] = 'When the users consumption amount exceeds this value, the free use of the card <br/>setting to 0 indicates that greeting card fees must be paid';
 
 $_LANG['warn_cardimg'] = 'You have uploaded pictures. The original image will be overwritten when uploaded again';
 

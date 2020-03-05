@@ -30,7 +30,7 @@ $_LANG['list_link'] = 'Friendship Link List';
 $_LANG['add_link'] = 'Add new links';
 $_LANG['edit_link'] = 'Editing Friendship Links';
 $_LANG['link_name_empty'] = 'Friendship link name can not be empty!';
-$_LANG['no_links'] = 'You haven\'t added friendship links yet';
+$_LANG['no_links'] = 'You have not added friendship links yet';
 
 $_LANG['back_list'] = 'Return to the list of friendship links';
 $_LANG['continue_add'] = 'Continue to add friendship links';

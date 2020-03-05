@@ -85,12 +85,12 @@
               </div>
               
                <div class="ng-link-area" >
-                <span>Belum punya akun? 
+                <span style="text-align:left;">Belum punya akun? 
                   <a href="register.php" >{$lang.m_315}</a>
                 </span>
                 <span><br></span>
-                 
-                   <span>Lupa password?
+                 <span class="user_line"></span>
+                   <span style="float:left;">Lupa password?
                   <a href="findPwd.php" >{$lang.forgot_password}</a>
                 </span>
               </div>

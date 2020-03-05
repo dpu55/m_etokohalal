@@ -25,7 +25,7 @@ $_LANG['priority']['monthly'] = 'month';
 $_LANG['priority']['yearly'] = 'year';
 $_LANG['priority']['never'] = 'Never update';
 
-$_LANG['generate_success'] = 'The site map has been generated to the appropriate directory.<br />The address is:%s';
-$_LANG['generate_failed'] = 'Failed to generate site map, please check if the site root directory, /data/ directory is allowed to write.';
+$_LANG['generate_success'] = 'The site map has been generated to the appropriate directory.<br/>The address is: %s';
+$_LANG['generate_failed'] = 'Failed to generate site map, please check if the site root directory, /data/directory is allowed to write.';
 $_LANG['sitemaps_note'] = 'The Sitemap service is designed to use the feed file sitemap.xml to notify Google, Yahoo!, and other crawler sites such as Microsoft on which files need to be indexed, the last revision time of these files, the frequency of changes, the file location, and the relative priority indexing information. Will help them build the behavioral habits of indexing and indexing. See the instructions on the <a href="http://www.sitemaps.org/" target="_blank">sitemaps.org</a> website for more information.';
 ?>

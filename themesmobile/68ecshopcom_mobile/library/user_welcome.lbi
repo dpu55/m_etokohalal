@@ -82,7 +82,7 @@
           </label>
         </div>
         <div class="field submit-btn">
-          <input type="submit" value="{$lang.confirm_edit}" class="btn_big1" />
+          <input type="submit" value="{$lang.confirm_passedit}" class="btn_big1" />
         </div>
         <input type="hidden" name="act" value="act_edit_password"/>
       </form>

@@ -19,7 +19,7 @@ $_LANG['add_group_buy'] = 'Adding Group Purchase Activities';
 $_LANG['edit_group_buy'] = 'Editorial Group Purchase Activities';
 
 /* 活动列表页 */
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['start_date'] = 'start time';
 $_LANG['end_date'] = 'End time';
 $_LANG['deposit'] = 'Bond';
@@ -32,12 +32,12 @@ $_LANG['current_status'] = 'state';
 $_LANG['view_order'] = 'View order';
 
 /* 添加/编辑活动页 */
-$_LANG['goods_cat'] = 'Commodity classification';
+$_LANG['goods_cat'] = 'Product category';
 $_LANG['all_cat'] = 'All categories';
-$_LANG['goods_brand'] = 'Commodity brand';
+$_LANG['goods_brand'] = 'Product brand';
 $_LANG['all_brand'] = 'All brands';
 
-$_LANG['label_goods_name'] = 'Group buying commodity：';
+$_LANG['label_goods_name'] = 'Group buying product：';
 $_LANG['notice_goods_name'] = 'Search for items first, and generate a list of options here...';
 $_LANG['label_start_date'] = 'Activity start time：';
 $_LANG['label_end_date'] = 'End time of activity：';
@@ -101,6 +101,6 @@ $_LANG['batch_drop_success'] = 'Successfully deleted the %s  record of group buy
 $_LANG['no_select_group_buy'] = 'You have no record of group buying activities now!';
 
 /* 操作日志 */
-$_LANG['log_action']['group_buy'] = 'Group buying commodity';
+$_LANG['log_action']['group_buy'] = 'Group buying product';
 
 ?>

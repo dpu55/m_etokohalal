@@ -138,9 +138,8 @@
 					 </div>
 					<input id="zphone" type="button" value="{$lang.m_308}" class="m_phone" style=" color:#FFF" />
 				</div>
-				<input id="zemail" type="button" value="{$lang.m_311}" class="m_phone" style="color:#FFF" />
 				<div class=" email v_email v_item" style="display: none">
-					<!-- <label>{$lang.m_156}</label> -->
+					<label>{$lang.m_156} </label>
 					<span id="l_email"></span>
 				</div>  
                                     
@@ -148,6 +147,7 @@
                 <div class="codeTxt">
 					<input type="text" id="email_code" name="email_code" placeholder="{$lang.m_307}" class="hq_phone" value="" />
                     </div>
+					<input id="zemail" type="button" value="{$lang.m_311}" class="m_phone" style="color:#FFF" />
 				</div>
                 
                 <div class="submit-btn " style=" padding-top:40px;">
@@ -405,7 +405,7 @@
 			</form>
 			</section>
 			<!-- {/if} -->
-			<!-- {*include file='library/page_footer.lbi'*} -->
+			<!-- {include file='library/page_footer.lbi'} -->
 		</div>
 	</div>
 	<script type="text/javascript">

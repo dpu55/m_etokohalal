@@ -22,7 +22,7 @@ $_LANG['upgrade'] = 'Upgrade';
 $_LANG['upgrade_success'] = 'Upgrade success';
 
 $_LANG['uninstall_confirm'] = 'Uninstalling the plug-in removes all data from the plug-in. \n Are you sure you want to uninstall this plug-in?';
-$_LANG['create_table_failed'] = 'Failed to create a data table for the plug-in, which may be an invalid plug-in.<br />error message：<br />%s';
+$_LANG['create_table_failed'] = 'Failed to create a data table for the plug-in, which may be an invalid plug-in.<br/>error message：<br/>%s';
 $_LANG['dir_readonly'] = '%s the directory is not writable. Please check your server settings.';
 $_LANG['file_readonly'] = '%s files are not writable. Please check your server settings.';
 $_LANG['uninstall_success'] = 'The specified plug-in has been uninstalled successfully.';

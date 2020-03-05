@@ -61,12 +61,12 @@ $_LANG['page']['index'] = 'Home page';
 $_LANG['page']['user'] = 'User center';
 $_LANG['page']['pick_out'] = 'Shopping Center';
 $_LANG['page']['flow'] = 'Shopping Cart';
-$_LANG['page']['group_buy'] = 'Group buying commodity';
+$_LANG['page']['group_buy'] = 'Group buying product';
 $_LANG['page']['snatch'] = 'Treasure Raiders';
 $_LANG['page']['tag_cloud'] = 'Tag cloud';
 
 $_LANG['page']['category'] = 'Merchandise List Page';
-$_LANG['page']['goods'] = 'Commodity page';
+$_LANG['page']['goods'] = 'Product page';
 $_LANG['page']['article_cat'] = 'Articles List Page';
 $_LANG['page']['article'] = 'Article page';
 $_LANG['page']['brand'] = 'Brand area';

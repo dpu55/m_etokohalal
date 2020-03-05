@@ -70,19 +70,19 @@ $_LANG['new_booking'] = 'New shortage registration:';
 $_LANG['new_reimburse'] = 'Refund application:';
 $_LANG['shipped_part'] = 'Partial delivery orders:';
 
-$_LANG['goods_stat'] = 'Entity Commodity Statistics';
-$_LANG['virtual_card_stat'] = 'Virtual Card Commodity Statistics';
-$_LANG['goods_count'] = 'Total commodity:';
+$_LANG['goods_stat'] = 'Entity Product Statistics';
+$_LANG['virtual_card_stat'] = 'Virtual Card Product Statistics';
+$_LANG['goods_count'] = 'Total product:';
 $_LANG['sales_count'] = 'Number of Promotional Goods:';
 $_LANG['new_goods'] = 'New product recommendation:';
 $_LANG['recommed_goods'] = 'Recommendation Number of Excellent Products:';
-$_LANG['hot_goods'] = 'Number of hot commodities:';
+$_LANG['hot_goods'] = 'Number of hot products:';
 $_LANG['warn_goods'] = 'Number of Warning Goods in Stock:';
 $_LANG['clear_cache'] = 'Clear cache';
 $_LANG['ebao_commend'] = 'Yi Bao recommends';
 
 $_LANG['acess_stat'] = 'Access statistics';
-$_LANG['acess_today'] = 'Today\'s visit:';
+$_LANG['acess_today'] = 'Todays visit:';
 $_LANG['online_users'] = 'Online number:';
 $_LANG['user_count'] = 'Total membership:';
 $_LANG['today_register'] = 'Registration today:';
@@ -124,7 +124,7 @@ $_LANG['imagesupload_cannt_write']= 'You will not be able to upload any pictures
 $_LANG['tpl_cannt_write'] = 'Your website will not be accessible.';
 $_LANG['tpl_backup_cannt_write'] = 'You cannot back up the current template file.';
 $_LANG['order_print_canntwrite'] = 'data directory order_print.html The file property is not writable, and you will not be able to modify the order print template.';
-$_LANG['shop_closed_tips'] = 'Your shop has been temporarily closed. Don\'t forget to open your store after setting it up.';
+$_LANG['shop_closed_tips'] = 'Your shop has been temporarily closed. Do not forget to open your store after setting it up.';
 $_LANG['empty_upload_tmp_dir'] = 'The current temporary upload directory is empty. You may not be able to upload files. Please check the settings in php.ini.';
 $_LANG['caches_cleared'] = 'Micromall Page Cache has been cleared successfully.';
 
@@ -169,12 +169,12 @@ $_LANG['ship_city'] = 'city';
 $_LANG['ship_district'] = 'County / district';
 $_LANG['shop_pay'] = 'Payment method';
 $_LANG['select_please'] = 'Please choose...';
-$_LANG['good_name'] = 'Trade name';
-$_LANG['good_number'] = 'Quantity of commodities';
-$_LANG['good_category'] = 'Commodity classification';
-$_LANG['good_brand'] = 'Commodity brand';
-$_LANG['good_price'] = 'commodity price';
-$_LANG['good_brief'] = 'Commodity Description';
+$_LANG['good_name'] = 'Product name';
+$_LANG['good_number'] = 'Quantity of products';
+$_LANG['good_category'] = 'Product category';
+$_LANG['good_brand'] = 'Product brand';
+$_LANG['good_price'] = 'product price';
+$_LANG['good_brief'] = 'Product Description';
 $_LANG['good_image'] = 'Upload merchandise pictures';
 $_LANG['is_new'] = 'New products';
 $_LANG['is_best'] = 'Boutique';
@@ -184,26 +184,26 @@ $_LANG['skip'] = 'Completing the wizard';
 $_LANG['next_step'] = 'Next step';
 $_LANG['ur_add'] = 'Shop Guide - Adding Goods';
 $_LANG['ur_config'] = 'Shop Guide-Setting up Online Shop';
-$_LANG['shop_basic_first'] = "Some basic information about setting up shop < EM > shop name, address, distribution method, payment method, etc.</em>";
-$_LANG['shop_basic_second'] = "Add the name, quantity, classification, brand, price, description of <em> to the store.</em>";
+$_LANG['shop_basic_first'] = "Some basic information about setting up shop <em> shop name, address, distribution method, payment method, etc.</em>";
+$_LANG['shop_basic_second'] = "Add the name, quantity, category, brand, price, description of <em> to the store.</em>";
 $_LANG['shop_basic_third'] = "Congratulations, your online store is ready to use! <em> Here are some links aggregation of commonly used functions. After you close this page, you can still find it in the items related to the left menu</em>";
 $_LANG['add_good'] = 'Add merchandise';
-$_LANG['add_category'] = 'Adding Classification of Commodities';
-$_LANG['add_type'] = 'Commodity type';
+$_LANG['add_category'] = 'Adding Category of Products';
+$_LANG['add_type'] = 'Product type';
 $_LANG['add_favourable'] = 'Adding Preferential Activities';
 $_LANG['shop_config'] = 'Store setup';
 $_LANG['select_template'] = 'Select template';
 $_LANG['shop_back_in'] = 'Enter the Backstage of Online Store';
-$_LANG['goods_img_too_big'] = 'The merchandise picture file is too big（Maximum value:%s），Unable to upload.';
+$_LANG['goods_img_too_big'] = 'The merchandise picture file is too big（Maximum value: %s），Unable to upload.';
 $_LANG['invalid_goods_img'] = 'The format of the merchandise pictures is incorrect!';
 
 
 //JS语言
 $_LANG['js_languages']['shop_name_not_null'] = 'Store name cannot be empty';
-$_LANG['js_languages']['good_name_not_null'] = 'Commodity name cannot be empty';
-$_LANG['js_languages']['good_category_not_null'] = 'Classification of commodities should not be empty';
+$_LANG['js_languages']['good_name_not_null'] = 'Product name cannot be empty';
+$_LANG['js_languages']['good_category_not_null'] = 'Category of products should not be empty';
 $_LANG['js_languages']['good_number_not_number'] = 'Quantity of goods is not a numerical value';
-$_LANG['js_languages']['good_price_not_number'] = 'Commodity prices are not numerical values';
+$_LANG['js_languages']['good_price_not_number'] = 'Product prices are not numerical values';
 
 /*后台语言项*/
 $_LANG['send_mail_off'] = 'Auto Send Mail Close';

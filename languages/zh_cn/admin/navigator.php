@@ -31,7 +31,7 @@ $_LANG['ckdel'] = 'Determine to delete?';
 
 $_LANG['view_cart'] = 'Check the shopping cart';
 $_LANG['pick_out'] = 'Shopping Center';
-$_LANG['group_buy_goods'] = 'Group buying commodity';
+$_LANG['group_buy_goods'] = 'Group buying product';
 $_LANG['snatch'] = 'Treasure Raiders';
 $_LANG['tag_cloud'] = 'Tag cloud';
 $_LANG['user_center'] = 'User center';

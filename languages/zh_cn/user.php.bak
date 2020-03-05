@@ -186,8 +186,7 @@ $_LANG['add_address_success'] = 'Tambahkan alamat baru dengan sukses! ';
 $_LANG['edit_address_success'] = 'Informasi alamat pengiriman Anda telah berhasil diperbarui! ';
 $_LANG['address_list_lnk'] = 'daftar alamat pengirim';
 $_LANG['add_address'] = 'Tambahkan alamat pengiriman baru';
-$_LANG['confirm_edit'] = 'Konfirmasi perubahan';
-$_LANG['confirm_passedit'] = 'Konfirmasi kata sandi';
+$_LANG['confirm_edit'] = 'Konfirmasikan revisi';
  
 $_LANG['confirm_drop_address'] = 'Anda yakin ingin menghapus alamat pengiriman? ';
  

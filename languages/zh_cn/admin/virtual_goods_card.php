@@ -32,7 +32,7 @@ $_LANG['js_languages']['uploadfile_not_null']='Please select the file to upload.
 
 $_LANG['use_help'] = 'Instruksi penggunaan:'.
 '<ol>'.
-'<li> Upload file should be CSV file <br/>The CSV file is listed as the serial number of the card, the password of the card and the deadline of the use of the card. <br / > '.
+'<li> Upload file should be CSV file <br/>The CSV file is listed as the serial number of the card, the password of the card and the deadline of the use of the card. <br/> '.
 '(Create CSV file with EXCEL: fill in the data in the order of card number, card password and deadline in EXCEL, and save it as CSV file directly after completion)'.
 '<li> password, and deadline can be empty, the deadline format is 2006-11-6 or 2006/11/6'.
 '<li> card number, card password and deadline should not use Chinese </li>'.
@@ -60,7 +60,7 @@ $_LANG['same_string'] = 'The new encryption string is the same as the original o
 $_LANG['update_log'] = 'Update record';
 $_LANG['old_stat'] = 'A total of %s was recorded. The records encrypted with new strings have %s, the records encrypted with original strings (to be updated) have %s, and the records encrypted with unknown strings have %s.';
 $_LANG['new_stat'] = 'After updating </strong>, there are %s records encrypted by new string and %s records encrypted by unknown string.';
-$_LANG['update_error'] = 'Errors occurred during the update process:%s';
+$_LANG['update_error'] = 'Errors occurred during the update process: %s';
 $_LANG['js_languages']['updating_info'] = '<strong> is updating </strong> (100 records at a time)';
 $_LANG['js_languages']['updated_info'] = '<strong> updated </strong> <span id="updated"> 0 </span> records.';
 
@@ -242,7 +242,7 @@ $_LANG['action_note']='remark';
 $_LANG['pay_note']='Payment Note:';
 $_LANG['sms_time_format']='m month, J day, G hour';
 $_LANG['order_shipped_sms']='Your order %s has been shipped at %s [%s]';
-$_LANG['order_splited_sms']='your order %s,%s is in %s [%s]';
+$_LANG['order_splited_sms']='your order %s, %s is in %s [%s]';
 $_LANG['order_removed']='Order deletion was successful. ';
 $_LANG['return_list']='return order list';
 
