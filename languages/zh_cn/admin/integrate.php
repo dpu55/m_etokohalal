@@ -1,4 +1,18 @@
 <?php
+
+/**
+ * 鸿宇多用户商城 管理中心会员数据整合插件管理程序语言文件
+ * ============================================================================
+ * 版权所有 2015-2018 鸿宇多用户商城科技有限公司，并保留所有权利。
+ * 网站地址: http://bbs.hongyuvip.com;
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 踏踏实实做事，堂堂正正做人。
+ * ============================================================================
+ * $Author: derek $
+ * $Id: integrate.php 17217 2016-01-19 06:29:08Z derek $
+*/
+
 $_LANG['integrate_name'] = 'Name';
 $_LANG['integrate_version'] = 'Edition';
 $_LANG['integrate_author'] = 'Author';
@@ -7,7 +21,7 @@ $_LANG['integrate_author'] = 'Author';
 $_LANG['update_success'] = 'Setting up member data integration plug-in has been successful.';
 $_LANG['install_confirm'] = 'Are you sure you want to install the member data integration plug-in?';
 $_LANG['need_not_setup'] = 'When you use the ECSHOP membership system, there is no need to set it up.';
-$_LANG['different_domain'] = 'The integration object you set is not in the same domain as ECSHOP. <br/> You will only be able to share the membership data of the system, but you will not be able to log in at the same time.';
+$_LANG['different_domain'] = 'The integration object you set is not in the same domain as ECSHOP.<br />You will only be able to share the membership data of the system, but you will not be able to log in at the same time.';
 $_LANG['points_set'] = 'Integral Exchange Settings';
 $_LANG['view_user_list'] = 'View forum users';
 $_LANG['view_install_log'] = 'View Installation Log';
@@ -16,10 +30,10 @@ $_LANG['integrate_setup'] = 'Setting up Membership Data Integration Plug-in';
 $_LANG['continue_sync'] = 'Continue to synchronize membership data';
 $_LANG['go_userslist'] = 'Return to membership account list';
 $_LANG['user_help'] = '<pre>
-Usage method:
-1: If you need to integrate other user systems, you can install appropriate version number plug-ins for integration.
-2: If the integrated user system needs to be replaced, the integration can be completed by installing the target plug-in directly, and the last integrated plug-in can be automatically uninstalled.
-3: If you do not need to integrate any user systems, Please choose to install ECSHOP plug-ins, you can uninstall all integration plug-ins.
+Usage method：
+         1:If you need to integrate other user systems, you can install the appropriate version number plug-ins for integration.
+         2:If the integrated user system needs to be replaced, the integration can be completed by installing the target plug-in directly, and the last integrated plug-in can be automatically uninstalled.
+         3:If you do not need to integrate any user systems, please choose to install ECSHOP plug-ins, you can uninstall all integration plug-ins.
                            </pre>';
 
 /* 查看安装日志 */
@@ -28,6 +42,7 @@ $_LANG['empty_install_log'] = 'Installation log is empty';
 
 /* 表单相关语言项 */
 $_LANG['db_notice'] = 'Click“<font color="#000000">next step</font>”It will guide you to synchronize the user data of the mall to the integration forum.If you do not need to synchronize data, Click“<font color="#000000">Save configuration information directly</font>”';
+
 $_LANG['lable_db_host'] = 'Database Server Host Name：';
 $_LANG['lable_db_name'] = 'Database name：';
 $_LANG['lable_db_chartset'] = 'Database Character Set：';
@@ -37,32 +52,34 @@ $_LANG['lable_db_pass'] = 'Database password：';
 $_LANG['lable_prefix'] = 'Table Prefix：';
 $_LANG['lable_url'] = 'Complete URL of the integrated system：';
 /* 表单相关语言项(discus5x) */
-$_LANG['cookie_prefix']='COOKIE prefix:';
-$_LANG['cookie_salt']='COOKIE encryption string:';
-$_LANG['button_next']='next';
-$_LANG['button_force_save_config']='Save configuration information directly';
-$_LANG['save_confirm']='Are you sure you want to save configuration information directly? ';
-$_LANG['button_save_config']='Save configuration information';
-$_LANG['error_db_msg']='Incorrect database address, user or password';
-$_LANG['error_db_exist']='Database does not exist';
-$_LANG['error_table_exist']='Integration Forum key data sheet does not exist, the information you filled in is incorrect';
-$_LANG['notice_latin1']='This option may cause Chinese username to be unavailable when it is filled in incorrectly';
-$_LANG['error_not_latin1']='Integrated database detection is not Latin1 encoding! Please re-select';
-$_LANG['error_is_latin1']='Integrated database detected lantin1 encoding! Please re-select';
-$_LANG['invalid_db_charset']='The integrated database detected a %s character set, not a %s character set';
-$_LANG['error_latin1']='The integration information you fill in will lead to serious errors and will not be able to complete the integration';
+$_LANG['cookie_prefix']          = 'COOKIEprefix：';
+$_LANG['cookie_salt']          = 'COOKIE Encrypted string：';
+$_LANG['button_next'] = 'next step';
+$_LANG['button_force_save_config'] = 'Save configuration information directly';
+$_LANG['save_confirm'] = 'Are you sure you want to save configuration information directly?';
+$_LANG['button_save_config'] = 'Save configuration information';
+
+$_LANG['error_db_msg'] = 'Incorrect database address, user or password';
+$_LANG['error_db_exist'] = 'The database does not exist';
+$_LANG['error_table_exist'] = 'The key data sheet of the Integration Forum does not exist. The information you filled in is incorrect.';
+
+$_LANG['notice_latin1'] = 'When this option is filled in incorrectly, it may cause Chinese username to be unavailable.';
+$_LANG['error_not_latin1'] = 'Integrated database detection is not Latin1 encoding! Please re-select';
+$_LANG['error_is_latin1'] = 'Integrated database detection is lantin1 encoding! Please re-select';
+$_LANG['invalid_db_charset'] = 'The integrated database detected that the%s  character set was not the%s character set.';
+$_LANG['error_latin1'] = 'The integration information you fill in will lead to serious errors and will not be able to complete the integration.';
 
 /* 检查同名用户 */
-$_LANG['conflict_username_check']='Check if Mall users and Integration Forum users have renames';
-$_LANG['check_notice']='This page will check whether the existing users and forum users in the mall have renames. Click "Before checking", Please choose a default processing method for the users with renames in the mall'.
-$_LANG['default_method']='If you detect duplicate users in the mall, please select a default processing method for these users';
-$_LANG['shop_user_total']='Etokohalal has %s users to be checked';
-$_LANG['lable_size']='Number of users checked each time';
-$_LANG['start_check']='Start checking';
-$_LANG['next']='next';
-$_LANG['checking']='Checking... (Please do not close the browser)';
-$_LANG['notice']='Checked %s/%s';
-$_LANG['check_complete']='Check completed';
+$_LANG['conflict_username_check'] = 'Check if Mall users and Integrated Forum users have duplicate names';
+$_LANG['check_notice'] = 'This page will check whether the existing users and forum users in the mall have renames. Click "Before Checking", please choose a default processing method for the users with renames in the mall.';
+$_LANG['default_method'] = 'If you detect duplicate users in the mall, select a default processing method for these users';
+$_LANG['shop_user_total'] = 'The mall has a total of %s users to be checked';
+$_LANG['lable_size'] = 'Check the number of users at a time';
+$_LANG['start_check'] = 'Start checking';
+$_LANG['next'] = 'next step';
+$_LANG['checking'] = 'Checking... (Please don\'t close the browser)';
+$_LANG['notice'] = 'Have checked %s / %s ';
+$_LANG['check_complete'] = 'Inspection completed';
 
 /* 同名用户处理 */
 $_LANG['conflict_username_modify'] = 'Mall Name User List';
@@ -109,13 +126,13 @@ $_LANG['save_ok'] = 'Save successfully';
 
 /* 积分设置 */
 $_LANG['no_points'] = 'No convertible points were detected in the forum.';
-$_LANG['bbs'] = 'Forum';
-$_LANG['shop_pay_points'] = 'Consumption Point of Mall';
-$_LANG['shop_rank_points'] = 'Grade Point of Mall';
+$_LANG['bbs'] = 'forum';
+$_LANG['shop_pay_points'] = 'Consumption Integral of Mall';
+$_LANG['shop_rank_points'] = 'Grade Integral of Mall';
 $_LANG['add_rule'] = ' Add new rules';
 $_LANG['modify'] = 'Modify';
 $_LANG['rule_name'] = 'Exchange rules';
-$_LANG['rule_rate'] = 'Subscription ratio';
+$_LANG['rule_rate'] = 'subscription ratio';
 
 /* JS语言项 */
 $_LANG['js_languages']['no_host'] = 'The database server host name cannot be empty.';
@@ -156,33 +173,33 @@ $_LANG['ucenter_opt_database'] = 'Database mode';
 $_LANG['ucenter_opt_interface'] = 'Interface mode';
 
 $_LANG['ucenter_notice_id'] = 'This value is the application ID of the current store in UCenter. Please do not change it in general.';
-$_LANG['ucenter_notice_key'] = 'Communication keys are used to encrypt information transmitted between ECShop and UCenter. They can contain any letters and numbers. Please set the same communication keys between UCenter and ECShop to ensure that the two systems can communicate normally.';
-$_LANG['ucenter_notice_url'] = 'This value will be initialized after you install UCenter. If your UCenter address or directory changes, modify this item. In general, please do not change it, such as: http://www.sitename.com/uc_server.';
-$_LANG['ucenter_notice_ip'] = 'If your server cannot access UCenter through domain name, you can enter the IP address of UCenter server.';
+$_LANG['ucenter_notice_key'] = 'Communication key is used to encrypt information between UCenter and ECShop. It can contain any letters and numbers. Please set the same communication key between UCenter and ECShop to ensure that the two systems can communicate normally.';
+$_LANG['ucenter_notice_url'] = 'This value will be initialized after you install UCenter. If your UCenter address or directory changes, modify this value. In general, please do not change such as: http://www.sitename.com/uc_server (Last but not least"/")';
+$_LANG['ucenter_notice_ip'] = 'If your server can\'t access UCenter through domain name, you can enter the IP address of UCenter server.';
 $_LANG['ucenter_notice_connect'] = 'Please choose the appropriate connection mode according to your server network environment';
-$_LANG['ucenter_notice_db_host'] = 'It can be either a local or a remote database server. If MySQL port is not the default 3306, please fill in the following form: 127.0.0.1:6033';
-$_LANG['uc_notice_ip'] = 'There is something wrong with the connection. Please fill in the IP address of the server. If your UC and ECShop are installed on the same server, we suggest you try to fill in 127.0.0.1.';
+$_LANG['ucenter_notice_db_host'] = 'It can be either a local or a remote database server. If MySQL port is not the default 3306, please fill in the following form:127.0.0.1:6033';
+$_LANG['uc_notice_ip'] = 'There is something wrong with the connection. Please fill in the IP address of the server. If your UC and ECShop are installed on the same server, we suggest you try to fill in the IP address. 127.0.0.1';
 
-$_LANG['uc_lab_url'] = 'UCenter URL:';
+$_LANG['uc_lab_url'] = 'UCenter of URL:';
 $_LANG['uc_lab_pass'] = 'UCenter Founder Code:';
-$_LANG['uc_lab_ip'] = 'UCenter IP:';
+$_LANG['uc_lab_ip'] = 'UCenter of IP:';
 
 $_LANG['uc_msg_verify_failur'] = 'Validation failed';
 $_LANG['uc_msg_password_wrong'] = 'Founder password error';
 $_LANG['uc_msg_data_error'] = 'Installation data error';
 
 $_LANG['ucenter_import_username'] = 'Membership data imported to UCenter';
-$_LANG['uc_import_notice'] = 'Reminder: Please pause all applications (such as Discuz!, SupeSite, etc.) before importing membership data.';
+$_LANG['uc_import_notice'] = 'Reminder: Please suspend all applications before importing Member data(such as Discuz!, SupeSite ect)';
 $_LANG['uc_members_merge'] = 'Membership merger';
-$_LANG['user_startid_intro'] = '<p> This initial membership ID is %s. Members whose original ID is 888 will be changed to %s + 888. </p>';
+$_LANG['user_startid_intro'] = '<p>This initial membership ID is% s. If the original ID is 888, the membership will be changed to %s+888 Value。</p>';
 $_LANG['uc_members_merge_way1'] = 'Force the same user with the same UC username and password';
 $_LANG['uc_members_merge_way2'] = 'Users with the same UC username and password are not imported into UC users';
 $_LANG['start_import'] = 'Start importing';
 $_LANG['import_user_success'] = 'Successfully imported membership data to UCenter';
-$_LANG['uc_points'] = 'UCenter points exchange settings need to be done in the UCenter management background';
+$_LANG['uc_points'] = 'UCenterpoints exchange settings need to be done in the UCenter management background';
 $_LANG['uc_set_credits'] = 'Setting up Integral Exchange Scheme';
-$_LANG['uc_client_not_exists'] = 'The uc_client directory does not exist. Please upload the uc_client directory to the root directory of the mall and then integrate it.';
-$_LANG['uc_client_not_write'] = 'The uc_client/data directory is not writable. Please set the uc_client/data directory permission to 777 first.';
+$_LANG['uc_client_not_exists'] = 'uc_client the directory does not exist. Please upload the uc_client directory to the root directory of the mall and then integrate it.';
+$_LANG['uc_client_not_write'] = 'uc_client/data the directory is not writable. Please set the uc_client/data directory permission to777';
 $_LANG['uc_lang']['credits'][0][0] = 'Rank integral';
 $_LANG['uc_lang']['credits'][0][1] = '';
 $_LANG['uc_lang']['credits'][1][0] = 'Consumption points';

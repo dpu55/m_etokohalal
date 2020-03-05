@@ -1,47 +1,61 @@
 <?php
+
+/**
+ * 鸿宇多用户商城 管理中心优惠活动语言文件
+ * ============================================================================
+ * 版权所有 2015-2018 鸿宇多用户商城科技有限公司，并保留所有权利。
+ * 网站地址: http://bbs.hongyuvip.com;
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 踏踏实实做事，堂堂正正做人。
+ * ============================================================================
+ * $Author: derek $
+ * $Id: favourable.php 17217 2016-01-19 06:29:08Z derek $
+ */
+
 /* menu */
-$_LANG['favourable_list'] = 'Activities list';
-$_LANG['add_favourable'] = 'Add activities';
-$_LANG['edit_favourable'] = 'Edit activities';
+$_LANG['favourable_list'] = 'List of Preferential Activities';
+$_LANG['add_favourable'] = 'Adding Preferential Activities';
+$_LANG['edit_favourable'] = 'Editorial Preferential Activities';
 $_LANG['favourable_log'] = 'Bidding Records for Preferential Activities';
-$_LANG['continue_add_favourable'] = 'Add';
-$_LANG['back_favourable_list'] = 'Back';
+$_LANG['continue_add_favourable'] = 'Continue to add preferential activities';
+$_LANG['back_favourable_list'] = 'Return to the list of preferential activities';
 $_LANG['add_favourable_ok'] = 'Successful Addition of Preferential Activities';
 $_LANG['edit_favourable_ok'] = 'Successful Editorial Preferences';
 
 /* list */
 $_LANG['act_is_going'] = 'Show only ongoing activities';
 $_LANG['act_name'] = 'Name of Preferential Activities';
-$_LANG['goods_name'] = 'Nama Produk';
-$_LANG['start_time'] = 'Waktu Mulai';
-$_LANG['end_time'] = 'Waktu Berakhir';
-$_LANG['min_amount'] = 'Batas Atas ';
-$_LANG['max_amount'] = 'Batas Bawah';
+$_LANG['goods_name'] = 'Trade name';
+$_LANG['start_time'] = 'start time';
+$_LANG['end_time'] = 'End time';
+$_LANG['min_amount'] = 'Lower limit of amount';
+$_LANG['max_amount'] = 'Upper limit of amount';
 $_LANG['favourable_not_exist'] = 'The preferential activities you want to operate do not exist.';
 $_LANG['js_languages']['batch_drop_confirm'] = 'Are you sure you want to delete the selected promotional activities?';
 $_LANG['batch_drop_ok'] = 'Successful batch deletion';
 $_LANG['no_record_selected'] = 'No record selected';
 
 /* info */
-$_LANG['label_act_name'] = 'Name of Preferential Activities:';
-$_LANG['label_start_time'] = 'Preferential start time:';
-$_LANG['label_end_time'] = 'At the end of the offer:';
-$_LANG['label_user_rank'] = 'Membership level with preferential treatment:';
+$_LANG['label_act_name'] = 'Name of Preferential Activities：';
+$_LANG['label_start_time'] = 'Preferential start time：';
+$_LANG['label_end_time'] = 'Discount End Time：';
+$_LANG['label_user_rank'] = 'Membership Level Enjoying Preferential Benefits：';
 $_LANG['not_user'] = 'Non member';
-$_LANG['label_act_range'] = 'Preferential scope:';
-$_LANG['far_all'] = 'All products';
+$_LANG['label_act_range'] = 'Preferential scope：';
+$_LANG['far_all'] = 'All merchandise';
 $_LANG['far_category'] = 'The following categories';
 $_LANG['far_brand'] = 'The following brands';
-$_LANG['far_goods'] = 'Following products';
+$_LANG['far_goods'] = 'Following commodities';
 $_LANG['label_search_and_add'] = 'Search and add preferences';
 $_LANG['js_languages']['all_need_not_search'] = 'Preferential range is all goods, do not need this operation';
 $_LANG['js_languages']['range_exists'] = 'This option already exists';
 $_LANG['label_min_amount'] = 'Lower limit of amount：';
 $_LANG['label_max_amount'] = 'Upper limit of amount：';
 $_LANG['notice_max_amount'] = '0 means no upper limit';
-$_LANG['label_act_type'] = 'Preferential methods:';
-$_LANG['notice_act_type'] = 'When the preferential mode is "enjoy the gift (special offer)", please enter the maximum quantity of the gift (special offer) which allows the buyer to choose. The quantity of 0 means unlimited quantity.' .
-        'When the preferential mode is "cash deduction", please enter the amount of cash deduction.' .
+$_LANG['label_act_type'] = 'Preferential way：';
+$_LANG['notice_act_type'] = 'When the preferential mode is "Enjoy Gifts (Preferential Goods)", please enter the maximum number of gifts (Preferential Goods) allowed to be selected by the buyer. The number of gifts (Preferential Goods) is 0, which means unlimited quantity.；' .
+        'When the preferential mode is "cash deduction", please enter the amount of cash deduction.；' .
         'When the preferential mode is "enjoy price discount", please enter a discount (1-99), such as: 9 discount, enter 90.';
 $_LANG['fat_goods'] = 'Enjoy gifts (special offers)';
 $_LANG['fat_price'] = 'Enjoy cash relief';
