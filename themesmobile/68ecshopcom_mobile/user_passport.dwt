@@ -60,7 +60,7 @@
 								<div>
 								  <div class="ng-cookie-area" >
 									<label class="bf1 login_ffri">
-										<input type="checkbox" name="remember" value="1" checked=""> &nbsp;{$lang.m_314} 
+										<input style="margin-left:5px;" type="checkbox" name="remember" value="1" checked="">&nbsp;{$lang.m_314} 
 									</label>
 								  </div>
 								</div>
