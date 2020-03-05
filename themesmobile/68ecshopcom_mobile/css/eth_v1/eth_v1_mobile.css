@@ -903,9 +903,9 @@
   width: -webkit-fill-available;
   min-width: 90%;
   height: auto;
-  line-height: 0;
+  line-height: 2.5rem;
   font-size: 12px;
-  padding: 9px 8px;
+  padding: 0px 8px;
 }
 
 .eth_v1_mobile.page-user-passport .btn_big1 {
