@@ -2564,7 +2564,10 @@ elseif ($_REQUEST['step'] == 'done')
 	    }
 	    $order['card_fee']      = $total['card_fee'];
 
-	    $order['order_amount']  = number_format($total['amount'], 0, ',', '.');
+		/*by catur 20200125
+		$order['order_amount']  = number_format($total['amount'], 0, ',', '.');
+		*/
+		$order['order_amount']  = $total['amount'];
 
 		/*增值税发票_添加_START_bbs.hongyuvip.com*/
     	/*发票金额*/
@@ -2966,13 +2969,101 @@ elseif ($_REQUEST['step'] == 'done')
     	//$order['log_id'] = insert_pay_log($order['order_id'], $order['order_amount'], PAY_ORDER);
 	}
 
+ 
+
+/* start by catur 20200125
+	---------------------
+	32 CIMB    : 51491273
+	33 Danamon : 89220200
+	35 Alfa    : 88888357
+	36 Permata : 88561201
+	38 BNI     : 88030008
+	41 Mandiri : 88899575
+    */
+    
     if ($order['order_amount'] > 0)
-    {
-        $payment = payment_info($order['pay_id']);
-        include_once('includes/modules/payment/' . $payment['pay_code'] . '.php');
-        $pay_obj    = new $payment['pay_code'];
-        $pay_online = $pay_obj->get_code($order, unserialize_config($payment['pay_config']));
+    {	
+		$order['order_sn'] = $db->getOne("SELECT order_sn FROM " .$ecs->table('order_info'). " WHERE order_id = '" . $order['order_id'] . "' ");
+		if 	($order['pay_id']=='41') {
+        	$payment = payment_info('41');
+			$dokupay = array(
+            	'pay_order_id'=>$order['order_sn'],
+            	'pay_amount'=>$order['order_amount'],
+            	'pay_id'=>'41',
+            	'pay_desc'=>'Mandiri',
+            	'pay_prefix'=>'88899575');
+		} else if 	($order['pay_id']=='38') {
+        	$payment = payment_info('38');
+			$dokupay = array(
+            	'pay_order_id'=>$order['order_sn'],
+            	'pay_amount'=>$order['order_amount'],
+            	'pay_id'=>'38',
+            	'pay_desc'=>'BNI',
+            	'pay_prefix'=>'88030008');
+		} else if 	($order['pay_id']=='36') {
+        	$payment = payment_info('36');
+			$dokupay = array(
+            	'pay_order_id'=>$order['order_sn'],
+            	'pay_amount'=>$order['order_amount'],
+            	'pay_id'=>'36',
+            	'pay_desc'=>'Permata',
+            	'pay_prefix'=>'88561201');
+		} else if 	($order['pay_id']=='35') {
+        	$payment = payment_info('35');
+			$dokupay = array(
+            	'pay_order_id'=>$order['order_sn'],
+            	'pay_amount'=>$order['order_amount'],
+            	'pay_id'=>'35',
+            	'pay_desc'=>'Alfamart',
+            	'pay_prefix'=>'88888357');
+		} else if 	($order['pay_id']=='33') {
+        	$payment = payment_info('33');
+			$dokupay = array(
+            	'pay_order_id'=>$order['order_sn'],
+            	'pay_amount'=>$order['order_amount'],
+             	'pay_id'=>'33',
+           		'pay_desc'=>'Danamon',
+            	'pay_prefix'=>'89220200');
+		} else if 	($order['pay_id']=='32') {
+        	$payment = payment_info('32');
+			$dokupay = array(
+            	'pay_order_id'=>$order['order_sn'],
+            	'pay_amount'=>$order['order_amount'],
+             	'pay_id'=>'32',
+            	'pay_desc'=>'CIMP',
+            	'pay_prefix'=>'51491273');
+		} else {
+        	$payment = payment_info($order['pay_id']);
+        }
+		if ($payment['pay_code']=='balance') {
+			include_once('includes/modules/payment/' . $payment['pay_code'] . '.php');
+			$pay_obj    = new $payment['pay_code'];
+		} else {
+			include_once('includes/modules/payment/doku.php');
+			$pay_obj    = new doku();
+		}
+        
+		if ($payment['pay_code']='doku') {
+	        $pay_online = $pay_obj->get_code($dokupay,$order, unserialize_config($payment['pay_config']));
+		} else {
+    	    $pay_online = $pay_obj->get_code($order, unserialize_config($payment['pay_config']));
+		}
+
+        /* end by catur 20200125 */
+
+		/* 代码修改_start  By bbs.hongyuvip.com 
+		$payment_www_com=unserialize_config($payment['pay_config']);
+		if ($payment['pay_code']=='alipay_bank')
+		{
+			$payment_www_com['www_ecshop68_com_alipay_bank'] = $_POST['www_68ecshop_com_bank'] ? trim($_POST['www_68ecshop_com_bank']) : "www_ecshop68_com";
+
+			$pay_online = $pay_obj->get_code($order, $payment_www_com);
+		}
+
+		代码修改_end  By bbs.hongyuvip.com */
+
         $order['pay_desc'] = $payment['pay_desc'];
+
         $smarty->assign('pay_online', $pay_online);
     }
 	if(!empty($order['shipping_name']))

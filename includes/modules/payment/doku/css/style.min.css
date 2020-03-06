@@ -1,0 +1,68 @@
+.default-btn-page {
+    background: #b90a29 none repeat scroll 0 0;
+    border: 1px solid #b90a29;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    padding: 14px 10px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'din-reg', arial
+}
+
+.result-text {
+    margin-top: 12px
+}
+
+.auto-redirect {
+    text-align: right
+}
+
+.paymentcode {
+    text-align: center
+}
+
+.paymentcodetitle {
+    float: left;
+    font-weight: bold;
+    color: #0000FF
+}
+
+.right-head-paymentcode {
+    width: 75%
+}
+
+.right-head-paymentcode img {
+    width: 65%
+}
+
+.logo-alfa img {
+    height: 65px
+}
+
+.logo-atm img {
+    height: 37px
+}
+
+.center-object {
+    margin: auto;
+    text-align: center
+}
+
+.lang {
+    z-index: 111
+}
+
+.lang a {
+    background: #b5b5b5;
+    color: #fff;
+    padding: 3px 10px 0 10px;
+    border-radius: 0 0 10px 10px;
+    font-size: 13px;
+    text-decoration: none
+}
+
+.top-page-right {
+    text-align: right;
+    margin-right: 20px
+}
