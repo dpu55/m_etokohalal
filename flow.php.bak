@@ -1040,7 +1040,7 @@ elseif ($_REQUEST['step'] == 'checkout')
 
 	
 
-	$consignee['region'] = $address['district'].', '.$address['city'].', '.$address['province'];
+	$consignee['region'] = $address['district'].', '.$address['city'].', '.$address['province'].', '.country($address['country']);
 
 	// var_dump($consignee); die();
 

@@ -817,7 +817,7 @@ function close_gift(suitId){
                <label for="payment_method_{$payment.pay_id}" >
                  <input type="radio" name="payment" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id} checked="checked"{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" class="c_checkbox_t"  {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if} />
                  <div class="fl shipping_title">
-                   {$payment.pay_name} {$payment.format_pay_fee}
+                   {$payment.pay_name} {*$payment.format_pay_fee*}
                  </div>
                </label>
 

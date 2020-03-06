@@ -273,7 +273,7 @@ $_LANG['no_fulfilled_order'] = 'Tidak ada pesanan yang sesuai';
 $_LANG['updated_order'] = 'Pesanan yang diperbarui:';
 $_LANG['order'] = 'Memesan:';
 $_LANG['confirm_order'] = 'Pesanan berikut tidak dapat diatur ke status dikonfirmasi';
-$_LANG['invalid_order'] = 'Pesanan berikut tidak dapat disetel ke tidak valid';
+$_LANG['invalid_order'] = 'Pesanan berikut tidak dapat diatur ke tidak valid';
 $_LANG['cancel_order'] = 'Pesanan berikut tidak dapat dibatalkan';
 $_LANG['remove_order'] = 'Pesanan berikut tidak dapat dihapus';
 
