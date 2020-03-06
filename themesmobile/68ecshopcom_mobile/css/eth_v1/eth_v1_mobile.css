@@ -2614,10 +2614,11 @@
 }
 
 .eth_v1_mobile.page-flow .order-buy #pay_div .title em.qxz {
-  font-size: 10px;
+  font-size: 12px;
   display: block;
   margin-left: 0;
   line-height: 1;
+  color: rgba(0, 0, 0, 0);
 }
 
 .eth_v1_mobile.page-flow .order-buy #pay_div .title .text {
