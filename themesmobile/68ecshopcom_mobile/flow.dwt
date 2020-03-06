@@ -440,7 +440,10 @@ else
                   </div>
                   <div class="address-details">
 					  <div>{$lang.m_193}</div>
-					  <div class="region">{$consignee.region|escape}&nbsp;{$consignee.address|escape}</div>
+					  <div class="region">
+              {$consignee.address|escape},<br/>
+              {$consignee.region|escape}{if $consignee.zipcode}, {$consignee.zipcode|escape}{/if}
+            </div>
                   </div>
                 </section>
               </a>
