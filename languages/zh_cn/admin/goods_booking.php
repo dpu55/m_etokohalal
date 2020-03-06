@@ -39,7 +39,7 @@ $_LANG['link_man'] = 'Contacts';
 
 $_LANG['note'] = 'Processing remarks';
 $_LANG['guest_user'] = 'Unregistered users';
-$_LANG['i_dispose'] = 'I\'ll deal with it.';
+$_LANG['i_dispose'] = 'I will deal with it.';
 
 $_LANG['detail'] = 'View details';
 

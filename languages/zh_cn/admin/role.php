@@ -70,10 +70,10 @@ $_LANG['user_name_drop'] = 'Has been deleted successfully!';
 $_LANG['pwd_error'] = 'The old password is error';
 $_LANG['old_password_empty'] = 'If you want to change your password, you must first enter your old password!';
 $_LANG['edit_admininfo_error'] = 'You can only edit your personal data!';
-$_LANG['edit_admininfo_cannot'] = 'You can\'t do anything with the administrator\'s rights!';
-$_LANG['edit_remove_cannot'] = 'You can\'t delete demo administrator!';
-$_LANG['remove_self_cannot'] = 'You can\'t delete yourself!';
-$_LANG['remove_cannot'] = 'You can\'t delete this administrator!';
+$_LANG['edit_admininfo_cannot'] = 'You cannot do anything with the administrators rights!';
+$_LANG['edit_remove_cannot'] = 'You cannot delete demo administrator!';
+$_LANG['remove_self_cannot'] = 'You cannot delete yourself!';
+$_LANG['remove_cannot'] = 'You cannot delete this administrator!';
 $_LANG['remove_cannot_user'] = 'This role is used by the administrator, can not be deleted for the time being!';
 
 $_LANG['modif_info'] = 'Edit profile';
@@ -81,8 +81,8 @@ $_LANG['edit_navi'] = 'Setting up personal navigation';
 
 /* 帮助信息 */
 $_LANG['password_notic'] = 'If you want to change your password, please fill in the old password first. If you leave it blank, the password will remain unchanged.';
-$_LANG['email_notic'] = 'Enter the Administrator\'s Email Mailbox, which must be in Email format';
-$_LANG['confirm_notic'] = 'Enter Administrator\'s Confirmation Password. Enter the same password twice.';
+$_LANG['email_notic'] = 'Enter the Administrators Email Mailbox, which must be in Email format';
+$_LANG['confirm_notic'] = 'Enter Administrators Confirmation Password. Enter the same password twice.';
 
 /* 登录表单 */
 $_LANG['label_username'] = 'User name：';

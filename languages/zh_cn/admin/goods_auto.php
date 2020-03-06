@@ -17,7 +17,7 @@ $_LANG['id'] = 'Number';
 $_LANG['starttime'] = 'On shelf time';
 $_LANG['endtime'] = 'Under shelf time';
 $_LANG['select_time'] = 'Please choose the time';
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['ok'] = 'ok';
 $_LANG['edit_ok'] = 'Successful operation';
 $_LANG['delete'] = 'Revoke';
@@ -26,7 +26,7 @@ $_LANG['enable_notice'] = 'You need to go to the System Settings - > Scheduling 
 $_LANG['button_start'] = 'Batch shelves';
 $_LANG['button_end'] = 'Batch down shelf';
 
-$_LANG['no_select_goods'] = 'No selected commodity';
+$_LANG['no_select_goods'] = 'No selected product';
 
 $_LANG['batch_start_succeed'] = 'Successful on the shelf in batches';
 $_LANG['batch_end_succeed'] = 'Successful Loading';

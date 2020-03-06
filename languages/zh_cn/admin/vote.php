@@ -25,7 +25,7 @@ $_LANG['no_multi'] = 'cannot';
 $_LANG['show_index'] = 'Home';
 $_LANG['goodslist'] = 'Product list page';
 
-$_LANG['no_vote_name'] = 'You haven\'t added an online survey yet.';
+$_LANG['no_vote_name'] = 'You have not added an online survey yet.';
 $_LANG['no_option_name'] = 'There is no option for the survey.';
 
 $_LANG['list_vote'] = 'Online survey list';

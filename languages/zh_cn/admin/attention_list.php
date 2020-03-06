@@ -13,7 +13,7 @@
  * $Id: attention_list.php 17217 2016-01-19 06:29:08Z derek $
  */
 
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['goods_last_update'] = 'Update date date';
 $_LANG['attention_addtolist'] = 'Insert send queue';
 $_LANG['attention_ckaddtolist'] = 'Determine to send the latest product information to the user concerned about the product? This operation will send the latest product information to the user concerned about the product.';

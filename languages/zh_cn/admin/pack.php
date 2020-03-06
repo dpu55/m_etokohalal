@@ -13,7 +13,7 @@
  * $Id: pack.php 17217 2016-01-19 06:29:08Z derek $
 */
 
-$_LANG['pack_name'] = 'Name of commodity packaging';
+$_LANG['pack_name'] = 'Name of product packaging';
 $_LANG['pack_fee'] = 'Cost';
 $_LANG['free_money'] = 'Free Quota';
 $_LANG['pack_img'] = 'Packaging drawings';
@@ -30,7 +30,7 @@ $_LANG['pack_list_lnk'] = 'Return to List Page';
 
 /*帮助信息*/
 $_LANG['notice_packfee'] = 'The cost of using this package is set to zero free of charge.';
-$_LANG['notice_freemoney'] = 'When the user\'s consumption exceeds this value, the package will be used free of charge. Setting < br /> to 0 indicates that packing charges must be paid';
+$_LANG['notice_freemoney'] = 'When the users consumption exceeds this value, the package will be used free of charge. Setting <br/> to 0 indicates that packing charges must be paid';
 
 $_LANG['warn_packimg'] = 'You have uploaded pictures. The original image will be overwritten when uploaded again';
 

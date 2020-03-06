@@ -39,7 +39,7 @@ $_LANG['unit']['week'] = 'week';
 
 $_LANG['addrow'] = 'increase';
 
-$_LANG['all_null'] = 'Cannot be all empty';
+$_LANG['all_null'] = 'cannot be all empty';
 
 $_LANG['help_expire'] = 'After a visitor clicks on a recommenders website, he or she registers and orders within this time period, which is considered to be the recommenders introduction.';
 $_LANG['help_lpa'] = 'This percentage of the order integral is used as a fractional integral.';

@@ -41,17 +41,17 @@ $_LANG['max_amount_empty'] = 'Order cap of red envelope type cannot be empty！'
 $_LANG['send_count_empty'] = 'The number of red envelopes can not be empty！';
 
 $_LANG['send_by'][SEND_BY_USER] = 'Distribution by user';
-$_LANG['send_by'][SEND_BY_GOODS] = 'Distribution by commodity';
+$_LANG['send_by'][SEND_BY_GOODS] = 'Distribution by product';
 $_LANG['send'] = '发放';
 $_LANG['send_by'][SEND_BY_ORDER] = 'Distribution by order amount';
 $_LANG['send_by'][SEND_BY_PRINT] = 'Off-line red envelopes';
 $_LANG['report_form'] = 'Report form';
 $_LANG['bonus_excel_file'] = 'Offline Red Pack Information List';
 
-$_LANG['goods_cat'] = 'Choosing Classification of Commodities';
-$_LANG['goods_brand'] = 'Commodity brand';
-$_LANG['goods_key'] = 'Commodity keywords';
-$_LANG['all_goods'] = 'Optional commodity';
+$_LANG['goods_cat'] = 'Choosing Category of Products';
+$_LANG['goods_brand'] = 'Product brand';
+$_LANG['goods_key'] = 'Product keywords';
+$_LANG['all_goods'] = 'Optional product';
 $_LANG['send_bouns_goods'] = 'Goods for this type of red envelope';
 $_LANG['remove_bouns'] = 'Remove red packets';
 $_LANG['all_remove_bouns'] = 'remove all';
@@ -100,7 +100,7 @@ $_LANG['bonus_sn_notic'] = 'Tip: The red envelope serial number is composed of s
 $_LANG['creat_bonus'] = 'Generated ';
 $_LANG['creat_bonus_num'] = ' Red envelope serial number';
 $_LANG['bonus_sn_error'] = 'The red envelope serial number must be a number!';
-$_LANG['send_user_notice'] = 'When issuing a red envelope to a specified user, please enter a user name here, separated by commas (,)<br />ect:liry, wjz, zwj';
+$_LANG['send_user_notice'] = 'When issuing a red envelope to a specified user, please enter a user name here, separated by commas (,)<br/>ect:liry, wjz, zwj';
 
 /* 红包信息字段 */
 $_LANG['bonus_id'] = 'Number';

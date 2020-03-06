@@ -22,7 +22,7 @@ $_LANG['support_cod'] = 'Cash on Delivery?';
 $_LANG['shipping_area'] = 'Setup area';
 $_LANG['shipping_print_edit'] = 'Edit Print Template';
 $_LANG['shipping_print_template'] = 'Express Bill Template';
-$_LANG['shipping_template_info'] = 'Order template variable description:<br/>{$shop_name}Shop name<br/>{$province}Shop provinces<br/>{$city}Shop city<br/>{$shop_address}Shop address<br/>{$service_phone}Shop contact number<br/>{$order.order_amount}Order amount<br/>{$order.region}Recipient area<br/>{$order.tel}Recipient telephone<br/>{$order.mobile}Recipient Cell Phone<br/>{$order.zipcode}Recipient\'s postcode<br/>{$order.address}receiver\'s address<br/>{$order.consignee}Recipient name<br/>{$order.order_sn}order number';
+$_LANG['shipping_template_info'] = 'Order template variable description:<br/>{$shop_name}Shop name<br/>{$province}Shop provinces<br/>{$city}Shop city<br/>{$shop_address}Shop address<br/>{$service_phone}Shop contact number<br/>{$order.order_amount}Order amount<br/>{$order.region}Recipient area<br/>{$order.tel}Recipient telephone<br/>{$order.mobile}Recipient Cell Phone<br/>{$order.zipcode}Recipients postcode<br/>{$order.address}receivers address<br/>{$order.consignee}Recipient name<br/>{$order.order_sn}order number';
 
 /* 表单部分 */
 $_LANG['shipping_install'] = 'Installation method';
@@ -66,16 +66,16 @@ $_LANG['no_shipping_desc'] = 'Sorry, the description of delivery mode can not be
 $_LANG['repeat_shipping_name'] = 'Sorry, there is already a distribution method with the same name.';
 $_LANG['uninstall_success'] = 'Delivery mode %s has been successfully unloaded.';
 $_LANG['add_shipping_area'] = 'Create a new distribution area for this delivery method';
-$_LANG['no_shipping_insure'] = 'Sorry, the insurance price cannot be empty. If you don\'t want to use it, please set it to 0.';
+$_LANG['no_shipping_insure'] = 'Sorry, the insurance price cannot be empty. If you do not want to use it, please set it to 0.';
 $_LANG['not_support_insure'] = 'The delivery method does not support the insured price, and the insured fee setting fails.';
 $_LANG['invalid_insure'] = 'Distribution insurance premium is not a legal price';
-$_LANG['no_shipping_install'] = 'Your shipping method has not been installed, you can\'t edit the template yet.';
+$_LANG['no_shipping_install'] = 'Your shipping method has not been installed, you cannot edit the template yet.';
 $_LANG['edit_template_success'] = 'The courier template has been successfully edited.';
 
 /* JS 语言 */
 $_LANG['js_languages']['lang_removeconfirm'] = 'Are you sure you want to uninstall this shipping method?';
 $_LANG['js_languages']['shipping_area'] = 'Setting area';
-$_LANG['js_languages']['upload_falid'] = 'Error: The file type is incorrect. Please upload a file of type "%s"!';
+$_LANG['js_languages']['upload_falid'] = 'Error: The file type is incorrect. Please upload a file of type %s!';
 $_LANG['js_languages']['upload_del_falid'] = 'Error: Delete failed!';
 $_LANG['js_languages']['upload_del_confirm'] = "Tip: Are you sure to delete the printed order picture?";
 $_LANG['js_languages']['no_select_upload'] = "Error: You haven't selected a print sheet image yet. Please use the 'Browse...' button to select!";

@@ -15,8 +15,8 @@
 
 $_LANG['snatch_id'] = 'Number';
 $_LANG['snatch_name'] = 'Activity name';
-$_LANG['goodsid'] = 'Active commodities';
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goodsid'] = 'Active products';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['start_time'] = 'Activity start time';
 $_LANG['end_time'] = 'End time of activity';
 $_LANG['min_price'] = 'Lower price limit';
@@ -30,7 +30,7 @@ $_LANG['desc'] = 'Activity description';
 $_LANG['more_goods'] = 'More......';
 
 $_LANG['make_option'] = 'Search the list of product generation options first';
-$_LANG['keywords'] = 'Commodity keywords';
+$_LANG['keywords'] = 'Product keywords';
 
 $_LANG['log_id'] = 'Number';
 $_LANG['bid_time'] = 'Bid time';
@@ -56,7 +56,7 @@ $_LANG['enter_int'] = 'Please enter an integer';
 $_LANG['notice_goodsid'] = 'You need to search for items, generate a list of items, and then select';
 $_LANG['notice_min_price'] = 'Lower Limit of User Bid Range';
 $_LANG['notice_max_price'] = 'Upper Limit of User Bidding Range';
-$_LANG['notice_price'] = 'If the winner\'s bid is higher than this price, the product will be purchased at this price.Buy goods at 0';
+$_LANG['notice_price'] = 'If the winners bid is higher than this price, the product will be purchased at this price.Buy goods at 0';
 $_LANG['notice_integral'] = 'Upper Limit of User Bidding Range';
 
 /*JS 语言项*/

@@ -24,7 +24,7 @@ $_LANG['item_name'] = 'Language item name';
 $_LANG['item_value'] = 'Linguistic item value';
 $_LANG['notice_edit'] = 'Note: Leave blank will not update language items';
 $_LANG['edit_languages_success'] = 'Congratulations! Language Item Editor Successful!';
-$_LANG['edit_languages_false'] = 'I\'m sorry! Language item editing failed!';
+$_LANG['edit_languages_false'] = 'I am sorry! Language item editing failed!';
 
 $_LANG['js_languages']['keyword_empty_error'] = 'Please enter the language keyword you want to edit!n List of language items related to this keyword by searching';
 

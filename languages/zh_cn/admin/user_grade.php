@@ -76,7 +76,7 @@ $_LANG['office_phone'] = 'office phone';
 $_LANG['mobile_phone'] = 'mobile phone';
 
 $_LANG['notice_pay_points'] = 'Spending points are a type of on-site currency that allows users to pay a certain percentage of points when shopping.';
-$_LANG['notice_rank_points'] = 'A grading point is a cumulative point at which the system determines the user\'s membership level.';
+$_LANG['notice_rank_points'] = 'A grading point is a cumulative point at which the system determines the users membership level.';
 $_LANG['notice_user_money'] = 'The amount reserved by the user in the station';
 
 /* 提示信息 */
@@ -89,13 +89,13 @@ $_LANG['still_accounts'] = 'The member has a balance or arrears\n';
 $_LANG['remove_confirm'] = 'Are you sure you want to delete this member account?';
 $_LANG['list_still_accounts'] = 'There is still a balance or arrears in the selected member account\n';
 $_LANG['list_remove_confirm'] = 'Are you sure you want to delete all selected member accounts?';
-$_LANG['remove_order_confirm'] = 'The member account already has an order, and deleting the member account will clear the order data.<br />Are you sure you want to delete it?';
+$_LANG['remove_order_confirm'] = 'The member account already has an order, and deleting the member account will clear the order data.<br/>Are you sure you want to delete it?';
 $_LANG['remove_order'] = 'Yes, I am sure I want to delete the member account and its order data.';
-$_LANG['remove_cancel'] = 'No, I don\'t want to delete this member account.';
+$_LANG['remove_cancel'] = 'No, I do not want to delete this member account.';
 $_LANG['remove_success'] = 'member account %s has been deleted successfully.';
 $_LANG['add_success'] = 'member account %s has been added successfully.';
 $_LANG['batch_remove_success'] = 'Has been successfully deleted %d member account.';
-$_LANG['no_select_user'] = 'You don\'t have a member to delete now!';
+$_LANG['no_select_user'] = 'You do not have a member to delete now!';
 $_LANG['register_points'] = 'Register to send points';
 $_LANG['username_not_allow'] = 'Username is not allowed to register';
 $_LANG['username_invalid'] = 'Invalid username';

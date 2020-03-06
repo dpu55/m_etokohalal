@@ -73,7 +73,7 @@
 #l_mobile_phone{font-size:18px; line-height:40px; color:#666}
 #l_email{font-size:18px; line-height:40px; color:#666}
 .validate_type{ width:100%; margin-top:10px; font-size:14px; line-height:40px; color:#333; margin-bottom:10px;}
-.m_phone{ width:45%; float:right; height:37px;display:block; border:0px; height:35px; background:#f12b2b; font-size:14px; text-align:center; margin-top:2px;border-radius:0; }
+.m_phone{ width:45%; height:37px;display:block; border:0px; height:35px; background:#f12b2b; font-size:14px; text-align:center; margin-top:2px;border-radius:0; }
 .find_box_end{ width:100%; margin:auto; margin-top:20px;}
 .find_box_end p{ text-align:center; font-size:18px; color:#F00; line-height:200%;}
 .tips{font-size:14px; color:#F00; line-height:200%;}

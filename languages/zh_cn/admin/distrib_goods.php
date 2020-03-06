@@ -17,19 +17,19 @@
 $_LANG['distrib_goods_list'] = 'Distribution List';
 $_LANG['add_distrib_goods'] = 'Single Added Distribution Goods';
 $_LANG['distrib_money'] = 'Divided into amount';
-$_LANG['error_distrib_money'] = 'The share amount should not be greater than the commodity price.';
-$_LANG['distrib_percent'] = 'Percentage of commodity prices';
-$_LANG['error_money_percent'] = 'Divide into the amount and the percentage of commodity price, can only fill in one!';
-$_LANG['error_over_percent'] = 'The percentage of commodity price is not within the reasonable range!';
+$_LANG['error_distrib_money'] = 'The share amount should not be greater than the product price.';
+$_LANG['distrib_percent'] = 'Percentage of product prices';
+$_LANG['error_money_percent'] = 'Divide into the amount and the percentage of product price, can only fill in one!';
+$_LANG['error_over_percent'] = 'The percentage of product price is not within the reasonable range!';
 $_LANG['batch_add'] = 'Batch Addition of Distribution Goods';
 
 $_LANG['pls_search_goods'] = 'Please search for goods first';
-$_LANG['label_search_goods'] = 'Commodity Number, Name or Number';
+$_LANG['label_search_goods'] = 'Product Number, Name or Number';
 $_LANG['custom_goods_cat'] = 'All categories';
 $_LANG['custom_goods_brand'] = 'All brands';
 
 /* 活动列表页 */
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['start_date'] = 'start time';
 $_LANG['end_date'] = 'End time';
 $_LANG['deposit'] = 'Bond';
@@ -42,12 +42,12 @@ $_LANG['current_status'] = 'state';
 $_LANG['view_order'] = 'View order';
 
 /* 添加/编辑活动页 */
-$_LANG['goods_cat'] = 'Commodity classification';
+$_LANG['goods_cat'] = 'Product category';
 $_LANG['all_cat'] = 'All categories';
-$_LANG['goods_brand'] = 'Commodity brand';
+$_LANG['goods_brand'] = 'Product brand';
 $_LANG['all_brand'] = 'All brands';
 
-$_LANG['label_goods_name'] = 'Commodity distribution：';
+$_LANG['label_goods_name'] = 'Product distribution：';
 $_LANG['notice_goods_name'] = 'Search for items first, and generate a list of options here...';
 $_LANG['label_start_date'] = 'start time：';
 $_LANG['label_end_date'] = 'End time：';
@@ -84,7 +84,7 @@ $_LANG['js_languages']['succeed_confirm'] = 'This operation is irreversible. Are
 $_LANG['js_languages']['fail_confirm'] = 'This operation is irreversible. Are you sure you failed to set up the distribution product?';
 $_LANG['button_mail'] = 'Send mail';
 $_LANG['notice_mail'] = '（Notify the customer to pay the balance for delivery）';
-$_LANG['mail_result'] = 'The distributor has a total of% s valid orders and successfully sent% s e-mail. %s valid orders and successfully sent %s e-mail.';
+$_LANG['mail_result'] = 'The distributor has a total of %s valid orders and successfully sent %s e-mail. %s valid orders and successfully sent %s e-mail.';
 $_LANG['invalid_time'] = 'You entered an invalid group buying time.';
 
 $_LANG['add_success'] = 'Successful addition of distributors.';
@@ -111,6 +111,6 @@ $_LANG['batch_drop_success'] = 'Successfully deleted the %s distribution record.
 $_LANG['no_select_group_buy'] = 'You have no record of distributing goods now!';
 
 /* 操作日志 */
-$_LANG['log_action']['group_buy'] = 'Group buying commodity';
+$_LANG['log_action']['group_buy'] = 'Group buying product';
 
 ?>

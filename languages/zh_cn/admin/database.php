@@ -57,7 +57,7 @@ $_LANG['update_table_pre'] = 'Change table prefix';
 $_LANG['old_table_pre'] = 'Original table prefix';
 $_LANG['new_table_pre'] = 'New table prefix';
 $_LANG['use_new_pre'] = 'Use new table prefixes';
-$_LANG['notice_use_new_pre'] = 'Only when all backups are restored can you choose Yes, otherwise tables without backups will not be available.<br />You can also modify it manually. data/config.php the $prefix variable in the table determines which table prefix to use $prefix variable in the table determines which table prefix to use';$_LANG['upload_and_exe'] = 'Upload and execute sql  files';
+$_LANG['notice_use_new_pre'] = 'Only when all backups are restored can you choose Yes, otherwise tables without backups will not be available.<br/>You can also modify it manually. data/config.php the $prefix variable in the table determines which table prefix to use $prefix variable in the table determines which table prefix to use';$_LANG['upload_and_exe'] = 'Upload and execute sql  files';
 
 /* 提示信息 */
 $_LANG['fail_get_tables'] = 'Failed to retrieve backup tables';
@@ -72,7 +72,7 @@ $_LANG['mysql_version_error'] = 'The current version of mysql %s is different fr
 $_LANG['confirm_ver'] = 'Yes, confirm the import';
 $_LANG['unconfirm_ver'] = 'No, cancel the import';
 $_LANG['version_error'] = 'ECShop current version %s is different from backup data version %s, backup recovery fails';
-$_LANG['not_sql_file'] = 'It doesn\'t seem that the file you uploaded is sql file. If the file is SQL file, please change the file extension to. sql.';
+$_LANG['not_sql_file'] = 'It does not seem that the file you uploaded is sql file. If the file is SQL file, please change the file extension to. sql.';
 $_LANG['sqlfile_error'] = 'Error execution of SQL file you uploaded, backup recovery failed';
 $_LANG['restore_success'] = 'Recovery was successful';
 $_LANG['fail_optimize'] = 'Failure to optimize data table %s ';
@@ -100,7 +100,7 @@ $_LANG['ver'] = 'Edition';
 $_LANG['add_time'] = 'Time';
 $_LANG['file_size'] = 'Size';
 $_LANG['empty_upload'] = 'You uploaded an empty file';
-$_LANG['fail_write_file'] = 'Backup %scannot be written';
+$_LANG['fail_write_file'] = 'Backup %s cannot be written';
 $_LANG['vol'] = 'Vol';
 $_LANG['import'] = 'Import';
 $_LANG['server_sql'] = 'Backup files on the server';
@@ -110,7 +110,7 @@ $_LANG['confirm_import'] = 'Importing one volume may result in incomplete data, 
 $_LANG['also_continue'] = 'Yes, I need to import other volume data.';
 
 $_LANG['dir_priv'] = 'The directory %s permission has the following problems：';
-$_LANG['dir_not_exist'] = 'The directory %s don\'t exit, please create it manually';
+$_LANG['dir_not_exist'] = 'The directory %s do not exit, please create it manually';
 $_LANG['cannot_read'] = 'unreadable';
 $_LANG['cannot_write'] = 'Not to write';
 $_LANG['cannot_add'] = 'Additional data';

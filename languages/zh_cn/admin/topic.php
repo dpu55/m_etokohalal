@@ -19,9 +19,9 @@ $_LANG['tab_goods'] = 'Special product';
 $_LANG['tab_advanced'] = 'advanced options';
 $_LANG['back_list'] = 'Return to the topic list';
 $_LANG['continue_add'] = 'Continue to add topics';
-$_LANG['topic_class'] = 'Thematic classification';
+$_LANG['topic_class'] = 'Thematic category';
 $_LANG['select_product'] = 'Select product';
-$_LANG['default_class'] = 'No classification';
+$_LANG['default_class'] = 'No category';
 $_LANG['publish_to_player'] = 'Publish to Flash playlist';
 $_LANG['publish_to_ads'] = 'Post to ad';
 
@@ -56,12 +56,12 @@ $_LANG['lable_title_upload'] = 'Category heading picture';
 $_LANG['lable_topic_keywords'] = 'Thematic page keyword';
 $_LANG['lable_topic_description'] = 'Thematic page description';
 
-$_LANG['tips_width_height'] = 'The standard width of the template is:%s and the standard height is:%s.';
+$_LANG['tips_width_height'] = 'The standard width of the template is: %s and the standard height is: %s.';
 $_LANG['tips_upload_notice'] = 'Upload the image file of the advertisement, or you can specify a remote URL address as the image of the advertisement.';
-$_LANG['tips_title_width_height'] = 'The standard width of the template is:%s and the standard height is:%s.';
+$_LANG['tips_title_width_height'] = 'The standard width of the template is: %s and the standard height is: %s.';
 
-$_LANG['all_goods'] = 'Optional commodity';
-$_LANG['selected_goods'] = 'Selected commodities';
+$_LANG['all_goods'] = 'Optional product';
+$_LANG['selected_goods'] = 'Selected products';
 $_LANG['top_img'] = 'image';
 $_LANG['top_flash'] = 'Flash';
 $_LANG['top_html'] = 'code';
