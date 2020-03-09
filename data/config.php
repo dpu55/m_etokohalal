@@ -26,11 +26,11 @@ define('EC_CHARSET','utf-8');
 
 if(!defined('ADMIN_PATH'));
 {
-define('ADMIN_PATH','admin');
+define('ADMIN_PATH','202058QAdm');
 }
 if(!defined('ADMIN_PATH_M'));
 {
-define('ADMIN_PATH_M','admin');
+define('ADMIN_PATH_M','202058QAdm');
 }
 define('AUTH_KEY', 'this is a key');
 
