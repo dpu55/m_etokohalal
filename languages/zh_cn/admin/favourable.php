@@ -26,7 +26,7 @@ $_LANG['edit_favourable_ok'] = 'Successful Editorial Preferences';
 /* list */
 $_LANG['act_is_going'] = 'Show only ongoing activities';
 $_LANG['act_name'] = 'Name of Preferential Activities';
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['start_time'] = 'start time';
 $_LANG['end_time'] = 'End time';
 $_LANG['min_amount'] = 'Lower limit of amount';
@@ -46,7 +46,7 @@ $_LANG['label_act_range'] = 'Preferential scope：';
 $_LANG['far_all'] = 'All merchandise';
 $_LANG['far_category'] = 'The following categories';
 $_LANG['far_brand'] = 'The following brands';
-$_LANG['far_goods'] = 'Following commodities';
+$_LANG['far_goods'] = 'Following products';
 $_LANG['label_search_and_add'] = 'Search and add preferences';
 $_LANG['js_languages']['all_need_not_search'] = 'Preferential range is all goods, do not need this operation';
 $_LANG['js_languages']['range_exists'] = 'This option already exists';

@@ -33,11 +33,11 @@ $_LANG['notice_goodsid'] ='You need to search for items, generate a list of item
 $_LANG['notice_integral'] ='Integral Value of Consumption in Converting this Goods';
 
 /* 提示信息 */
-$_LANG['goods_exist'] ='Commodities already exist';
+$_LANG['goods_exist'] ='Products already exist';
 $_LANG['back_list'] ='Returns the list of items';
 $_LANG['continue_add'] ='Continue to add new products';
-$_LANG['articleadd_succeed'] ='Commodities have been added successfully';
-$_LANG['articleedit_succeed'] ='Successful Commodity Editor';
+$_LANG['articleadd_succeed'] ='Products have been added successfully';
+$_LANG['articleedit_succeed'] ='Successful Product Editor';
 $_LANG['drop_confirm'] = 'Are you sure you want to delete this item?';
 $_LANG['batch_remove_succeed'] = 'You have successfully deleted %d You have successfully deleted';
 $_LANG['exchange_integral_invalid'] = 'Integral values are null or not numeric';

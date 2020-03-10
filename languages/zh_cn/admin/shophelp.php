@@ -13,14 +13,14 @@
  * $Id: shophelp.php 17217 2016-01-19 06:29:08Z derek $
 */
 $_LANG['shophelp_add'] = 'Add new help articles';
-$_LANG['cat_add'] = 'Adding new classifications';
-$_LANG['cat_name'] = 'Classification name';
+$_LANG['cat_add'] = 'Adding new categories';
+$_LANG['cat_name'] = 'Category name';
 $_LANG['title'] = 'Article name';
 $_LANG['article_type'] = 'Article type';
 $_LANG['add_time'] = 'Adding time';
 $_LANG['sort'] = 'sort';
 $_LANG['article_add'] = 'Add new help articles';
-$_LANG['cat'] = 'Article classification';
+$_LANG['cat'] = 'Article category';
 $_LANG['article_list'] = 'Online Shop Helps Information Management';
 $_LANG['back_list'] = 'Return Help Information Management';
 $_LANG['continue_add'] = 'Continue to add articles';
@@ -28,7 +28,7 @@ $_LANG['top'] = 'Roof placement';
 $_LANG['common'] = 'ordinary';
 $_LANG['num'] = 'Article quantity';
 $_LANG['page'] = 'Article quantity';
-$_LANG['cat_name_empty'] = 'Classification name cannot be empty!';
+$_LANG['cat_name_empty'] = 'Category name cannot be empty!';
 
 $_LANG['article_list'] = 'List of Help Articles';
 $_LANG['cat_list'] = 'Help Category List';
@@ -37,7 +37,7 @@ $_LANG['select_plz'] = 'Please choose...';
 /* 提示信息 */
 $_LANG['catname_exist'] = 'This category name already exists!';
 $_LANG['title_exist'] = 'The theme of this article already exists!';
-$_LANG['catadd_fail'] = 'Failure to add classification';
+$_LANG['catadd_fail'] = 'Failure to add category';
 $_LANG['catedit_fail'] = 'Category Editing Failed';
 $_LANG['remove_fail'] = 'Delete failed';
 $_LANG['edit_fail'] = 'Editor failure';

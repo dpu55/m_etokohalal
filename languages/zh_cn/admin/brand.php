@@ -50,7 +50,7 @@ $_LANG['continue_add'] = 'Continue to add new brands';
 $_LANG['upfile_type_error'] = "Only upload jpg, gif, PNG type pictures";
 $_LANG['upfile_error'] = "Pictures cannot be uploaded. Make sure that all subdirectories in the data directory are writable！";
 
-$_LANG['visibility_notes'] = 'When there is no commodity under the brand, the brand area on the home page and the classification page will not show the brand.';
+$_LANG['visibility_notes'] = 'When there is no product under the brand, the brand area on the home page and the category page will not show the brand.';
 
 /*JS 语言项*/
 $_LANG['js_languages']['no_brandname'] = 'You must enter the brand name!';

@@ -15,17 +15,17 @@
 
 $_LANG['package_id'] = 'Number';
 $_LANG['package_name'] = 'Name of Value Bag';
-$_LANG['goodsid'] = 'Activity-related commodities';
-$_LANG['goods_name'] = 'Names of related commodities';
+$_LANG['goodsid'] = 'Activity-related products';
+$_LANG['goods_name'] = 'Names of related products';
 $_LANG['start_time'] = 'Activity start time';
 $_LANG['end_time'] = 'End time of activity';
 $_LANG['package_price'] = 'Gift price';
-$_LANG['package_edit'] = 'Editor\'s Overvalue Gift Bag Activity';
+$_LANG['package_edit'] = 'Editors Overvalue Gift Bag Activity';
 $_LANG['desc'] = 'Overvalue Bag Activity Description';
 $_LANG['make_option'] = 'Search the list of product generation options first';
-$_LANG['keywords'] = 'Commodity keywords';
-$_LANG['search_goods'] = 'Commodity search';
-$_LANG['all_goods'] = 'Optional commodity';
+$_LANG['keywords'] = 'Product keywords';
+$_LANG['search_goods'] = 'Product search';
+$_LANG['all_goods'] = 'Optional product';
 $_LANG['package_goods'] = 'The merchandise of the gift bag';
 $_LANG['goods_number'] = 'Number';
 $_LANG['saving'] = 'Immediate savings';

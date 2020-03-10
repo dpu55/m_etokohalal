@@ -13,7 +13,7 @@
  * $Id: priv_action.php 17217 2016-01-19 06:29:08Z derek $
 */
 /* 权限管理的一级分组 */
-$_LANG['goods'] = 'Commodity management';
+$_LANG['goods'] = 'Product management';
 $_LANG['cms_manage'] = 'Article management';
 $_LANG['users_manage'] = 'Membership management';
 $_LANG['priv_manage'] = 'Privilege management';
@@ -27,25 +27,25 @@ $_LANG['sms_manage'] = 'SMS Management';
 
 //商品管理部分的权限
 $_LANG['goods_manage'] = 'Merchandise Addition/Editing';
-$_LANG['remove_back'] = 'Commodity deletion/recovery';
+$_LANG['remove_back'] = 'Product deletion/recovery';
 $_LANG['cat_manage'] = 'Category Add/Edit';
-$_LANG['cat_drop'] = 'Classification transfer/deletion';
-$_LANG['attr_manage'] = 'Commodity Attribute Management';
-$_LANG['brand_manage'] = 'Commodity Brand Management';
+$_LANG['cat_drop'] = 'Category transfer/deletion';
+$_LANG['attr_manage'] = 'Product Attribute Management';
+$_LANG['brand_manage'] = 'Product Brand Management';
 $_LANG['comment_priv'] = 'User Comment Management';
-$_LANG['goods_type'] = 'Commodity type';
+$_LANG['goods_type'] = 'Product type';
 $_LANG['tag_manage'] = 'Label management';
 $_LANG['goods_auto'] = 'Goods on and off shelves automatically';
 $_LANG['topic_manage'] = 'Thematic management';
 $_LANG['virualcard'] = 'Virtual Card Management';
 $_LANG['picture_batch'] = 'Picture batch processing';
-$_LANG['goods_export'] = 'Batch Export of Commodities';
-$_LANG['goods_batch'] = 'Bulk Upload/Modification of Commodities';
-$_LANG['gen_goods_script'] = 'Generate commodity code';
-$_LANG['suppliers_goods'] = 'Supplier Commodity Management';
+$_LANG['goods_export'] = 'Batch Export of Products';
+$_LANG['goods_batch'] = 'Bulk Upload/Modification of Products';
+$_LANG['gen_goods_script'] = 'Generate product code';
+$_LANG['suppliers_goods'] = 'Supplier Product Management';
 
 //文章管理部分的权限
-$_LANG['article_cat'] = 'Classification Management of Articles';
+$_LANG['article_cat'] = 'Category Management of Articles';
 $_LANG['article_manage'] = 'Article Content Management';
 $_LANG['shopinfo_manage'] = 'Online Store Information Management';
 $_LANG['shophelp_manage'] = 'Online Shop Help Management';
@@ -113,7 +113,7 @@ $_LANG['back_view'] = 'Check the return slip';
 $_LANG['snatch_manage'] = 'Treasure Raiders';
 $_LANG['bonus_manage'] = 'Red envelope management';
 $_LANG['card_manage'] = 'Greeting cards';
-$_LANG['pack'] = 'Commodity packaging';
+$_LANG['pack'] = 'Product packaging';
 $_LANG['ad_manage'] = 'Advertising management';
 $_LANG['gift_manage'] = 'Gift management';
 $_LANG['auction'] = 'Auction sale';
@@ -121,7 +121,7 @@ $_LANG['group_by'] = 'group purchase';
 $_LANG['favourable'] = 'Promotions';
 $_LANG['whole_sale'] = 'Wholesale management';
 $_LANG['package_manage'] = 'Excess value package';
-$_LANG['exchange_goods'] = 'Integral Mall Commodities';
+$_LANG['exchange_goods'] = 'Integral Mall Products';
 
 //邮件管理
 $_LANG['attention_list'] = 'Attention management';

@@ -16,7 +16,7 @@
 /* 字段信息 */
 $_LANG['user_name'] = 'Administrator';
 $_LANG['email'] = 'Email adress';
-$_LANG['enter_admin_pwd'] = 'Administrator\'s new password';
+$_LANG['enter_admin_pwd'] = 'Administrators new password';
 $_LANG['confirm_admin_pwd'] = 'Administrator Confirms Password';
 $_LANG['get_newpassword'] = 'Administrator Password Retrieval';
 $_LANG['click_button'] = 'Determine';
@@ -29,8 +29,8 @@ $_LANG['login_now'] = 'Login immediately';
 $_LANG['js_languages']['user_name_empty'] = 'Administrator username cannot be empty!';
 $_LANG['js_languages']['email_empty'] = 'Email address cannot be empty!';
 $_LANG['js_languages']['email_error'] = 'Email The address format is incorrect!';
-$_LANG['js_languages']['admin_pwd_empty'] = 'Please enter the administrator\'s new password!';
-$_LANG['js_languages']['confirm_pwd_empty'] = 'Please enter the administrator\'s confirmation password!';
+$_LANG['js_languages']['admin_pwd_empty'] = 'Please enter the administrators new password!';
+$_LANG['js_languages']['confirm_pwd_empty'] = 'Please enter the administrators confirmation password!';
 $_LANG['js_languages']['both_pwd_error'] = 'The password you entered twice is inconsistent!';
 
 $_LANG['email_username_error'] = 'User name and email address do not match, please return!';

@@ -349,13 +349,18 @@
 .eth_v1_mobile.page-index .search_hide #mallSearch .mallSearch-input .button {
   background-size: 50%;
 }
-.eth_v1_mobile.page-index .floor_body{
+.eth_v1_mobile.page-index .floor_body {
   padding: 0px 0;
 }
-
+.eth_v1_mobile.page-index .floor_body ul {
+  display: flex;
+  justify-content: center;
+}
 .eth_v1_mobile.page-index .floor_body ul li {
   border: 1px solid #e1e3e6;
   border-radius: 4px;
+  margin-left: 1%;
+  width: 32%;
 }
 
 .eth_v1_mobile.page-index .floor_body h2 {
@@ -898,9 +903,9 @@
   width: -webkit-fill-available;
   min-width: 90%;
   height: auto;
-  line-height: 0;
+  line-height: 2.5rem;
   font-size: 12px;
-  padding: 9px 8px;
+  padding: 0px 8px;
 }
 
 .eth_v1_mobile.page-user-passport .btn_big1 {
@@ -2609,10 +2614,11 @@
 }
 
 .eth_v1_mobile.page-flow .order-buy #pay_div .title em.qxz {
-  font-size: 10px;
+  font-size: 12px;
   display: block;
   margin-left: 0;
   line-height: 1;
+  color: rgba(0, 0, 0, 0);
 }
 
 .eth_v1_mobile.page-flow .order-buy #pay_div .title .text {
@@ -2748,7 +2754,7 @@
   font-size: 11px;
   margin-top: 0;
   color: #fff;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   height: 37px;
   border-radius: 5px;
 }

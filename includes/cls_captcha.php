@@ -47,11 +47,11 @@ class captcha
      * @var array   $themes
      */
     var $themes_jpg = array(
-		1 => array('captcha_bg6.jpg', 16, 138, 205),
-        2 => array('captcha_bg6.jpg', 46, 46, 46),
-        3 => array('captcha_bg6.jpg', 176, 46, 56),
-        4 => array('captcha_bg6.jpg', 18, 18, 18),
-        5 => array('captcha_bg6.jpg', 248, 3, 0),
+		1 => array('captcha_bg61.jpg', 16, 138, 205),
+        2 => array('captcha_bg61.jpg', 46, 46, 46),
+        3 => array('captcha_bg61.jpg', 176, 46, 56),
+        4 => array('captcha_bg61.jpg', 18, 18, 18),
+        5 => array('captcha_bg61.jpg', 248, 3, 0),
 //         2 => array('captcha_bg2.jpg', 0, 0, 0),
 //         3 => array('captcha_bg3.jpg', 0, 0, 0),
 //         4 => array('captcha_bg4.jpg', 255, 255, 255),

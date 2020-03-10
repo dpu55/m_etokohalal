@@ -60,7 +60,7 @@
 								<div>
 								  <div class="ng-cookie-area" >
 									<label class="bf1 login_ffri">
-										<input type="checkbox" name="remember" value="1" checked=""> &nbsp;{$lang.m_314} 
+										<input style="margin-left:5px;" type="checkbox" name="remember" value="1" checked="">&nbsp;{$lang.m_314} 
 									</label>
 								  </div>
 								</div>
@@ -86,14 +86,12 @@
               {/if}
               
                <div class="ng-link-area" >
-               	{if $register_status != '1'}
-                <span style="text-align:left;">Belum punya akun? 
+                <span>Belum punya akun? 
                   <a href="register.php" >{$lang.m_315}</a>
                 </span>
                 <span><br></span>
-                {/if}
-                 <span class="user_line"></span>
-                   <span style="float:left;">Lupa password?
+                 
+                   <span>Lupa password?
                   <a href="findPwd.php" >{$lang.forgot_password}</a>
                 </span>
               </div>

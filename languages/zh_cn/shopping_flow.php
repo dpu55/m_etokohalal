@@ -41,7 +41,7 @@ $_LANG['accessories'] = 'Aksesoris';
 $_LANG['largess'] = 'Giveaway';
 $_LANG['shopping_money'] = '<b>Total Harga:</b> <span> %s </span>';
 $_LANG['than_market_price'] = '<br>Harga normal %s, Anda berhemat %s (%s)';
-$_LANG['your_discount'] = 'Promo <a href="activity.php"><font color=red>%s</font></a>, Anda mendapatkan diskon %s';
+$_LANG['your_discount'] = '&nbsp;&nbsp;&nbsp;Promo <a href="activity.php"><font color=red>%s</font></a>! Dapat diskon: %s';
 $_LANG['no'] = 'Tidak ada';
 $_LANG['not_support_virtual_goods'] = 'Ada produk non-fisik dalam keranjang belanja, dan pembelian anonim tidak didukung.';
 $_LANG['not_support_insure'] = 'Tidak mendukung asuransi';

@@ -14,7 +14,7 @@
 */
 
 $_LANG['title'] ='Article title';
-$_LANG['cat'] ='Article classification';
+$_LANG['cat'] ='Article category';
 $_LANG['reserve'] = 'Reserve';
 $_LANG['article_type'] ='The Importance of Articles';
 $_LANG['author'] ='Article author';
@@ -36,9 +36,9 @@ $_LANG['top'] ='Roof placement';
 $_LANG['common'] ='Ordinary';
 $_LANG['isopen'] ='Display';
 $_LANG['isclose'] ='No display';
-$_LANG['no_article'] = 'You don\'t have any articles yet.';
+$_LANG['no_article'] = 'You do not have any articles yet.';
 $_LANG['no_select_article'] = 'You have not selected any articles.';
-$_LANG['no_select_act'] = 'Please choose article classification！';
+$_LANG['no_select_act'] = 'Please choose article category！';
 
 $_LANG['display'] = 'Display article content';
 $_LANG['download'] = 'Download File';
@@ -47,12 +47,12 @@ $_LANG['both'] = 'Display the content of the article and download the file';
 $_LANG['button_remove'] ='Batch deletion';
 $_LANG['button_hide'] ='Batch hiding';
 $_LANG['button_show'] ='Batch display';
-$_LANG['move_to'] = 'Transfer to classification';
+$_LANG['move_to'] = 'Transfer to category';
 
 $_LANG['article_edit'] = 'Editing article content';
 $_LANG['tab_general'] = 'General information';
 $_LANG['tab_content'] = 'Article content';
-$_LANG['tab_goods'] = 'Related commodities';
+$_LANG['tab_goods'] = 'Related products';
 
 $_LANG['link_goods'] = 'Goods associated with this article';
 $_LANG['keyword'] = 'Keyword';
@@ -71,7 +71,7 @@ $_LANG['batch_handle_ok'] = 'Successful batch operation';
 /*JS 语言项*/
 $_LANG['js_languages']['no_title'] = 'No article title';
 $_LANG['js_languages']['no_cat'] = 'No article categorization was selected';
-$_LANG['js_languages']['not_allow_add'] = 'The system retains classifications and does not allow articles to be added to them.';
+$_LANG['js_languages']['not_allow_add'] = 'The system retains categories and does not allow articles to be added to them.';
 $_LANG['js_languages']['drop_confirm'] = 'Are you sure you want to delete the article?';
 
 $_LANG['all_cat'] = 'All categories';

@@ -33,7 +33,7 @@ $_LANG['batch_card_add'] = 'Bulk replenishment';
 $_LANG['download_file'] = 'Download batch CSV files';
 $_LANG['separator'] = 'Separator';
 $_LANG['uploadfile'] = 'Upload files';
-$_LANG['sql_error'] = 'Error in message %s ：<br /> ';
+$_LANG['sql_error'] = 'Error in message %s ：<br/> ';
 
 /* 提示信息 */
 $_LANG['replenish_no_goods_id'] = 'Missing item ID parameter, unable to replenish operation';
@@ -53,8 +53,8 @@ $_LANG['js_languages']['uploadfile_not_null'] = 'Please select the file to uploa
 
 $_LANG['use_help'] = 'Instructions：' .
         '<ol>' .
-          '<li>Upload files should be CSV files<br />' .
-              'CSV files are listed as the first card serial number, the second card password, and the third as the deadline for use.<br />'.
+          '<li>Upload files should be CSV files<br/>' .
+              'CSV files are listed as the first card serial number, the second card password, and the third as the deadline for use.<br/>'.
               '(The method of creating CSV file with EXCEL: fill in the data in the order of card number, card password and deadline in EXCEL, and save it as CSV file directly after completion)'.
           '<li>Passwords, and deadlines can be null, in the format of 2006-11-6 or 2006/11/6'.
           '<li>Do not use Chinese in card number, card password and deadline</li>' .
@@ -69,7 +69,7 @@ $_LANG['user_guide'] = 'Instructions：' .
         '<ol>' .
           '<li>Encryption string is used to encrypt the card number and password of virtual card goods.</li>' .
           '<li>The encrypted string is stored in the file data/config.php, and the corresponding constant is AUTH_KEY.</li>' .
-          '<li>If you want to change the encrypted string, enter the original encrypted string and the new encrypted string in the text box below, then click the'\OK\'button.</li>' .
+          '<li>If you want to change the encrypted string, enter the original encrypted string and the new encrypted string in the text box below, then click the OK button.</li>' .
         '</ol>';
 $_LANG['label_old_string'] = 'Original encryption string';
 $_LANG['label_new_string'] = 'New encryption string';

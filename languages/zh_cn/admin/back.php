@@ -218,7 +218,7 @@ $_LANG['pay_note'] = 'Payment Notes:';
 
 $_LANG['sms_time_format'] = 'm month j day G hour';
 $_LANG['order_shipped_sms'] = 'Your order %s already in %s deliver goods [%s]';
-$_LANG['order_splited_sms'] = 'Your order %s,%s being %s [%s]';
+$_LANG['order_splited_sms'] = 'Your order %s, %s being %s [%s]';
 $_LANG['order_removed'] = 'Order deletion was successful.';
 $_LANG['return_list'] = 'Returns the order list';
 
@@ -372,8 +372,8 @@ $_LANG['return_user_money'] = 'Return user balance';
 $_LANG['create_user_account'] = 'Generate a refund application';
 $_LANG['not_handle'] = 'No processing, select this item when misoperation occurs';
 
-$_LANG['order_refund'] = 'Order refund:%s';
-$_LANG['order_pay'] = 'Order payment:%s';
+$_LANG['order_refund'] = 'Order refund: %s';
+$_LANG['order_pay'] = 'Order payment: %s';
 
 $_LANG['send_mail_fail'] = 'Failed to send mail';
 

@@ -46,6 +46,6 @@ $_LANG['add_area_error'] = 'Failure to add new locales!';
 $_LANG['region_name_exist'] = 'The same area name already exists!';
 $_LANG['parent_id_exist'] = 'There are other subordinate areas in this region, which can not be deleted.!';
 $_LANG['form_notic'] = 'Click to view subordinate areas';
-$_LANG['area_drop_confirm'] = 'If the following areas are used in the order or user\'s default mode of delivery, the area information will be displayed as empty. Are you sure you want to delete this record?';
+$_LANG['area_drop_confirm'] = 'If the following areas are used in the order or users default mode of delivery, the area information will be displayed as empty. Are you sure you want to delete this record?';
 
 ?>

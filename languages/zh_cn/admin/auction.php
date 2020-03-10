@@ -27,7 +27,7 @@ $_LANG['settle_deposit_ok'] = 'Successful handling of frozen margins';
 /* list */
 $_LANG['act_is_going'] = 'Show only ongoing activities';
 $_LANG['act_name'] = 'Name of auction activity';
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['start_time'] = 'Start time';
 $_LANG['end_time'] = 'End time';
 $_LANG['deposit'] = 'Bond';
@@ -42,7 +42,7 @@ $_LANG['no_record_selected'] = 'No record selected';
 
 /* info */
 $_LANG['label_act_name'] = 'Name of auction activity：';
-$_LANG['notice_act_name'] = 'If left blank, take the name of the auction commodity (the name is only used in the background, the front desk will not show)';
+$_LANG['notice_act_name'] = 'If left blank, take the name of the auction product (the name is only used in the background, the front desk will not show)';
 $_LANG['label_act_desc'] = 'Description of auction activities：';
 $_LANG['label_search_goods'] = 'Search for goods based on their number, name, or number';
 $_LANG['label_goods_name'] = 'Name of Auction Goods：';
@@ -55,7 +55,7 @@ $_LANG['label_no_top'] = 'No capping';
 $_LANG['label_amplitude'] = 'Price increase range：';
 $_LANG['label_deposit'] = 'Bond：';
 $_LANG['bid_user_count'] = 'There are already %s bids from buyers.';
-$_LANG['settle_frozen_money'] = 'How to deal with the buyer\'s frozen funds?';
+$_LANG['settle_frozen_money'] = 'How to deal with the buyers frozen funds?';
 $_LANG['unfreeze'] = 'Thaw deposit';
 $_LANG['deduct'] = 'Deduction of margin';
 $_LANG['invalid_status'] = 'The current status is incorrect';

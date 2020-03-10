@@ -27,7 +27,7 @@ $_LANG['add_continue'] = 'Continue to add member registration items';
 $_LANG['back_list'] = 'Returns a list of membership registries';
 $_LANG['order_not_num'] = 'The input sort weight is not a valid number.';
 $_LANG['no_edit'] = 'System reservations are not modifiable';
-$_LANG['no_remove'] = 'System Retention Can\'t Be Deleted';
+$_LANG['no_remove'] = 'System Retention cannot Be Deleted';
 
 
 /* JS 语言 */

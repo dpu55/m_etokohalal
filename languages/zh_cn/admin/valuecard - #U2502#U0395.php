@@ -112,7 +112,7 @@ $_LANG['order_money_notic'] = '只要订单金额达到该数值，就会发放�
 $_LANG['type_money_notic'] = '此类型的红包可以抵销的金额';
 $_LANG['send_startdate_notic'] = '只有当前时间介于起始日期和截止日期之间时，此类型的红包才可以发放';
 $_LANG['type_money_error'] = '金额必须是数字并且不能小于 0 !';
-$_LANG['send_user_notice'] = '给指定的用户发放红包时,请在此输入用户名, 多个用户之间请用逗号(,)分隔开<br />如:liry, wjz, zwj';
+$_LANG['send_user_notice'] = '给指定的用户发放红包时,请在此输入用户名, 多个用户之间请用逗号(,)分隔开<br/>如:liry, wjz, zwj';
 
 /* 红包信息字段 */
 $_LANG['bonus_id'] = '编号';

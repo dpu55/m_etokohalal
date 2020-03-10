@@ -50,7 +50,7 @@
    <!-- {foreach from=$list item=val} -->
    <div class="huodong">
   <div class="huodong_mid huodong_mid_box">
-  <div class="h_left">{$lang.m_381}</div>
+  <div class="h_left"></div>
   <div class="h_right actvity_box">
   <p><img src="themesmobile/68ecshopcom_mobile/images/youhui.png">{$val.act_name|truncate:14}</p>
    <div class="img"><img src="{if $val.supplier_id >0}{$img_url}{else}{$img_url}{/if}{$val.logo|default:images/ceshi.jpg}" width="100%" />
@@ -58,21 +58,22 @@
    </div>
    <!--优惠方式-->
    <ul>
-   <li><strong>{$lang.label_act_type}</strong>{$val.act_type}<!-- {if $val.act_type ne $lang.fat_goods} -->{$val.act_type_ext}<!-- {/if} --></li>
+   <li><strong>{$lang.label_act_type}&nbsp;</strong>{$val.act_type}<!-- {if $val.act_type ne $lang.fat_goods} -->{$val.act_type_ext}<!-- {/if} --></li>
    <!---上限。下限-->
-   <li><strong>{$lang.label_max_amount}</strong><!-- {if $val.max_amount > 0} -->{$val.max_amount}<!-- {else} -->{$lang.nolimit}<!-- {/if} --><strong style=" padding-left:8px;">{$lang.label_min_amount}</strong>{$val.min_amount}</li> 
+   <li><strong>{$lang.label_max_amount}&nbsp;</strong><!-- {if $val.max_amount > 0} -->{$val.max_amount}<!-- {else} -->{$lang.nolimit}<!-- {/if} --></li>
+    <li><strong>{$lang.label_min_amount}&nbsp;</strong>{$val.min_amount}</li> 
     </ul>
        <!---优惠范围-->
-     <dl class="fanwei"><dt>{$lang.label_act_range}</dt><dd>{$val.act_range}<!-- {if $val.act_range ne $lang.far_all} -->:
+     <dl class="fanwei"><dt>{$lang.label_act_range}&nbsp;</dt><dd>{$val.act_range}<!-- {if $val.act_range ne $lang.far_all} -->
         <!-- {foreach from=$val.act_range_ext item=ext} -->
-        &nbsp;&nbsp;<a href="{$val.program}{$ext.id}" taget="_blank">{$ext.name}</a>
+        <a href="{$val.program}{$ext.id}" taget="_blank">{$ext.name}</a>
         <!-- {/foreach} -->
         <!-- {/if} --></dd></dl>
         
-     <dl class="dengji"><dt>{$lang.label_user_rank}</dt>
+     <dl class="dengji"><dt>{$lang.label_user_rank}&nbsp;</dt>
      <dd>
      <!-- {foreach from=$val.user_rank item=user} -->
-       <span>{$user}</span>
+       <span>{$user}</span><br>
         <!-- {/foreach} -->
         </dd>
         </dl>   

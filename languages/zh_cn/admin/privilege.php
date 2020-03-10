@@ -73,7 +73,7 @@ $_LANG['user_name_drop'] = 'Has been successfully deleted!';
 $_LANG['pwd_error'] = 'The old password entered is incorrect!';
 $_LANG['old_password_empty'] = 'If you want to change your password, you must first enter your old password!';
 $_LANG['edit_admininfo_error'] = 'Only edit your own profile!';
-$_LANG['edit_admininfo_cannot'] = 'You can\'t do anything with this administrator\'s permission!';
+$_LANG['edit_admininfo_cannot'] = 'You cannot do anything with this administrators permission!';
 $_LANG['edit_remove_cannot'] = 'You cannot delete the demo administrator!';
 $_LANG['remove_self_cannot'] = 'You cannot delete yourself!';
 $_LANG['remove_cannot'] = 'You cannot delete this administrator!';
@@ -83,8 +83,8 @@ $_LANG['edit_navi'] = 'Set up personal navigation';
 
 /* 帮助信息 */
 $_LANG['password_notic'] = 'If you want to change the password, please fill in the old password first, if left blank, the password remains unchanged.';
-$_LANG['email_notic'] = 'Enter the administrator\'s email address, which must be in email format';
-$_LANG['confirm_notic'] = 'Enter the administrator\'s confirmation password. The two inputs must be the same.';
+$_LANG['email_notic'] = 'Enter the administrators email address, which must be in email format';
+$_LANG['confirm_notic'] = 'Enter the administrators confirmation password. The two inputs must be the same.';
 
 /* 登录表单 */
 $_LANG['label_username'] = 'username：';

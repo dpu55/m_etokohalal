@@ -566,7 +566,7 @@ function close_gift(suitId){
                       </tr>
                       <tr>
                   <td class="input-coupon"><label id="Bonus_span_{$key}" style="display:none;">
-                      <input name="bonus_sn[{$key}]" id="bonus_sn_{$key}" type="text"   value="{if $order.bonus_sn_info[$key]}{$order.bonus_sn_info[$key]}{else}{$lang.m_199}{/if}" onfocus="if (value =='{$lang.m_199}'){value =''}" onblur="if (value ==''){value='{$lang.m_199}'}" class="txt1" style="width:100px;"/><input name="validate_bonus" type="button" value="{$lang.m_200}" onclick="validateBonus(document.getElementById('bonus_sn_{$key}').value,{$key})" class="BonusButton" />
+                      <input name="bonus_sn[{$key}]" id="bonus_sn_{$key}" type="text"   value="{if $order.bonus_sn_info[$key]}{$order.bonus_sn_info[$key]}{else}{$lang.m_199}{/if}" onfocus="if (value =='{$lang.m_199}'){value =''}" onblur="if (value ==''){value='{$lang.m_199}'}" class="txt1" style="width:100px;"/><input name="validate_bonus" type="button" value="{$lang.m_200}" onclick="validateBonus(document.getElementById('bonus_sn_{$key}').value,{$key})" class="BonusButton" style="font-size: 1em;padding: 0px;"/>
                     </label></td>
                 </tr>
                 <!-- {/if} --> 
@@ -756,7 +756,7 @@ function close_gift(suitId){
       <tr>
        <td colspan=4 class="tdother2">
         <div class="checkout_other" id="show68" >
-           <div class="jmbag" href="javascript:void(0);" onclick="showCheckoutOther(this);"><span class="right_arrow_flow" id="showip"></span> <span id="peisongtime">{$lang.m_222}</span></div>
+           <div class="jmbag" href="javascript:void(0);" onclick="showCheckoutOther(this);"><span class="right_arrow_flow" id="showip"></span> <span id="peisongtime">{$lang.m_pre_220}</span></div>
       <div class="subbox_other" width="100%" >
 <div class="flow_bottom_list">
       <div style="">
@@ -817,7 +817,7 @@ function close_gift(suitId){
                <label for="payment_method_{$payment.pay_id}" >
                  <input type="radio" name="payment" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id} checked="checked"{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" class="c_checkbox_t"  {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if} />
                  <div class="fl shipping_title">
-                   {$payment.pay_name} {$payment.format_pay_fee}
+                   {$payment.pay_name} {*$payment.format_pay_fee*}
                  </div>
                </label>
 
@@ -916,7 +916,7 @@ function close_gift(suitId){
         {if $split_order.sub_order_count gt 1}
                 <li style="height:auto;">{$lang.m_214}<font style="color:#ff3300;">{$split_order.sub_order_count}</font> {$lang.m_215}</li>
                   {else}
-                <li>{$lang.m_212}{$order.shipping_name} {$lang.m_213}</li>
+                <li>{$lang.m_212}&nbsp;{$lang.m_213}&nbsp;{$order.shipping_name}</li>
                 {/if}
                   {foreach from=$split_order.suborder_list item=suborder}
                  <li >{$lang.order_number} <em>{$suborder.order_sn}</em>
@@ -924,7 +924,7 @@ function close_gift(suitId){
                 </li>  
 
         <li>
-         {$order.pay_name}：
+         {$order.pay_name}:&nbsp;
           <em>{$suborder.order_amount_formated}</em>
         </li>
         <li>

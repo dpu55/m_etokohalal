@@ -22,10 +22,10 @@ $_LANG['continue_add_wholesale'] = 'Continue to add wholesale solutions';
 $_LANG['back_wholesale_list'] = 'Return to the wholesale solution list';
 $_LANG['add_wholesale_ok'] = 'Successful addition of wholesale solutions';
 $_LANG['edit_wholesale_ok'] = 'Editorial Wholesale Scheme Successful';
-$_LANG['save_wholesale_falid'] = 'Some specifications of commodities do not exist in the “%s” list of commodities and cannot be preserved in full.';
+$_LANG['save_wholesale_falid'] = 'Some specifications of products do not exist in the “%s” list of products and cannot be preserved in full.';
 
 /* list */
-$_LANG['goods_name'] = 'Trade name';
+$_LANG['goods_name'] = 'Product name';
 $_LANG['rank_name'] = 'Applicable membership level';
 $_LANG['wholesale_not_exist'] = 'The wholesale scheme you want to operate does not exist';
 $_LANG['js_languages']['batch_drop_confirm'] = 'Are you sure you want to delete the selected wholesale scheme?';
@@ -33,8 +33,8 @@ $_LANG['batch_drop_ok'] = 'Successful batch deletion';
 $_LANG['no_record_selected'] = 'No record selected';
 
 /* info */
-$_LANG['label_search_goods'] = 'Commodity Number, Name or Number';
-$_LANG['label_goods_name'] = 'Name of wholesale commodity：';
+$_LANG['label_search_goods'] = 'Product Number, Name or Number';
+$_LANG['label_goods_name'] = 'Name of wholesale product：';
 $_LANG['label_rank_name'] = 'Applicable membership level：';
 $_LANG['label_enabled'] = 'Is it enabled?：';
 $_LANG['js_languages']['pls_search_goods'] = 'Please search and select wholesale goods';

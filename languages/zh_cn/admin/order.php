@@ -41,7 +41,7 @@ $_LANG['ss'][SS_UNSHIPPED] = 'Unshipped';
 $_LANG['ss'][SS_PREPARING] = 'In distribution';
 $_LANG['ss'][SS_SHIPPED] = 'Shipped';
 $_LANG['ss'][SS_RECEIVED] = 'Receipt confirmation';
-$_LANG['ss'][SS_SHIPPED_PART] = 'Shipped(Some commodities)';
+$_LANG['ss'][SS_SHIPPED_PART] = 'Shipped(Some products)';
 $_LANG['ss'][SS_SHIPPED_ING] = 'Delivery';
 
 $_LANG['ps'][PS_UNPAYED] = 'Unpaid';
@@ -122,7 +122,7 @@ $_LANG['print_shipping'] = 'Print courier bill';
 $_LANG['print_order_sn'] = 'Order number：';
 $_LANG['print_buy_name'] = 'Purchaser：';
 $_LANG['label_consignee_address'] = 'Purchaser：';
-$_LANG['no_print_shipping'] = 'I\'m sorry, you haven\'t set up a template for printing courier sheets yet. It can\'t be printed.';
+$_LANG['no_print_shipping'] = 'I am sorry, you have not set up a template for printing courier sheets yet. It cannot be printed.';
 $_LANG['suppliers_no'] = 'Do not specify the supplier to handle the store itself';
 $_LANG['restaurant'] = 'Our shop';
 
@@ -160,9 +160,9 @@ $_LANG['label_agency'] = 'Office：';
 $_LANG['suppliers_name'] = 'supplier';
 
 $_LANG['product_sn'] = 'Goods No.';
-$_LANG['goods_info'] = 'Commodity information';
-$_LANG['goods_name'] = 'Trade name';
-$_LANG['goods_name_brand'] = 'Commodity Name [Brand]';
+$_LANG['goods_info'] = 'Product information';
+$_LANG['goods_name'] = 'Product name';
+$_LANG['goods_name_brand'] = 'Product Name [Brand]';
 $_LANG['goods_sn'] = 'Item number';
 $_LANG['goods_price'] = 'Price';
 $_LANG['goods_number'] = 'Number';
@@ -210,7 +210,7 @@ $_LANG['return_list'] = 'Returns the order list';
 
 /* 订单处理提示 */
 $_LANG['surplus_not_enough'] = 'The order is paid with a %s balance, and the user balance is insufficient now.';
-$_LANG['integral_not_enough'] = 'The order is paid with %s integral, but the user\'s integral is insufficient now.';
+$_LANG['integral_not_enough'] = 'The order is paid with %s integral, but the users integral is insufficient now.';
 $_LANG['bonus_not_available'] = 'The order is paid in red envelope, which is not available now.';
 
 /* 购货人信息 */
@@ -300,27 +300,27 @@ $_LANG['available_surplus'] = 'Available balance：';
 $_LANG['available_integral'] = 'Available integral：';
 $_LANG['available_bonus'] = 'Available red envelope：';
 $_LANG['admin'] = 'Administrator adds';
-$_LANG['search_goods'] = 'Search by commodity number or commodity name or commodity number';
+$_LANG['search_goods'] = 'Search by product number or product name or product number';
 $_LANG['category'] = 'Category';
 $_LANG['brand'] = 'brand';
 $_LANG['user_money_not_enough'] = 'Insufficient user balance';
 $_LANG['pay_points_not_enough'] = 'Insufficient User Integral';
 $_LANG['money_paid_enough'] = 'The amount paid is more than the sum of the total amount of the goods and all kinds of expenses. Please refund it first.';
-$_LANG['price_note'] = 'Note: Attribute price increases have been included in commodity prices.';
+$_LANG['price_note'] = 'Note: Attribute price increases have been included in product prices.';
 $_LANG['select_pack'] = 'Selective packaging';
 $_LANG['select_card'] = 'Choosing greeting cards';
 $_LANG['select_shipping'] = 'Please choose the mode of distribution first.';
 $_LANG['want_insure'] = 'I want to protect the price.';
-$_LANG['update_goods'] = 'Update commodity';
+$_LANG['update_goods'] = 'Update product';
 $_LANG['notice_user'] = '<strong>note:</strong>Search results only show the top 20 records, if no phase is found' .
         'For members, please find more accurately. In addition, if the member is registered from the forum and has not logged in at the mall,' .
-        'Also can\'t find it, you need to log in at the mall first.';
+        'Also cannot find it, you need to log in at the mall first.';
 $_LANG['amount_increase'] = 'Since you have modified your order, the total order amount has increased and you need to pay again.';
 $_LANG['amount_decrease'] = 'Since you have modified your order, the total order amount is reduced and a refund is required.';
-$_LANG['continue_shipping'] = 'Since you have modified the consignee\'s location, the original shipping method is no longer available, please re-select the shipping method.';
+$_LANG['continue_shipping'] = 'Since you have modified the consignees location, the original shipping method is no longer available, please re-select the shipping method.';
 $_LANG['continue_payment'] = 'Since you have modified the shipping method, the original payment method is no longer available, please re-select the shipping method.';
 $_LANG['refund'] = 'refund';
-$_LANG['cannot_edit_order_shipped'] = 'You can\'t modify the order that has been shipped.';
+$_LANG['cannot_edit_order_shipped'] = 'You cannot modify the order that has been shipped.';
 $_LANG['address_list'] = 'Select from the existing receiving address：';
 $_LANG['order_amount_change'] = 'Total order amount changed from %s to %s ';
 $_LANG['shipping_note'] = 'Note: Because the order has been shipped, modifying the distribution mode will not change the distribution fee and premium.';
@@ -424,8 +424,8 @@ $_LANG['deposit_bank'] = 'Bank of deposit';
 $_LANG['bank_account'] = 'Bank account';
 $_LANG['inv_consignee_info'] = 'Receiver information';
 $_LANG['inv_consignee_name'] = 'Name of the drawee';
-$_LANG['inv_consignee_phone'] = 'Ticket Receiver\'s Mobile Phone';
-$_LANG['inv_consignee_address'] = 'Receiver\'s address';
+$_LANG['inv_consignee_phone'] = 'Ticket Receivers Mobile Phone';
+$_LANG['inv_consignee_address'] = 'Receivers address';
 $_LANG['inv_status'] = 'Invoice status';
 $_LANG['inv_money'] = 'Invoice amount';
 $_LANG['edit_invoice'] = 'Edit invoice';
@@ -442,8 +442,8 @@ $_LANG['label_deposit_bank'] = 'Bank of deposit：';
 $_LANG['label_bank_account'] = 'Bank account：';
 $_LANG['label_inv_consignee_info'] = 'Receiver information：';
 $_LANG['label_inv_consignee_name'] = 'Name of the drawee：';
-$_LANG['label_inv_consignee_phone'] = 'Ticket Receiver\'s Mobile Phone：';
-$_LANG['label_inv_consignee_address'] = 'Receiver\'s address：';
+$_LANG['label_inv_consignee_phone'] = 'Ticket Receivers Mobile Phone：';
+$_LANG['label_inv_consignee_address'] = 'Receivers address：';
 $_LANG['label_inv_status'] = 'Invoice status：';
 $_LANG['label_inv_money'] = 'Invoice amount：';
 $_LANG['label_action_note2'] = 'Remarks：';

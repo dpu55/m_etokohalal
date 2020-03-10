@@ -15,7 +15,7 @@
 
 $_LANG['ur_here'] = 'GroupNet';
 $_LANG['opened_title'] = 'You have opened a network of services, details are as follows：';
-$_LANG['webcollect_notice'] = 'ECShop Marketing and Promotion Services - Networking is committed to helping online merchants find multi-channel ways to promote, so as to minimize costs and maximize benefits.<br />It integrates the resources of shopping search and comparative shopping websites with fixed consumer groups, realizes that the commodity information of online merchants is included by several shopping search and comparative shopping websites, and communicates with each other in real time. Increase the exposures and sales of websites.';
+$_LANG['webcollect_notice'] = 'ECShop Marketing and Promotion Services - Networking is committed to helping online merchants find multi-channel ways to promote, so as to minimize costs and maximize benefits.<br/>It integrates the resources of shopping search and comparative shopping websites with fixed consumer groups, realizes that the product information of online merchants is included by several shopping search and comparative shopping websites, and communicates with each other in real time. Increase the exposures and sales of websites.';
 $_LANG['support_engine'] = 'Support engine';
 $_LANG['open_now'] = 'Open the application immediately';
 $_LANG['license_label'] = 'License';
@@ -29,8 +29,8 @@ $_LANG['call_pay'] = 'Contact customer service renewal';
 $_LANG['stop_sev'] = 'Temporarily Out of Service';
 $_LANG['open_sev'] = 'Opening service';
 $_LANG['open_again'] = 'Application for reopening';
-$_LANG['no-open'] = 'You haven\'t opened this service yet.';
-$_LANG['col_goods_num'] = 'commodities';
+$_LANG['no-open'] = 'You have not opened this service yet.';
+$_LANG['col_goods_num'] = 'products';
 $_LANG['item'] = 'item';
 
 /* JS提示 */

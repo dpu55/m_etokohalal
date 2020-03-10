@@ -29,7 +29,7 @@ $_LANG['tag_edit_success'] = 'Update tags successfully';
 $_LANG['tag_add_success'] = 'Add tags successfully';
 $_LANG['pls_select_goods'] = 'Please select a product';
 
-$_LANG['no_select_tag'] = 'You don\'t have any tags to delete now';
+$_LANG['no_select_tag'] = 'You do not have any tags to delete now';
 $_LANG['drop_success'] = 'You have successfully deleted %d Tags';
 $_LANG['back_list'] = 'Returns the label list';
 

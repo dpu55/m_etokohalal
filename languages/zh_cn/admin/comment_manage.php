@@ -33,7 +33,7 @@ $_LANG['no_reply'] = 'Unanswered';
 $_LANG['yes_reply'] = 'Recovered';
 $_LANG['admin_user_name'] = 'Administrators';
 
-$_LANG['type'] = array('Commodities','Articles');
+$_LANG['type'] = array('Products','Articles');
 
 $_LANG['ip_address'] = 'IP address';
 $_LANG['comment_rank'] = 'Comment level';

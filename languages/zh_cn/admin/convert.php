@@ -20,7 +20,7 @@ $_LANG['select_system'] = 'Please select the system you want to convert：';
 $_LANG['note_select_system'] = '（If your system is not in the list on the left, you can go to<a href="http://bbs.hongyuvip.com" target="_blank"><strong>Our website</strong></a>Ask for help）';
 $_LANG['select_charset'] = 'Select the character set for the system you want to convert：';
 $_LANG['note_select_charset'] = '（If your system does not use UTF-8 character sets, conversion may take a long time.）';
-$_LANG['dir_notes'] = 'Note that the root directory path of the original mall should use the path relative to the admin directory.<br />For example, the original mall directory is shop under the root directory, while ecshop is under the root directory, the path is../shop';
+$_LANG['dir_notes'] = 'Note that the root directory path of the original mall should use the path relative to the admin directory.<br/>For example, the original mall directory is shop under the root directory, while ecshop is under the root directory, the path is../shop';
 $_LANG['your_config'] = 'Please set up the configuration information of the original system.：';
 $_LANG['your_host'] = 'Host name or address：';
 $_LANG['your_user'] = 'Login number：';
@@ -36,7 +36,7 @@ $_LANG['remark_info'] = '<ul>' .
         '<li>Please reset the advertisement；</li>' .
         '<li>Please reset the distribution mode；</li>' .
         '<li>Please reset the payment method；</li>' .
-        '<li>Please transfer the goods that did not belong to the final classification to the final classification.；</li>' .
+        '<li>Please transfer the goods that did not belong to the final category to the final category.；</li>' .
         '</ul>';
 
 $_LANG['connect_db_error'] = 'Unable to connect to the database, please check the configuration information.';
