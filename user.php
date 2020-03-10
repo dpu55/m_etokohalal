@@ -61,7 +61,7 @@ $smarty->assign('affiliate', $affiliate);
 $smarty->assign('img_url', $img_url);
 $smarty->assign('path', $path);
 
-$sql = "SELECT value FROM " . $ecs->table('shop_config') . " WHERE code LIKE 'shop_reg_closed'";
+$sql = "SELECT value FROM " . $ecs->table('ecsmart_shop_config') . " WHERE code LIKE 'shop_reg_closed'";
 $register_status = $db->getRow($sql)['value'];
 $smarty->assign('register_status', $register_status);
 
