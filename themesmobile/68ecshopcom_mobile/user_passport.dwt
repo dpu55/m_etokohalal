@@ -72,23 +72,26 @@
 								</div>
                                   <div class="ng-foot">
               
-             
+              {if $register_status != '1'}
               <div class="third-area ">
                 <div class="third-area-a"><span>{$lang.m_316}</span><div class="border"></div></div>
 <!--
                 <a class="ta-qq" href="user.php?act=oath&type=qq" target="_blank" title="QQ"></a>
                 <a class="ta-weibo" href="user.php?act=oath&type=weibo" target="_blank" title="weibo"></a>
                 <a class="ta-alipay" href="user.php?act=oath&type=alipay" target="_blank" title="alipay"></a>
--->
-             	<a href="{$googleURL}"><img src="themesmobile/68ecshopcom_mobile/images/google.png"/></a>
+-->				
+				<a href="{$googleURL}"><img src="themesmobile/68ecshopcom_mobile/images/google.png"/></a>
              	<a href="{$facebookURL}"><img src="themesmobile/68ecshopcom_mobile/images/facebook.png"/></a>
               </div>
+              {/if}
               
                <div class="ng-link-area" >
+               	{if $register_status != '1'}
                 <span style="text-align:left;">Belum punya akun? 
                   <a href="register.php" >{$lang.m_315}</a>
                 </span>
                 <span><br></span>
+                {/if}
                  <span class="user_line"></span>
                    <span style="float:left;">Lupa password?
                   <a href="findPwd.php" >{$lang.forgot_password}</a>
