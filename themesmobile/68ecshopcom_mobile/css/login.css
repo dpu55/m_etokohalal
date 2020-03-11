@@ -1,5 +1,5 @@
 /*个人中心登录*/
- .font12{ font-size:18px; line-height:50px; text-align:center; color:#333}
+ .font12{ font-size:18px; line-height:22px; text-align:center; color:#333; margin:8px;}
  
 .denglu{ width:100%; margin:auto; overflow:hidden;}
 .Login{ width:90%; margin:auto; overflow:hidden; padding-top:20px;}

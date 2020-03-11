@@ -342,6 +342,10 @@ function action_default ()
 	{
 		$register_type = 'mobile';
 	}
+	$sql = "SELECT value FROM " . $ecs->table('ecsmart_shop_config') . " WHERE code LIKE 'shop_reg_closed'";
+	$register_status = $db->getRow($sql)['value'];
+	$smarty->assign('register_status', $register_status);
+
 	$smarty->assign('register_type', $register_type);
 	// $smarty->assign('back_act', $back_act);
 	$smarty->assign('googleURL', $googleURL);

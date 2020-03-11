@@ -29,8 +29,8 @@
     <div class="h-mid">{$lang.label_regist}</div>
      </header>
 	<div id="tbh5v0">
-			<!-- {if $shop_reg_closed eq 1} -->
-			<div class="font12">{$lang.shop_register_closed}</div>
+			<!-- {if $register_status eq 1} -->
+			<div class="font12" style="margin-top: 56px;">{$lang.shop_register_closed}</div>
 			<!-- {else} -->
 			<script type="text/javascript">
 		
