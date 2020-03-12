@@ -125,8 +125,8 @@ $_LANG['page_last'] = 'Last page';
 $_LANG['admin_home'] = 'home page';
 
 /* 重量 */
-$_LANG['gram'] = 'Gram';
-$_LANG['kilogram'] = 'Kilogram';
+$_LANG['gram'] = ' gr';
+$_LANG['kilogram'] = ' kg';
 
 /* 菜单分类部分 */
 $_LANG['02_cat_and_goods'] = 'Product management';

@@ -580,10 +580,12 @@ function get_goods_info($goods_id)
         $row['promote_price_org'] =  $promote_price;
         $row['promote_price'] =  price_format($promote_price);
 
-        /* 修正重量显示 */
-        $row['goods_weight']  = (intval($row['goods_weight']) > 0) ?
-            $row['goods_weight'] . $GLOBALS['_LANG']['kilogram'] :
-            ($row['goods_weight'] * 1000) . $GLOBALS['_LANG']['gram'];
+        /* edit by wandi, hanya pakai satuan gram */
+        /* $row['goods_weight']  = (intval($row['goods_weight']) > 0) ?
+            $row['goods_weight'] . ' ' . $GLOBALS['_LANG']['kilogram'] :
+            ($row['goods_weight'] * 1000) . ' ' . $GLOBALS['_LANG']['gram']; */
+
+            $row['goods_weight']  = $row['goods_weight'] . ' ' . $GLOBALS['_LANG']['gram'];
 
         /* 修正上架时间显示 */
         $row['add_time']      = local_date($GLOBALS['_CFG']['date_format'], $row['add_time']);

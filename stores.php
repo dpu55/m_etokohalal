@@ -246,6 +246,7 @@ function get_street_goods_info($suppid){
 			$goodsInfo[$key]['promote_price']    = ($promote_price > 0) ? price_format($promote_price) : '';
 			$goodsInfo[$key]['goods_thumb']      = get_image_path($row['goods_id'], $row['goods_thumb'], true);
 			$goodsInfo[$key]['url']              = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
+			$goodsInfo[$key]['shop_p']       	 = price_format($row['shop_p']);
 		}
 	}
 	return array('num'=>$allnum,'info'=>$goodsInfo);

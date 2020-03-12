@@ -135,8 +135,8 @@ $_LANG['page_last'] = 'Halaman terakhir';
 $_LANG['admin_home'] = 'Halaman awal';
 
 /* 重量 */
-$_LANG['gram'] = 'Gram';
-$_LANG['kilogram'] = 'Kg';
+$_LANG['gram'] = ' gr';
+$_LANG['kilogram'] = ' kg';
 
 /* 菜单分类部分 */
 $_LANG['02_cat_and_goods'] = 'Manajemen barang dagangan';
@@ -168,7 +168,7 @@ $_LANG['05_comment_manage'] = 'Ulasan pengguna';
 $_LANG['05_question_manage'] = 'Konsultasi pengguna';  
 $_LANG['05_shaidan_manage'] = 'Pesanan pengguna';
 $_LANG['05_goods_tags'] = 'Ulasan label';
-$_LANG['06_goods_brand_list'] = 'Merek komoditas';
+$_LANG['06_goods_brand_list'] = 'Merek';
 $_LANG['07_brand_add'] = 'Tambahkan merek';
 $_LANG['08_goods_type'] = 'Jenis produk';
 $_LANG['09_attribute_list'] = 'Atribut produk';

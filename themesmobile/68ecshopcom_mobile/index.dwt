@@ -117,13 +117,13 @@ function clock(key)
      d=dSecs
      if (DifferHour>0) {a=a}
      else {a=''}
-   document.getElementById("jstimerBox"+key).innerHTML = a + b + c + d ; //显示倒计时信息
+   document.getElementById("jstimerBox"+key).innerHTML = a + b + c + d; //显示倒计时信息
 }
 </script>
 <section class="index_floor_lou">
   <div class="floor_body" >
     <h2>
-      <em></em>{$lang.promotion_goods}<div class="geng"><a href="../search.php?intro=promotion" >{$lang.m_6}</a> <span></span></div>
+      <em></em>{$lang.promotion_goods}<div class="geng"><a href="../search.php?intro=promotion" >{$lang.m_6} <i class="fa fa-chevron-right"></i></a> <span></span></div>
     </h2>
     <div id="scroll_promotion">
         <ul>
@@ -137,11 +137,12 @@ function clock(key)
                 </div>
               <div class="goods_name">{$goods.name|truncate:17}</div>
               <div class="price">
-              <a href="javascript:addToCart({$goods.id})" class="btns">
-                  <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png"></a>
+                <span class="price_mar">{$goods.market_price}</span>
                 <span class="price_pro">
                   {if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}
                 </span>
+                <a href="javascript:addToCart({$goods.id})" class="btns">
+                  <img src="themesmobile/68ecshopcom_mobile/images/ethcart.svg"></a>
                 
               </div>
             </a>
@@ -199,6 +200,7 @@ window.setInterval(function()
                          <a href="javascript:addToCart({$goods.id})" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
+              <span class="price_mar">{$goods.market_price}</span>  
               <span href="{$goods.url}" class="price_pro"> {if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span>
       
       
@@ -237,7 +239,7 @@ window.setInterval(function()
     <h2>
       <em></em>
       {$lang.new_goods}
-      <div class="geng"><a href="../search.php?intro=new" >{$lang.m_6 <i class="fa fa-chevron-right"></i>}</a> <span></span></div>
+      <div class="geng"><a href="../search.php?intro=new" >{$lang.m_6} <i class="fa fa-chevron-right"></i></a> <span></span></div>
     </h2>
     <div id="scroll_new" class="scroll_hot">
       <div class="bd">
@@ -250,10 +252,12 @@ window.setInterval(function()
                 <img src="{$img_url}{$option.static_path}{$goods.thumb}"></div>
               <div class="goods_name">{$goods.name}</div>
               <div class="price">
-                 <a href="javascript:addToCart({$goods.id})" class="btns">
-                    <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
-                </a>
+                 
+              <span class="price_mar">{$goods.market_price}</span>  
               <span href="{$goods.url}" class="price_pro">{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span>
+              <a href="javascript:addToCart({$goods.id})" class="btns">
+                    <img src="themesmobile/68ecshopcom_mobile/images/ethcart.svg">
+                </a>
               </div>
               </div>
             </a>
@@ -300,6 +304,7 @@ window.setInterval(function()
                    <a href="javascript:addToCart({$goods.id})" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
+              <span class="price_mar">{$goods.market_price}</span>    
               <span href="{$goods.url}" class="price_pro">{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span>
               </div>
               </div>
