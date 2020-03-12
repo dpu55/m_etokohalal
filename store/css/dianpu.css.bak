@@ -352,7 +352,7 @@ box-shadow: 0 0 2px #ccc; }
 .c_pagination{ width:100%; height:50px; margin-top:0px; text-align:center; position: fixed;bottom: 2.5rem;}
 
 .c_pagination a { display:inline-block; width:2rem; height:2rem;font-size:14px; line-height:35px; color:rgb(255, 255, 255); text-align:center;border-radius:50%; 
-	background:#FFF;
+	background:#FFF
 	-webkit-box-shadow: inset 0px 0px 300px -29px rgba(0,206,209,0.75);
 	-moz-box-shadow: inset 0px 0px 300px -29px rgba(0,206,209,0.75);
 	box-shadow: inset 0px 0px 300px -29px rgba(0,206,209,0.75);
