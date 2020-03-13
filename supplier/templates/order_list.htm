@@ -61,24 +61,44 @@
               <ul class="order_list">
                 {foreach from=$orders item=order}
                 <li>
-                  <table width="100%" cellpadding="3" cellspacing="1" >
+                  <table border="0px solid black" style="border-collapse: collapse;" width="100%">
                     <tr>
-                      <td align="left">{$lang.y_131}<a href="order.php?act=info&order_id={$order.order_id}">{$order.order_sn}</a></td>
-                      <td align="right">{$lang.y_133}{$order.short_order_time}</td>
+                      <td align="left">{$lang.y_131}</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;<a href="order.php?act=info&order_id={$order.order_id}">{$order.order_sn}</a></td>
                     </tr>
                     <tr>
-                      <td align="left">{$lang.y_183}{$order.buyer}</td>
-                      <td align="right">{$lang.y_115}{$order.formated_total_fee}</td>
+                      <td align="left">{$lang.y_133}</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;{$order.short_order_time}</td>
                     </tr>
                     <tr>
-                      <td align="left">{$lang.y_184}{$lang.os[$order.order_status]},{$lang.ps[$order.pay_status]},{$lang.ss[$order.shipping_status]}</td>
-                      <td align="right"><a href='navigate.php?act=navigate&order_id={$order.order_id}' target='_blank'><img src='images/location.png' style='height:15px;'/></a>&nbsp;&nbsp;<a href="order.php?act=info&order_id={$order.order_id}" class="font" >查看</a></td>
+                      <td align="left">{$lang.y_183}</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;{$order.buyer}</td>
+                    </tr>
+                    <tr>
+                      <td align="left">{$lang.y_115}</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;{$order.formated_total_fee}</td>
+                    </tr> 
+                    <tr>
+                      <td align="left">{$lang.y_184}</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;{$lang.os[$order.order_status]}</td>
+                    </tr>
+                    <tr>
+                      <td align="left">Status bayar</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;{$lang.ps[$order.pay_status]}<br></td>
+                    </tr>
+                    <tr>
+                      <td align="left">Status pengiriman</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;{$lang.ss[$order.shipping_status]} <a href='navigate.php?act=navigate&order_id={$order.order_id}' target='_blank'><img src='images/location.png' style='height:15px;'/></a></td>
+                    </tr>
+                    <tr>
+                      <td align="left">Detail</td>
+                      <td align="left">:&nbsp;&nbsp;&nbsp;<a href="order.php?act=info&order_id={$order.order_id}" class="font" >Lihat</a></td>
                     </tr>
                   </table>
                 </li>
                 {foreachelse}
                 <li>
-                  <div class="no_order" style="">{$lang.y_185}</div>
+                  <div class="no_order">{$lang.y_185}</div>
                 </li>
                 {/foreach}
               </ul>
