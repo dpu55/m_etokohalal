@@ -1405,7 +1405,7 @@ $_LANG['m_f_738'] = 'Pelayanan';
 
 
 // Added by wandi
-$_LANG['err_0001'] = 'Maaf, tidak ditemukan. Mohon pilih yang lain.';
+$_LANG['err_0001'] = 'Maaf Tidak ditemukan, silakan pilih yang lain.';
 $_LANG['err_tracking'] = 'Data tidak tersedia.';
 $_LANG['shipping_info'] = 'Informasi Pengiriman';
 $_LANG['shipping_date_history'] = 'Tanggal';

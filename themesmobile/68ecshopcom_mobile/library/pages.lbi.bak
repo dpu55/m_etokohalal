@@ -6,7 +6,7 @@
         <div class="pagenav" id="J_PageNav">
 
 <!--          <div class="p-prev p-gray" > <a href="{$pager.page_prev}">{$lang.page_prev}</a> </div>-->
-          <div class="p-prev p-gray" > <a href="{$pager.page_prev}"><i class="fa fa-chevron-left"></i></a> </div>          
+          <div class="p-prev p-gray" > <a href="{$pager.page_prev}"><i class="fa fa-chevron-leftt"></i></a> </div>          
           
           <div class="pagenav-cur" style="vertical-align:bottom">
             <div class="pagenav-text" > <span><!--{foreach from=$pager.page_number key=key item=item}-->

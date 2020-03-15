@@ -132,16 +132,6 @@
   line-height: 0;
 }
 
-.gotop {
-  width: auto;
-  height: auto;
-  background-color: rgba(0, 206, 209, 0.5);
-  border: 1px solid #00ced1;
-  border-radius: 10px;
-  padding: 10px;
-  line-height: 0;
-}
-
 .eth_v1_mobile .pagenav-wrapper .pagenav .pagenav-cur {
   height: auto;
 }

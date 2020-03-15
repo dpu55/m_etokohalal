@@ -2,7 +2,7 @@
 <!--翻页 start-->
 <form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
 <div class="c_pagination" id="pager">
-      <!-- {if $pager.page eq 1} --><a href="javascript:;" class="endd"><i class="fa"></i></a><!--{else}--><a href="{$pager.page_prev}" class="last"><i class="fa fa-chevron-left"></i></a><!--{/if}-->
+      <!-- {if $pager.page eq 1} --><a href="javascript:;" class="endd"><i class="fa"></i></a><!--{else}--><a href="{$pager.page_prev}" class="last"><i class="fa fa-chevron-leftt"></i></a><!--{/if}-->
       <a href="javascript:;" class="page-num">{$pager.page}/{$pager.page_count}</a>
       <!-- {if $pager.page eq $pager.page_count} --><a href="javascript:;" class="endd"><i class="fa"></i></a><!--{else}--><a href="{$pager.page_next}" class="next"><i class="fa fa-chevron-right"></i></a><!--{/if}--> 
 </div>

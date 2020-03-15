@@ -108,7 +108,7 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 
 .goods_nav{ width:30%; float:right; right:5px; overflow:hidden; position:fixed;margin-top:-20px; z-index:9999999}
 /*------------mall.dwt店铺信息--------------*/
-.dianpu_main{width:100%; overflow:hidden;background: url(../img/topbg.jpg) no-repeat center bottom; background-size: cover;}
+.dianpu_main{width:100%; overflow:hidden;background: url(../img/topbg.jpg) no-repeat center bottom}
 .dianpu_main dl{width:100%; overflow:hidden; position:relative; padding-top:20px;}
 .dianpu_main dl p{ position:absolute; width:50px; height:35px;background-color:rgba(27,27,27,0.5); font-size:12px; line-height:35px; text-align:center; color:#FFF; right:5px; top:10px; border-radius:4px; }
 .dianpu_main dl dt{width:100%; overflow:hidden;}
@@ -118,9 +118,9 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 .dianpu_main dl dd em{ display:block; width:100%; overflow:hidden; margin-top:10px;}
 .dianpu_main dl dd em img{ display:block; margin:auto; height:20px;}
 .dianpu_main ul{width:100%; overflow:hidden;background-color:rgba(27,27,27,0.3); margin-top:20px;}
-.dianpu_main ul li{width:25%; float:left; height:100%; border-right:1px solid #bcbbbb; margin-left:-1px;}
-.dianpu_main ul li span{ display:block; width:100%; overflow:hidden; text-align:center; font-size:12px; font-size: 3.2vw; line-height:120%; color:#eeeeee; padding-top:10px;}
-.dianpu_main ul li strong{ display:block; width:100%; overflow:hidden; text-align:center; font-size:12px; font-size: 3.2vw; line-height:150%; color:#fff; padding-bottom:10px;}
+.dianpu_main ul li{ width:25%; float:left; height:50px; border-right:1px solid #bcbbbb; margin-left:-1px;}
+.dianpu_main ul li span{ display:block; width:100%; overflow:hidden; text-align:center; font-size:12px; line-height:120%; color:#eeeeee; padding-top:10px;}
+.dianpu_main ul li strong{ display:block; width:100%; overflow:hidden; text-align:center; font-size:14px; line-height:150%; color:#fff}
 /*------------mall.dwt店铺信息------------
 
 .bian{ border-right:1px solid #eeeeee; margin-left:-1px;}
@@ -163,7 +163,7 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 
 /*banner*/
 
-	.scrollimg{ position:relative; overflow:hidden; margin:0px auto; }
+	.scrollimg{ position:relative; overflow:hidden; margin:0px auto; margin-top:10px; }
 
 	.scrollimg .hd{ position: absolute;
 
