@@ -5113,9 +5113,7 @@ function action_shaidan_save()
 
         include_once(ROOT_PATH . 'includes/cls_image.php');
 
-        $path_a = "images/image/".date('Ym')."/";
-
-        $path = "./../".$path_a;
+        $path = "images/image/".date('Ym')."/";
 
         if (!file_exists($path)){
 
@@ -5153,14 +5151,14 @@ function action_shaidan_save()
 
                         $thumb = $image->make_thumb($path.$v["name"], 100, 100);
 
-                        $path_img = $path_a.$v["name"];
+                        $path_img = $path.$v["name"];
 
-                        $sql = "INSERT INTO " . $ecs->table('shaidan_img') . "(shaidan_id, `desc`, image, thumb)" . "VALUES ('$shaidan_id', '" . $v["name"] . "', '$path_img', '$thumb')";
+                        $sql = "INSERT INTO " . $ecs->table('shaidan_img') . "(shaidan_id, `desc`, image, thumb, type)" . "VALUES ('$shaidan_id', '" . $v["name"] . "', '$path_img', '$thumb', 'mobile')";
 
                         $db->query($sql);
 
                     }else{
-
+                    		print 'sss';
                             echo "<script>alert('".$_LANG['m_569']."');self.location='user.php?act=shaidan_send&id=$rec_id';</script>";
 
                             exit();
