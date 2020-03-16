@@ -86,7 +86,7 @@
               <div class="pj_main">
                 <ul>
                   <li>
-                    <em>{$lang.m_107} </em>
+                    <em>{$lang.m_109} </em>
                     <img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment.comment_rank}.png">
                   </li>
                   <li class="pj_w">{$value.comment.content}</li>
@@ -94,7 +94,7 @@
 
                 {if $value.shaidan_status}
                   <ul>
-                    <li><em>{$lang.m_109} {$value.comment.shaidan.title}</em></li>
+                    <li><em>{$lang.m_107} {$value.comment.shaidan.title}</em></li>
                     <li class="pj_w">{$value.comment.shaidan.message}</li>
                   </ul>
                   <div class="sd_img">
@@ -163,14 +163,14 @@
                 <div class="pj_main">
                   <ul>
                     <li>
-                      <em>{$lang.m_107}</em>
+                      <em>{$lang.m_109}</em>
                       <img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment.comment_rank}.png">
                     </li>
                     <li class="pj_w">{$value.comment.content}</li>
                   </ul>
                   {if $value.shaidan_status}
                     <ul>
-                      <li><em>{$lang.m_109} {$value.comment.shaidan.title}</em></li>
+                      <li><em>{$lang.m_107} {$value.comment.shaidan.title}</em></li>
                       <li class="pj_w">{$value.comment.shaidan.message}</li>
                     </ul>
                     <div class="sd_img">
@@ -224,7 +224,7 @@
                 <div class="pj_main">
                   <ul>
                     <li>
-                      <em>{$lang.m_107} </em>
+                      <em>{$lang.m_109} </em>
                       <img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment.comment_rank}.png">
                     </li>
                     <li class="pj_w">{$value.comment.content}</li>
@@ -232,7 +232,7 @@
 
                   {if $value.shaidan_id}
                     <ul>
-                      <li><em>{$lang.m_109} {$value.comment.shaidan.title}</em></li>
+                      <li><em>{$lang.m_107} {$value.comment.shaidan.title}</em></li>
                       <li class="pj_w">{$value.comment.shaidan.message}</li>
                     </ul>
                     <div class="sd_img">
