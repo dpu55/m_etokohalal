@@ -233,13 +233,14 @@ class cls_image
         }
 
         /* 创建当月目录 */
-        if (empty($path))
-        {
-            $dir = ROOT_PATH_WAP . $this->images_dir . '/' . date('Ym').'/';
-        }
-        else
-        {
-            $dir = $path;
+        // $dir = ROOT_PATH_WAP . $this->images_dir . '/' . date('Ym').'/';
+        $dir = $this->images_dir . '/' . date('Ym').'/';
+        // die( $dir);
+
+        if (!file_exists($dir)){
+
+            mkdir ($dir);
+
         }
 
 
