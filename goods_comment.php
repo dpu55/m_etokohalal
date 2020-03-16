@@ -81,8 +81,8 @@ if ($_REQUEST['act'] == 'view')
 			$tags[$v['tag_id']] = $v['tag_name'];	
 		}
 		
-		$comment['add_time_str'] = date("Y-m-d", $comment['add_time']);
-		$comment['buy_time_str'] = date("Y-m-d", $comment['buy_time']);
+		$comment['add_time_str'] = date("d M Y", $comment['add_time']);
+		$comment['buy_time_str'] = date("d M Y", $comment['buy_time']);
 		$comment['user_rank'] = get_user_rank($comment['user_id']);
 		if ($comment['shaidan_id'] > 0)
 		{

@@ -199,7 +199,7 @@ if (!empty($_REQUEST['act']) && $_REQUEST['act'] == 'gotopage')
 
         foreach ($bought_notes as $key => $val)
         {
-            $bought_notes[$key]['add_time'] = local_date("Y-m-d G:i:s", $val['add_time']);
+            $bought_notes[$key]['add_time'] = local_date("d M Y G:i:s", $val['add_time']);
         }
 
         $sql = 'SELECT count(*) ' .
@@ -300,6 +300,7 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
         $linked_goods = get_linked_goods($goods_id);
 
         $goods['goods_style_name'] = add_style($goods['goods_name'], $goods['goods_name_style']);
+        $goods['add_time'] = date('d M Y', strtotime($goods['add_time']));
 
         /* 购买该商品可以得到多少钱的红包 */
         if ($goods['bonus_type_id'] > 0)
@@ -502,7 +503,7 @@ if(empty($_SESSION['user_id'])) {
 }
 
 $smarty->assign('now_time',  gmtime());           // 当前系统时间
-$smarty->assign('img_url',  $img_url);           // 当前系统时间
+$smarty->assign('img_url',  $img_url); 
 
 $smarty->display('goods.dwt',      $cache_id);
 
@@ -578,7 +579,7 @@ function get_linked_articles($goods_id)
     {
         $row['url']         = $row['open_type'] != 1 ?
             build_uri('article', array('aid'=>$row['article_id']), $row['title']) : trim($row['file_url']);
-        $row['add_time']    = local_date($GLOBALS['_CFG']['date_format'], $row['add_time']);
+        $row['add_time']    = local_date('d M Y', $row['add_time']);
         $row['short_title'] = $GLOBALS['_CFG']['article_title_length'] > 0 ?
             sub_str($row['title'], $GLOBALS['_CFG']['article_title_length']) : $row['title'];
 
@@ -643,8 +644,8 @@ function get_also_bought($goods_id)
         $arr[$key]['goods_name']  = $row['goods_name'];
         $arr[$key]['short_name']  = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
             sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
-        $arr[$key]['goods_thumb'] = '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-        $arr[$key]['goods_img']   = '../'.get_image_path($row['goods_id'], $row['goods_img']);
+        $arr[$key]['goods_thumb'] = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $arr[$key]['goods_img']   = get_image_path($row['goods_id'], $row['goods_img']);
         $arr[$key]['shop_price']  = price_format($row['shop_price']);
         $arr[$key]['url']         = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
 
@@ -801,7 +802,7 @@ function get_package_goods_list($goods_id)
         foreach($goods_res as $key => $val)
         {
             $goods_id_array[] = $val['goods_id'];
-            $goods_res[$key]['goods_thumb']  = '../'.get_image_path($val['goods_id'], $val['goods_thumb'], true);
+            $goods_res[$key]['goods_thumb']  = get_image_path($val['goods_id'], $val['goods_thumb'], true);
             $goods_res[$key]['market_price'] = price_format($val['market_price']);
             $goods_res[$key]['rank_price']   = price_format($val['rank_price']);
             $subtotal += $val['rank_price'] * $val['goods_number'];
@@ -877,7 +878,7 @@ function get_dianpu_baseinfo($suppid=0,$suppinfo){
 	$smarty->assign('serviceqq', $_goods_attr['qq']);
 	$smarty->assign('serviceemail', $_goods_attr['service_email']);
 	$smarty->assign('servicephone', $_goods_attr['service_phone']);
-	$smarty->assign('createtime',      gmdate('Y-m-d',$suppinfo['add_time']));//商家创建时间
+	$smarty->assign('createtime',      gmdate('d M Y',$suppinfo['add_time']));//商家创建时间
 	$suppid = (intval($suppid)>0) ? intval($suppid) : intval($_GET['suppId']);
 	//$sql="SELECT count(`goods_id`) FROM ".$GLOBALS['ecs']->table('goods')." as g WHERE  g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.supplier_id='$suppid'";
 	//$smarty->assign('goodsnum',      $GLOBALS['db']->getOne($sql));//商家商品数量
