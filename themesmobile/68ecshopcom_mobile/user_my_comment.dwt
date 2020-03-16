@@ -177,9 +177,16 @@
                       <dl id="gallery">
                         {foreach from=$value.comment.shaidan_img item=shaidan_img}
                           <dd>
+                            {if $shaidan_img.type == 'mobile'}
+                            <a href="{$shaidan_img.image}">
+                              <img src="{$shaidan_img.thumb}" width="100px" heigth="100px">
+                            </a>
+                            {else}
                             <a href="{$img_url}{$shaidan_img.image}">
                               <img src="{$img_url}{$shaidan_img.thumb}" width="100px" heigth="100px">
                             </a>
+                            {/if}
+                            
                           </dd>
                         {/foreach}
                       </dl>
@@ -232,9 +239,15 @@
                       <dl id="gallery">            
                         {foreach from=$value.comment.shaidan_img item=shaidan_img}
                           <dd>
-                            <a href="{$img_url}{$shaidan_img.image}">
-                            <img src="{$img_url}{$shaidan_img.thumb}" width="100px" heigth="100px">
+                            {if $shaidan_img.type == 'mobile'}
+                            <a href="{$shaidan_img.image}">
+                              <img src="{$shaidan_img.thumb}" width="100px" heigth="100px">
                             </a>
+                            {else}
+                            <a href="{$img_url}{$shaidan_img.image}">
+                              <img src="{$img_url}{$shaidan_img.thumb}" width="100px" heigth="100px">
+                            </a>
+                            {/if}
                           </dd>
                         {/foreach}
                       </dl>
