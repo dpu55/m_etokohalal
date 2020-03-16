@@ -907,15 +907,12 @@ panda(function () {
  <li><a href="tel:{$service_phone}">{$lang.m_695}</a></li>
  </ul>
  </div>
- 
- <!---kembali ke atas-->
- <script>
+ <!---返回顶部-->
+<script>
 function goTop(){
 	$('html,body').animate({'scrollTop':0},600);
 }
 </script>
-<a href="javascript:goTop();" class="gotop"><i class="fa fa-chevron-up"></i></a>
-
-<!-- #BeginLibraryItem "/library/footer_nav_dp6.lbi" --> <!-- #EndLibraryItem -->
+<a href="javascript:goTop();" class="gotop"><img src="themesmobile/68ecshopcom_mobile/images/topup.png"></a> 
 </body>
 </html>

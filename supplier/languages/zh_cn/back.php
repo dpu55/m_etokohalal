@@ -37,24 +37,24 @@ $_LANG['cs'][OS_RETURNED] = 'Kembali';
 $_LANG['cs'][OS_SHIPPED_PART] = 'Pengiriman sebagian';
 
 /* 订单状态 */
-$_LANG['os'][OS_UNCONFIRMED] = 'Belum dikonfirmasi';
+$_LANG['os'][OS_UNCONFIRMED] = 'Belum konfirmasi';
 $_LANG['os'][OS_CONFIRMED] = 'Dikonfirmasi';
-$_LANG['os'][OS_CANCELED] = '<font color = "red"> Batalkan </font>';
-$_LANG['os'][OS_INVALID] = '<font color = "red"> Tidak valid </font>';
-$_LANG['os'][OS_RETURNED] = '<font color = "red"> Pengembalian </font>';
+$_LANG['os'][OS_CANCELED] = '<font color="red"> Batalkan </font>';
+$_LANG['os'][OS_INVALID] = '<font color="red"> Tidak valid </font>';
+$_LANG['os'][OS_RETURNED] = '<font color="red"> Pengembalian </font>';
 $_LANG['os'][OS_SPLITED] = 'Dipesan';
 $_LANG['os'][OS_SPLITING_PART] = 'Pesanan sebagian';
 
-$_LANG['ss'][SS_UNSHIPPED] = 'Tidak dikirim';
+$_LANG['ss'][SS_UNSHIPPED] = 'Belum dikirim';
 $_LANG['ss'][SS_PREPARING] = 'Stok habis';
 $_LANG['ss'][SS_SHIPPED] = 'Dikirim';
 $_LANG['ss'][SS_RECEIVED] = 'Konfirmasi penerimaan';
-$_LANG['ss'][SS_SHIPPED_PART] = 'Dikirim (beberapa produk)';
+$_LANG['ss'][SS_SHIPPED_PART] = 'Dikirim (sebagian)';
 $_LANG['ss'][SS_SHIPPED_ING] = 'Pengiriman';
 
-$_LANG['ps'][PS_UNPAYED] = 'Tidak dibayar';
-$_LANG['ps'][PS_PAYING] = 'Membayar';
-$_LANG['ps'][PS_PAYED] = 'Dibayar';
+$_LANG['ps'][PS_UNPAYED] = 'Belum dibayar';
+$_LANG['ps'][PS_PAYING] = 'Proses bayar';
+$_LANG['ps'][PS_PAYED] = 'Lunas';
 
 /* 退换货订单状态 */
 $_LANG['bos'][0] = "Disetujui </br> </br> Menunggu pengguna untuk mengembalikan produk di jalan";

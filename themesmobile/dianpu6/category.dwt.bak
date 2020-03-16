@@ -20,10 +20,10 @@
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/eth_v1/eth_v1_mobile.css"/>
 <!--/Custom CSS -->
 <!--Font Awesome-->
-<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/all.min.css">
-<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/fontawesome.min.css">
-<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/v4-shims.min.css">
-<script data-search-pseudo-elements defer src="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/css/v4-shims.min.css">
+<script data-search-pseudo-elements defer src="../../../themes/68ecshopcom_360buy/fontawesome-5.9.0/js/all.min.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
 <!--/Font Awesome-->
 <script src="store/js/run_common-min.js" charset="utf-8" type="text/javascript" itemid="run_common.js"></script>
 {* 包含脚本文件 *}
