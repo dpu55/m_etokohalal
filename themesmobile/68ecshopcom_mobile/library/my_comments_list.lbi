@@ -29,9 +29,17 @@
 <div class="sd_img">
         <dl id="gallery">
 <!--{foreach from=$value.shaidan_imgs key=key item=img}--> 
-       <dd><a href="./../{$img.image}">
-               <img src="./../{$img.thumb}" width="100px" heigth="100px">
-       </a></dd>
+       <dd>
+       {if $img.type == 'mobile'}
+       <a href="{$img.image}">
+               <img src="{$img.thumb}" width="100px" heigth="100px">
+       </a>
+       {else}
+       <a href="{$img_url}{$img.image}">
+               <img src="{$img.thumb}" width="100px" heigth="100px">
+       </a>
+       {/if}
+       </dd>
 {/foreach}
         </dl>
        </div>

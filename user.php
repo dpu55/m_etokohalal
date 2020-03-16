@@ -4681,7 +4681,7 @@ function action_my_comment()
 
 		), $row['goods_name']);
 
-		$row['add_time_str'] = local_date("Y-m-d", $row['add_time']);
+		$row['add_time_str'] = local_date("d M Y", $row['add_time']);
 
 		$row['goods_tags'] = $db->getAll("SELECT * FROM " . $ecs->table('goods_tag') . " WHERE goods_id = '$row[goods_id]'");
 
