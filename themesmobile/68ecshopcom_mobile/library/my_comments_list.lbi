@@ -9,13 +9,14 @@
         <div class="content_head" {if $smarty.foreach.comments.last} style="border-bottom:0px solid #CCC;"{else}style="border-bottom:1px solid #CCC;"{/if}>
           <div class="info">
             <div class=" comment_star">
-              <div class="name">{if $value.hide_username eq 1}{$lang.m_36}{else}{$value.user_name}{/if}
-              <em><img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment_rank}.png" alt="{$value.comment_rank}" /></em>
+              <div class="name">{if $value.hide_username eq 1}{$lang.m_36}{else}{$value.user_name}{/if}<br/>
+              <p>{$lang.m_109}
+              <em><img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment_rank}.png" alt="{$value.comment_rank}" /></em></p>
               </div>
                <div class="two">{$value.add_time_str}</div>
             </div>
           </div>
-          <p>{$value.content}</p> 
+          <p>{$lang.m_107} {$value.content}</p> 
           
 
  <!---晒单-->   

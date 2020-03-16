@@ -89,7 +89,7 @@
                     <em>{$lang.m_109} </em>
                     <img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment.comment_rank}.png">
                   </li>
-                  <li class="pj_w">{$value.comment.content}</li>
+                  <!-- <li class="pj_w">{$value.comment.content}</li> -->
                 </ul>
 
                 {if $value.shaidan_status}
@@ -166,7 +166,7 @@
                       <em>{$lang.m_109}</em>
                       <img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment.comment_rank}.png">
                     </li>
-                    <li class="pj_w">{$value.comment.content}</li>
+                    <!-- <li class="pj_w">{$value.comment.content}</li> -->
                   </ul>
                   {if $value.shaidan_status}
                     <ul>
@@ -227,7 +227,7 @@
                       <em>{$lang.m_109} </em>
                       <img src="themesmobile/68ecshopcom_mobile/images/stars{$value.comment.comment_rank}.png">
                     </li>
-                    <li class="pj_w">{$value.comment.content}</li>
+                    <!-- <li class="pj_w">{$value.comment.content}</li> -->
                   </ul>
 
                   {if $value.shaidan_id}
