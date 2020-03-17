@@ -26,7 +26,7 @@ if (__FILE__ == '')
 }
 
 // added by wandi
-$img_url = 'https://test.etokohalal.com/';
+$img_url = 'https://www.etokohalal.com/';
 
 
 /* 取得当前ecshop所在的根目录 */
