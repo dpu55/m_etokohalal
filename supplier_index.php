@@ -14,7 +14,8 @@
 */
 
 define('IN_ECS', true);
-//判断是否有ajax请求
+
+
 $act = !empty($_GET['act']) ? $_GET['act'] : '';
 if ($act == 'cat_rec')
 {
@@ -89,10 +90,10 @@ if (!$smarty->is_cached('mall.dwt', $cache_id))
         }
         $smarty->assign('cat_rec', $cat_rec);
     }
-  // 获取轮播图
-    $playerdb = get_flash_xml();
+
+    $playerdb = get_flash_xml($img_url);
     $smarty->assign('playerdb',$playerdb);
-    /* 页面中的动态内容 */
+    
     assign_dynamic('mall');
 }
 $smarty->display('mall.dwt', $cache_id);
@@ -171,8 +172,8 @@ function get_supplier_goods($gtype=0){
             $goods[$idx]['short_style_name']   = add_style($goods[$idx]['short_name'],$row['goods_name_style']);
             $goods[$idx]['market_price'] = price_format($row['market_price']);
             $goods[$idx]['shop_price']   = price_format($row['shop_price']);
-            $goods[$idx]['thumb']        = '../'.get_image_path($row['goods_id'], $row['goods_thumb'], true);
-            $goods[$idx]['goods_img']    = '../'.get_image_path($row['goods_id'], $row['goods_img']);
+            $goods[$idx]['thumb']        = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+            $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
             $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
         }
 	}
@@ -181,18 +182,19 @@ function get_supplier_goods($gtype=0){
 }
 
 //获取轮播图 
-function get_flash_xml()
-{
-    $flash_file = "flash_data_supplier".$_GET['suppId'].".xml";
+function get_flash_xml($img_url)
+{   
+    $flash_file = $img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
+    
     $flashdb = array();
-    $root_path_wap = str_replace('/mobile','',ROOT_PATH);
-    if (file_exists($root_path_wap . DATA_DIR . '/'.$flash_file))
-    {
+    
+    // if (file_exists('https://test.etokohalal.com/' . $root_path_wap . DATA_DIR . '/'.$flash_file))
+    // {
 
         // 兼容v2.7.0及以前版本
-        if (!preg_match_all('/item_url="([^"]+)"\slink="([^"]+)"\stext="([^"]*)"\ssort="([^"]*)"/', file_get_contents($root_path_wap . DATA_DIR . '/'.$flash_file), $t, PREG_SET_ORDER))
+        if (!preg_match_all('/item_url="([^"]+)"\slink="([^"]+)"\stext="([^"]*)"\ssort="([^"]*)"/', file_get_contents($flash_file), $t, PREG_SET_ORDER))
         {
-            preg_match_all('/item_url="([^"]+)"\slink="([^"]+)"\stext="([^"]*)"/', file_get_contents($root_path_wap . DATA_DIR . '/'.$flash_file), $t, PREG_SET_ORDER);
+            preg_match_all('/item_url="([^"]+)"\slink="([^"]+)"\stext="([^"]*)"/', file_get_contents($flash_file), $t, PREG_SET_ORDER);
         }
         if (!empty($t))
         {
@@ -202,7 +204,7 @@ function get_flash_xml()
                 $flashdb[] = array('src'=>$val[1],'url'=>$val[2],'text'=>$val[3],'sort'=>$val[4]);
             }
         }
-    }
+    // }
     return $flashdb;
 }
 ?>
