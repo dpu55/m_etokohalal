@@ -15,6 +15,7 @@
 
 define('IN_ECS', true);
 
+
 $act = !empty($_GET['act']) ? $_GET['act'] : '';
 if ($act == 'cat_rec')
 {
@@ -89,8 +90,8 @@ if (!$smarty->is_cached('mall.dwt', $cache_id))
         }
         $smarty->assign('cat_rec', $cat_rec);
     }
-  // 获取轮播图
-    $playerdb = get_flash_xml();
+
+    $playerdb = get_flash_xml($img_url);
     $smarty->assign('playerdb',$playerdb);
     
     assign_dynamic('mall');
@@ -181,10 +182,9 @@ function get_supplier_goods($gtype=0){
 }
 
 //获取轮播图 
-function get_flash_xml()
-{
-    $flash_file = 'https://test.etokohalal.com/' . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
-    
+function get_flash_xml($img_url)
+{   
+    $flash_file = $img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
     
     $flashdb = array();
     
