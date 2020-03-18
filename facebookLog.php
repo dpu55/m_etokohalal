@@ -59,7 +59,17 @@
 		
 		if($result)
 		{
-			$sql = 'SELECT id FROM ' . $ecs->table('reg_fields') . ' WHERE type = 0 AND display = 1 ORDER BY dis_order, id'; // 读出所有自定义扩展字段的id
+			// send email
+			$template = get_mail_template('setup_password');
+			$GLOBALS['smarty']->assign('username', $username);
+			$GLOBALS['smarty']->assign('password', $password);
+			$GLOBALS['smarty']->assign('shop_name', $GLOBALS['_CFG']['shop_name']);
+			$GLOBALS['smarty']->assign('send_date', date($GLOBALS['_CFG']['date_format']));
+			$content = $GLOBALS['smarty']->fetch('str:' . $template['template_content']);
+			send_mail($email, $email, $template['template_subject'], $content, $template['is_html']);
+			// end send email
+
+			$sql = 'SELECT id FROM ' . $ecs->table('reg_fields') . ' WHERE type = 0 AND display = 1 ORDER BY dis_order, id'; 
 			$fields_arr = $db->getAll($sql);
 			
 			$extend_field_str = ''; 
