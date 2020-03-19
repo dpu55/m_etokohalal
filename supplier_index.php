@@ -184,7 +184,10 @@ function get_supplier_goods($gtype=0){
 //获取轮播图 
 function get_flash_xml($img_url)
 {   
-    $flash_file = $img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
+    // $flash_file = $img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
+    $img_url = str_replace("https://","",$img_url);
+    $img_url = str_replace("http://","",$img_url);
+    $flash_file = "/var/www/vhosts/etokohalal.com/".$img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
     
     $flashdb = array();
     
@@ -205,6 +208,7 @@ function get_flash_xml($img_url)
             }
         }
     // }
+
     return $flashdb;
 }
 ?>
