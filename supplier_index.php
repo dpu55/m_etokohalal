@@ -185,9 +185,20 @@ function get_supplier_goods($gtype=0){
 function get_flash_xml($var_path,$img_url)
 {   
     // $flash_file = $img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
-    $img_url = str_replace("https://","",$img_url);
-    $img_url = str_replace("http://","",$img_url);
-    $flash_file = $var_path.$img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
+
+    $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+    $host = parse_url($link, PHP_URL_HOST);
+    
+    if($host == 'm.etokohalal.com') {
+        $img_url = str_replace($img_url,"httpdocs/",$img_url);
+        $flash_file = $var_path.$img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml";
+    }else {
+       $img_url = str_replace("https://","",$img_url);
+        $img_url = str_replace("http://","",$img_url);
+        $flash_file = $var_path.$img_url . $root_path_wap . DATA_DIR .'/'. "flash_data_supplier".$_GET['suppId'].".xml"; 
+    }
+    
     
     $flashdb = array();
     
