@@ -1013,8 +1013,6 @@ elseif ($_REQUEST['step'] == 'checkout')
 
     $consignee = get_consignee($_SESSION['user_id']);
 
-    // 	var_dump($consignee); die();
-
 	if (empty($consignee))
 	{
 		$consignee['country']='1';
@@ -1029,21 +1027,17 @@ elseif ($_REQUEST['step'] == 'checkout')
 
     $_SESSION['flow_consignee'] = $consignee;
 	/*收货人显示省市区*/
+	$sql = "SELECT concat( IFNULL(c.region_name, ' '),
+        IFNULL(p.region_name, ''),
+        IFNULL(t.region_name, ''),
+        IFNULL(d.region_name, '')) AS region " .
+        " FROM " . $ecs->table('region') . " c, " . $ecs->table('region') . " p, " . $ecs->table('region') . " t, " . $ecs->table('region') . " d
+        WHERE c.`region_id`='".$consignee['country']."'
+        AND p.`region_id`='".$consignee['province']."'
+        AND t.`region_id`='".$consignee['city']."'
+        AND d.`region_id`='".$consignee['district']."'";
 
-	$address['country'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['country']."'");
-
-	$address['province'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['province']."'");
-
-	$address['city'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['city']."'");
-
-	$address['district'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['district']."'");
-
-	
-
-	$consignee['region'] = $address['district'].', '.$address['city'].', '.$address['province'];
-
-	// var_dump($consignee); die();
-
+$consignee['region'] = $db->getOne($sql);
     $smarty->assign('consignee', $consignee);
 
     include_once('includes/lib_transaction.php');
@@ -2979,13 +2973,22 @@ elseif ($_REQUEST['step'] == 'done')
 
 /* start by catur 20200125
 	---------------------
+	--> Development
 	32 CIMB    : 51491273
 	33 Danamon : 89220200
 	35 Alfa    : 88888357
 	36 Permata : 88561201
 	38 BNI     : 88030008
 	41 Mandiri : 88899575
-    */
+
+	--> Production
+	32 CIMB 	: 51491385
+	33 Danamon 	: 89220371
+	35 Alfa     : 11111176
+	36 Permata 	: 88561428
+	38 BNI VA 	: 32325002
+	41 Mandiri 	: 89022443
+*/
     
     if ($order['order_amount'] > 0)
     {	
@@ -2997,7 +3000,7 @@ elseif ($_REQUEST['step'] == 'done')
             	'pay_amount'=>$order['order_amount'],
             	'pay_id'=>'41',
             	'pay_desc'=>'Mandiri',
-            	'pay_prefix'=>'88899575');
+            	'pay_prefix'=>'89022443');
 		} else if 	($order['pay_id']=='38') {
         	$payment = payment_info('38');
 			$dokupay = array(
@@ -3005,7 +3008,7 @@ elseif ($_REQUEST['step'] == 'done')
             	'pay_amount'=>$order['order_amount'],
             	'pay_id'=>'38',
             	'pay_desc'=>'BNI',
-            	'pay_prefix'=>'88030008');
+            	'pay_prefix'=>'32325002');
 		} else if 	($order['pay_id']=='36') {
         	$payment = payment_info('36');
 			$dokupay = array(
@@ -3013,7 +3016,7 @@ elseif ($_REQUEST['step'] == 'done')
             	'pay_amount'=>$order['order_amount'],
             	'pay_id'=>'36',
             	'pay_desc'=>'Permata',
-            	'pay_prefix'=>'88561201');
+            	'pay_prefix'=>'88561428');
 		} else if 	($order['pay_id']=='35') {
         	$payment = payment_info('35');
 			$dokupay = array(
@@ -3021,7 +3024,7 @@ elseif ($_REQUEST['step'] == 'done')
             	'pay_amount'=>$order['order_amount'],
             	'pay_id'=>'35',
             	'pay_desc'=>'Alfamart',
-            	'pay_prefix'=>'88888357');
+            	'pay_prefix'=>'11111176');
 		} else if 	($order['pay_id']=='33') {
         	$payment = payment_info('33');
 			$dokupay = array(
@@ -3029,7 +3032,7 @@ elseif ($_REQUEST['step'] == 'done')
             	'pay_amount'=>$order['order_amount'],
              	'pay_id'=>'33',
            		'pay_desc'=>'Danamon',
-            	'pay_prefix'=>'89220200');
+            	'pay_prefix'=>'89220371');
 		} else if 	($order['pay_id']=='32') {
         	$payment = payment_info('32');
 			$dokupay = array(
@@ -3037,7 +3040,7 @@ elseif ($_REQUEST['step'] == 'done')
             	'pay_amount'=>$order['order_amount'],
              	'pay_id'=>'32',
             	'pay_desc'=>'CIMP',
-            	'pay_prefix'=>'51491273');
+            	'pay_prefix'=>'51491385');
 		} else {
         	$payment = payment_info($order['pay_id']);
         }
@@ -4328,13 +4331,4 @@ function get_hot_cat_goods($type = '', $num = 20)
 
 	return $goods;
 }
-
-function country($id) {
-	$array = array(
-		'ID' => 'Indonesia' 
-	);
-
-	return $array[$id];
-}
-
 ?>
