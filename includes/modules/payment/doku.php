@@ -102,7 +102,7 @@ class doku
         require_once(ROOT_PATH ."includes/modules/payment/doku/Doku.php");
 		
 		date_default_timezone_set('Asia/Jakarta');
-        Doku_Initiate::$sharedKey = 'QcJyrqrSYgB2';//$secretKey;
+        Doku_Initiate::$sharedKey = 'GJcpowAoE7My';//$secretKey;
         Doku_Initiate::$mallId = '11057247';//$channelId;	
 		
 		$params = array(
@@ -146,15 +146,25 @@ class doku
 
         //$response = Doku_Api::doGeneratePaycode($dataPayment); 
 
-		/*start by catur 20200125
-			---------------------
-			32 CIMB    : 51491273
-			33 Danamon : 89220200
-			35 Alfa    : 88888357
-			36 Permata : 88561201
-			38 BNI     : 88030008
-			41 Mandiri : 88899575
-		*/	
+/* start by catur 20200125
+--------------------------
+	--> Development
+	32 CIMB    : 51491273
+	33 Danamon : 89220200
+	35 Alfa    : 88888357
+	36 Permata : 88561201
+	38 BNI     : 88030008
+	41 Mandiri : 88899575
+
+	--> Production
+	32 CIMB 	: 51491385
+	33 Danamon 	: 89220371
+	35 Alfa     : 11111176
+	36 Permata 	: 88561428
+	38 BNI VA 	: 32325002
+	41 Mandiri 	: 89022443
+--------------------------
+end by catur 20200317 */
 
 		$paymentchannel = $dokupay['pay_id'];
 		$prefixchannel = $dokupay['pay_prefix'];
