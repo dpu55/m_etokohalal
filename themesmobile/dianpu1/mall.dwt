@@ -853,10 +853,17 @@ panda(function () {
       </header>
 <!-- #BeginLibraryItem "/library/up_menu.lbi" --><!-- #EndLibraryItem --> <!--弹出菜单-->
 
-<!--店铺信息-->
+<!--start modif favorit button by DPU-->
+<div class="click">
+    <a href="javascript:guanzhu({$suppid});"><span class="fa fa-heart-o"></span></a>
+    <div class="ring"></div>
+    <div class="ring2"></div>
+    <p class="info">{$lang.added_to_fav}</p>
+</div>
+<!--end modif favorit button by DPU-->
+
 <div class="dianpu_main">
 <dl>
-<p><a href="javascript:guanzhu({$suppid});" style=" color:#FFF">{$lang.btn_collect}</a></p>
 <dt><img src="{$img_url}{$shoplogo}" alt="{$shopname}"></dt>
 <dd><span>{$shopname}</span>
 </dd>
@@ -908,6 +915,35 @@ panda(function () {
 function goTop(){
     $('html,body').animate({'scrollTop':0},600);
 }
+</script>
+<script>
+    $('.click').click(function() {
+	if ($('.click a span').hasClass("fa-heart")) {
+			$('.click').removeClass('active')
+		setTimeout(function() {
+			$('.click').removeClass('active-2')
+		}, 30)
+			$('.click').removeClass('active-3')
+		setTimeout(function() {
+			$('.click a span').removeClass('fa-heart')
+			$('.click a span').addClass('fa-heart-o')
+		}, 15)
+	} else {
+		$('.click').addClass('active')
+		$('.click').addClass('active-2')
+		setTimeout(function() {
+			$('.click a span').addClass('fa-heart')
+			$('.click a span').removeClass('fa-heart-o')
+		}, 150)
+		setTimeout(function() {
+			$('.click').addClass('active-3')
+		}, 150)
+		$('.info').addClass('info-tog')
+		setTimeout(function(){
+			$('.info').removeClass('info-tog')
+		},1000)
+	}
+})
 </script>
 <a href="javascript:goTop();" class="gotop"><i class="fa fa-chevron-up"></i></a>
 

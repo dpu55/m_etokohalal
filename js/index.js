@@ -92,7 +92,7 @@ function guanzhu(sid){
         url:'supplier.php?go=other&act=add_guanzhu&suppId=' + sid,
         dataType: 'json', 
         success:function(data){
-            alert(data.info); 
+           // alert(data.info); 
         }
     })
 }

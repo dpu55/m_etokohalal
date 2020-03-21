@@ -110,7 +110,11 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 /*------------mall.dwt店铺信息--------------*/
 .dianpu_main{width:100%; overflow:hidden;background: url(../img/topbg.jpg) no-repeat center bottom; background-size: cover;}
 .dianpu_main dl{width:100%; overflow:hidden; position:relative; padding-top:20px;}
-.dianpu_main dl p{ position:absolute; width:50px; height:35px;background-color:rgba(27,27,27,0.5); font-size:12px; line-height:35px; text-align:center; color:#FFF; right:5px; top:10px; border-radius:4px; }
+.dianpu_main dl 
+.dianpu_main dl p{ position:absolute; width: 3em;height: 3em;background-color:rgba(27,27,27,0.5); font-size:0.7em; line-height:3em; text-align:center; color:#FFF; right:5px; top:10px; border-radius:50%; }
+.dianpu_main dl p span {color: #fff;font-size: 1.2em;}
+.dianpu_main dl p span:active {color:yellow;}
+.dianpu_main dl p span:hover {color:yellow;}
 .dianpu_main dl dt{width:100%; overflow:hidden;}
 .dianpu_main dl dt img{ display:block; margin:auto; width:20%; border-radius:50%; }
 .dianpu_main dl dd{width:100%; overflow:hidden;}
@@ -121,6 +125,112 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 .dianpu_main ul li{width:25%; float:left; height:100%; border-right:1px solid #bcbbbb; margin-left:-1px;}
 .dianpu_main ul li span{ display:block; width:100%; overflow:hidden; text-align:center; font-size:12px; font-size: 3.2vw; line-height:120%; color:#eeeeee; padding-top:10px;}
 .dianpu_main ul li strong{ display:block; width:100%; overflow:hidden; text-align:center; font-size:12px; font-size: 3.2vw; line-height:150%; color:#fff; padding-bottom:10px;}
+
+
+.click {
+	width: 38px;
+	height: 38px;
+	margin: 0 auto;
+	position: absolute;
+	cursor: pointer;
+	top: 58px;
+	right: 0px;
+}
+
+.click a {
+	right: 10px;
+	top: 5px;
+	z-index: 1;
+	position: absolute;
+	background-color: rgba(27,27,27,0.5);
+	width: 2em;
+	height: 2em;
+	font-size: 16px !important;
+	border-radius: 50%;
+	line-height: 2em;
+	text-align: center;
+	color: #fff !important;
+}
+
+.click a:active {
+	transform: scale(1.1,1.1) translateY(-5px)
+}
+
+
+.ring, .ring2 {
+	opacity: 0;
+	background: grey;
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 16px;
+	
+}
+
+.active a, .active-2 a {
+	color: rgb(255, 0, 0) !important;
+	background-color: #fff !important;
+}
+
+.active-2 .ring {
+	width: 2em !important;
+	height: 2em !important;
+	top: 5px !important;
+	right: 10px !important;
+	position: absolute;
+	border-radius: 50%;
+	opacity: 1 !important;
+	
+}
+
+.active-2 .ring {
+	background: rgb(255, 0, 0) !important;
+}
+
+.active-2 .ring2 {
+	background: #fff !important;
+}
+
+.active-3 .ring2 {
+	width: 2em !important;
+	height: 2em !important;
+	top: 5px !important;
+	right: 10px !important;
+	position: absolute;
+	border-radius: 50%;
+	opacity: 1 !important;
+	
+}
+
+.info {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	text-align: left;
+	line-height: 120%;
+	color: grey;
+	position: relative;
+	top: 5px;
+	right: 10px;
+	opacity: 0;
+	/* transition: all 0.3s ease; */
+}
+
+.info-tog {
+	color: rgb(255, 255, 255);
+	position: relative;
+	right: 70px;
+	opacity: 1;
+}
+
+.click * {
+	transition: all .32s ease;
+}
+
 /*------------mall.dwt店铺信息------------
 
 .bian{ border-right:1px solid #eeeeee; margin-left:-1px;}

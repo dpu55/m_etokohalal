@@ -29,13 +29,13 @@
               <a href="{$goods.url}">
               <div class="order_info">
                 <dl>
-                  <dt>{$goods.goods_name|truncate:13}</dt>
+                  <dt>{$goods.goods_name}</dt>
                   <dd><strong>{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</strong></dd>
                 </dl>
               </div>
               </a>
               <div class="dingdancaozuo" >
-              <a href="javascript:addToCart({$goods.goods_id})" class="s_flow" style=" color:#fff">{$lang.m_95}</a>
+              <a href="javascript:addToCart({$goods.goods_id})" class="s_flow" style=" color:#fff">{$lang.btn_add_to_cart}</a>
                <a href="user.php?act=delete_collection&collection_id={$goods.rec_id}" class="s_out" style=" color:#fff" >{$lang.m_96}</a></div>
           </li>
   {/foreach}
@@ -61,7 +61,7 @@
               <div class="order_info">
                 <dl>
                   <dt><span style=" color:#FFF">{$lang.m_91}</span>{$shop.shop_name|truncate:13}</dt>
-                  <dd><img src="themesmobile/68ecshopcom_mobile/images/dianpu2.png" height="25"><span>{if $shop.rank_id eq '1'}{$lang.m_97}{elseif $shop.rank_id eq '2'}{$lang.m_98}{elseif $shop.rank_id eq '3'}{$lang.m_99}{else}{$lang.m_97}{/if}</span></dd>
+                  <dd><img src="themesmobile/68ecshopcom_mobile/images/dianpu2.png" height="25"><span>&nbsp;Level:&nbsp;{if $shop.rank_id eq '1'}{$lang.m_97}{elseif $shop.rank_id eq '2'}{$lang.m_98}{elseif $shop.rank_id eq '3'}{$lang.m_99}{else}{$lang.m_97}{/if}</span></dd>
                   <a class="outdianpu" style=" color:#FFF" href="javascript:if (confirm('{$lang.m_100}')) location.href='user.php?act=del_follow&rec_id={$shop.id}'">{$lang.m_101}</a>
                  </dl>
               </div>

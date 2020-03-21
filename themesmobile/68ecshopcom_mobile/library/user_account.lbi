@@ -16,7 +16,7 @@
   <!--{foreach from=$account_log item=item name=name}-->
     <li class="Funds_li" {if $smarty.foreach.name.last} style=" border:0"{/if}>
     	<span class="icon<!--{if $smarty.foreach.name.first}--> on<!--{/if}-->"></span>
-        <span>{$item.type},<em>{$item.amount}</em></span>
+        <span>{$item.type}: <em>{$item.amount}</em></span>
         <span>{$item.change_time}</span>
         <span>{$item.short_change_desc}</span>
     </li>
