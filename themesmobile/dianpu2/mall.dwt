@@ -28,7 +28,7 @@
 <!--/Font Awesome-->
 <script src="store/js/run_common-min.js" charset="utf-8" type="text/javascript" itemid="run_common.js"></script>
 <script type="text/javascript">window.pageConfig = { compatible: true }; </script>
-{insert_scripts files='common.js,index.js'}
+{insert_scripts files='common.js,index.js,fav_button.js'}
 <script type="text/javascript">
             
 panda(function (){
@@ -605,13 +605,13 @@ panda(function () {
     var slideElements = panda("div[id=jdSlider]");
     var comparePosition = function (nodeA, nodeB) {
         var positionMessage = {
-            0: "元素一致",
-            1: "节点在不同的文档",
-            2: "B 在 A 之前",
-            4: "A 在 B 之前",
-            8: "B 包含 A",
-            16: "节点 A 包含节点 B",
-            32: "浏览器的私有使用"
+            0: "Consistent element",
+            1: "Nodes in different documents",
+            2: "B before A",
+            4: "A before B",
+            8: "B contains A",
+            16: "Node A contains node B",
+            32: "Browser Private Use"
         };
 
         return nodeA.compareDocumentPosition ?
@@ -853,10 +853,17 @@ panda(function () {
       </header>
 <!-- #BeginLibraryItem "/library/up_menu.lbi" --><!-- #EndLibraryItem --> <!--弹出菜单-->
 
-<!--店铺信息-->
+<!--start favorit button using fav_button.js by DPU-->
+<div class="click">
+    <a href="javascript:guanzhu({$suppid});"><span class="fa fa-heart-o"></span></a>
+    <div class="ring"></div>
+    <div class="ring2"></div>
+    <p class="info">{$lang.added_to_fav}</p>
+</div>
+<!--end favorit button using fav_button.js by DPU-->
+
 <div class="dianpu_main">
 <dl>
-<p><a href="javascript:guanzhu({$suppid});" style=" color:#FFF">{$lang.btn_collect}</a></p>
 <dt><img src="{$img_url}{$shoplogo}" alt="{$shopname}"></dt>
 <dd><span>{$shopname}</span>
 </dd>
@@ -884,27 +891,31 @@ panda(function () {
 <script type="text/javascript">
 				TouchSlide({ 
 					slideCell:"#scrollimg",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					titCell:".hd ul", //Aktifkan auto pagination autoPage: true, dan atur titCell sebagai lapisan pembungkus elemen navigasi.
 					mainCell:".bd ul", 
 					effect:"leftLoop", 
-					autoPage:true,//自动分页
-					autoPlay:true //自动播放
+					autoPage:true,//Susun
+					autoPlay:true //Putar otomatis
 				});
 			</script>
-  <!--超值精品-->
+  <!--recommend_best-->
    <!-- #BeginLibraryItem "/library/recommend_best.lbi" --><!-- #EndLibraryItem -->   
-  <!--超值热卖-->
+ 
+  <!--recommend_hot-->
     <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem --> 
-  <!--超值新品-->
+ 
+  <!--recommend_new-->
     <!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem --> 
+ 
  <!--footer--->
 <div style=" height:40px;"></div>
- 
+<script type="text/javascript">fav_button();</script>
 <script>
 function goTop(){
     $('html,body').animate({'scrollTop':0},600);
 }
 </script>
+
 <a href="javascript:goTop();" class="gotop"><i class="fa fa-chevron-up"></i></a>
 
 <!-- #BeginLibraryItem "/library/footer_nav_dp2.lbi" --> <!-- #EndLibraryItem -->
