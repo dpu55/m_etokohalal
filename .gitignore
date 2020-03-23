@@ -96,5 +96,6 @@ languages/.DS_Store
 data/config.php
 includes/init.php
 temp/
+supplier/temp/
 supplier/includes/init.php
 includes/init_supplier.php
