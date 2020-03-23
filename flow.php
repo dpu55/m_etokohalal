@@ -1027,17 +1027,21 @@ elseif ($_REQUEST['step'] == 'checkout')
 
     $_SESSION['flow_consignee'] = $consignee;
 	/*收货人显示省市区*/
-	$sql = "SELECT concat( IFNULL(c.region_name, ' '),
-        IFNULL(p.region_name, ''),
-        IFNULL(t.region_name, ''),
-        IFNULL(d.region_name, '')) AS region " .
-        " FROM " . $ecs->table('region') . " c, " . $ecs->table('region') . " p, " . $ecs->table('region') . " t, " . $ecs->table('region') . " d
-        WHERE c.`region_id`='".$consignee['country']."'
-        AND p.`region_id`='".$consignee['province']."'
-        AND t.`region_id`='".$consignee['city']."'
-        AND d.`region_id`='".$consignee['district']."'";
 
-$consignee['region'] = $db->getOne($sql);
+	$address['country'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['country']."'");
+
+	$address['province'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['province']."'");
+
+	$address['city'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['city']."'");
+
+	$address['district'] = $db->getOne("SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id='".$consignee['district']."'");
+
+	
+
+	$consignee['region'] = ucwords(strtolower($address['district'].', '.$address['city'].', '.$address['province']));
+
+	// var_dump($consignee); die();
+
     $smarty->assign('consignee', $consignee);
 
     include_once('includes/lib_transaction.php');
@@ -4331,4 +4335,13 @@ function get_hot_cat_goods($type = '', $num = 20)
 
 	return $goods;
 }
+
+function country($id) {
+	$array = array(
+		'ID' => 'Indonesia' 
+	);
+
+	return $array[$id];
+}
+
 ?>
