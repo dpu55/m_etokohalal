@@ -702,8 +702,11 @@ function insert_get_shop_shipping($arr){
     $shipping_list = available_shipping_list($region,$suppid);
     $cart_weight_price = cart_weight_price2($flow_type,$suppid);
 
-    if(count($shipping_list)>0){
-        //获取当前地址下所有的配送方式
+    if(!$shipping_list) {
+        
+        // 0 = default etokohalal
+        $shipping_list = available_shipping_list($region,0);
+            
         $shipping_id = array();
         foreach($shipping_list as $v){
             $shipping_id[] = $v['shipping_id'];
@@ -736,8 +739,6 @@ function insert_get_shop_shipping($arr){
             $cart_weight_price['weight'], $cart_weight_price['amount'], $cart_weight_price['number']);
             $shipp = explode("#", $curl_shipping_fee);
 
-            // $shipping_fee = ($shipping_count == 0 && $cart_weight_price['free_shipping'] == 1) ? 0 : shipping_fee($val['shipping_code'], unserialize($val['configure']),
-   //          $cart_weight_price['weight'], $cart_weight_price['amount'], $cart_weight_price['number']);
             $shipping_fee = ($shipping_count == 0 && $cart_weight_price['free_shipping'] == 1) ? 0 : (int)$shipp[0];
             $shipping_etd = $shipp[1];
             $shipping_weight = $shipp[2];
@@ -756,14 +757,6 @@ function insert_get_shop_shipping($arr){
                 price_format($val['insure'], false) : $val['insure'];
 
             $selected = '';
-            // if($i==0 && !in_array($order['shipping_pay'][$suppid],$shipping_id)){
-            //  $selected = 'checked';
-            //  $order['shipping_pay'][$suppid] = $val['shipping_id'];//记录第一个被选中的配送方式的id
-            // }
-            // if(isset($order['shipping_pay'][$suppid]) && intval($order['shipping_pay'][$suppid]) == $val['shipping_id'] && in_array($order['shipping_pay'][$suppid],$shipping_id)){
-            //  $selected = 'checked';
-            // }
-            
             // modify by wandi
             if($shipping_fee != 0 && $flag_selected == 0){
                 $flag_selected = 1;
@@ -775,14 +768,87 @@ function insert_get_shop_shipping($arr){
                 $GLOBALS['smarty']->assign('checkedid',   $shipping_list[$key]['shipping_id']);
             }
 
-            // 当前的配送方式是否支持保价 
+            if ($val['shipping_id'] == $order['shipping_id'])
+            {
+                $insure_disabled = ($val['insure'] == 0);
+                $cod_disabled    = ($val['support_cod'] == 0);
+            }
+        }    
+
+    }else { 
+
+        // if(count($shipping_list)>0){
+        $shipping_id = array();
+        foreach($shipping_list as $v){
+            $shipping_id[] = $v['shipping_id'];
+        }
+        $i=0;
+        $sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";
+        $sql = 'SELECT count(*) FROM ' . $ecs->table('cart') . " WHERE $sql_where AND `extension_code` != 'package_buy' AND `is_shipping` = 0 AND rec_id in (".$_SESSION['sel_cartgoods'].")"; //jx
+        $shipping_count = $db->getOne($sql);
+        
+        // modify by wandi
+        $ship_del = [];
+        $flag_selected = 0;
+
+        foreach($shipping_list as $key=>$val){
+            
+            $shipping_code = $shipping_list[$key]['shipping_code'];
+            if($shipping_code == 'pups')
+            {
+                $pickinfo = get_pickup_info(intval($consignee['city']), $suppid);
+                
+                if(empty($pickinfo) || $pickinfo == false)
+                {
+                    unset($shipping_list[$key]);
+                    continue;
+                }
+            }
+            
+            $shipping_cfg = unserialize_config($val['configure']);
+            $curl_shipping_fee = shipping_fee($suppid, $val['shipping_code'], unserialize($val['configure']),
+            $cart_weight_price['weight'], $cart_weight_price['amount'], $cart_weight_price['number']);
+            $shipp = explode("#", $curl_shipping_fee);
+
+            $shipping_fee = ($shipping_count == 0 && $cart_weight_price['free_shipping'] == 1) ? 0 : (int)$shipp[0];
+            $shipping_etd = $shipp[1];
+            $shipping_weight = $shipp[2];
+            
+            if($shipping_fee == 0) {
+                array_push($ship_del, $shipping_list[$key]['shipping_name']);
+            }
+
+            $shipping_list[$key]['format_shipping_fee'] = price_format($shipping_fee, false);
+            $shipping_list[$key]['shipping_fee']        = $shipping_fee;
+            $shipping_list[$key]['shipping_etd']        = $shipping_etd;
+            $shipping_list[$key]['shipping_weight']     = $shipping_weight;
+            $shipping_list[$key]['free_money1']          = $shipping_cfg['free_money'];
+            $shipping_list[$key]['free_money']          = price_format($shipping_cfg['free_money'], false);
+            $shipping_list[$key]['insure_formated']     = strpos($val['insure'], '%') === false ?
+                price_format($val['insure'], false) : $val['insure'];
+
+            $selected = '';
+            // modify by wandi
+            if($shipping_fee != 0 && $flag_selected == 0){
+                $flag_selected = 1;
+                $selected = 'checked';
+            }
+            $shipping_list[$key]['selected'] = $selected;
+
+            if(!empty($selected)){
+                $GLOBALS['smarty']->assign('checkedid',   $shipping_list[$key]['shipping_id']);
+            }
+
             if ($val['shipping_id'] == $order['shipping_id'])
             {
                 $insure_disabled = ($val['insure'] == 0);
                 $cod_disabled    = ($val['support_cod'] == 0);
             }
         }
+        // }
+    
     }
+
     
     // added by wandi
     foreach($ship_del as $val) {
