@@ -120,8 +120,8 @@ function get_my_comments($goods_id, $type = 0, $page = 1, $c_tag)
 			$row['buy_time'] = $GLOBALS['db']->getOne("SELECT o.add_time FROM ".$GLOBALS['ecs']->table('order_info')." AS o
 													   LEFT JOIN ".$GLOBALS['ecs']->table('order_goods')." AS og ON o.order_id=og.order_id
 													   WHERE og.rec_id = '$row[rec_id]'");
-			$row['add_time_str'] = local_date("Y-m-d", $row['add_time']);
-			$row['buy_time_str'] = local_date("Y-m-d", $row['buy_time']);
+			$row['add_time_str'] = local_date("d M Y", $row['add_time']);
+			$row['buy_time_str'] = local_date("d M Y", $row['buy_time']);
 			$row['user_rank'] = get_user_rank($row['user_id']);
 			if ($row['shaidan_id'] > 0)
 			{
