@@ -65,8 +65,8 @@ function get_my_comments($goods_id, $type = 0, $page = 1, $c_tag)
 		$points_list = array();
 		while ($row = $GLOBALS['db']->fetchRow($res))
 		{
-			$row['add_time_str'] = local_date("Y-m-d", $row['add_time']);
-			$row['buy_time_str'] = local_date("Y-m-d", $row['buy_time']);
+			$row['add_time_str'] = local_date("d M Y", $row['add_time']);
+			$row['buy_time_str'] = local_date("d M Y", $row['buy_time']);
 			$row['user_rank'] = get_user_rank($row['user_id']);
 			if ($row['shaidan_id'] > 0 && $row['shaidan_status'] == 1)
 			{
