@@ -191,9 +191,9 @@
         <form method='POST' action='order.php?act=quick_delivery' onsubmit='return quick_delivery();'>
           <div class="order_info_con">
             <p class="one_delivery">
-              <input type="text" name="express_no" id='express_no' placeholder="{$lang.y_125}" class="inputBg"/>
+              <input type="text" name="express_no" id='express_no' placeholder="{$lang.y_125}" class="inputBg" required="" />
               <input type='hidden' name='order_id' value='{$delivery_order.order_id}'/>
-              <input type="submit" value="{$lang.y_126}" class="one_delivery_btn" />
+              <input type="submit" value="{$lang.y_306}" class="one_delivery_btn" />
             </p>
           </div>
         </form>
