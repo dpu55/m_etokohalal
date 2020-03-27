@@ -229,14 +229,24 @@ section .index ul {
 	display: inline-block;
 	padding: 20px 0px 10px;
 }
-section .index ul li {
+/*section .index ul li {
 	width: 33.3%;
 	height: auto;
 	float: left;
 	display: block;
 	margin: 5px 0px;
 	text-align: center;
+}*/
+
+section .index ul li {
+    width: 33.3%;
+    height: auto;
+    display: inline-block;
+    margin: 5px -2px;
+    text-align: center;
+    vertical-align: top;
 }
+
 section .index ul li a {
 	width: 100%;
 	height: auto;
