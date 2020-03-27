@@ -99,3 +99,4 @@ temp/
 supplier/temp/
 supplier/includes/init.php
 includes/init_supplier.php
+supplier/data/config.php
