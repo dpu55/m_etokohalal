@@ -103,10 +103,10 @@
         <form method='POST' action='order.php' onsubmit='return quick_delivery();'>
           <div class="order_info_con">
             <p class="one_delivery">
-              <input type="text" name="express_no" id='express_no' placeholder="{$lang.y_61}" class="inputBg"/>
+              <input type="text" name="express_no" id='express_no' placeholder="{$lang.y_61}" class="inputBg" required="" />
               <input type='hidden' name='order_id' value='{$order.order_id}'/>
 			  <input type='hidden' name='act' value='quick_delivery'/>
-              <input type="submit" value="{$lang.y_181}" class="one_delivery_btn" />
+              <input type="submit" value="{$lang.y_306}" class="one_delivery_btn" />
 			  
             </p>
           </div>
@@ -114,7 +114,7 @@
         {/if}
         <div class="order_info_con">
           <div class="order_fee">
-            <p class="edit" id="order_fee" onclick='$(".fee_info").slideToggle()'><span>{$lang.y_272}<a href="order.php?act=edit&order_id={$order.order_id}&step=money" class="special">{$lang.edit}</a></span> <i></i></p>
+            <p class="edit" id="order_fee" onclick='$(".fee_info").slideToggle()'><span>{$lang.y_272}</span> <i></i></p>
             <div class="fee_info">
               <p>{$lang.y_186}{$order.formated_goods_amount} - {$lang.y_187} {$order.formated_discount} + {$lang.y_188}{$order.formated_tax} + {$lang.y_190} {$order.formated_shipping_fee} + {$lang.y_192} {$order.formated_insure_fee} + {$lang.y_193} {$order.formated_pay_fee} + {$lang.y_194} {$order.formated_pack_fee} + {$lang.y_195} {$order.formated_card_fee}</p>
               <p>= {$lang.y_189} {$order.formated_total_fee}</p>
@@ -123,18 +123,15 @@
             <p class="order_amount">= {if $order.order_amount >= 0}{$lang.y_198}{$order.formated_order_amount}{else}{$lang.y_274}{$order.formated_money_refund}{/if}</p>
           </div>
           <div class="consignee_info">
-            <p class="edit"><span>{$lang.y_275}<a href="order.php?act=edit&order_id={$order.order_id}&step=consignee" class="special">{$lang.edit}</a></span></p>
+            <p class="edit"><span>{$lang.y_275}</span></p>
             <div class="order_consign">
               <table width="100%" >
                 <tr>
-                  <td>{$lang.y_132}{$order.consignee}</td>
-                  <td><a href="tel:{$order.mobile}" class="phone">{$order.mobile}</a></td>
+                  <td>{$lang.y_132} {$order.consignee}</td>
+                  <td><a href="tel:{$order.mobile}" class="phone"> {$order.mobile}</a></td>
                 </tr>
                 <tr>
-                  <td colspan="2">{$lang.y_249}{$order.country_name}&nbsp;{$order.city_name}&nbsp;{$order.district_name}&nbsp;{$order.address}<a href='navigate.php?act=navigate&order_id={$order.order_id}' target='_blank'><img src='images/location.png' style='height:15px;'/></a>&nbsp;&nbsp;</td>
-                </tr>
-                <tr>
-                  <td colspan="2">{$lang.y_276} {$order.best_time}</td>
+                  <td colspan="2">{$lang.y_249} {$order.address}, {$order.region} {if $order.zipcode}, {$order.zipcode}{/if}&nbsp;<a href='navigate.php?act=navigate&order_id={$order.order_id}' target='_blank'><img src='images/location.png' style='height:15px;'/></a>&nbsp;&nbsp;</td>
                 </tr>
               </table>
             </div>
@@ -174,9 +171,9 @@
               <p>{$lang.y_134} {if $order.shipping_time gt 0}{$order.formatted_shipping_time}{else}{$lang.y_285}{/if}</p>
             </div>
             <div class="base_info">
-              <p>{$lang.y_184} {$lang.os[$order.order_status]},{$lang.ps[$order.pay_status]},{$lang.ss[$order.shipping_status]}</p>
-              <p>{$lang.02_payment_list} {$order.pay_name}<a href="order.php?act=edit&order_id={$order.order_id}&step=payment" class="special">{$lang.edit}</a></p>
-              <p>{$lang.03_shipping_list} {$order.shipping_name}<a href="order.php?act=edit&order_id={$order.order_id}&step=shipping" class="special">{$lang.edit}</a></p>
+              <p>{$lang.y_184}: {$lang.os[$order.order_status]}, {$lang.ps[$order.pay_status]}, {$lang.ss[$order.shipping_status]}</p>
+              <p>{$lang.02_payment_list}: {$order.pay_name}</p>
+              <p>{$lang.03_shipping_list}: {$order.shipping_name}</p>
               <!--如果配送方式是“门店自提”，则显示以下自提点 star-->
               {if $order.is_pickup eq 1 && $order.pickup_point gt 0}
               <p>{$lang.y_286} [{$order.pickup_point_info.province_name}&nbsp;{$order.pickup_point_info.city_name}&nbsp;{$order.pickup_point_info.district_name}&nbsp;{$order.pickup_point_info.address}]{$order.pickup_point_info.shop_name}</p>

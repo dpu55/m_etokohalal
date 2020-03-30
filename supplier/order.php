@@ -130,23 +130,26 @@ elseif($act == 'info')
     $sql = "SELECT agency_id, agency_name FROM " . $ecs->table('agency');
     $smarty->assign('agency_list', $db->getAll($sql));
 
-    /* 取得区域名 */
-    $sql = "SELECT CONCAT(IFNULL(c.region_name, ''), '  ', IFNULL(p.region_name, ''), " .
-                "'  ', IFNULL(t.region_name, ''), '  ', IFNULL(d.region_name, '')) AS region " .
-            "FROM " . $ecs->table('order_info') . " AS o " .
-                "LEFT JOIN " . $ecs->table('region') . " AS c ON o.country = c.region_id " .
-                "LEFT JOIN " . $ecs->table('region') . " AS p ON o.province = p.region_id " .
-                "LEFT JOIN " . $ecs->table('region') . " AS t ON o.city = t.region_id " .
-                "LEFT JOIN " . $ecs->table('region') . " AS d ON o.district = d.region_id " .
-            "WHERE o.order_id = '$order[order_id]'";
-    $order['region'] = $db->getOne($sql);
+    /* data alamat */
+    $sql = "SELECT country, province, city, district FROM " . $ecs->table('order_info') . " WHERE order_id = '$order[order_id]'";
+    $order_info = $db->getRow($sql);
+    $sql1 = "SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id = '" . $order_info["country"] . "'";
+    $sql2 = "SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id = '" . $order_info["province"] . "'";
+    $sql3 = "SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id = '" . $order_info["city"] . "'";
+    $sql4 = "SELECT region_name FROM " . $ecs->table('region') . " WHERE region_id = '" . $order_info["district"] . "'";
+    $country = $db->getRow($sql1);
+    $prov = $db->getRow($sql2);
+    $city = $db->getRow($sql3);
+    $district = $db->getRow($sql4);
+    $order['region'] = ucwords(strtolower($district['region_name'].', '.$city['region_name'].', '.$prov['region_name']));
+
     //自提点地址
     if(!empty($order['is_pickup']) && !empty($order['pickup_point']))
     {
         $sql = 'SELECT pp.shop_name,pp.address,pp.phone,pp.contact,pr.region_name AS province_name,cr.region_name AS city_name,dr.region_name AS district_name FROM '.$ecs->table('pickup_point').' AS pp LEFT JOIN '.$ecs->table('region').' AS pr ON pr.region_id=pp.province_id LEFT JOIN '.$ecs->table('region').' AS cr ON cr.region_id=pp.city_id LEFT JOIN '.$ecs->table('region').' AS dr ON dr.region_id=pp.district_id WHERE pp.id='.$order['pickup_point'];
         $order['pickup_point_info'] = $db->getRow($sql);
     }
-    //增值税发票地址信息
+
     if($order['inv_type'] == 'vat_invoice')
     {
         $sql = 'SELECT region_name FROM'.$ecs->table('region').' WHERE region_id='.$order['inv_consignee_country'];
@@ -1588,7 +1591,7 @@ elseif($act == 'quick_delivery')
     global $ecs,$db;
 
     $order_id = empty($_REQUEST['order_id']) ? 0 : intval($_REQUEST['order_id']);
-    $express_no = empty($_REQUEST['express_no']) ? 0 : intval($_REQUEST['express_no']);
+    $express_no = empty($_REQUEST['express_no']);
 
     if(empty($express_no))
     {

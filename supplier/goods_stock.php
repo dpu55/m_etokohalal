@@ -54,7 +54,7 @@ function goods_stock()
         }
         $filter = page_and_size($filter);
         $limit = ' LIMIT '. $filter['start'] .',' . $filter['page_size'];
-        $sql = 'SELECT goods_id,goods_sn,goods_name,goods_number FROM '.$ecs->table('goods').$where.$limit;
+        $sql = 'SELECT goods_id,goods_sn,goods_name,goods_number as number_stock FROM '.$ecs->table('goods').$where.$limit;
         set_filter($filter, $sql);
     }
     else

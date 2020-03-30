@@ -790,6 +790,6 @@ $_LANG['y_302'] = 'Alamat Penerima Pembayaran:';
 $_LANG['y_303'] = 'Pesan antara Penjual dan Pembeli:';
 $_LANG['y_304'] = 'Stok kosong: dilakukan sebelum proses pengiriman';
 $_LANG['y_305'] = 'Pesan dari pelanggan ke pelanggan:';
-$_LANG['y_306'] = '';
+$_LANG['y_306'] = 'Simpan';
 $_LANG['y_307'] = '';
 $_LANG['y_308'] = '';
