@@ -91,34 +91,36 @@ border-left:.1rem solid transparent;
 /*登录页面*/
 .login_dl {
 	position: absolute;
-	top: 50%;
-	margin-top: -150px;
+	top: 10%;
 	padding: 0px 10%
 }
 .login_dl td {
 	text-align: center;
-	padding: 5px 0px;
+	padding: 9px 0px;
+	display: flex;
+	align-items: center;
 }
 .login_dl td.logo_img {
-	padding-bottom: 15px
+	margin-bottom: 30px;
+	justify-content: center;
 }
 .login_dl .text_input {
-	height: 36px;
-	width: 96%;
-	border: 1px solid #DDD;
+	height: 40px;
+	width: 100%;
+	border: 2px solid #fbc210;
 	padding: 0px 2%;
-	color: #333;
+	color: #c1c1c1;
 	font-size: 14px;
 	background: #FFF;
-	border-radius: 3px
+	border-radius: 15px
 }
 .login_dl .text_input1 {
-	background: url(../images/user.gif) no-repeat left top #FFF;
-	text-indent: 48px;
+	/* background: url(../images/user.gif) no-repeat left top #FFF; */
+	text-indent: 30px;
 }
 .login_dl .text_input2 {
-	background: url(../images/pwd.gif) no-repeat left top #FFF;
-	text-indent: 48px;
+	/* background: url(../images/pwd.gif) no-repeat left top #FFF; */
+	text-indent: 30px;
 }
 .login_dl .text_input4 {
 	background: url(../images/email_icon.png) no-repeat left top #FFF;
@@ -140,13 +142,13 @@ input.button
 	display: block;
 	text-align: center;
 	color: #fff;
-	height: 45px;
+	height: 40px;
 	line-height: 45px;
 	font-size: 16px;
 	border: none;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	background: #ee2222;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	background: #00ced1;
 }
 .button3
 {
@@ -171,15 +173,15 @@ input.button
 }
 .login_dl a.login_ffleft {
 	padding: 2px 0px 3px 5px;
-	display: block;
-	float: right;
+	width: 50%;
 	color: #50b4d7;
 }
 .login_dl .login_ffri {
-	float: left;
+	width: 50%;
 }
 .login_dl .login_ffri input {
 	vertical-align: middle;
+	transition: ease;
 }
 a.logout 
 {
@@ -1051,7 +1053,7 @@ section .order_pd_base .order{
   margin-right: 5px;
   width: 20px;
   height: 20px;
-  display: inline-block;
+  display: block;
 }
 .stock_query .query_stock {
 	width: 96%;
@@ -1452,3 +1454,25 @@ i.navigate_marker.on
       background-position:center center;
       background-size:10px 10px;
 }
+.inputimg {
+	position: absolute;
+	display: flex;
+	width:25px;
+	margin-left: 0.5rem;
+	filter: opacity(0.5);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #6c757d;
+	opacity: 0.6; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #6c757d;
+	opacity: 0.5;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+	color: #6c757d; 
+	opacity: 0.5;
+  }
+  
