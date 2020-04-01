@@ -1591,7 +1591,7 @@ elseif($act == 'quick_delivery')
     global $ecs,$db;
 
     $order_id = empty($_REQUEST['order_id']) ? 0 : intval($_REQUEST['order_id']);
-    $express_no = empty($_REQUEST['express_no']);
+    $express_no = $_REQUEST['express_no'];
 
     if(empty($express_no))
     {
