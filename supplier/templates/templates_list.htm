@@ -1,0 +1,128 @@
+{if $full_page eq 1}
+<!DOCTYPE html>
+<html>
+  <head>
+    {include file='html_header.htm'}
+    <script type="text/javascript">
+      function search_stock()
+       {
+         if(check_form_empty('theForm'))
+         {
+           $.zalert.add("{$lang.y_99}",1)
+         }
+         else
+         {
+           $.zcontent.set('goods_name',$('#goods_name').val());
+           $.zcontent.set('goods_sn',$('#goods_sn').val());
+           search();
+         }
+         return false;
+       }
+    </script>
+  </head>
+  <body>
+    <div id='container'>
+      {/if}
+      {include file='page_header.htm'}
+      <section>
+        {include file='menu_list.htm'}
+        <div class="order_con" id="con_order_manage_2" style="display:none">
+          <div class="order_pd">
+            <div class="order order_t">
+              <form name="theForm" method="" action="" class="order_search" onsubmit='return search_stock();return false;'>
+                <table width="100%" border="0">
+                  <tr>
+                    <td>
+                      <input type="text" name="goods_name" id='goods_name' class="inputBg" placeholder="{$lang.y_143}" {if $filter.goods_name}value='{$filter.goods_name}'{/if}/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="goods_sn" id='goods_sn' class="inputBg" placeholder="{$lang.y_144}"  {if $filter.goods_sn}value='{$filter.goods_sn}'{/if}/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" class="button2" value="{$lang.y_101}"/>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+		  
+        </div>
+        <div class="order_pd goods_pd"  id="con_order_manage_1">
+		{include file='store_menu.htm'}
+          <div class="goods">
+            <ul class="goods_list">
+              	<li class="goods_list_info">
+                	<div class="no_goods"><b>{$lang.y_312}</b></div>
+                	<p class="ctr"><b>{$curr_template.name}</b></p>
+                	<p>&nbsp;</p>
+					<p class="ctr">
+						{if $curr_template.screenshot}
+						<img src="{$curr_template.screenshot}" style="float:center;" id="{$curr_template.code}"/>
+						{/if}
+					</p>
+					<p class="ctr" style=" margin-top: 5px;">{$curr_template.desc}</p>
+                	<hr/>
+                	<br/>
+              	</li>
+
+              	{foreach from=$available_templates item=template}
+					{if $template.author == 'supplier'}
+				  		<li class="goods_list_info">
+				  			<p class="ctr"><b><a href="{$template.uri}" target="_blank">{$template.name}</a></b></p>
+							<p>&nbsp;</p>
+							<p class="ctr">
+								{if $template.screenshot}
+								<img src="{$template.screenshot}" style="float:center;" id="{$template.code}"/>
+								{/if}
+							</p>
+							<p class="ctr" style=" margin-top: 5px;">{$template.desc}</p>
+							<p>
+								<a href="javascript:void(0)" class="btn button5"  onclick="javascript:setupTemplate('{$template.code}')">Gunakan ini</a> 
+							</p>
+						</li>
+					{/if}
+				{/foreach}
+            </ul>
+
+          </div>
+          {include file='page.htm'}
+        </div>
+      </section>
+      {include file='page_footer.htm'}
+      {if $full_page eq 1}
+    </div>
+    {include file='static_div.htm'}
+  </body>
+
+	<script type="text/javascript">
+  		<!--
+		{literal}
+
+		var T = 0;
+		var StyleSelected = '{$curr_tpl_style}';
+		var StyleCode = '';
+		var StyleTem = '';
+		
+		function setupTemplate(tpl)
+		{
+			alert('hello tema: ' + tpl); return;
+		  if (tpl != StyleTem)
+		  {
+		    StyleCode = '';
+		  }
+		  if (confirm(setupConfirm))
+		  {
+		    Ajax.call('template.php?is_ajax=1&act=install', 'tpl_name=' + tpl + '&tpl_fg='+ StyleCode, setupTemplateResponse, 'GET', 'JSON');
+		  }
+		}
+		//-->
+		{/literal}	
+	</script>
+
+</html>
+{/if}

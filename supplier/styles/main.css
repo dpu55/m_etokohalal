@@ -1529,3 +1529,6 @@ i.navigate_marker.on
 	color: #ffffff;
 	border: 1px #FFC486 solid;
 }
+.ctr {
+	text-align: center ! important;
+}
