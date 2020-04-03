@@ -135,7 +135,7 @@ $_LANG['page_last'] = 'terakhir';
 $_LANG['admin_home'] = 'awal';
 
 /* 重量 */
-$_LANG['gram'] = ' gr';
+$_LANG['gram'] = ' gram';
 $_LANG['kilogram'] = ' kg';
 
 /* 菜单分类部分 */
@@ -796,7 +796,7 @@ $_LANG['y_308'] = 'Manajemen Produk';
 $_LANG['y_309'] = 'Berat Produk:';
 $_LANG['y_310'] = 'Harga:';
 $_LANG['y_311'] = 'Edit Produk';
-$_LANG['y_312'] = '';
+$_LANG['y_312'] = 'Tema Sekarang';
 $_LANG['y_313'] = '';
 $_LANG['y_314'] = '';
 $_LANG['y_315'] = '';

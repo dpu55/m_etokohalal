@@ -1,7 +1,10 @@
 <?php
 define('IN_ECS', true);
 require(dirname(__FILE__) . '/includes/init.php');
+require_once(ROOT_PATH . 'includes/lib_order.php');
+require_once(ROOT_PATH . 'includes/lib_supplier_common_wap.php');
 $act = empty($_REQUEST['act'])?'list':trim($_REQUEST['act']);
+
 require_once('includes/lib_template.php');
 
 /*------------------------------------------------------ */
@@ -18,15 +21,17 @@ if ($_REQUEST['act'] == 'list')
     /* 获得可用的模版 */
     $available_templates = array();
     $template_dir        = @opendir($var_path . 'themesmobile/');
-    print $var_path . 'themesmobile/'; 
+    
     while ($file = readdir($template_dir))
     {
         if ($file != '.' && $file != '..' && is_dir($var_path. 'themesmobile/' . $file) && $file != '.svn' && $file != 'index.htm')
         {
-            $available_templates[] = get_template_info($file);
+            $available_templates[] = get_template_info($file,$var_path,'');
         }
     }
     @closedir($template_dir);
+
+   // echo "<pre>"; var_dump($available_templates); die();
 
     /* 获得可用的模版的可选风格数组 */
     $templates_style = array();
@@ -34,11 +39,11 @@ if ($_REQUEST['act'] == 'list')
     {
         foreach ($available_templates as $value)
         {
-            $templates_style[$value['code']] = read_tpl_style($value['code'], 2);
+            $templates_style[$value['code']] = read_tpl_style($value['code'], 2,$var_path);
         }
     }
 
-    echo "<pre>"; var_dump($templates_style); die('b');
+    // echo "<pre>"; var_dump($templates_style); die('b');
 
     /* 清除不需要的模板设置 */
     $available_code = array();
@@ -64,13 +69,16 @@ if ($_REQUEST['act'] == 'list')
     $db->query($sql);
 
     assign_query_info();
+    // echo "<pre>"; var_dump(get_template_info($curr_template, $var_path, $curr_style)); die();
 
     $smarty->assign('ur_here',             $_LANG['template_manage']);
     $smarty->assign('curr_tpl_style', $curr_style);
     $smarty->assign('template_style', $templates_style);
-    $smarty->assign('curr_template',       get_template_info($curr_template, $curr_style));
+    $smarty->assign('curr_template',       get_template_info($curr_template,$var_path,$curr_style));
     $smarty->assign('available_templates', $available_templates);
-    $smarty->display('templates_list.htm');
+    _wap_assign_header_info($_LANG['y_307']);
+    _wap_assign_footer_order_info();
+    _wap_display_page('templates_list.htm');
 }
 
 /*------------------------------------------------------ */
@@ -809,7 +817,7 @@ function load_library($curr_template, $lib_name)
  * @param   int     $flag           1，AJAX数据；2，Array
  * @return
  */
-function read_tpl_style($tpl_name, $flag=1)
+function read_tpl_style($tpl_name, $flag=1, $var_path)
 {
     if (empty($tpl_name) && $flag == 1)
     {
@@ -820,11 +828,10 @@ function read_tpl_style($tpl_name, $flag=1)
     $temp = '';
     $start = 0;
     $available_templates = array();
-    $dir = $var_path  . $tpl_name . '/';
-    print $dir; 
+    $dir = $var_path . 'themesmobile/' . $tpl_name . '/';
+     
     $tpl_style_dir = @opendir($dir);
-    var_dump($tpl_style_dir);
-    
+
     while ($file = readdir($tpl_style_dir))
     {
         if ($file != '.' && $file != '..' && is_file($dir . $file) && $file != '.svn' && $file != 'index.htm')
@@ -840,7 +847,8 @@ function read_tpl_style($tpl_name, $flag=1)
                 }
             }
         }
-    }
+    } 
+
     @closedir($tpl_style_dir);
 
     if ($flag == 1)
@@ -850,7 +858,7 @@ function read_tpl_style($tpl_name, $flag=1)
         {
             foreach ($available_templates as $value)
             {
-                $tpl_info = get_template_info($tpl_name, $value);
+                $tpl_info = get_template_info($tpl_name,'',$value);
 
                 $ec .= '<table border="0" width="100%" cellpadding="0" cellspacing="0" class="colortable" onMouseOver="javascript:onSOver(\'' . $value . '\', this);" onMouseOut="onSOut(this);" onclick="javascript:setupTemplateFG(\'' . $value . '\');"  bgcolor="' . $tpl_info['type'] . '"><tr><td>&nbsp;</td></tr></table>';
 
@@ -890,10 +898,10 @@ function read_tpl_style($tpl_name, $flag=1)
 function read_style_and_tpl($tpl_name, $tpl_style)
 {
     $style_info = array();
-    $style_info = get_template_info($tpl_name, $tpl_style);
+    $style_info = get_template_info($tpl_name, '', $tpl_style);
 
     $tpl_style_info = array();
-    $tpl_style_info = read_tpl_style($tpl_name, 2);
+    $tpl_style_info = read_tpl_style($tpl_name, 2, $var_path);
     $tpl_style_list = '';
     if (count($tpl_style_info) > 1)
     {
