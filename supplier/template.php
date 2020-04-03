@@ -7,18 +7,14 @@ $act = empty($_REQUEST['act'])?'list':trim($_REQUEST['act']);
 
 require_once('includes/lib_template.php');
 
-/*------------------------------------------------------ */
-//-- 模版列表
-/*------------------------------------------------------ */
+
 if ($_REQUEST['act'] == 'list')
 {
     admin_priv('template_select');
 
-    /* 获得当前的模版的信息 */
     $curr_template = $_CFG['template'];
     $curr_style = $_CFG['stylename'];
 
-    /* 获得可用的模版 */
     $available_templates = array();
     $template_dir        = @opendir($var_path . 'themesmobile/');
     
@@ -31,9 +27,6 @@ if ($_REQUEST['act'] == 'list')
     }
     @closedir($template_dir);
 
-   // echo "<pre>"; var_dump($available_templates); die();
-
-    /* 获得可用的模版的可选风格数组 */
     $templates_style = array();
     if (count($available_templates) > 0)
     {
@@ -43,16 +36,14 @@ if ($_REQUEST['act'] == 'list')
         }
     }
 
-    // echo "<pre>"; var_dump($templates_style); die('b');
-
-    /* 清除不需要的模板设置 */
-    $available_code = array();
-    $sql = "DELETE FROM ".$ecs->table('template')." WHERE 1 ";
-    foreach ($available_templates AS $tmp)
-    {
-        $sql .= " AND theme <> '".$tmp['code']."' ";
-        $available_code[] = $tmp['code'];
-    }
+    /* Backup template */
+    // $available_code = array();
+    // $sql = "DELETE FROM ".$ecs->table('template')." WHERE 1 ";
+    // foreach ($available_templates AS $tmp)
+    // {
+    //     $sql .= " AND theme <> '".$tmp['code']."' ";
+    //     $available_code[] = $tmp['code'];
+    // }
     // $tmp_bak_dir = @opendir(ROOT_PATH . 'temp/backup/library/');
     // while ($file = readdir($tmp_bak_dir))
     // {
@@ -66,7 +57,7 @@ if ($_REQUEST['act'] == 'list')
     //     }
     // }
 
-    $db->query($sql);
+    // $db->query($sql);
 
     assign_query_info();
     // echo "<pre>"; var_dump(get_template_info($curr_template, $var_path, $curr_style)); die();
@@ -74,6 +65,7 @@ if ($_REQUEST['act'] == 'list')
     $smarty->assign('ur_here',             $_LANG['template_manage']);
     $smarty->assign('curr_tpl_style', $curr_style);
     $smarty->assign('template_style', $templates_style);
+    $smarty->assign('var_path',			  $var_path);
     $smarty->assign('curr_template',       get_template_info($curr_template,$var_path,$curr_style));
     $smarty->assign('available_templates', $available_templates);
     _wap_assign_header_info($_LANG['y_307']);
@@ -235,6 +227,7 @@ if ($_REQUEST['act'] == 'setup')
     $smarty->assign('brand_goods',        $brand_goods);
     $smarty->assign('cat_articles',       $cat_articles);
     $smarty->assign('ad_positions',       $ad_positions);
+    $smarty->assign('var_path',			  $var_path);
     $smarty->assign('arr_cates',          cat_list(0, 0, true));
     $smarty->assign('arr_brands',         get_brand_list());
     $smarty->assign('arr_article_cats',   article_cat_list(0, 0, true));
@@ -472,9 +465,6 @@ if ($_REQUEST['act'] == 'setting')
     }
 }
 
-/*------------------------------------------------------ */
-//-- 管理库项目
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'library')
 {
@@ -525,26 +515,21 @@ if ($_REQUEST['act'] == 'library')
     $smarty->display('template_library.htm');
 }
 
-/*------------------------------------------------------ */
-//-- 安装模版
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'install')
 {
-    check_authz_json('backup_setting');
-
-    $tpl_name = trim($_GET['tpl_name']);
+	$tpl_name = trim($_GET['tpl_name']);
     $tpl_fg=0;
     $tpl_fg = trim($_GET['tpl_fg']);
 
-    $sql = "UPDATE " .$GLOBALS['ecs']->table('shop_config'). " SET value = '$tpl_name' WHERE code = 'template'";
+    $sql = "UPDATE " .$GLOBALS['ecs']->table('supplier_shop_config'). " SET value = '$tpl_name' WHERE code = 'template' AND supplier_id=".$_SESSION['supplier_id'];
     $step_one = $db->query($sql, 'SILENT');
-    $sql = "UPDATE " .$GLOBALS['ecs']->table('shop_config'). " SET value = '$tpl_fg' WHERE code = 'stylename'";
+    $sql = "UPDATE " .$GLOBALS['ecs']->table('supplier_shop_config'). " SET value = '$tpl_fg' WHERE code = 'stylename' AND supplier_id=".$_SESSION['supplier_id'];
     $step_two = $db->query($sql, 'SILENT');
 
     if ($step_one && $step_two)
     {
-        clear_all_files(); //清除模板编译文件
+        clear_all_files(); 
 
         $error_msg = '';
         if (move_plugin_library($tpl_name, $error_msg))
@@ -553,7 +538,7 @@ if ($_REQUEST['act'] == 'install')
         }
         else
         {
-            make_json_result(read_style_and_tpl($tpl_name, $tpl_fg), $_LANG['install_template_success']);
+            make_json_result(read_style_and_tpl($tpl_name, $_GET['var_path'], $tpl_fg), $_LANG['y_313']);
         }
     }
     else
@@ -895,10 +880,10 @@ function read_tpl_style($tpl_name, $flag=1, $var_path)
  * @param   string  $tpl_style 模版风格名
  * @return
  */
-function read_style_and_tpl($tpl_name, $tpl_style)
+function read_style_and_tpl($tpl_name, $var_path, $tpl_style)
 {
     $style_info = array();
-    $style_info = get_template_info($tpl_name, '', $tpl_style);
+    $style_info = get_template_info($tpl_name, $var_path, $tpl_style);
 
     $tpl_style_info = array();
     $tpl_style_info = read_tpl_style($tpl_name, 2, $var_path);

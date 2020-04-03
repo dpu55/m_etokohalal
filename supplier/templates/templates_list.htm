@@ -58,14 +58,14 @@
             <ul class="goods_list">
               	<li class="goods_list_info">
                 	<div class="no_goods"><b>{$lang.y_312}</b></div>
-                	<p class="ctr"><b>{$curr_template.name}</b></p>
+                	<p class="ctr name"><b>{$curr_template.name}</b></p>
                 	<p>&nbsp;</p>
 					<p class="ctr">
 						{if $curr_template.screenshot}
-						<img src="{$curr_template.screenshot}" style="float:center;" id="{$curr_template.code}"/>
+						<img id="screenshot" src="{$curr_template.screenshot}" style="float:center;" id="{$curr_template.code}"/>
 						{/if}
 					</p>
-					<p class="ctr" style=" margin-top: 5px;">{$curr_template.desc}</p>
+					<p class="ctr desc" style=" margin-top: 5px;">{$curr_template.desc}</p>
                 	<hr/>
                 	<br/>
               	</li>
@@ -99,6 +99,9 @@
     {include file='static_div.htm'}
   </body>
 
+  	<script src="js/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  	<script src="js/sweetalert2/dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="js/sweetalert2/dist/sweetalert2.min.css">
 	<script type="text/javascript">
   		<!--
 		{literal}
@@ -107,19 +110,87 @@
 		var StyleSelected = '{$curr_tpl_style}';
 		var StyleCode = '';
 		var StyleTem = '';
+		var VarPath = '{$var_path}';
 		
 		function setupTemplate(tpl)
 		{
-			alert('hello tema: ' + tpl); return;
-		  if (tpl != StyleTem)
-		  {
-		    StyleCode = '';
-		  }
-		  if (confirm(setupConfirm))
-		  {
-		    Ajax.call('template.php?is_ajax=1&act=install', 'tpl_name=' + tpl + '&tpl_fg='+ StyleCode, setupTemplateResponse, 'GET', 'JSON');
-		  }
+			if (tpl != StyleTem)
+		  	{
+		    	StyleCode = '';
+		  	}
+		  	console.log('StyleCode: ' + StyleCode)
+		  	console.log('tpl: ' + tpl)
+		  	console.log('StyleTem: ' + StyleTem)
+		  	console.log('VarPath: ' + VarPath)
+
+			Swal.fire({
+				title: 'Tema Toko',
+				text: "Kamu yakin ingin menggantinya?",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Ya',
+				cancelButtonText: 'Tidak'
+			}).then((result) => {
+				if (result.value) {
+					$.get("template.php?is_ajax=1&act=install", { tpl_name:tpl, tpl_fg:StyleCode, var_path:VarPath }, function(data, status){
+						console.log(data)
+						var obj = JSON.parse(data)
+				    	if (obj.error == 0)
+						{
+							$('.name').html('<b>'+ obj.content.name +'</b>');
+							$('.desc').html(obj.content.desc);
+							document.getElementById("screenshot").src = obj.content.screenshot;
+
+							Swal.fire(
+								'Tema Toko',
+								obj.message,
+								'success'
+							)
+						}
+
+					});
+				}
+			})
+
+
+		  // if (confirm(setupConfirm))
+		  // {
+		  //   Ajax.call('template.php?is_ajax=1&act=install', 'tpl_name=' + tpl + '&tpl_fg='+ StyleCode, setupTemplateResponse, 'GET', 'JSON');
+		  // }
+
 		}
+
+		function setupTemplateResponse(result)
+		{
+			StyleCode = '';
+			if (result.message.length > 0)
+			{
+				Swal.fire(
+					'Tema Toko',
+					result.message,
+					'success'
+				)
+			}
+			if (result.error == 0)
+			{
+				showTemplateInfo(result.content);
+			}
+		}
+
+		function showTemplateInfo(res)
+		{
+			document.getElementById("CurrTplStyleList").innerHTML = res.tpl_style;
+			StyleSelected = res.stylename;
+			document.getElementById("screenshot").src = res.screenshot;
+			document.getElementById("templateName").innerHTML    = res.name;
+			document.getElementById("templateDesc").innerHTML    = res.desc;
+			document.getElementById("templateVersion").innerHTML = res.version;
+			document.getElementById("templateAuthor").innerHTML  = '<a href="' + res.uri + '" target="_blank">' + res.author + '</a>';
+			// document.getElementById("backup").onclick = function () {backupTemplate(res.code);};
+		}
+
 		//-->
 		{/literal}	
 	</script>
