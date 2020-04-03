@@ -6,6 +6,9 @@ if (!defined('IN_ECS'))
     die('Hacking attempt');
 }
 
+require(ROOT_PATH. '/data/config.php');
+
+
 $template_files = array(
     'index.dwt',
     'article.dwt',
@@ -33,17 +36,11 @@ $template_files = array(
     'auction_list.dwt',
     'auction.dwt',
     'message_board.dwt',
-    'takegoods',  
     'exchange_list.dwt',
 );
 
+/* 每个模板允许设置的库项目 */
 $page_libs = array(
-    'takegoods' => array(
-        '/library/ur_here.lbi' => 0,
-        '/library/cart.lbi' => 0,
-        '/library/category_tree.lbi' => 0,
-        '/library/history.lbi' => 0,
-    ),
     'article' => array(
         '/library/ur_here.lbi' => 0,
         '/library/search_form.lbi' => 0,
@@ -255,7 +252,6 @@ $page_libs = array(
     ),
 );
 
-/* 动态库项目 */
 $dyna_libs = array(
     'cat_goods',
     'brand_goods',
@@ -264,7 +260,7 @@ $dyna_libs = array(
 );
 
 
-function get_template_info($template_name, $template_style='')
+function get_template_info($template_name, $var_path, $template_style='')
 {
     if (empty($template_style) || $template_style == '')
     {
@@ -282,32 +278,33 @@ function get_template_info($template_name, $template_style='')
     {
         foreach ($ext AS $val)
         {
-            if (file_exists('../themes/' . $template_name . "/images/screenshot.$val"))
+            if (file_exists($var_path . '/themesmobile/' . $template_name . "/images/screenshot.$val"))
             {
-                $info['screenshot'] = '../themes/' . $template_name . "/images/screenshot.$val";
+                $info['screenshot'] = '../themesmobile/' . $template_name . "/images/screenshot.$val";
 
                 break;
             }
         }
+
     }
     else
     {
         foreach ($ext AS $val)
         {
-            if (file_exists('../themes/' . $template_name . "/images/screenshot_$template_style.$val"))
+            if (file_exists($var_path . '/themesmobile/' . $template_name . "/images/screenshot_$template_style.$val"))
             {
-                $info['screenshot'] = '../themes/' . $template_name . "/images/screenshot_$template_style.$val";
+                $info['screenshot'] = '../themesmobile/' . $template_name . "/images/screenshot_$template_style.$val";
 
                 break;
             }
         }
     }
 
-    $css_path = '../themes/' . $template_name . '/style.css';
+    $css_path = $var_path . '/themesmobile/' . $template_name . '/style.css';
     if ($template_style != '')
     {
-        $css_path = '../themes/' . $template_name . "/style_$template_style.css";
-    }
+        $css_path = $var_path . '/themesmobile/' . $template_name . "/style_$template_style.css";
+    }   
     if (file_exists($css_path) && !empty($template_name))
     {
         $arr = array_slice(file($css_path), 0, 10);
@@ -351,12 +348,10 @@ function get_template_region($tmp_name, $tmp_file, $lib=true)
 {
     global $dyna_libs;
 
-    $file = '../themes/' . $tmp_name . '/' . $tmp_file;
+    $file = $var_path . '/themesmobile/' . $tmp_name . '/' . $tmp_file;
 
-    /* 将模版文件的内容读入内存 */
     $content = file_get_contents($file);
 
-    /* 获得所有编辑区域 */
     static $regions = array();
 
     if (empty($regions))
@@ -383,7 +378,7 @@ function get_template_region($tmp_name, $tmp_file, $lib=true)
     }
 
     $libs = array();
-    /* 遍历所有编辑区 */
+    
     foreach ($regions AS $key => $val)
     {
         $matches = array();
@@ -391,7 +386,6 @@ function get_template_region($tmp_name, $tmp_file, $lib=true)
 
         if (preg_match(sprintf($pattern, $val), $content, $matches))
         {
-            /* 找出该编辑区域内所有库项目 */
             $lib_matches = array();
 
             $result      = preg_match_all('/([\s|\S]{0,20})(<!--\\s#BeginLibraryItem\\s")([^"]+)("\\s-->)/',
@@ -413,24 +407,16 @@ function get_template_region($tmp_name, $tmp_file, $lib=true)
     return $libs;
 }
 
-/**
- * 将插件library从默认模板中移动到指定模板中
- *
- * @access  public
- * @param   string  $tmp_name   模版名称
- * @param   string  $msg        如果出错，保存错误信息，否则为空
- * @return  Boolen
- */
+
 function move_plugin_library($tmp_name, &$msg)
 {
     $sql = 'SELECT code, library FROM ' . $GLOBALS['ecs']->table('plugins') . " WHERE library > ''";
     $rec = $GLOBALS['db']->query($sql);
     $return_value = true;
-    $target_dir = ROOT_PATH . 'themes/' . $tmp_name;
-    $source_dir = ROOT_PATH . 'themes/' . $GLOBALS['_CFG']['template'];
+    $target_dir = ROOT_PATH . 'themesmobile/' . $tmp_name;
+    $source_dir = ROOT_PATH . 'themesmobile/' . $GLOBALS['_CFG']['template'];
     while ($row = $GLOBALS['db']->fetchRow($rec))
     {
-        //先移动，移动失败试则拷贝
         if (!@rename($source_dir . $row['library'], $target_dir . $row['library']))
         {
             if (!@copy(ROOT_PATH . 'plugins/' . $row['code'] . '/temp' . $row['library'], $target_dir . $row['library']))
@@ -442,14 +428,7 @@ function move_plugin_library($tmp_name, &$msg)
     }
 }
 
-/**
- * 获得指定库项目在模板中的设置内容
- *
- * @access  public
- * @param   string  $lib    库项目
- * @param   array   $libs    包含设定内容的数组
- * @return  void
- */
+
 function get_setted($lib, &$arr)
 {
     $options = array('region' => '', 'sort_order' => 0, 'display' => 0);
@@ -469,28 +448,21 @@ function get_setted($lib, &$arr)
     return $options;
 }
 
-/**
- * 从相应模板xml文件中获得指定模板文件中的可编辑区信息
- *
- * @access  public
- * @param   string  $curr_template    当前模板文件名
- * @param   array   $curr_page_libs   缺少xml文件时的默认编辑区信息数组
- * @return  array   $edit_libs        返回可编辑的库文件数组
- */
+
 function get_editable_libs($curr_template, $curr_page_libs)
 {
     global $_CFG;
     $vals = array();
     $edit_libs = array();
 
-    if ($xml_content = @file_get_contents(ROOT_PATH . 'themes/' . $_CFG['template'] . '/libs.xml'))
+    if ($xml_content = @file_get_contents(ROOT_PATH . 'themesmobile/' . $_CFG['template'] . '/libs.xml'))
     {
-        $p = xml_parser_create();                                                   //把xml解析到数组
+        $p = xml_parser_create();                                                   
         xml_parse_into_struct($p,$xml_content,$vals,$index);
         xml_parser_free($p);
 
         $i = 0;
-        for (; $i < sizeof($vals); $i++)                                      //找到相应模板文件的位置
+        for (; $i < sizeof($vals); $i++)                                      
         {
             if ($vals[$i]['tag'] == 'FILE' && isset($vals[$i]['attributes']))
             {
@@ -502,7 +474,7 @@ function get_editable_libs($curr_template, $curr_page_libs)
 
         }
 
-        while ($vals[++$i]['tag'] != 'FILE' || !isset($vals[$i]['attributes']))     //读出可编辑区库文件名称，放到一个数组中
+        while ($vals[++$i]['tag'] != 'FILE' || !isset($vals[$i]['attributes']))     
         {
             if ($vals[$i]['tag'] == 'LIB')
             {
@@ -513,4 +485,5 @@ function get_editable_libs($curr_template, $curr_page_libs)
 
     return $edit_libs;
 }
+
 ?>

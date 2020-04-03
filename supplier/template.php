@@ -7,18 +7,14 @@ $act = empty($_REQUEST['act'])?'list':trim($_REQUEST['act']);
 
 require_once('includes/lib_template.php');
 
-/*------------------------------------------------------ */
-//-- 模版列表
-/*------------------------------------------------------ */
+
 if ($_REQUEST['act'] == 'list')
 {
     admin_priv('template_select');
 
-    /* 获得当前的模版的信息 */
     $curr_template = $_CFG['template'];
     $curr_style = $_CFG['stylename'];
 
-    /* 获得可用的模版 */
     $available_templates = array();
     $template_dir        = @opendir($var_path . 'themesmobile/');
     
@@ -31,9 +27,6 @@ if ($_REQUEST['act'] == 'list')
     }
     @closedir($template_dir);
 
-   // echo "<pre>"; var_dump($available_templates); die();
-
-    /* 获得可用的模版的可选风格数组 */
     $templates_style = array();
     if (count($available_templates) > 0)
     {
@@ -43,16 +36,14 @@ if ($_REQUEST['act'] == 'list')
         }
     }
 
-    // echo "<pre>"; var_dump($templates_style); die('b');
-
-    /* 清除不需要的模板设置 */
-    $available_code = array();
-    $sql = "DELETE FROM ".$ecs->table('template')." WHERE 1 ";
-    foreach ($available_templates AS $tmp)
-    {
-        $sql .= " AND theme <> '".$tmp['code']."' ";
-        $available_code[] = $tmp['code'];
-    }
+    /* Backup template */
+    // $available_code = array();
+    // $sql = "DELETE FROM ".$ecs->table('template')." WHERE 1 ";
+    // foreach ($available_templates AS $tmp)
+    // {
+    //     $sql .= " AND theme <> '".$tmp['code']."' ";
+    //     $available_code[] = $tmp['code'];
+    // }
     // $tmp_bak_dir = @opendir(ROOT_PATH . 'temp/backup/library/');
     // while ($file = readdir($tmp_bak_dir))
     // {
@@ -66,14 +57,14 @@ if ($_REQUEST['act'] == 'list')
     //     }
     // }
 
-    $db->query($sql);
+    // $db->query($sql);
 
     assign_query_info();
-    // echo "<pre>"; var_dump(get_template_info($curr_template, $var_path, $curr_style)); die();
 
     $smarty->assign('ur_here',             $_LANG['template_manage']);
     $smarty->assign('curr_tpl_style', $curr_style);
     $smarty->assign('template_style', $templates_style);
+    $smarty->assign('var_path',			  $var_path);
     $smarty->assign('curr_template',       get_template_info($curr_template,$var_path,$curr_style));
     $smarty->assign('available_templates', $available_templates);
     _wap_assign_header_info($_LANG['y_307']);
@@ -81,9 +72,6 @@ if ($_REQUEST['act'] == 'list')
     _wap_display_page('templates_list.htm');
 }
 
-/*------------------------------------------------------ */
-//-- 设置模板的内容
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'setup')
 {
@@ -100,14 +88,11 @@ if ($_REQUEST['act'] == 'setup')
 
     if (empty($editable_libs))
     {
-        /* 获取数据库中数据，并跟模板中数据核对,并设置动态内容 */
-        /* 固定内容 */
         foreach ($page_libs[$curr_template] AS $val => $number_enabled)
         {
             $lib = basename(strtolower(substr($val, 0, strpos($val, '.'))));
             if (!in_array($lib, $GLOBALS['dyna_libs']))
             {
-                /* 先排除动态内容 */
                 $temp_options[$lib]            = get_setted($val, $temp_libs);
                 $temp_options[$lib]['desc']    = $_LANG['template_libs'][$lib];
                 $temp_options[$lib]['library'] = $val;
@@ -118,14 +103,11 @@ if ($_REQUEST['act'] == 'setup')
     }
     else
     {
-        /* 获取数据库中数据，并跟模板中数据核对,并设置动态内容 */
-        /* 固定内容 */
         foreach ($page_libs[$curr_template] AS $val => $number_enabled)
         {
             $lib = basename(strtolower(substr($val, 0, strpos($val, '.'))));
             if (!in_array($lib, $GLOBALS['dyna_libs']))
             {
-                /* 先排除动态内容 */
                 $temp_options[$lib]            = get_setted($val, $temp_libs);
                 $temp_options[$lib]['desc']    = $_LANG['template_libs'][$lib];
                 $temp_options[$lib]['library'] = $val;
@@ -140,7 +122,6 @@ if ($_REQUEST['act'] == 'setup')
         }
     }
 
-    /* 动态内容 */
     $cate_goods   = array();
     $brand_goods  = array();
     $cat_articles = array();
@@ -156,12 +137,10 @@ if ($_REQUEST['act'] == 'setup')
     {
         if ($row['type'] > 0)
         {
-            /* 动态内容 */
             $db_dyna_libs[$row['region']][$row['library']][] = array('id' => $row['id'], 'number' => $row['number'], 'type' => $row['type']);
         }
         else
         {
-            /* 固定内容 */
             $lib = basename(strtolower(substr($row['library'], 0, strpos($row['library'], '.'))));
             if (isset($lib))
             {
@@ -172,10 +151,8 @@ if ($_REQUEST['act'] == 'setup')
 
     foreach ($temp_libs AS $val)
     {
-        /* 对动态内容赋值 */
         if ($val['lib'] == 'cat_goods')
         {
-            /* 分类下的商品 */
             if (isset($db_dyna_libs[$val['region']][$val['library']]) && ($row = array_shift($db_dyna_libs[$val['region']][$val['library']])))
             {
                 $cate_goods[] = array('region' => $val['region'], 'sort_order' => $val['sort_order'], 'number' => $row['number'], 'cat_id' => $row['id'], 'cats'=>cat_list(0, $row['id']));
@@ -188,7 +165,6 @@ if ($_REQUEST['act'] == 'setup')
 
         elseif ($val['lib'] == 'brand_goods')
         {
-            /* 品牌下的商品 */
             if (isset($db_dyna_libs[$val['region']][$val['library']]) && ($row = array_shift($db_dyna_libs[$val['region']][$val['library']])))
             {
                 $brand_goods[] = array('region' => $val['region'], 'sort_order' => $val['sort_order'], 'number' => $row['number'], 'brand' => $row['id']);
@@ -199,7 +175,6 @@ if ($_REQUEST['act'] == 'setup')
             }
         }
 
-        /* 文章列表 */
         elseif ($val['lib'] == 'cat_articles')
         {
             if (isset($db_dyna_libs[$val['region']][$val['library']]) && ($row = array_shift($db_dyna_libs[$val['region']][$val['library']])))
@@ -212,7 +187,6 @@ if ($_REQUEST['act'] == 'setup')
             }
         }
 
-        /* 广告位 */
         elseif ($val['lib'] == 'ad_position')
         {
             if (isset($db_dyna_libs[$val['region']][$val['library']]) && ($row = array_shift($db_dyna_libs[$val['region']][$val['library']])))
@@ -235,6 +209,7 @@ if ($_REQUEST['act'] == 'setup')
     $smarty->assign('brand_goods',        $brand_goods);
     $smarty->assign('cat_articles',       $cat_articles);
     $smarty->assign('ad_positions',       $ad_positions);
+    $smarty->assign('var_path',			  $var_path);
     $smarty->assign('arr_cates',          cat_list(0, 0, true));
     $smarty->assign('arr_brands',         get_brand_list());
     $smarty->assign('arr_article_cats',   article_cat_list(0, 0, true));
@@ -242,9 +217,6 @@ if ($_REQUEST['act'] == 'setup')
     $smarty->display('template_setup.htm');
 }
 
-/*------------------------------------------------------ */
-//-- 提交模板内容设置
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'setting')
 {
@@ -253,7 +225,6 @@ if ($_REQUEST['act'] == 'setting')
     $curr_template = $_CFG['template'];
     $db->query("DELETE FROM " .$ecs->table('template'). " WHERE remarks = '' AND filename = '$_POST[template_file]' AND theme = '$curr_template'");
 
-    /* 先处理固定内容 */
     foreach ($_POST['regions'] AS $key => $val)
     {
         $number = isset($_POST['number'][$key]) ? intval($_POST['number'][$key]) : 0;
@@ -267,7 +238,6 @@ if ($_REQUEST['act'] == 'setting')
         }
     }
 
-    /* 分类的商品 */
     if (isset($_POST['regions']['cat_goods']))
     {
         foreach ($_POST['regions']['cat_goods'] AS $key => $val)
@@ -287,7 +257,6 @@ if ($_REQUEST['act'] == 'setting')
         }
     }
 
-    /* 品牌的商品 */
     if (isset($_POST['regions']['brand_goods']))
     {
         foreach ($_POST['regions']['brand_goods'] AS $key => $val)
@@ -307,7 +276,6 @@ if ($_REQUEST['act'] == 'setting')
         }
     }
 
-    /* 文章列表 */
     if (isset($_POST['regions']['cat_articles']))
     {
         foreach ($_POST['regions']['cat_articles'] AS $key => $val)
@@ -327,7 +295,6 @@ if ($_REQUEST['act'] == 'setting')
         }
     }
 
-    /* 广告位 */
     if (isset($_POST['regions']['ad_position']))
     {
         foreach ($_POST['regions']['ad_position'] AS $key => $val)
@@ -347,7 +314,6 @@ if ($_REQUEST['act'] == 'setting')
         }
     }
 
-    /* 对提交内容进行处理 */
     $post_regions = array();
     foreach ($_POST['regions'] AS $key => $val)
     {
@@ -423,10 +389,8 @@ if ($_REQUEST['act'] == 'setting')
         }
     }
 
-    /* 排序 */
     usort($post_regions, "array_sort");
 
-    /* 修改模板文件 */
     $template_file    = '../themes/' . $curr_template . '/' . $_POST['template_file'] . '.dwt';
     $template_content = file_get_contents($template_file);
     $template_content = str_replace("\xEF\xBB\xBF", '', $template_content);
@@ -439,7 +403,7 @@ if ($_REQUEST['act'] == 'setting')
 
     foreach ($org_regions AS $region)
     {
-        $region_content = ''; // 获取当前区域内容
+        $region_content = '';
         foreach ($post_regions AS $lib)
         {
             if ($lib['region'] == $region)
@@ -455,13 +419,11 @@ if ($_REQUEST['act'] == 'setting')
             }
         }
 
-        /* 替换原来区域内容 */
         $template_content = preg_replace(sprintf($pattern, $region), sprintf($replacement , $region_content), $template_content);
     }
 
     if (file_put_contents($template_file, $template_content))
     {
-        //clear_tpl_files(false, '.dwt.php'); // 清除对应的编译文件
         clear_cache_files();
         $lnk[] = array('text' => $_LANG['go_back'], 'href'=>'template.php?act=setup&template_file=' .$_POST['template_file']);
         sys_msg($_LANG['setup_success'], 0, $lnk);
@@ -472,20 +434,15 @@ if ($_REQUEST['act'] == 'setting')
     }
 }
 
-/*------------------------------------------------------ */
-//-- 管理库项目
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'library')
 {
     admin_priv('library_manage');
 
-    /* 包含插件语言项 */
     $sql = "SELECT code FROM ".$ecs->table('plugins');
     $rs = $db->query($sql);
     while ($row = $db->FetchRow($rs))
     {
-        /* 取得语言项 */
         if (file_exists(ROOT_PATH . 'plugins/'.$row['code'].'/languages/common_'.$_CFG['lang'].'.php'))
         {
             include_once(ROOT_PATH . 'plugins/'.$row['code'].'/languages/common_'.$_CFG['lang'].'.php');
@@ -525,26 +482,21 @@ if ($_REQUEST['act'] == 'library')
     $smarty->display('template_library.htm');
 }
 
-/*------------------------------------------------------ */
-//-- 安装模版
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'install')
 {
-    check_authz_json('backup_setting');
-
-    $tpl_name = trim($_GET['tpl_name']);
+	$tpl_name = trim($_GET['tpl_name']);
     $tpl_fg=0;
     $tpl_fg = trim($_GET['tpl_fg']);
 
-    $sql = "UPDATE " .$GLOBALS['ecs']->table('shop_config'). " SET value = '$tpl_name' WHERE code = 'template'";
+    $sql = "UPDATE " .$GLOBALS['ecs']->table('supplier_shop_config'). " SET value = '$tpl_name' WHERE code = 'template' AND supplier_id=".$_SESSION['supplier_id'];
     $step_one = $db->query($sql, 'SILENT');
-    $sql = "UPDATE " .$GLOBALS['ecs']->table('shop_config'). " SET value = '$tpl_fg' WHERE code = 'stylename'";
+    $sql = "UPDATE " .$GLOBALS['ecs']->table('supplier_shop_config'). " SET value = '$tpl_fg' WHERE code = 'stylename' AND supplier_id=".$_SESSION['supplier_id'];
     $step_two = $db->query($sql, 'SILENT');
 
     if ($step_one && $step_two)
     {
-        clear_all_files(); //清除模板编译文件
+        clear_all_files(); 
 
         $error_msg = '';
         if (move_plugin_library($tpl_name, $error_msg))
@@ -553,7 +505,7 @@ if ($_REQUEST['act'] == 'install')
         }
         else
         {
-            make_json_result(read_style_and_tpl($tpl_name, $tpl_fg), $_LANG['install_template_success']);
+            make_json_result(read_style_and_tpl($tpl_name, $_GET['var_path'], $tpl_fg), $_LANG['y_313']);
         }
     }
     else
@@ -562,9 +514,6 @@ if ($_REQUEST['act'] == 'install')
     }
 }
 
-/*------------------------------------------------------ */
-//-- 备份模版
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'backup')
 {
@@ -587,9 +536,6 @@ if ($_REQUEST['act'] == 'backup')
     }
 }
 
-/*------------------------------------------------------ */
-//-- 载入指定库项目的内容
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'load_library')
 {
@@ -599,9 +545,6 @@ if ($_REQUEST['act'] == 'load_library')
     make_json_result($library['html'], $message);
 }
 
-/*------------------------------------------------------ */
-//-- 更新库项目内容
-/*------------------------------------------------------ */
 
 if ($_REQUEST['act'] == 'update_library')
 {
@@ -609,7 +552,7 @@ if ($_REQUEST['act'] == 'update_library')
 
     $html = stripslashes(json_str_iconv($_POST['html']));
     $lib_file = '../themes/' . $_CFG['template'] . '/library/' . $_POST['lib'] . '.lbi';
-    $lib_file = str_replace("0xa", '', $lib_file); // 过滤 0xa 非法字符
+    $lib_file = str_replace("0xa", '', $lib_file); 
 
     $org_html = str_replace("\xEF\xBB\xBF", '', file_get_contents($lib_file));
 
@@ -625,16 +568,14 @@ if ($_REQUEST['act'] == 'update_library')
     }
 }
 
-/*------------------------------------------------------ */
-//-- 还原库项目
-/*------------------------------------------------------ */
+
 if ($_REQUEST['act'] == 'restore_library')
 {
     $lib_name   = trim($_GET['lib']);
     $lib_file   = '../themes/' . $_CFG['template'] . '/library/' . $lib_name . '.lbi';
-    $lib_file   = str_replace("0xa", '', $lib_file); // 过滤 0xa 非法字符
+    $lib_file   = str_replace("0xa", '', $lib_file); 
     $lib_backup = '../temp/backup/library/' . $_CFG['template'] . '-' . $lib_name . '.lbi';
-    $lib_backup = str_replace("0xa", '', $lib_backup); // 过滤 0xa 非法字符
+    $lib_backup = str_replace("0xa", '', $lib_backup); 
 
     if (file_exists($lib_backup) && filemtime($lib_backup) >= filemtime($lib_file))
     {
@@ -647,9 +588,6 @@ if ($_REQUEST['act'] == 'restore_library')
 }
 
 
-/*------------------------------------------------------ */
-//-- 布局备份
-/*------------------------------------------------------ */
 if ($_REQUEST['act'] == 'backup_setting')
 {
     admin_priv('backup_setting');
@@ -734,11 +672,8 @@ if ($_REQUEST['act'] == 'restore_backup')
             foreach ($arr as $val)
             {
                 $lib_content     = file_get_contents(ROOT_PATH . 'themesmobile/' . $_CFG['template'] . $val['library']);
-                //去除lib头部
                 $lib_content     = preg_replace('/<meta\\shttp-equiv=["|\']Content-Type["|\']\\scontent=["|\']text\/html;\\scharset=utf-8"|\']>/i', '', $lib_content);
-                //去除utf bom
                 $lib_content     = str_replace("\xEF\xBB\xBF", '', $lib_content);
-                //加入dw 标识
                 $lib_content     = '<!-- #BeginLibraryItem "' . $val['library'] . "\" -->\r\n" . $lib_content . "\r\n" . '<!-- #EndLibraryItem -->';
                 if (isset($data[$val['filename']][$val['region']]))
                 {
@@ -760,7 +695,6 @@ if ($_REQUEST['act'] == 'restore_backup')
                 file_put_contents($temple_file, $template_content);
             }
 
-            /* 文件修改成功后，恢复数据库 */
             $sql = "DELETE FROM " .$ecs->table('template').
                    " WHERE remarks = '' AND  theme = '" . $_CFG['template'] . "'".
                    " AND " . db_create_in(array_keys($data), 'filename');
@@ -790,17 +724,10 @@ function array_sort($a, $b)
     }
 }
 
-/**
- * 载入库项目内容
- *
- * @access  public
- * @param   string  $curr_template  模版名称
- * @param   string  $lib_name       库项目名称
- * @return  array
- */
+
 function load_library($curr_template, $lib_name)
 {
-    $lib_name = str_replace("0xa", '', $lib_name); // 过滤 0xa 非法字符
+    $lib_name = str_replace("0xa", '', $lib_name); 
 
     $lib_file    = '../themes/' . $curr_template . '/library/' . $lib_name . '.lbi';
     $arr['mark'] = file_mode_info($lib_file);
@@ -809,14 +736,7 @@ function load_library($curr_template, $lib_name)
     return $arr;
 }
 
-/**
- * 读取模板风格列表
- *
- * @access  public
- * @param   string  $tpl_name       模版名称
- * @param   int     $flag           1，AJAX数据；2，Array
- * @return
- */
+
 function read_tpl_style($tpl_name, $flag=1, $var_path)
 {
     if (empty($tpl_name) && $flag == 1)
@@ -824,7 +744,6 @@ function read_tpl_style($tpl_name, $flag=1, $var_path)
         return 0;
     }
 
-    /* 获得可用的模版 */
     $temp = '';
     $start = 0;
     $available_templates = array();
@@ -836,7 +755,7 @@ function read_tpl_style($tpl_name, $flag=1, $var_path)
     {
         if ($file != '.' && $file != '..' && is_file($dir . $file) && $file != '.svn' && $file != 'index.htm')
         {
-            if (preg_match("/^(style|style_)(.*)*/i", $file)) // 取模板风格缩略图
+            if (preg_match("/^(style|style_)(.*)*/i", $file)) 
             {
                 $start = strpos($file, '.');
                 $temp = substr($file, 0, $start);
@@ -887,18 +806,11 @@ function read_tpl_style($tpl_name, $flag=1, $var_path)
     }
 }
 
-/**
- * 读取当前风格信息与当前模板风格列表
- *
- * @access  public
- * @param   string  $tpl_name       模版名称
- * @param   string  $tpl_style 模版风格名
- * @return
- */
-function read_style_and_tpl($tpl_name, $tpl_style)
+
+function read_style_and_tpl($tpl_name, $var_path, $tpl_style)
 {
     $style_info = array();
-    $style_info = get_template_info($tpl_name, '', $tpl_style);
+    $style_info = get_template_info($tpl_name, $var_path, $tpl_style);
 
     $tpl_style_info = array();
     $tpl_style_info = read_tpl_style($tpl_name, 2, $var_path);
@@ -924,4 +836,5 @@ function read_style_and_tpl($tpl_name, $tpl_style)
 
     return $style_info;
 }
+
 ?>
