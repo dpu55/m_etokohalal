@@ -20,9 +20,9 @@ require(ROOT_PATH . 'includes/lib_order.php');
 require(ROOT_PATH . 'includes/lib_payment.php');
 
 $flow_type = 0;
-    $_LANG['gram'] = $_LANG['gram'];
-    $_LANG['kilogram'] = $_LANG['kilogram'];
-    $tips = $_LANG['m_647'];
+$_LANG['gram'] = $_LANG['gram'];
+$_LANG['kilogram'] = $_LANG['kilogram'];
+$tips = $_LANG['m_647'];
 
 if ($_SESSION['user_id'] > 0)
 {

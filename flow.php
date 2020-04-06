@@ -2388,20 +2388,26 @@ elseif ($_REQUEST['step'] == 'done')
 	        $order['extension_id'] = 0;
 	    }
 
-		/*检查配送方式是否选择*/
-            // 如果是虚拟商品不需要选择配送方式
+		/*Cek metode pengiriman*/           
         if( $_SESSION['extension_code'] != 'virtual_good'){
-	    if(!isset($_POST['pay_ship'][$ckey])){
-	    	show_message($_LANG['m_622']);
-	    }else{
-	    	$shipid = $db->getOne("select shipping_id from ".$ecs->table('shipping')." where shipping_id=".$_POST['pay_ship'][$ckey]." and supplier_id=".$ckey);
-	    	if($shipid){
-	    		$order['shipping_id'] = intval($shipid);
-	    	}else{
-	    		show_message($_LANG['m_623']);
-	    	}
-	    }
+		    if(!isset($_POST['pay_ship'][$ckey])){
+		    	show_message($_LANG['m_622']);
+		    }else{
+		    	$shipid = $db->getOne("select shipping_id from ".$ecs->table('shipping')." where shipping_id=".$_POST['pay_ship'][$ckey]." and supplier_id=".$ckey);
+		    	if($shipid){
+		    		$order['shipping_id'] = intval($shipid);
+		    	}else{
+		    		$shipid2 = $db->getOne("select shipping_id from ".$ecs->table('shipping')." where shipping_id=".$_POST['pay_ship'][$ckey]." and supplier_id=0");
+		    		// show_message($_LANG['m_623']);
+		    		if($shipid2){
+			    		$order['shipping_id'] = intval($shipid2);
+			    	}else{
+			    		show_message($_LANG['m_623']);
+			    	}
+		    	}
+		    }
         }
+
 
 	    /* 检查积分余额是否合法 */
 	    $user_id = $_SESSION['user_id'];
