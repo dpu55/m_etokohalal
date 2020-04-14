@@ -57,7 +57,7 @@ function get_user_orders_1($user_id, $num = 10, $start = 0,$where='')
 				}
 				@$okgoods_time = $GLOBALS['db']->getOne("select value from " . $GLOBALS['ecs']->table('shop_config') . " where code='okgoods_time'");
 				@$row_time = $okgoods_time - (local_date('d',gmtime()) - local_date('d',$row['shipping_time']));
-                @$row['handler'] = "<strong><img src='themesmobile/68ecshopcom_mobile/images/time.png' height='30px' style='vertical-align:middle;'/>还剩" . $row_time . "天自动收货</strong><a href=\"user.php?act=affirm_received&order_id=" .$row['order_id']. "\" onclick=\"if (!confirm('".$back_info.$GLOBALS['_LANG']['confirm_received']."')) return false;\" style='display:inline-block; margin-top:12px; width:80px; height:25px; font-size:14px; line-height:25px; border:1px solid #F60; color:#fff; text-align:center;border-radius:5px; background:#F60 '>".$GLOBALS['_LANG']['received']."</a>";
+                @$row['handler'] = "<strong><img src='themesmobile/68ecshopcom_mobile/images/time.png' height='30px' style='vertical-align:middle;'/>Pengiriman otomatis selama " . $row_time . " hari tersisa</strong><a href=\"user.php?act=affirm_received&order_id=" .$row['order_id']. "\" onclick=\"if (!confirm('".$back_info.$GLOBALS['_LANG']['confirm_received']."')) return false;\" style='display:inline-block; margin-top:12px; width:80px; height:25px; font-size:14px; line-height:25px; border:1px solid #F60; color:#fff; text-align:center;border-radius:5px; background:#F60 '>".$GLOBALS['_LANG']['received']."</a>";
             }
             elseif ($row['shipping_status'] == SS_RECEIVED)
             {

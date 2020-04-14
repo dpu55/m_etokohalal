@@ -124,7 +124,7 @@ input[type="hidden" i], input[type="image" i], input[type="file" i] {
 .qb_tac { text-align: center; color: #534949; line-height: 40px; color: #999; font-size: 18px; margin-top: 20px; }
 .qb_tac img { margin-bottom: 20px; }
 .qb_gap { padding-left: 10px; padding-right: 10px; margin-bottom: 10px }
-.mod_btn { text-align: center; text-decoration: none; line-height: 45px; height: 45px; font-size: 15px; display: block; width: 100%; color: #ffffff!important; -webkit-border-radius: .3em; -moz-border-radius: .3em; -ms-border-radius: .3em; -o-border-radius: .3em; border-radius: .3em; background-color: #DD2726; }
+.mod_btn { text-align: center; text-decoration: none; line-height: 45px; height: 45px; font-size: 15px; display: block; width: 100%; color: #ffffff!important; -webkit-border-radius: 1.3em; -moz-border-radius: 1.3em; -ms-border-radius: 1.3em; -o-border-radius: 1.3em; border-radius: 1.3em; background-color: #fbc314; }
 /*
 
 收货地址页面
@@ -203,7 +203,7 @@ background: -ms-linear-gradient(top, #ededed, #f0f0f0); background: -moz-linear-
 .icon-money { background-position: 0 -76px }
 em.qxz { font-size: 14px; color: #999; margin-left: 10px; }
 .extra_info { color: #bbbbbb }
-.ct-list .price { color: #eb4d4d; }
+.ct-list .price { color: #e10000; }
 /*配件*/
 .scroll_best { text-align: center; margin: 0px 8px; }
 .scroll_best .hd { height: 20px; overflow: hidden; font-size: 0; position: absolute; width: 100%; }
@@ -264,8 +264,8 @@ em.qxz { font-size: 14px; color: #999; margin-left: 10px; }
 .order-buy .order-info .buy-nums .plus { border-left: 1px solid #c5c8cf }
 .order-buy .order-info .buy-nums .input-nums { width: 53px; height: 32px; text-align: center }
 .order-buy .order-info .subtotal { padding: 12px 0; text-align: right; font-size: 14px; border-top: 1px solid #eee; line-height:25px; }
-.order-buy .order-info .subtotal .total-text { color: #999 }
-.order-buy .order-info .subtotal .price_total { font-size: 18px; font-weight: 700; color:#ff2233 ;}
+.order-buy .order-info .subtotal .total-text { color: #333 }
+.order-buy .order-info .subtotal .price_total { font-size: 16px; font-weight: 400; color:#e10000 ;}
 .order-buy .order .b-box { padding: 16px 0 }
 .order-buy .b-box { display: -webkit-box; position: relative; padding: 16px 12px; border-top: 1px solid #eee; margin-top: -1px }
 .order-buy .b-box .title { display: inline-block }
@@ -325,7 +325,7 @@ em.qxz { font-size: 14px; color: #999; margin-left: 10px; }
 .h_title1 dd { width: 75%; float: left; overflow: hidden; font-size: 14px; color: #666; line-height: 150%; }
 .btn_orange { display: block; width: 96%; margin-left: 2%; margin-right: 2%; height: 40px; margin: auto; background: #FF2233; font-size: 16px; line-height: 40px; color: #FFF; text-align: center; border-radius: 5px; border: 0px; margin-top: 10px; margin-bottom: 10px; font-family: Roboto }
 .activity { padding: 10px 10px 10px 10px; font-size: 14px; }
-.order_total_li { border: 0; text-align: right; color: #999; padding-bottom: 20px; font-size: 14px; line-height:22px; }
+.order_total_li { border: 0; text-align: right; color: #333; padding-bottom: 20px; font-size: 14px; line-height:22px; }
 .order_total_ul { line-height: 18px; padding-top: 10px; padding-bottom: 10px; }
 .txt1 { border: 1px solid #DFDFDF; height: 18px; line-height: 18px; padding-top: 7px; padding-bottom: 7px; width: 195px; padding-left: 5px; -webkit-appearance: none; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; border-radius: 0; -webkit-rtl-ordering: logical; -webkit-user-select: text; cursor: auto; background-color: white; }
 .txt2 { border: 1px solid #DFDFDF; height: 18px; line-height: 18px; padding-top: 5px; padding-bottom: 6px; width: 195px; padding-left: 5px; -webkit-appearance: none; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; border-radius: 0; -webkit-rtl-ordering: logical; -webkit-user-select: text; cursor: auto; background-color: white; }

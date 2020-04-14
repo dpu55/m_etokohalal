@@ -61,7 +61,7 @@
 .order_list .pic strong{display:inline-block;font-size:18px; line-height:50px; color:#e41735;font-weight:normal;}
 .anniu{ height:50px; text-align:right;}
 .anniu a{ display:inline-block; margin-top:10px; width:80px; height:30px; font-size:14px; line-height:30px; background:#FF3300; color:#fff; text-align:center;border-radius:5px;}
-.anniu span{display:inline-block; margin-top:10px; width:80px; height:29px;font-size:14px; line-height:29px; border:1px solid #666; text-align:center;border-radius:5px; color:#666}
+.anniu span{display:inline-block; margin-top:10px; width:25%; height:29px;font-size:60%; line-height:29px; border:1px solid #666; text-align:center;border-radius:5px; color:#666}
 .anniu strong{ display:inline-block;margin-top:10px; height:30px; font-size:14px; line-height:30px; color:#F60; font-weight:normal; text-align:left; margin-right:10px;}
 .anniu strong img{  margin-top:-10px;}
 

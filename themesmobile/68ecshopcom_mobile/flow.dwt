@@ -370,8 +370,8 @@ else
 {else}
 <section id="cart-content">
       <div class="qb_tac" style="padding:50px 0">
-        <img src="themesmobile/68ecshopcom_mobile/images/flow/empty_cart.png" width="100" height="95">
-        <br>{$lang.m_189}</div>
+        <img src="themesmobile/68ecshopcom_mobile/images/flow/ethcart.svg" width="180px">
+        <br><span style="display:inline-block;width:50%;font-size: 120%;font-weight: bold; line-height: 1.2;">{$lang.m_189}</span></div>
       <div class="qb_gap" style="width:60%; margin:0 auto;">
         <a href="./" class="mod_btn btn_strong" >{$lang.m_190}</a>
       </div>
@@ -553,7 +553,7 @@ function close_gift(suitId){
                   <td  colspan="2"><select name="bonus[{$key}]" onchange="changeBonus(this.value,{$key})" id="ECS_BONUS_{$key}" >
                       <option value="0" {if $order.bonus_id eq 0}selected{/if}>{$lang.please_select}{$lang.m_196}</option>
                       <!-- {foreach from=$goodsinfo.redbag item=bonus} -->
-                      <option value="{$bonus.bonus_id}" {if $order.bonus_id_info[$key] eq $bonus.bonus_id}selected{/if}>{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+                      <option value="{$bonus.bonus_id}" {if $order.bonus_id_info[$key] eq $bonus.bonus_id}selected{/if}>{$bonus.type_name} [{$bonus.bonus_money_formated}]</option>
                       <!-- {/foreach} -->
                       
                     </select></td>
@@ -845,7 +845,7 @@ function close_gift(suitId){
 <div class="con-ct fo-con"> {include file='library/order_total.lbi'} </div>
 <div class="panel panel-default info-box">
     <div class="pay-btn">
-      <input onclick="return check_before_submit()" type="submit" class="sub-btn btnRadius" value="{$lang.m_180}"/>
+      <input onclick="return check_before_submit()" type="submit" class="sub-btn btnRadius" value="{$lang.m_179}"/>
       <input type="hidden" name="step" value="done"></div>
   </div>
   </div></section>
@@ -917,20 +917,11 @@ function close_gift(suitId){
                 <li style="height:auto;">{$lang.m_214}<font style="color:#ff3300;">{$split_order.sub_order_count}</font> {$lang.m_215}</li>
                   {else}
                 <li>{$lang.m_212}&nbsp;{$lang.m_213}&nbsp;{$order.shipping_name}</li>
-                {/if}
-                  {foreach from=$split_order.suborder_list item=suborder}
-                 <li >{$lang.order_number} <em>{$suborder.order_sn}</em>
-
-                </li>  
-
-        <li>
-         {$order.pay_name}:&nbsp;
-          <em>{$suborder.order_amount_formated}</em>
-        </li>
-        <li>
-          {$lang.shipping_method} 
-          <em class="price">{$order.shipping_name}</em>
-        </li>          
+        {/if}
+          {foreach from=$split_order.suborder_list item=suborder}
+                <li>{$lang.order_number}: <em style="color:blue;">{$suborder.order_sn}</em></li>  
+                <li>Bayar dengan {$order.pay_name}:&nbsp;<em style="color:blue;">{$suborder.order_amount_formated}</em></li>
+                <li>{$lang.shipping_method}: <em style="color:blue;">{$order.shipping_name}</em></li>          
           {/foreach}
       </ul>
 

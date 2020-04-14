@@ -4,7 +4,7 @@
     <!--{foreach from=$orders item=item}-->
       <div class="order_list">
         <h2> 
-          <a href="supplier.php?suppId={$item.supplier_id}"><img src="themesmobile/68ecshopcom_mobile/images/dianpu.png"><span>{$lang.m_140}{$item.shopname}</span><strong><img src="themesmobile/68ecshopcom_mobile/images/icojiantou1.png"></strong></a>
+          <a href="supplier.php?suppId={$item.supplier_id}"><img src="themesmobile/68ecshopcom_mobile/images/dianpu.png"><span>{$lang.m_140} {$item.shopname}</span><strong><img src="themesmobile/68ecshopcom_mobile/images/icojiantou1.png"></strong></a>
         </h2>
         <a href="user.php?act=order_detail&order_id={$item.order_id}">
         {foreach from=$item.goods_list item=goods name=goods}

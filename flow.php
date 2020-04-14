@@ -1648,7 +1648,7 @@ elseif ($_REQUEST['step'] == 'select_payment')
         $order['pay_id'] = intval($_REQUEST['payment']);
         $payment_info = payment_info($order['pay_id']);
         $result['pay_code'] = $payment_info['pay_code'];
-	$order['pay_code'] = $payment_info['pay_code'];
+	    $order['pay_code'] = $payment_info['pay_code'];
         $result['pay_name'] = $payment_info['pay_name'];
 
         /* 保存 session */
@@ -1657,7 +1657,7 @@ elseif ($_REQUEST['step'] == 'select_payment')
         /* 计算订单的费用 */
         $total = order_fee($order, $cart_goods, $consignee);
         $smarty->assign('total', $total);
-	$smarty->assign('real_goods_count', $total['real_goods_count']);
+	    $smarty->assign('real_goods_count', $total['real_goods_count']);
 
         /* 取得可以得到的积分和红包 */
         $smarty->assign('total_integral', cart_amount(false, $flow_type) - $total['bonus'] - $total['integral_money']);

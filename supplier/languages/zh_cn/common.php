@@ -100,7 +100,7 @@ $_LANG['update_sort'] = 'Perbarui jenis';
 $_LANG['modify_failure'] = 'Ubah Gagal!';
 $_LANG['attradd_succed'] = 'Proses Berhasil!';
 $_LANG['todolist'] = 'Notepad';
-$_LANG['n_a'] = 'T / A';
+$_LANG['n_a'] = 'N/A';
 
 /* 提示 */
 $_LANG['sys']['wrong'] = 'Kesalahan:';
@@ -135,7 +135,7 @@ $_LANG['page_last'] = 'terakhir';
 $_LANG['admin_home'] = 'awal';
 
 /* 重量 */
-$_LANG['gram'] = ' gram';
+$_LANG['gram'] = ' gr';
 $_LANG['kilogram'] = ' kg';
 
 /* 菜单分类部分 */
@@ -486,11 +486,11 @@ $_LANG['update_pwd_failed'] = 'Gagal mengubah kata sandi baru!';
 $_LANG['send_success'] = 'Email telah dikirim untuk mereset kata sandi Anda:';
 
 $_LANG['y_1'] = 'Kesalahan parameter!';
-$_LANG['y_2'] = 'Pulihkan Kata Sandi-Langkah Pertama';
+$_LANG['y_2'] = 'Pulihkan Kata Sandi - Langkah Pertama';
 $_LANG['y_3'] = 'Nama pengguna dan email tidak boleh kosong!';
 $_LANG['y_4'] = 'Administrator tidak ada!';
 $_LANG['y_5'] = 'Nama pengguna dan email tidak cocok!';
-$_LANG['y_6'] = 'Pulihkan Kata Sandi-Langkah 2';
+$_LANG['y_6'] = 'Pulihkan Kata Sandi - Langkah 2';
 $_LANG['y_7'] = 'Kata sandi tidak boleh kosong!';
 $_LANG['y_8'] = 'Tautan telah kedaluwarsa!';
 $_LANG['y_9'] = 'Pesan pesan';
@@ -624,7 +624,7 @@ $_LANG['y_136'] = 'Tidak menemukan faktur apa pun!';
 $_LANG['y_137'] = 'Email tidak boleh kosong';
 $_LANG['y_138'] = 'Nama pengguna tidak boleh kosong';
 $_LANG['y_139'] = 'Username';
-$_LANG['y_140'] = 'Silakan masukkan email Anda';
+$_LANG['y_140'] = 'Email';
 $_LANG['y_141'] = 'Silakan masukkan kata sandi baru';
 $_LANG['y_142'] = '& Nbs';
 $_LANG['y_143'] = 'Silakan masukkan nama produk';

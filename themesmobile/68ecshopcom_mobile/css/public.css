@@ -64,7 +64,8 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 
 /*底部模块*/ 
 .footer { background-color: #F8F8F8; text-align: center; width:100%; overflow:hidden; padding-bottom:10px; padding-top:10px;}
-.footer a { display: inline-block; /*padding: 0 1em*/ }
+.footer a { display: inline-block; /*padding: 0 1em*/; font-size: 12px; color: #333; }
+.footer a:visited {color:#333;}
 .footer span { color: #82858A; }
 .footer .tip { padding: 0 0 1.5em }
 .footer .tip span { font-size: 1.2em }
@@ -82,7 +83,7 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 
 .footer .gl { color: #c30e0e }
 .footer p { text-align: center; line-height: 20px; }
-.mf_o4 { color: #a2a2a2 ;font-size: 10px;}
+.mf_o4 { color: #333 ;font-size: 12px;}
 
 /*返回顶部*/
 .gotop{ display:block; width:40px; height:40px; position:fixed; bottom:70px; right:8px;background-color:rgba(243,241,241,0.5); border:1px solid #CCC; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }

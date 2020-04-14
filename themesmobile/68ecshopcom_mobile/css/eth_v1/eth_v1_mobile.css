@@ -2603,12 +2603,16 @@
   padding: 12px 20px;
   font-size: 12px;
   line-height: 16px;
+  display: grid;
+  grid-template-columns: 60% auto;
 }
 
 .eth_v1_mobile.page-flow .order-buy .order_total_ul .subtotal {
   padding: 12px 20px;
   line-height: 20px;
   font-size: 12px;
+  display: grid;
+  grid-template-columns: 60% auto;
 }
 
 .eth_v1_mobile.page-flow .order-buy #pay_div .title {

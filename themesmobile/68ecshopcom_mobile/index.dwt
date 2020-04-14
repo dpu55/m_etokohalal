@@ -383,8 +383,14 @@ $(function(){
       </div>
   </div>
 
-<!--首页精品推荐动态加载end-->
-<footer> <!-- #BeginLibraryItem "/library/page_footer.lbi" --> <!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/footer_nav.lbi" --> <!-- #EndLibraryItem --> </footer>
+
+
+ <!--首页精品推荐动态加载end-->
+<footer>
+  <!-- #BeginLibraryItem "/library/benefit.lbi" --> <!-- #EndLibraryItem --> 
+  <!-- #BeginLibraryItem "/library/page_footer.lbi" --> <!-- #EndLibraryItem --> 
+  <!-- #BeginLibraryItem "/library/footer_nav.lbi" --> <!-- #EndLibraryItem --> 
+</footer>
 
 <!---返回顶部-->
 <script>
@@ -469,7 +475,8 @@ function selectPage(sel)
 {/literal}
 
 </script>
-	<script type="text/javascript">
+
+<script type="text/javascript">
 {foreach from=$lang.compare_js item=item key=key}
 {if $key neq 'button_compare'}
 var {$key} = "{$item}";
