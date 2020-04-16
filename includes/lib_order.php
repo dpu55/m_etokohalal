@@ -474,9 +474,33 @@ function order_info($order_id, $order_sn = '')
     }
     $order = $GLOBALS['db']->getRow($sql);
 
-    /* 格式化金额字段 */
+    /* Cek jika ada order */
+    $order['cnote_no']              = "";
+    $order['cnote_pod_status']      = "";
+    $order['cnote_keterangan']      = "";
+    $order['ship_history']          = "";
     if ($order)
     {
+        $datax = get_status_shipping($order['invoice_no']);
+        if($datax) {
+            $order['cnote_no']              = $datax->cnote->cnote_no;
+            $order['cnote_pod_receiver']    = $datax->cnote->cnote_pod_receiver;
+            $order['cnote_receiver_name']   = $datax->cnote->cnote_receiver_name;
+            $order['cnote_pod_date']        = $datax->cnote->cnote_pod_date;
+            $order['cnote_pod_status']      = $datax->cnote->pod_status;
+            $order['cnote_keterangan']      = $datax->cnote->keterangan;
+
+            $order['ship_history']          = $datax->history;
+
+            $ul = "<br>";
+            foreach ($order['ship_history'] as $xx) {
+                # code...
+                $ul .= '- '.strtolower(ucwords($xx->date.' : '.$xx->desc)).'<br>';
+            }
+
+            $order['ship_history']          =  $ul;
+        }
+
         $order['formated_goods_amount']   = price_format($order['goods_amount'], false);
         $order['formated_discount']       = price_format($order['discount'], false);
         $order['formated_tax']            = price_format($order['tax'], false);
@@ -497,6 +521,39 @@ function order_info($order_id, $order_sn = '')
 
     return $order;
 }
+
+
+/**
+ * TRacking order customer
+ * @param   no resi diambil dari ecs_order_action field action_note
+ * @return  bool
+ */
+function get_status_shipping($no_resi)
+{
+    $username   = 'TOLAL';
+    $apiKey     = '97ecfbe13dd639b79de4559c0a9e14db';
+
+    $data = "username=".$username."&api_key=".$apiKey;
+    $ch = curl_init();
+
+    // curl_setopt($ch, CURLOPT_URL,"http://apiv2.jne.co.id:10102/tracing/api/list/v1/cnote/".$no_resi);
+    curl_setopt($ch, CURLOPT_URL,"http://apiv2.jne.co.id:10101/tracing/api/list/cnoteretails/cnote/".$no_resi);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded','Accept: application/json','User-Agent: Java-Request'));
+
+    // receive server response ...
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $server_output = curl_exec ($ch);
+    $result= json_decode($server_output);
+    curl_close ($ch);
+
+    return $result;
+    
+    // print "<pre>";
+    // var_dump($result); die("http://apiv2.jne.co.id:10101/tracing/api/list/cnoteretails/cnote/".$no_resi);  
+}
+
 
 /**
  * 判断订单是否已完成
