@@ -185,8 +185,43 @@
             </ul>
        </div>      
 </section>
+<!--底部按钮--> 
+
+<!--pengiriman-->  
+<div class="ord_list1">
+	<h2>{$lang.shipping_info}</h2>
+	<div class="order_list">
+		<div class="navContent"> 
+			{if $order.invoice_no}
+			<ul>
+				<li class="first">{$lang.cnote_no}: {$order.invoice_no}</li>
+				<li>{$lang.cnote_pod_receiver}: {$order.cnote_pod_receiver} / {$order.cnote_receiver_name}</li>
+				<li>{$lang.cnote_keterangan}: {$order.cnote_keterangan}</li>
+				<li>{$lang.cnote_pod_date}: {$order.cnote_pod_date}</li>
+				<li>{$lang.cnote_pod_status}: {$order.cnote_pod_status}</li>
+			</ul>
+			{else}
+			<ul>
+				<li>{$lang.err_tracking}</li>
+			</ul>
+			{/if}
+
+			<!-- start histori pengiriman -->
+			{if $order.ship_history}
+			<ul>
+			<li>{$lang.ship_history} :
+				{$order.ship_history}
+			</li>
+			</ul>
+			{/if}
+			<!-- end histori pengiriman -->
+       </div>      
+	</div>
+</div>
+<!-- end pengiriman -->
+			
 <!--底部按钮-->
-<div style=" height:50px;"></div> 
+<div style=" height:50px;"></div>
 
 {if $order.order_status neq $_LANG['m_129']}
 <div class="detail_dowm">
