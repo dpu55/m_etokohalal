@@ -2761,6 +2761,29 @@ function quick_delivery($order_id,$invoice_no,$action_note='Wap端一键发货')
     $arr['invoice_no']          = trim($order['invoice_no'] . '<br>' . $invoice_no, '<br>');
     update_order($order_id, $arr);
 
+    // Proses pendaftaran AWB ke JNE 
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => "http://apiv2.jne.co.id:10101/cnoteretails/",
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => "",
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => "POST",
+      CURLOPT_POSTFIELDS => "username=TOLAL&api_key=97ecfbe13dd639b79de4559c0a9e14db&ORDER_ID=".$order['order_id']."&AWB_NUMBER=".$order['invoice_no'],
+      CURLOPT_HTTPHEADER => array(
+        "Content-Type:  application/x-www-form-urlencoded",
+        "Accept:  application/json",
+        "User-Agent:  Java-Request"
+      ),
+    ));
+
+    $response = curl_exec($curl);
+    curl_close($curl);
+    // echo $response;
+
     /* 发货单发货记录log */
     order_action($order['order_sn'], OS_CONFIRMED, $shipping_status, $order['pay_status'], $action_note, null, 1);
     /* 如果当前订单已经全部发货 */
@@ -2801,13 +2824,13 @@ function quick_delivery($order_id,$invoice_no,$action_note='Wap端一键发货')
             }
         }
 
-        /* 如果需要，发短信 */
-        if ($GLOBALS['_CFG']['sms_order_shipped'] == '1' && $order['mobile'] != '')
-        {
-            include_once('../send.php');
-				$content = $_LANG['y_65'].' '.$order['order_sn'].' '.$_LANG['y_66'].' '.$order['consignee'].$_LANG['y_67'].$order['address'].$_LANG['y_68'].'【'.$GLOBALS['_CFG']['shop_name'].'】';
-				sendSMS($order['mobile'],$content);
-        }
+        /* notifikasi pengiriman via sms */
+    //     if ($GLOBALS['_CFG']['sms_order_shipped'] == '1' && $order['mobile'] != '')
+    //     {
+    //         include_once('../send.php');
+				// $content = $_LANG['y_65'].' '.$order['order_sn'].' '.$_LANG['y_66'].' '.$order['consignee'].$_LANG['y_67'].$order['address'].$_LANG['y_68'].'【'.$GLOBALS['_CFG']['shop_name'].'】';
+				// sendSMS($order['mobile'],$content);
+    //     }
     }
 
     /* 清除缓存 */
