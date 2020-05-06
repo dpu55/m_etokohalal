@@ -30,7 +30,17 @@ elseif($act == 'edit')
 
 elseif($act == 'delete')
 {
-    print $_REQUEST['goods_id'];
+    global $ecs,$db;
+    if($act == 'delete') {
+        $goods_id = $_REQUEST['goods_id'];
+        $sql = "DELETE FROM " . $ecs->table('goods') . " WHERE goods_id = '" .$goods_id. "'";
+        $db->query($sql);
+
+        $sql = "DELETE FROM " . $ecs->table('goods_gallery') . " WHERE goods_id = '" .$goods_id. "'";
+        $db->query($sql);    
+    }
+    
+    header("Location: goods.php?act=list");
 }
 
 // ambil produk berdasarkan produk ID
