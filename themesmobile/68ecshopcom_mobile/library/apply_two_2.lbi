@@ -1,8 +1,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {insert_scripts files='utils.js'}
 <div class="headerLayout">
+  <div class="wrapper">
     <div class="headerCon ">
-      <h1 id="mallLogo" style="padding-top:10px;"> <a href="index.php" class="header-logo"><img src="../images/header/logo.jpg" /></a></h1>
+      <!-- <h1 id="mallLogo" style="padding-top:10px;"> <a href="index.php" class="header-logo"><img src="../images/header/logo.jpg" /></a></h1> -->
       <div class="header-extra">
        	 <div class="panel-heading">
             <div class="more">
@@ -37,6 +38,8 @@
       </div>
     </div>
   </div>
+</div>
+<div class="wrapper">
 <div class="store-joinin-apply">
   <div class="main">
 
@@ -51,36 +54,36 @@
       </thead>
       <tbody>
         <tr>
-          <th class="w150"><i>*</i>银行开户名：</th>
+          <th class="w150"><i>*</i>{$lang.m_f_560}</th>
           <td><input name="bank_account_name" id="bank_account_name" type="text" class="w200" value="{$supplier.bank_account_name}">
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>公司银行账号：</th>
+          <th><i>*</i>{$lang.m_f_561}</th>
           <td><input name="bank_account_number" id="bank_account_number" type="text" class="w200" value="{$supplier.bank_account_number}">
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>开户银行支行名称：</th>
+          <th><i>*</i>{$lang.apply_81}</th>
           <td><input name="bank_name" type="text" id="bank_name" class="w200" value="{$supplier.bank_name}">
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>支行联行号：</th>
+          <th><i>*</i>{$lang.m_f_563}</th>
           <td><input name="bank_code" type="text" id="bank_code" class="w200"  value="{$supplier.bank_code}">
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>开户银行许可证电子版：</th>
+          <th><i>*</i>{$lang.apply_82}</th>
           <td><input name="bank_licence_electronic" type="file">
               {if $supplier.bank_licence_electronic}<br>
               <img src="data/supplier/{$supplier.bank_licence_electronic}" width=80 height=80 id='ble'>{/if}
-            <span class="block">请确保图片清晰，文字可辨并有清晰的红色公章。</span></td>
+            <span class="block">{$lang.apply_83}</span></td>
         </tr>
         <tr>
           <th></th>
           <td><input id="is_settlement_account" name="is_settlement_account" type="checkbox" onclick="cin()">
-            <label for="is_settlement_account">此账号为结算账号</label></td>
+            <label for="is_settlement_account">{$lang.apply_84}</label></td>
         </tr>
       </tbody>
       <tfoot>
@@ -93,27 +96,27 @@
       <table border="0" cellpadding="0" cellspacing="0" class="all">
         <thead>
           <tr>
-            <th colspan="20" align="left">结算账号信息</th>
+            <th colspan="20" align="left">{$lang.apply_85}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th class="w150"><i>*</i>银行开户名：</th>
+            <th class="w150"><i>*</i>{$lang.m_f_560}</th>
             <td><input id="settlement_bank_account_name" name="settlement_bank_account_name" type="text" class="w200" value="{$supplier.settlement_bank_account_name}">
               <span></span></td>
           </tr>
           <tr>
-            <th><i>*</i>公司银行账号：</th>
+            <th><i>*</i>{$lang.m_f_561}</th>
             <td><input id="settlement_bank_account_number" name="settlement_bank_account_number" type="text" class="w200" value="{$supplier.settlement_bank_account_number}">
               <span></span></td>
           </tr>
           <tr>
-            <th><i>*</i>开户银行支行名称：</th>
+            <th><i>*</i>{$lang.apply_81}</th>
             <td><input id="settlement_bank_name" name="settlement_bank_name" type="text" class="w200" value="{$supplier.settlement_bank_name}">
               <span></span></td>
           </tr>
           <tr>
-            <th><i>*</i>支行联行号：</th>
+            <th><i>*</i>{$lang.m_f_563}</th>
             <td><input id="settlement_bank_code" name="settlement_bank_code" type="text" class="w200" value="{$supplier.settlement_bank_code}">
               <span></span></td>
           </tr>
@@ -128,26 +131,26 @@
     <table border="0" cellpadding="0" cellspacing="0" class="all">
       <thead>
         <tr>
-          <th colspan="20" align="left">税务登记证</th>
+          <th colspan="20" align="left">{$lang.m_f_566}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="w150"><i>*</i>税务登记证号：</th>
+          <th class="w150"><i>*</i>{$lang.m_f_567}</th>
           <td><input name="tax_registration_certificate" type="text" class="w200" value="{$supplier.tax_registration_certificate}">
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>纳税人识别号：</th>
+          <th><i>*</i>{$lang.apply_87}</th>
           <td><input name="taxpayer_id" type="text" class="w200" value="{$supplier.taxpayer_id}">
             <span></span></td>
         </tr>
         <tr>
-          <th><i>*</i>税务登记证号电子版：</th>
+          <th><i>*</i>{$lang.apply_86}</th>
           <td><input name="tax_registration_certificate_electronic" type="file">
 	  {if $supplier.tax_registration_certificate_electronic}<br>
               <img src="data/supplier/{$supplier.tax_registration_certificate_electronic}" width=80 height=80 id='trce'>{/if}
-            <span class="block">请确保图片清晰，文字可辨并有清晰的红色公章。</span></td>
+            <span class="block">{$lang.apply_83}</span></td>
         </tr>
       </tbody>
       <tfoot>
@@ -159,10 +162,11 @@
     <input type="hidden" name="shownum" value="2">
       <input type="hidden" name="do" value="1">
     
-      <div class="bottom"><input type="button" value="上一步" class="btn" onclick="top.location.href='apply.php?shownum=1'"><input type="submit" value="下一步" class="btn"></div>
+      <div class="bottom"><input type="button" value="{$lang.m_f_591}" class="btn" onclick="top.location.href='apply.php?shownum=1'"><input type="submit" value="{$lang.m_f_21}" class="btn"></div>
       </form>
     </div>
   </div>
+</div>
 </div>
 <script>
 function cin(){
@@ -214,54 +218,54 @@ function supplier_Reg()
 	
 	if (bank_account_name.length == 0)
 	{
-		msg += "(开户)银行开户名不能为空！" + '\n';
+		msg += "{$lang.apply_55}" + '\n';
 	}
 	if (bank_account_number.length == 0)
 	{
-		msg += "(开户)公司银行账号不能为空！" + '\n';
+		msg += "{$lang.apply_56}" + '\n';
 	}
 	if (bank_name.length == 0)
 	{
-		msg += "(开户)开户银行支行不能为空！" + '\n';
+		msg += "{$lang.apply_57}" + '\n';
 	}
 	if (bank_code.length == 0)
 	{
-		msg += "(开户)支行联行号不能为空！" + '\n';
+		msg += "{$lang.apply_58}" + '\n';
 	}
 	if(ispic(bank_licence_electronic) == false && ble == null){
-	   msg += "请上传开户银行许可证！" + '\n';
+	   msg += "Harap unggah pembukaan akun bank!" + '\n';
 	}
 
 
-	if (settlement_bank_account_name.length == 0)
-	{
-		msg += "(结算)银行开户名不能为空！" + '\n';
-	}
-	if (settlement_bank_account_number.length == 0)
-	{
-		msg += "(结算)公司银行账号不能为空！" + '\n';
-	}
-	if (settlement_bank_name.length == 0)
-	{
-		msg += "(结算)开户银行支行不能为空！" + '\n';
-	}
-	if (settlement_bank_code.length == 0)
-	{
-		msg += "(结算)支行联行号不能为空！" + '\n';
-	}
+  if (settlement_bank_account_name.length == 0)
+  {
+    msg += "(Penyelesaian) Nama rekening bank tidak boleh kosong!" + '\n';
+  }
+  if (settlement_bank_account_number.length == 0)
+  {
+    msg += "(Penyelesaian) Rekening bank perusahaan tidak boleh kosong!" + '\n';
+  }
+  if (settlement_bank_name.length == 0)
+  {
+    msg += "(Penyelesaian) Cabang bank dari akun tidak boleh kosong!" + '\n';
+  }
+  if (settlement_bank_code.length == 0)
+  {
+    msg += "(Penagihan) nomor baris cabang tidak boleh kosong!" + '\n';
+  }
 
-
-	if (tax_registration_certificate.length == 0)
-	{
-		msg += "税务登记证号不能为空！" + '\n';
-	}
-	if (taxpayer_id.length == 0)
-	{
-		msg += "纳税人识别号不能为空！" + '\n';
-	}
-	if(ispic(tax_registration_certificate_electronic) == false && trce == null){
-	   msg += "请上传税务登记证！" + '\n';
-	}
+  if (tax_registration_certificate.length == 0)
+  {
+    msg += "Nomor sertifikat pendaftaran pajak tidak boleh kosong!" + '\n';
+  }
+  if (taxpayer_id.length == 0)
+  {
+    msg += "ID Wajib Pajak tidak boleh kosong!" + '\n';
+  }
+  if (ispic (tax_registration_certificate_electronic) == false && trce == null)
+  {
+    msg += "Silakan unggah sertifikat pendaftaran pajak!" + '\n';
+  }
 
 	if (msg.length > 0)
 	{

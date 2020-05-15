@@ -1,0 +1,65 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<header id="header" class='header'>
+  <div class="h-left"><a href="javascript:history.back(-1)" class="sb-back"></a></div>
+  <div class="h-mid">Pendaftaran Penjual</div>
+ </header>	 
+<div class="headerLayout">
+ <div class="wrapper">
+    <div class="headerCon ">
+      <!-- <h1 id="mallLogo" style="padding-top:10px;"> <a href="index.php" class="header-logo"><img src="../images/header/logo.jpg" /></a></h1> -->
+      <div class="header-extra">
+       	 <div class="panel-heading">
+            <div class="more">
+                <div class="progress">
+                    <div class="progress-wrap">
+                        <div class="progress-item ongoing">
+                            <div class="number">1</div>
+                            <div class="progress-desc">{$lang.m_f_540}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item tobe">
+                            <div class="number">2</div>
+                            <div class="progress-desc">{$lang.m_f_541}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item tobe">
+                            <div class="number">3</div>
+                            <div class="progress-desc">{$lang.m_f_542}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item tobe">
+                            <div class="number"><i class="tick"></i></div>
+                            <div class="progress-desc">{$lang.m_f_584}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row-container">
+  <div class="wrapper">
+    <div class="store-joinin-apply">
+      <div id="apply_agreement" class="apply-agreement">
+        <h3>{$lang.m_f_586}</h3>
+        <div class="apply-agreement-content">{include file='library/apply_protocol.lbi'} </div>
+        <form action='apply.php' name="applyform" method="post">
+        <div class="apple-agreement">
+          <input id="input_apply_agreement" name="input_apply_agreement" checked="checked" type="checkbox" value="1">
+          <label for="input_apply_agreement">{$lang.m_f_587}</label>
+        </div>
+        <div class="bottom">
+        <input type="submit" value="{$lang.m_f_21}" class="btn"></div>
+        <input type="hidden" name="shownum" value="0">
+        <input type="hidden" name="do" value="1">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

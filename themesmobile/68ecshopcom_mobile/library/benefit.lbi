@@ -1,0 +1,39 @@
+ <div class="container benefit">
+  <div class="wrapper"> 
+    <div class="roww">
+      <div class="footer-benefit">
+        <div class="list-benefit-flex">
+          <div class="col hvr-bounce-in">
+            <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/jaminan-halal-mui.svg" alt="{$lang.m_f_723}" /></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_723}</h3></strong><p>{$lang.m_f_723a}</p></div>
+          </div>
+          <div class="col hvr-bounce-in">
+            <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/layanan-purna-jual.svg" alt="{$lang.m_f_727}" /></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_727}</h3></strong><p>{$lang.m_f_727a}</p></div>
+          </div>
+          <div class="col hvr-bounce-in">
+            <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/garansi-7x24-jam.svg" alt="{$lang.m_f_724}" /></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_724}</h3></strong><p>{$lang.m_f_724a}</p></div>
+          </div>
+          <div class="col hvr-bounce-in">
+            <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/gratis-penukaran.svg" alt="{$lang.m_f_725}" /></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_725}</h3></strong><p>{$lang.m_f_725a}</p></div>
+          </div>
+          <div class="col hvr-bounce-in">
+            <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/pilihan-jasa-pengiriman.svg" alt="{$lang.m_f_726}" /></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_726}</h3></strong><p>{$lang.m_f_726a}</p></div>
+          </div>
+        </div>
+  <!--
+        <ul class="list-benefit clearfix">
+      <li> <a class="ic1" rel="nofollow" href="" target="_blank" ><i class="fa fa-truck"></i> <strong>{$lang.m_f_723}</strong> </a> </li>
+          <li> <a class="ic2" rel="nofollow" href="" target="_blank"><i class="fa fa-truck"></i><strong>{$lang.m_f_724}</strong> </a> </li>
+          <li> <a class="ic3" rel="nofollow" href="" target="_blank" ><i class="fa fa-truck"></i> <strong>{$lang.m_f_725}</strong> </a> </li>
+          <li> <a class="ic4" rel="nofollow" href="" target="_blank"><i class="fa fa-truck"></i> <strong>{$lang.m_f_726}</strong> </a> </li>
+          <li> <a class="ic5" rel="nofollow" href="" target="_blank"><i class="fa fa-truck"></i> <strong>{$lang.m_f_727}</strong> </a> </li>
+        </ul>
+  -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,800 @@
+@charset "utf-8";
+
+/* General commin*/
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {
+    padding: 0;
+	margin: 0;
+}
+body {
+    font: 400 12px "Roboto", sans-serif;
+    color: rgb(0, 0, 0);
+    background: #fff none repeat scroll 0 0;
+    -ms-overflow-style: scrollbar;
+    scroll-behavior: smooth;
+}
+.header, #header {
+    background: #fff;
+    box-shadow: 0 1px 4px #e1e3e6;
+    height: auto;
+	position: relative;
+}
+.header .h-mid {
+    font-family: inherit;
+    text-align: left;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.btn-end {
+	text-decoration: none;
+	color: #000;
+    margin: auto;
+    display: flex;
+    height: 2rem;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    background: #fff;
+    border-radius: 8px;
+    border-color: #eee;
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+    -webkit-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+    -moz-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+}
+} 
+
+/* CSS Document */
+#sn-bd {
+	width: 100% !important;
+}
+#menu-8 {
+	width: 990px !important;
+}
+#menu-8 .site-hot, #menu-8 .site-market, #menu-8 site-brand {
+	width: 285px !important;
+}
+#menu-8 {
+	width: 990px !important;
+}
+#menu-8 .site-hot, #menu-8 .site-market, #menu-8 site-brand {
+	width: 285px !important;
+}
+.headerCon {
+	margin: 0 auto;
+	width: 100%;
+}
+body {
+	background: #FAFAFA !important;
+	margin: 0;
+	padding: 0;
+}
+/* =====================
+ * Memformat elemen form dan efek pseudo-class
+ * ===================== */
+ input[type="file"] {
+	font-size: 80%;
+	color: #666;
+	height: auto;
+	line-height: 30px;
+	background-color: #f4f4f4;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 5px;
+	border: solid 1px;
+	border-color: #e0e0e0;
+}
+
+input[type="text"] {
+	font-size: 12px;
+	color: #666;
+	height: 30px;
+	line-height: 30px;
+	background-color: #ffffff;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 2px 5px;
+	border: solid 1px;
+	border-color: #e0e0e0;
+}
+input[type="text"] {
+*display: inline;
+}
+input[type="text"]:hover {
+	background-color: #FFF;
+}
+input[type="text"]:focus {
+	background-color: #FFF;
+	border-color: #BCD7DA;
+}
+input.error, input:hover.error, input:focus.error, textarea.error, textarea.error:hover, textarea.error:focus {
+	background-color: #FFBFBF;
+	border: dotted 1px #D90000;
+}
+textarea {
+	font-family: Arial;
+	line-height: 30px;
+	background-color: #ffffff;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 5px;
+	border: solid 1px;
+	border-color: #e0e0e0;
+}
+textarea {
+*display: inline;
+}
+textarea:hover {
+	background-color: #FFF;
+}
+textarea:focus {
+	background-color: #FFF;
+	border-color: #CCC;
+}
+/*input[type="file"] {  background-color: #FFF; vertical-align: middle; display: inline-block; width: 206px;}*/
+input[type="button"] {
+	line-height: 22px;
+
+	background-color: #FEFFFF;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEFFFF', endColorstr='#F7FCFF');
+	background-image: -webkit-gradient( linear, left top, left bottom, from(#FEFFFF), to(#F7FCFF));
+	background-image: -moz-linear-gradient(top, #FEFFFF, #F7FCFF);
+	vertical-align: middle;
+	display: inline-block;
+	height: 22px;
+	padding: 0 4px;
+	border: 1px solid;
+	border-color: #e0e0e0;
+	cursor: pointer;
+	box-shadow: 1px 1px 0 rgba(153,153,153,0.15);
+}
+input[type="button"] {
+*display: inline;
+}
+select {
+	outline: none;
+	height: 30px;
+	line-height: 30px;
+	background-color: #ffffff;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+	display: inline-block;
+*display: inline;
+	width: auto;
+	padding: 2px;
+	margin-right: 4px;
+	border: solid 1px;
+	border-color: #e0e0e0;
+	overflow: hidden;
+	zoom: 1;
+}
+input[type="checkbox"] {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+label.error {
+	color: #333;
+	line-height: 18px;
+	background: #FFEEEE url(../images/apply/img_bg.png) no-repeat -185px -185px;
+	vertical-align: middle;
+	display: inline-block;
+	height: 18px;
+	padding: 1px 5px 1px 20px;
+	margin-left: 4px;
+	border: solid 1px #FCC;
+}
+label.error {
+*display: inline;
+}
+.w50 {
+	width: 50px !important;
+}
+.w400 {
+	width: 400px;
+}
+.w200 {
+	width: 200px !important;
+	display: flex;
+}
+/*Sembunyikan bilah menu atas*/
+.store-joinin-apply {
+filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#D8FFFFFF', endColorstr='#D8FFFFFF');
+	background: #fff;
+	opacity: 0.85;
+	max-width: 100%;
+	padding: 20px;
+	margin: 20px auto;
+	border-radius: 12px;
+    box-shadow: 0 2px 10px 2px rgba(235, 241, 249, 1);
+	-webkit-box-shadow: 0 2px 10px 2px rgba(235, 241, 249, 1);
+	-moz-box-shadow: 0 2px 10px 2px rgba(235, 241, 249, 1);
+}
+.main {
+	width: 100%;
+	border-radius: 4px;
+}
+.store-joinin-apply h3 {
+	font-size: 1em;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.apply-agreement-content {
+	height: 300px;
+	padding: 10px;
+	border: solid 1px #EEE;
+	overflow: auto;
+}
+.apple-agreement {
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+	margin: 20px 0 0;
+}
+.main .note {
+	color: #039490;
+	line-height: 16px;
+	padding: 10px 5px;
+	margin-bottom: 10px;
+	background: #e4f7f7;
+	border-radius: 5px;
+}
+.main .note i {
+	background: url(../images/apply/img_bg.png) no-repeat -40px -180px;
+	vertical-align: top;
+	display: inline-block;
+	width: 11px;
+	height: 16px;
+	margin-right: 6px;
+}
+.main table.all {
+	line-height: 22px;
+	width: 100%;
+	margin-top: 20px;
+}
+.main table.all thead th {
+	font-size: 14px;;
+	font-weight: bold;
+	height: 22px;
+	padding: 8px 4px;
+}
+.main table.all thead th em {
+	font-size: 12px;
+	line-height: normal;
+	color: #F00;
+	margin-bottom: 12px;
+}
+.main table.all tbody th {
+	vertical-align: top;
+	text-align: right;
+	width: 180px;
+	height: 22px;
+	padding: 8px 4px;
+}
+.main table.all tbody th i {
+	line-height: -999px;
+	background: url(../images/apply/img_bg.png) no-repeat -30px -180px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	margin-right: 6px;
+	overflow: hidden;
+}
+.main table.all tbody th i {
+*display: inline/*IE7*/;
+}
+.main table.all tbody td {
+	vertical-align: top;
+	text-align: left;
+	height: 20px;
+	padding: 8px 4px
+}
+.main table.all tbody td span {
+*display: none/*IE7*/;
+	color: #777;
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+.main table.all tbody td span.block {
+	display: block;
+}
+.main table.all tbody td p.emphasis {
+	color: #F30;
+}
+.main tabel.all tfoot td {
+	line-height: 20px;
+	height: 20px;
+	padding: 0;
+}
+.main table.type {
+	width: 600px;
+	margin: 0 auto;
+	border: solid 1px #DDD;
+}
+.main table.type thead th {
+	color: #777;
+	text-align: center;
+	background-color: #F7F7F7;
+	width: 25%;
+}
+.main table.type tbody td {
+	text-align: center;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	border-color: #DDD #DDD transparent transparent;
+}
+.main table.type tbody td a {
+	color: #F30;
+}
+.main .bottom, .apply-agreement .bottom, .joinin-pay .bottom {
+	text-align: center;
+	height: 30px;
+	margin: 30px 0 10px 0;
+}
+.main .btn, .apply-agreement .btn, .joinin-pay .btn {
+
+	text-decoration: none;
+
+	display: inline-block;
+	height: 40px;
+	padding: 4px 12px;
+	margin-right: 10px;
+	border: 1px solid;
+	background: #f0f5f8;
+	border-radius: 8px;
+	border-color: #eee;
+	cursor: pointer;
+	box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-webkit-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-moz-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+}
+.main .btn:hover, .apply-agreement .btn:hover, .joinin-pay .btn:hover {
+	color: #333;
+	background-position: 0 -240px;
+	box-shadow: none;
+}
+.main .explain {
+	text-align: center;
+	margin: 120px 0 100px 0
+}
+.main .explain i {
+	background: url(../images/apply/img_bg.png) no-repeat 0 -280px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+}
+.main .explain1 {
+	text-align: left;
+	margin: 10px 0 20px 0
+}
+.main .explain1 i {
+	background: url(../images/apply/img_bg.png) no-repeat 0 -280px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+}
+/*Formulir entri pedagang*/
+.joinin-pay {
+	background-color: #FFF;
+	width: 100%;
+	padding: 0px;
+}
+.store-joinin {
+	background-color: #FFF;
+	width: 100%;
+	line-height: 20px;
+	margin-bottom: 20px;
+	border-style: solid;
+	border-width: 0 0 1px 1px;
+	border-color: transparent transparent #C9DDE0 #C9DDE0;
+	box-shadow: 2px 2px 2px rgba(204,204,204,0.25);
+}
+.store-joinin thead th {
+	font-weight: 600;
+	color: #214752;
+	background-color: #E3EFF0;
+	height: 20px;
+	padding: 8px 5px;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	border-color: #C9DDE0 #C9DDE0 transparent transparent;
+}
+.store-joinin tbody th {
+	color: #555555;
+	background-color: #F0F7FA;
+	text-align: left;
+	width: 50%;
+	height: 20px;
+	padding: 8px 5px;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	border-color: #C9DDE0 #C9DDE0 transparent transparent;
+}
+.store-joinin tbody td {
+	color: #333;
+	min-width: 149px;
+	height: fit-content;
+	padding: 8px 5px;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	border-color: #C9DDE0 #C9DDE0 transparent transparent;
+}
+.store-joinin tbody td img {
+	max-width: 100%;
+	height: auto;
+	padding: 4px;
+	border: solid 1px #EEE;
+	vertical-align: bottom;
+}
+.store-joinin tbody td textarea {
+	width: 400px;
+	height: 100px;
+}
+table.type {
+	width: 700px;
+	border: solid 1px #EEE;
+}
+table.type thead th {
+	color: #555;
+	background-color: #F7F7F7;
+	text-align: center;
+	padding: 4px;
+	border-color: #EEE;
+}
+table.type tbody td {
+	color: #777;
+	text-align: center;
+	padding: 4px;
+	border-color: #EEE;
+}
+table.type tbody td input {
+	width: 60px;
+	padding: 0;
+}
+/*Aplikasi pedagang*/
+.headerLayout {
+	background: #fff;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	width: 100%;
+	box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-webkit-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-moz-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+}
+.panel-heading {
+	padding: 7px 0;
+	background: #fff;
+	overflow: hidden;
+}
+.panel-heading.plain {
+	background: transparent;
+}
+.panel-heading h2, .panel-heading h3, .panel-heading h4 {
+
+	font-size: 16px;
+	display: inline;
+	float: left;
+}
+.panel-heading .more {
+	float: right;
+}
+.panel-body {
+	padding: 10px;
+}
+.panel-body.grey {
+	background: #fcfcfc;
+}
+.panel-body.yellow {
+	background: #fffdf0;
+}
+/*TODO Melemahnya gaya teratas yang harus diselesaikan*/
+/*TODO Untuk diselesaikan*/
+.progress {
+	clear: both;
+	overflow: hidden;
+	padding-top: 5px;
+	padding-right: 5px;
+	position: relative;
+}
+.progress .progress-wrap {
+	width: 116px;
+	text-align: center;
+	float: left;
+}
+.progress .progress-item {
+	width: 120px;
+}
+.progress .passed {
+	background: url(../images/apply/passed.png) no-repeat 0px 0;
+	color: #00ced1;
+	position: relative;
+}
+.progress .ongoing {
+	background: url(../images/apply/curr.png) no-repeat 0px 0;
+	position: relative;
+	color: #3bc1c9;
+}
+.progress .defeated {
+	background: url(../images/apply/defeated.png) no-repeat 0px 0;
+	position: relative;
+	color: #e74c3c;
+}
+.progress .tobe {
+	background: url(../images/apply/tobe.png) no-repeat 0px 0;
+	color: #aaa;
+}
+.progress .number {
+	display: block;
+	height: 22px;
+	line-height: 22px;
+	margin-bottom: 5px;
+	color: #fff;
+	font-weight: bold;
+	position: relative;
+}
+.progress .number i.tick {
+	background: url(../images/apply/tick.png) no-repeat;
+	position: absolute;
+	width: 10px;
+	height: 8px;
+	top: 7px;
+	left: 55px;
+}
+.cth-foto {
+	width: 50%;
+	float: right;
+	border: 1px dashed #e0e0e0;
+    border-radius: 8px;
+    padding: 5px;
+}
+.cth-foto p{
+	position: relative;
+    display: inline-block;
+    font-size: 80%;
+    background: rgba(255,255,255, 0.7);
+}
+.apply-company-info table tr td input {
+	margin: 0 10px 10px 0;
+}
+td.cth-img .col-input div {
+	border-radius: 8px;
+	border: 1px dashed #e0e0e0;
+	padding: 5px;
+}
+td.cth-img .col-input {
+	width: 50%;
+}
+td.cth-img .col-input div img {
+	width: 100%;
+	height: auto;
+	max-height: 250px;
+	border-radius: 8px;
+}
+#id-hand-s{
+background: url(../images/apply/id-hand-s.jpg) no-repeat;
+width:70%;
+height:210px;
+background-size: contain;
+border-radius: 8px;
+}
+#id-front-s{
+background: url(../images/apply/id-front-s.jpg) no-repeat;
+width:70%;
+height:210px;
+background-size: contain;
+border-radius: 8px;
+}
+#id-back-s{
+background: url(../images/apply/id-back-s.jpg) no-repeat;
+width:70%;
+height:210px;
+background-size: contain;
+border-radius: 8px;
+}
+.bottom-footer {
+    width: 100%;
+    background: #F0F5F8;
+    border-top: 1px solid #44decc;
+	bottom: 0px;
+}
+
+/* start media query */
+
+/* tablet view */
+@media
+	  only screen 
+    and (max-width: 1024px), (min-device-width: 481px) 
+    and (max-device-width: 1024px)  {
+
+    .wrapper{
+      max-width: 720px;
+    }
+
+    select{
+      margin-bottom: 5px;
+    }
+
+	
+    input[type="text"]{
+      height: 30px;
+      line-height: 30px;
+    }
+    input[type="file"] {
+      width: 80%;
+      border-color: #BCD7DA;
+    }
+    .main table.all tbody th{
+      width: 25%;
+      height: auto;
+      text-align: left;
+    }
+    .main table.all tbody td{
+      height: auto;
+    }
+    .w200 {
+      width: 200px !important;
+    }
+    .w100{
+      width: 98% !important;
+    }
+    .apply-company-info table tr td input{
+      margin:0;
+    }
+    th.ktp{
+      width: 50% !important;
+    }
+    td.cth-img{
+      display: flex;
+    }
+    .col-input{
+      width: 50%;
+    }
+    #mallLogo{
+      width: 30%;
+	}
+	#id-hand-s{
+		width: 100%;
+		height: 120px;
+	}
+	#id-front-s{
+		width: 100%;
+		height: 150px;
+	}
+	#id-back-s{
+		width: 100%;
+		height: 150px;
+	}
+	}
+
+
+	/* mobile phone view */
+  @media
+	  only screen 
+    and (min-device-width: 320px) and (max-device-width: 480px)  {
+      .wrapper{
+        max-width: 720px;
+      }
+      /* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr {
+			display: block;
+      text-align: left;
+		}
+
+    select{
+      margin-bottom: 5px;
+    }
+
+    tr {
+      margin: 0 0 1rem 0;
+      background: #fff;
+    }
+      
+    tr:nth-child(odd) {
+      background: #fff;
+    }
+    
+		td {
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+			position: absolute;
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+    input[type="text"]{
+      height: 35px;
+      line-height: 35px;
+    }
+    input[type="file"] {
+      width: 80%;
+      border-color: #BCD7DA;
+    }
+    .main table.all tbody th{
+      width: 100%;
+      height: auto;
+      text-align: left;
+    }
+    .main table.all tbody td{
+      height: auto;
+    }
+    .w200 {
+      width: 98% !important;
+    }
+    .w100{
+      width: 98% !important;
+    }
+    .apply-company-info table tr td input{
+      margin:0;
+    }
+    th.ktp{
+      width: 50% !important;
+    }
+    td.cth-img{
+      display: flex;
+    }
+    td.cth-img .col-input{
+      width: 100%;
+      margin-right: 10px;
+    }
+    #mallLogo {
+	  width: 45%;
+	  float: none;
+	  height: auto;
+	  margin:auto;
+	  padding: inherit;
+	  
+	}
+	#mallLogo a img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+    .panel-heading{
+      display: flex;
+    }
+    .panel-heading .more{
+      margin: auto;
+    }
+    .progress .progress-item, .progress .progress-wrap{
+      width: 75px;
+    }
+    .progress .tobe, .progress .passed, .progress .ongoing{
+      background-position: top;
+    }
+    .progress .number i.tick{
+      left:32px;
+    }
+    .progress-desc{
+      font-size: 9px;
+    }
+    .main table.all tbody td span.block{
+      width: 100%;
+	}
+	#id-hand-s{
+		width: 100%;
+		height: 70px;
+	}
+	#id-front-s{
+		width: 100%;
+		height: 70px;
+	}
+	#id-back-s{
+		width: 100%;
+		height: 70px;
+	}
+}
+

@@ -1,13 +1,13 @@
 <?php
 //apply.php
-$_LANG['apply_1'] = 'Silakan pilih identitas toko Anda';
+$_LANG['apply_1'] = 'Silakan isi informasi toko Anda';
 $_LANG['apply_2'] = 'Informasi Rekening Bank';
-$_LANG['apply_3'] = 'Dokumen yang diunggah hanya mendukung format JPG \ GIF \ PNG, dan ukurannya maximal {$ piclimit} K.';
+$_LANG['apply_3'] = 'Mohon unggah file dokumen dengan format JPG\GIF\PNG dan ukuran maksimal {$piclimit} KB.';
 $_LANG['apply_4'] = 'Individu';
 $_LANG['apply_5'] = 'Bisnis';
 $_LANG['apply_6'] = 'Silakan ikuti petunjuknya untuk mengisi informasi anda yang sebenarnya.';
 $_LANG['apply_7'] = 'Alamat Kontak: ';
-$_LANG['apply_8'] = 'Silahkan Pilih: ';
+$_LANG['apply_8'] = 'Silakan Pilih: ';
 $_LANG['apply_9'] = 'Nama Toko: ';
 $_LANG['apply_10'] = 'Alamat: ';
 $_LANG['apply_11'] = 'Nama: ';
@@ -18,7 +18,7 @@ $_LANG['apply_15'] = 'Nomor KTP: ';
 $_LANG['apply_16'] = 'Foto KTP dan Pemilik';
 $_LANG['apply_17'] = 'Foto KTP (Tampak Depan)';
 $_LANG['apply_18'] = 'Foto KTP (Tampak Belakang)';
-$_LANG['apply_19'] = 'Nama rekening bank: ';
+$_LANG['apply_19'] = 'Nama Pemilik Rekening: ';
 $_LANG['apply_20'] = 'Nomor Rekening Bank';
 $_LANG['apply_21'] = 'Nama Cabang Bank';
 $_LANG['apply_22'] = 'Kode Cabang Bank';
@@ -78,3 +78,4 @@ $_LANG['apply_75'] = '';
 $_LANG['apply_76'] = '';
 $_LANG['apply_77'] = '';
 $_LANG['apply_78'] = '';
+

@@ -1,0 +1,424 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="headerLayout">
+  <div class="wrapper">
+    <div class="headerCon ">
+      <h1 id="mallLogo" style="padding-top:10px;"> <a href="index.php" class="header-logo"><img src="themesmobile/68ecshopcom_mobile/images/etokohalal-logo.png" /></a></h1>
+      <div class="header-extra">
+       	 <div class="panel-heading">
+            <div class="more">
+                <div class="progress">
+                    <div class="progress-wrap">
+                        <div class="progress-item passed">
+                            <div class="number">1</div>
+                            <div class="progress-desc">{$lang.m_f_540}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item passed">
+                            <div class="number">2</div>
+                            <div class="progress-desc">{$lang.m_f_541}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item passed">
+                            <div class="number">3</div>
+                            <div class="progress-desc">{$lang.m_f_542}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item passed">
+                            <div class="number"><i class="tick"></i></div>
+                            <div class="progress-desc">{$lang.m_f_546}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="store-joinin-apply">
+    <div class="main">
+    <div class="explain1"><i></i>{$lang.m_f_547} <a href="{$mydomain}supplier/" target="_blank" style="color:#1381c0">{$lang.m_f_548}</a> {$lang.m_f_549}</div>
+      <div class="joinin-pay"> {if $supplier.guimo}
+  <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="6">{$lang.m_f_550}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w150">{$lang.m_f_135}</th>
+          <td colspan="5">{$supplier.company_name}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_136}</th>
+          <td colspan="5">
+      <select name="country" id="selCountries_0" onchange="region.changed(this, 1, 'selProvinces_0')" disabled>
+        <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+        <!-- {foreach from=$country_list item=country} -->
+        <option value="{$country.region_id}" {if $supplier_country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      <select name="province" id="selProvinces_0" onchange="region.changed(this, 2, 'selCities_0')" disabled>
+        <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+        <!-- {foreach from=$province_list item=province} -->
+        <option value="{$province.region_id}" {if $supplier.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      <select name="city" id="selCities_0" onchange="region.changed(this, 3, 'selDistricts_0')" disabled>
+        <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+        <!-- {foreach from=$city_list item=city} -->
+        <option value="{$city.region_id}" {if $supplier.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      <select name="district" id="selDistricts_0" {if !$district_list}style="display:none"{/if} disabled>
+        <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+        <!-- {foreach from=$district_list item=district} -->
+        <option value="{$district.region_id}" {if $supplier.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      </td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_137}</th>
+          <td colspan="5">{$supplier.address}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_138}</th>
+          <td>{$supplier.tel}</td>
+          <th class="w150">{$lang.m_f_139}</th>
+          <td>{$supplier.guimo}</td>
+          <th class="w150">{$lang.m_f_142}</th>
+          <td>{$supplier.company_type}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_430}</th>
+          <td>{$supplier.contacts_name}</td>
+          <th class="w150">{$lang.m_f_551}</th>
+          <td>{$supplier.contacts_phone}</td>
+          <th class="w150">{$lang.m_f_141}</th>
+          <td>{$supplier.email}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="2">{$lang.m_f_145}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w150">{$lang.m_f_552}</th>
+          <td>{$supplier.business_licence_number}</td>
+    </tr>
+    <tr></tr>
+        <tr>
+          <th class="w150">{$lang.m_f_553}</th>
+          <td colspan="20">{$supplier.business_sphere}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_552}<br>
+    {$lang.m_f_554}</th>
+          <td colspan="20">{if $supplier.zhizhao}<img src="../data/supplier/{$supplier.zhizhao}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('../data/supplier/{$supplier.zhizhao}');" value="{$lang.m_f_555}">
+    {/if}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="2">{$lang.m_f_556}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w150">{$lang.m_f_557}</th>
+          <td>{$supplier.organization_code}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_556}<br>
+    {$lang.m_f_554}</th>
+          <td>{if $supplier.organization_code_electronic}<img src="../data/supplier/{$supplier.organization_code_electronic}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('../data/supplier/{$supplier.organization_code_electronic}');" value="{$lang.m_f_555}">
+    {/if}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="2">{$lang.m_f_558}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w150">{$lang.m_f_558}</th>
+          <td>{if $supplier.general_taxpayer}<img src="../data/supplier/{$supplier.general_taxpayer}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('../data/supplier/{$supplier.general_taxpayer}');" value="{$lang.m_f_555}">
+    {/if}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="2">{$lang.m_f_559}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w150">{$lang.m_f_560}</th>
+          <td>{$supplier.bank_account_name}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_561}</th>
+          <td>{$supplier.bank_account_number}</td>
+    </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_562}</th>
+          <td>{$supplier.bank_name}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_563}</th>
+          <td>{$supplier.bank_code}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_564}<br>
+    {$lang.m_f_554}</th>
+          <td colspan="20">{if $supplier.bank_licence_electronic}<img src="../data/supplier/{$supplier.bank_licence_electronic}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('../data/supplier/{$supplier.bank_licence_electronic}');" value="{$lang.m_f_555}">
+    {/if}</td>
+        </tr>
+      </tbody>
+      
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="2">{$lang.m_f_565}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w150">{$lang.m_f_560}</th>
+          <td>{$supplier.settlement_bank_account_name}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_561}</th>
+          <td>{$supplier.settlement_bank_account_number}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_562}</th>
+          <td>{$supplier.settlement_bank_name}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_563}</th>
+          <td>{$supplier.settlement_bank_code}</td>
+        </tr>
+      </tbody>
+      
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="2">{$lang.m_f_566}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w150">{$lang.m_f_567}</th>
+          <td>{$supplier.tax_registration_certificate}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.taxpayer_id}</th>
+          <td>{$supplier.taxpayer_id}</td>
+        </tr>
+        <tr>
+          <th class="w150">{$lang.m_f_567}<br>
+    {$lang.m_f_554}</th>
+          <td>{if $supplier.tax_registration_certificate_electronic}<img src="../data/supplier/{$supplier.tax_registration_certificate_electronic}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('../data/supplier/{$supplier.tax_registration_certificate_electronic}');" value="{$lang.m_f_555}">
+    {/if}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+        <thead>
+          <tr>
+            <th colspan="2">{$lang.m_f_568}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="w150">{$lang.m_f_569}</th>
+            <td>{$supplier.supplier_name}</td>
+          </tr>
+          <tr>
+            <th class="w150">{$lang.m_f_570}</th>
+            <td>{$supplier.rank_name}</td>
+            </tr>
+            <tr>
+            <th class="w150">{$lang.m_f_571}</th>
+            <td>{$supplier.type_name}</td>
+          </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_572}</th>
+              <td colspan="2">{$supplier.supplier_remark}</td>
+          </tr>
+          <tr>
+              <th class="w150">{$lang.m_f_573}</td>
+              <td  colspan="2"><select name="status" size=1 disabled>
+                  <option value="0" {if $supplier.status eq '0'}selected{/if}>{$lang.m_f_574}</option>
+                  <option value="1" {if $supplier.status eq '1'}selected{/if}>{$lang.m_f_546}</option>
+                  <option value="-1" {if $supplier.status eq '-1'}selected{/if}>{$lang.m_f_575}</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        {else}
+        <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+          <thead>
+            <tr>
+              <th colspan="6">{$lang.m_f_583}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="w150">{$lang.m_f_569}</th>
+              <td colspan="5">{$supplier.company_name}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_582}</th>
+              <td colspan="5"><select name="country" id="selCountries_0" onchange="region.changed(this, 1, 'selProvinces_0')" disabled>
+                  <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+                  <!-- {foreach from=$country_list item=country} -->
+                  <option value="{$country.region_id}" {if $supplier_country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+                  <!-- {/foreach} -->
+                </select>
+                <select name="province" id="selProvinces_0" onchange="region.changed(this, 2, 'selCities_0')" disabled>
+                  <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                  <!-- {foreach from=$province_list item=province} -->
+                  <option value="{$province.region_id}" {if $supplier.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+                  <!-- {/foreach} -->
+                </select>
+                <select name="city" id="selCities_0" onchange="region.changed(this, 3, 'selDistricts_0')" disabled>
+                  <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+                  <!-- {foreach from=$city_list item=city} -->
+                  <option value="{$city.region_id}" {if $supplier.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+                  <!-- {/foreach} -->
+                </select>
+                <select name="district" id="selDistricts_0" {if !$district_list}style="display:none"{/if} disabled>
+                  <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+                  <!-- {foreach from=$district_list item=district} -->
+                  <option value="{$district.region_id}" {if $supplier.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+                  <!-- {/foreach} -->
+                </select></td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_218}</th>
+              <td colspan="5">{$supplier.address}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_581}</th>
+              <td>{$supplier.contacts_name}</td>
+              <th class="w150">{$lang.m_f_551}</th>
+              <td>{$supplier.contacts_phone}</td>
+              <th class="w150">{$lang.m_f_141}</th>
+              <td>{$supplier.email}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_580}</th>
+              <td colspan="5">{$supplier.id_card_no}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_579}</th>
+              <td>{if $supplier.handheld_idcard}<img src="../data/supplier/{$supplier.handheld_idcard}" width=50 height=50>&nbsp;&nbsp;
+                <input type="button" onclick="window.open('../data/supplier/{$supplier.handheld_idcard}');" value="{$lang.m_f_555}">
+                {/if}</td>
+              <th class="w150">{$lang.m_f_578}</th>
+              <td>{if $supplier.idcard_front}<img src="../data/supplier/{$supplier.idcard_front}" width=50 height=50>&nbsp;&nbsp;
+                <input type="button" onclick="window.open('../data/supplier/{$supplier.idcard_front}');" value="{$lang.m_f_555}">
+                {/if}</td>
+              <!-- <th class="w150">{$lang.m_f_577}</th>
+              <td>{if $supplier.idcard_reverse}<img src="../data/supplier/{$supplier.idcard_reverse}" width=50 height=50>&nbsp;&nbsp;
+                <input type="button" onclick="window.open('../data/supplier/{$supplier.idcard_reverse}');" value="{$lang.m_f_555}">
+                {/if}</td> -->
+          </tbody>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+          <thead>
+            <tr>
+              <th colspan="2">{$lang.m_f_559}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="w150">{$lang.m_f_560}</th>
+              <td>{$supplier.bank_account_name}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_576}</th>
+              <td>{$supplier.bank_account_number}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_562}</th>
+              <td>{$supplier.bank_name}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_563}</th>
+              <td>{$supplier.bank_code}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+          <thead>
+            <tr>
+              <th colspan="2">{$lang.m_f_568}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="w150">{$lang.m_f_569}</th>
+              <td>{$supplier.supplier_name}</td>
+            </tr>
+            <tr>
+              <th class="w150">{$lang.m_f_570}</th>
+              <td>{$supplier.rank_name} </td>
+            </tr>
+            <th class="w150">{$lang.m_f_571}</th>
+            <td>{$supplier.type_name}</td>
+          </tr>
+          <tr>
+            <th class="w150">{$lang.m_f_572}</th>
+            <td colspan="2">{$supplier.supplier_remark}</td>
+          </tr>
+    <tr>
+    <th class="w150">{$lang.m_f_573}</th>
+    <td  colspan="2"><select name="status" size=1 disabled>
+    <option value="0" {if $supplier.status eq '0'}selected{/if}>{$lang.m_f_574}</option>
+    <option value="1" {if $supplier.status eq '1'}selected{/if}>{$lang.m_f_546}</option>
+    <option value="-1" {if $supplier.status eq '-1'}selected{/if}>{$lang.m_f_75}</option>
+    </select></td>
+    </tr>
+        </tbody>
+      </table>
+
+        {/if} </div>
+    </div>
+  </div>
+</div>
