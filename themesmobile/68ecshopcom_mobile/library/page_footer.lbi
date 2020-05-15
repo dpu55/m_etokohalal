@@ -12,9 +12,9 @@
      <p class="mf_o4">{$copyright} | Halal for All</p>
      <p class="mf_o4">
        <a href="http://blog.etokohalal.com">Blog</a>&nbsp;&bull;&nbsp;
-       <a href="#">Syarat & Ketentuan</a>&nbsp;&bull;&nbsp;
+       <a href="article.php?id=4">Syarat & Ketentuan</a>&nbsp;&bull;&nbsp;
        <a href="#">Kontak</a>&nbsp;&bull;&nbsp;
-       <a href="#">FAQ</a>
+       <a href="article.php?id=5">FAQ</a>
     </p>
 </div>
 

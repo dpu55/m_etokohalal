@@ -7,7 +7,7 @@
 <div class="headerLayout">
  <div class="wrapper">
     <div class="headerCon ">
-      <!-- <h1 id="mallLogo" style="padding-top:10px;"> <a href="index.php" class="header-logo"><img src="../images/header/logo.jpg" /></a></h1> -->
+      <h1 id="mallLogo"> <a href="index.php" class="header-logo"><img src="themesmobile/68ecshopcom_mobile/images/etokohalal-logo.png" /></a></h1>
       <div class="header-extra">
        	 <div class="panel-heading">
             <div class="more">
