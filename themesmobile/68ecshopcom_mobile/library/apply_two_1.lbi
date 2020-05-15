@@ -72,12 +72,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr style="display: none;">
+              <!-- <tr style="display: none;">
                 <td>
                   <label style="cursor:pointer;"><input type="radio" name="apply_type" {if $supplier.guimo}checked{/if} onClick="radioShow()"> {$lang.apply_5}</label>
                 <label style="cursor:pointer;"><input type="radio" name="apply_type" {if !$supplier.guimo}checked{/if} onClick="radioShow()"> {$lang.apply_4}</label>　
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
       </div>
