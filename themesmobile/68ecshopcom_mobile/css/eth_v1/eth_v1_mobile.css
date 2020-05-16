@@ -1637,6 +1637,10 @@
   line-height: 49px;
 }
 
+.eth_v1_mobile.page-stores .page_guide_slider {
+  background-color: #ffffff;
+}
+
 .eth_v1_mobile.page-stores .page_guide_item_text a {
   color: #363637;
 }
