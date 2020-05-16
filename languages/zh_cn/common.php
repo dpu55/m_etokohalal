@@ -1616,3 +1616,15 @@ $_LANG['m_f_1051'] = 'Versi elektronik lisensi rekening bank gagal mengunggah ga
 $_LANG['m_f_1052'] = 'Nomor sertifikat registrasi pajak versi elektronik dari gambar gagal diunggah! ';
 $_LANG['m_f_1053'] = 'Silakan klik untuk menyetujui perjanjian! ';
 // End of lang apply
+
+//Benefit
+$_LANG['m_f_723'] = 'Jaminan halal MUI';
+$_LANG['m_f_723a'] = 'Produk 100% Halal yang terintegrasi secara lagsung dengan sistem verifikasi halal MUI';
+$_LANG['m_f_724'] = 'Garansi 7x24 jam';
+$_LANG['m_f_724a'] = 'Tokohalal akan mengembalikan uang anda secara penuh, jika barang tidak sesuai dengan deskripsi atau berkualitas buruk';
+$_LANG['m_f_725'] = 'Gratis penukaran';
+$_LANG['m_f_725a'] = 'Gratis biaya penukaran barang 15 hari dari pembelian';
+$_LANG['m_f_726'] = 'Pilihan jasa pengiriman';
+$_LANG['m_f_726a'] = 'Tokohalal menyediakan berbagai pilihan jasa pengiriman dengan jangkauan nasional';
+$_LANG['m_f_727'] = 'Layanan purna jual';
+$_LANG['m_f_727a'] = 'Pertayaan akan ditanggapi 24 jam';

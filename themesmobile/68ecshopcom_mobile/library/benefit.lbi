@@ -19,10 +19,10 @@
             <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/gratis-penukaran.svg" alt="{$lang.m_f_725}" /></div>
             <div class="title-benefit"><strong><h3>{$lang.m_f_725}</h3></strong><p>{$lang.m_f_725a}</p></div>
           </div>
-          <div class="col hvr-bounce-in">
+          <!-- <div class="col hvr-bounce-in">
             <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/pilihan-jasa-pengiriman.svg" alt="{$lang.m_f_726}" /></div>
             <div class="title-benefit"><strong><h3>{$lang.m_f_726}</h3></strong><p>{$lang.m_f_726a}</p></div>
-          </div>
+          </div> -->
         </div>
   <!--
         <ul class="list-benefit clearfix">

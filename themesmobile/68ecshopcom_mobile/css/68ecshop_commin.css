@@ -1484,7 +1484,7 @@ margin:0
 }
 .benefit .footer-benefit {
 	width: 100%;
-	min-height: 100px;
+	min-height: auto;
 	
 	padding: 15px 0 20px;
 }
@@ -1520,11 +1520,11 @@ margin:0
 	  background-position: right center;
   }
   .benefit .footer-benefit .list-benefit-flex strong h3{
-	text-indent: 16px;
-	line-height: 2;
-	text-transform: uppercase;
-	font-weight: 700;
+	line-height: 1.2;
+	text-transform: capitalize;
+	font-weight: 400;
 	width: 100%;
+	font-size: 0.9em;
   }
   .list-benefit-flex .col {
 	  width: 18.76%;
@@ -3735,8 +3735,10 @@ counter-increment: li-counter;
 }
 .benefit {
 	width: 100%;
-	padding: 30px 0;
-	background: #edf4f9;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-webkit-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-moz-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
 }
 .btn-close {
 	color: rgba(218, 52, 0, 0.97);
