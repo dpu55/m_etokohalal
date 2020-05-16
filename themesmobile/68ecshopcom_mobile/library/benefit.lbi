@@ -5,19 +5,19 @@
         <div class="list-benefit-flex">
           <div class="col hvr-bounce-in">
             <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/jaminan-halal-mui.svg" alt="{$lang.m_f_723}" /></div>
-            <div class="title-benefit"><strong><h3>{$lang.m_f_723}</h3></strong><p>{$lang.m_f_723a}</p></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_723}</h3></strong><!-- <p>{$lang.m_f_723a}</p> --></div>
           </div>
           <div class="col hvr-bounce-in">
             <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/layanan-purna-jual.svg" alt="{$lang.m_f_727}" /></div>
-            <div class="title-benefit"><strong><h3>{$lang.m_f_727}</h3></strong><p>{$lang.m_f_727a}</p></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_727}</h3></strong><!-- <p>{$lang.m_f_727a}</p> --></div>
           </div>
           <div class="col hvr-bounce-in">
             <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/garansi-7x24-jam.svg" alt="{$lang.m_f_724}" /></div>
-            <div class="title-benefit"><strong><h3>{$lang.m_f_724}</h3></strong><p>{$lang.m_f_724a}</p></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_724}</h3></strong><!-- <p>{$lang.m_f_724a}</p> --></div>
           </div>
           <div class="col hvr-bounce-in">
             <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/gratis-penukaran.svg" alt="{$lang.m_f_725}" /></div>
-            <div class="title-benefit"><strong><h3>{$lang.m_f_725}</h3></strong><p>{$lang.m_f_725a}</p></div>
+            <div class="title-benefit"><strong><h3>{$lang.m_f_725}</h3></strong><!-- <p>{$lang.m_f_725a}</p> --></div>
           </div>
           <!-- <div class="col hvr-bounce-in">
             <div class="icon-benefit"><img src="themesmobile/68ecshopcom_mobile/images/benefit/pilihan-jasa-pengiriman.svg" alt="{$lang.m_f_726}" /></div>
