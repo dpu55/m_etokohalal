@@ -324,7 +324,7 @@ function create_html_editor($input_name, $input_value = '')
             });
     </script>
     <textarea id=\"$input_name\" name=\"$input_name\" style='width:100%;height:300px;'>$input_value</textarea>
-	<input type=\"submit\" value=\"提交\" />
+	<input type=\"submit\" value=\"Submit\" />
     ";
     $smarty->assign('FCKeditor', $kindeditor);  //这里前面的 FCKEditor 不要变
 }

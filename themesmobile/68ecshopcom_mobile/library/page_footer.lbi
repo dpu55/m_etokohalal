@@ -9,12 +9,12 @@
           <li>
           <a href="javascript:;"><i class="footerimg_2"></i><span class="gl">{$lang.m_48}</span></a></li>
           <li><a href="index.php?is_c=1" class="goDesktop"><i class="footerimg_3"></i><span>{$lang.m_49}</span></a></li></ul>
-     <p class="mf_o4">{$copyright} | Halal for All</p>
      <p class="mf_o4">
        <a href="http://blog.etokohalal.com">Blog</a>&nbsp;&bull;&nbsp;
-       <a href="#">Syarat & Ketentuan</a>&nbsp;&bull;&nbsp;
+       <a href="article.php?id=4">Syarat & Ketentuan</a>&nbsp;&bull;&nbsp;
        <a href="#">Kontak</a>&nbsp;&bull;&nbsp;
-       <a href="#">FAQ</a>
+       <a href="article.php?id=5">FAQ</a>
     </p>
+     <p class="mf_o4">{$copyright} | Halal for All</p>
 </div>
 

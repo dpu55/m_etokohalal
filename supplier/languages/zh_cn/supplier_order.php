@@ -356,7 +356,7 @@ $_LANG['label_handle_refund'] = 'Metode pengembalian uang:';
 $_LANG['label_refund_note'] = 'Deskripsi pengembalian dana:';
 $_LANG['return_user_money'] = 'Kembalikan saldo pengguna';
 $_LANG['create_user_account'] = 'Buat permintaan pengembalian dana';
-$_LANG['not_handle'] = 'Perhatian, silahkan pilih proses saat ini';
+$_LANG['not_handle'] = 'Perhatian, silakan pilih proses saat ini';
 
 $_LANG['order_refund'] = 'Pengembalian uang pesanan: %s';
 $_LANG['order_pay'] = 'Pembayaran pesanan: %s';

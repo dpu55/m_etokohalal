@@ -26,7 +26,7 @@
 #pagenavi a { width: 10px; height: 10px; line-height: 99em; background: #b5b5b5; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; margin: 0 4px; overflow: hidden; cursor: pointer; display: inline-block; *display:inline;*zoom:1;filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;}
 #pagenavi a.active { background: #C00; }
 
-.product_info{ width:100%; overflow:hidden;}
+.product_info{ width:100%; overflow:hidden; border-bottom: 1px solid #eeeeee;}
 .product_info .info_dottm{ height:50px; padding-top:15px; padding-bottom:15px; background:#f2f2f2}
 .info_dottm .name{ width:76%; float:left; height:50px; font-size:16px; line-height:25px; color:#333; padding-left:3%; padding-right:3%; overflow:hidden; font-weight:normal}
 .info_dottm .right{ width:18%; float:left; height:50px; font-size:16px;color:#333; border-left:1px solid #e2dfdf; margin-left:-1px; text-align:center}

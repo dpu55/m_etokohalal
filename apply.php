@@ -29,7 +29,7 @@ if (empty($_SESSION['user_id'])){
     {
       $back_act = 'apply.php?' . strip_tags($_SERVER['QUERY_STRING']);
     }
-    show_message($_LANG['m_f_906'], array($_LANG['back_up_page'],$_LANG['m_f_1042']), array($back_act, 'user.php'), 'info');
+    show_message($_LANG['m_714'], array($_LANG['back_up_page'],$_LANG['m_715']), array($back_act, 'user.php'), 'info');
 }
 
 $userid = $_SESSION['user_id'];

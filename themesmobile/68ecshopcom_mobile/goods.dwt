@@ -201,9 +201,9 @@ function setGoodsTab(name,cursel,n){
               
               
               <ul class="price_dottm">
-               <li style=" text-align:left">{$lang.discount} {$zhekou} {$lang.m_355}</li>
-               <li>{$review_count} {$lang.m_379}</li>
-               <li style=" text-align:right">{$order_num} {$lang.m_380}</li> 
+               <li style=" text-align:left">{$lang.discount}: {$zhekou}</li>
+               <li>{$lang.m_379}: {$review_count} </li>
+               <li style=" text-align:right">{$lang.m_380}: {$order_num}</li> 
               </ul>
               </div>             
               
@@ -214,7 +214,7 @@ function setGoodsTab(name,cursel,n){
  <!-- {if $promotion || $volume_price_list || $cfg.use_integral || $goods.give_integral > 0 || $goods.bonus_money} -->
 <section id="search_ka" class="huodong">
 	<div class="subNav"> 
-     <div class="att_title">
+     <div class="att_title" style="display: none;">
      {if $promotion}
       <!-- {foreach from=$promotion item=item key=key name=promotion}-->       
       {if $smarty.foreach.promotion.iteration < 2}    
@@ -252,7 +252,7 @@ function setGoodsTab(name,cursel,n){
    <!-- {foreach from=$promotion item=item key=key name=promotion}--> 
              <li>
       <!-- {if $item.type eq "favourable"} 优惠活动--> 
-    <a href="activity.php" title="{$lang.favourable}"><img src="themesmobile/68ecshopcom_mobile/images/hui.png"></a>
+    <a href="activity.php" title="{$lang.favourable}"><img src="themesmobile/68ecshopcom_mobile/images/poin.png"></a>
       <!-- {/if} -->
       <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}">{$item.act_name}</a>
         <!-- {/foreach} -->  
@@ -265,7 +265,7 @@ function setGoodsTab(name,cursel,n){
      <ul class="youhui_list1" style="margin-top:0px;">  
            {foreach from=$volume_price_list item=price_list key=price_key}
           
-          <li><img src="themesmobile/68ecshopcom_mobile/images/hui.png">{$lang.btn_buy} {$price_list.number} {$lang.m_44}&nbsp; {$lang.preferences_price} {$price_list.format_price}</li> 
+          <li><img src="themesmobile/68ecshopcom_mobile/images/poin.png">{$lang.btn_buy} {$price_list.number} {$lang.m_44}&nbsp; {$lang.preferences_price} {$price_list.format_price}</li> 
           {/foreach}
           </ul>
      {/if}
@@ -274,13 +274,13 @@ function setGoodsTab(name,cursel,n){
        <!-- {if $cfg.use_integral || $goods.give_integral > 0 || $goods.bonus_money} 购买此商品可使用积分-->
         <ul class="youhui_list1" style="margin-top:0px;"> 
         {if  $cfg.use_integral}
-      <li><img src="themesmobile/68ecshopcom_mobile/images/hui.png">{$lang.goods_integral}{$goods.integral}{$points_name}</li> 
+      <li><img src="themesmobile/68ecshopcom_mobile/images/poin.png">{$lang.goods_integral}{$goods.integral}{$points_name}</li> 
       {/if}
          <!-- {if $goods.give_integral > 0} 购买此商品赠送积分-->
-         <li><img src="themesmobile/68ecshopcom_mobile/images/hui.png">{$lang.goods_give_integral} {$goods.give_integral}{$points_name}</li> 
+         <li><img src="themesmobile/68ecshopcom_mobile/images/poin.png">{$lang.goods_give_integral} {$goods.give_integral}{$points_name}</li> 
         <!-- {/if} -->
            <!-- {if $goods.bonus_money} 红包-->
-   <li><img src="themesmobile/68ecshopcom_mobile/images/hui.png">{$lang.goods_bonus}{$goods.bonus_money}</li>
+   <li><img src="themesmobile/68ecshopcom_mobile/images/poin.png">{$lang.goods_bonus}{$goods.bonus_money}</li>
       </li>
       <!-- {/if} -->
       
@@ -399,8 +399,8 @@ changePrice();
 </dl>
 <ul>
 <li><span>{$lang.m_58}</span><strong>{if $c_rank gt 0}{$c_rank}{else}5.0{/if}</strong><em>{if $c_rank gt 0}{if $c_rank lte 2}{$lang.m_59}{elseif $c_rank gt 2 && $c_rank lte 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></li>
-<li><span>{$lang.m_62}</span><strong>{if $serv_rank gt 0}{$serv_rank}{else}5.0{/if}</strong><em>{if $serv_rank gt 0}{if $serv_rank lte 2}{$lang.m_59}{elseif $serv_rank gt 2 && $serv_rank lte 4}{$lang.m_60}{else}{$lang.m_60}{/if}{else}{$lang.m_61}{/if}</em></li>
-<li><span>{$lang.m_63}</span><strong>{if $shipp_rank gt 0}{$shipp_rank}{else}5.0{/if}</strong><em>{if $shipp_rank gt 0}{if $shipp_rank lte 2}低{elseif $shipp_rank gt 2 && $shipp_rank lte 4}{$lang.m_60}{else}{$lang.m_59}{/if}{else}{$lang.m_59}{/if}</em></li>
+<li><span>{$lang.m_62}</span><strong>{if $serv_rank gt 0}{$serv_rank}{else}5.0{/if}</strong><em>{if $serv_rank gt 0}{if $serv_rank lte 2}{$lang.m_59}{elseif $serv_rank gt 2 && $serv_rank lte 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></li>
+<li><span>{$lang.m_63}</span><strong>{if $shipp_rank gt 0}{$shipp_rank}{else}5.0{/if}</strong><em>{if $shipp_rank gt 0}{if $shipp_rank lte 2}{$lang.m_59}{elseif $shipp_rank gt 2 && $shipp_rank lte 4}{$lang.m_60}{else}{$lang.m_61}{/if}{else}{$lang.m_61}{/if}</em></li>
 </ul>
 </div>
 <div class="s_dianpu">

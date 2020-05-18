@@ -1,0 +1,46 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="headerLayout">
+    <div class="headerCon ">
+      <h1 id="mallLogo"> <a href="index.php" class="header-logo"><img src="themesmobile/68ecshopcom_mobile/images/etokohalal-logo.png" /></a></h1>
+      <div class="header-extra">
+       	 <div class="panel-heading">
+            <div class="more">
+                <div class="progress">
+                    <div class="progress-wrap">
+                        <div class="progress-item passed">
+                            <div class="number">1</div>
+                            <div class="progress-desc">{$lang.m_f_540}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item passed">
+                            <div class="number">2</div>
+                            <div class="progress-desc">{$lang.m_f_541}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item passed">
+                            <div class="number">3</div>
+                            <div class="progress-desc">{$lang.m_f_542}</div>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-item ongoing">
+                            <div class="number"><i class="tick"></i></div>
+                            <div class="progress-desc">{$lang.m_f_584}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+<div class="store-joinin-apply">
+  <div class="main">
+    <div class="main">
+<div class="explain"><i></i>{$lang.m_f_585}</div>
+</div>
+</div>
+</div>
+<div class="bottom"><a href="index.php" class="btn-end">Kembali ke Beranda</a></div>

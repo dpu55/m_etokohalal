@@ -730,7 +730,7 @@ $_LANG['add_booking'] = 'Registrasi kehabisan stok';
 $_LANG['article_list'] = 'Daftar artikel';
 $_LANG['preferences_price'] = 'Harga preferensial';
 $_LANG['divided_into'] = 'Dibagi menjadi aturan';
-$_LANG['article_detail'] = 'Detail artikel';
+$_LANG['article_detail'] = 'Artikel';
 $_LANG['brand_list'] = 'Daftar merek';
 $_LANG['cart'] = 'Troli Belanja';
 $_LANG['shop_name'] = 'Pusat Pengembangan ECSHOP';
@@ -1384,9 +1384,9 @@ $_LANG['m_710'] = 'Direkomendasikan oleh manajer toko';
 $_LANG['m_711'] = 'Produk Populer';
 $_LANG['m_712'] = 'Produk baru, harga adopter awal';
 $_LANG['m_713'] = 'Rincian Saldo';
-$_LANG['m_714'] = 'Semua Produk';
-$_LANG['m_715'] = '';
-$_LANG['m_716'] = '';
+$_LANG['m_714'] = 'Silakan masuk terlebih dahulu';
+$_LANG['m_715'] = 'Klik untuk masuk';
+$_LANG['m_716'] = 'Gambar yang Anda unggah tidak dalam format yang benar, silakan pilih kembali!';
 $_LANG['m_717'] = '';
 $_LANG['m_718'] = '';
 $_LANG['m_719'] = '';
@@ -1424,3 +1424,207 @@ $_LANG['unit_g'] = 'gram';
 $_LANG['new_promo'] = 'Promo Terbaru';
 $_LANG['brand_name'] = 'Merek Ternama';
 $_LANG['group_by_goods'] = 'Beli Barang';
+
+//Lang flow apply
+$_LANG['apply_1'] = 'Silakan isi informasi toko Anda';
+$_LANG['apply_2'] = 'Informasi Rekening Bank';
+$_LANG['apply_3'] = 'Mohon unggah file dokumen dengan format JPG\GIF\PNG dan ukuran maksimal ';
+$_LANG['apply_4'] = 'Individu';
+$_LANG['apply_5'] = 'Bisnis';
+$_LANG['apply_6'] = 'Silakan ikuti petunjuknya untuk mengisi informasi anda yang sebenarnya.';
+$_LANG['apply_7'] = 'Alamat Kontak: ';
+$_LANG['apply_8'] = 'Silakan Pilih: ';
+$_LANG['apply_9'] = 'Nama Penjual: ';
+$_LANG['apply_10'] = 'Alamat: ';
+$_LANG['apply_11'] = 'Nama: ';
+$_LANG['apply_12'] = 'Nomor Telepon: ';
+$_LANG['apply_13'] = 'Alamat Email: ';
+$_LANG['apply_14'] = 'Informasi Kartu Tanda Penduduk (KTP)';
+$_LANG['apply_15'] = 'Nomor KTP: ';
+$_LANG['apply_16'] = 'Foto KTP dan Pemilik';
+$_LANG['apply_17'] = 'Foto KTP (Tampak Depan)';
+$_LANG['apply_18'] = 'Foto NPWP (Optional)';
+$_LANG['apply_19'] = 'Nama Pemilik Rekening: ';
+$_LANG['apply_20'] = 'Nomor Rekening:';
+$_LANG['apply_21'] = 'Nama Bank:';
+$_LANG['apply_22'] = 'Kode Bank:';
+$_LANG['apply_23'] = 'Berikutnya';
+$_LANG['apply_24'] = 'Kembali';
+$_LANG['apply_25'] = 'Nama toko tidak boleh kosong';
+$_LANG['apply_26'] = 'Lokasi perusahaan tidak lengkap';
+$_LANG['apply_27'] = 'Alamat toko tidak boleh kosong';
+$_LANG['apply_28'] = 'Telepon perusahaan tidak boleh kosong';
+$_LANG['apply_29'] = 'Nomor telepon perusahaan salah';
+$_LANG['apply_30'] = 'Ukuran perusahaan tidak boleh kosong';
+$_LANG['apply_31'] = 'Email tidak boleh kosong';
+$_LANG['apply_32'] = 'Kesalahan format email';
+$_LANG['apply_33'] = 'Jenis bisnis tidak boleh kosong';
+$_LANG['apply_34'] = 'Nama kontak tidak boleh kosong';
+$_LANG['apply_35'] = 'Nomor telepon tidak boleh kosong';
+$_LANG['apply_36'] = 'Kesalahan nomor telepon';
+$_LANG['apply_37'] = 'Nomor lisensi bisnis tidak boleh kosong';
+$_LANG['apply_38'] = 'Ruang lingkup bisnis hukum tidak boleh kosong';
+$_LANG['apply_39'] = 'Harap unggah lisensi bisnis';
+$_LANG['apply_40'] = 'Kode organisasi tidak boleh kosong';
+$_LANG['apply_41'] = 'Sertifikat kode organisasi';
+$_LANG['apply_42'] = 'Nama toko tidak boleh kosong!';
+$_LANG['apply_43'] = 'Alamat kontak tidak lengkap!';
+$_LANG['apply_44'] = 'Alamat terperinci tidak boleh kosong!';
+$_LANG['apply_45'] = 'Nama tidak boleh kosong!';
+$_LANG['apply_46'] = 'Nomor telepon tidak boleh kosong!';
+$_LANG['apply_47'] = 'Nomor telepon salah!';
+$_LANG['apply_48'] = 'Email tidak boleh kosong!';
+$_LANG['apply_49'] = 'Format email salah!';
+$_LANG['apply_50'] = 'Nomor kartu ID tidak boleh kosong!';
+$_LANG['apply_51'] = 'Format kartu ID salah!';
+$_LANG['apply_52'] = 'Foto ID genggam!';
+$_LANG['apply_53'] = 'Foto depan kartu ID!';
+$_LANG['apply_54'] = 'Foto kartu ID bagian belakang';
+$_LANG['apply_55'] = '(Buka akun) Nama rekening bank tidak boleh kosong!';
+$_LANG['apply_56'] = '(Buka akun) Rekening bank tidak boleh kosong!';
+$_LANG['apply_57'] = '(Buka akun) Cabang bank tidak boleh kosong!';
+$_LANG['apply_58'] = '(Buka akun) Nomor bank cabang tidak boleh kosong!';
+$_LANG['apply_59'] = 'Perusahaan dan informasi kontak';
+$_LANG['apply_60'] = 'Nama Perusahaan: ';
+$_LANG['apply_61'] = 'Lokasi perusahaan: ';
+$_LANG['apply_62'] = 'Negara';
+$_LANG['apply_63'] = 'Provinsi';
+$_LANG['apply_64'] = 'Kota';
+$_LANG['apply_65'] = 'Kecamatan';
+$_LANG['apply_66'] = 'Jenis Perusahaan: ';
+$_LANG['apply_67'] = 'Telepon Perusahaan: ';
+$_LANG['apply_68'] = 'Asset Perusahaan: ';
+$_LANG['apply_69'] = 'Contoh : Jumlah karyawan: XX, modal terdaftar: XX juta';
+$_LANG['apply_70'] = 'Informasi lisensi bisnis (salinan)';
+$_LANG['apply_71'] = 'Nomor lisensi bisnis';
+$_LANG['apply_72'] = 'Lingkup bisnis hukum';
+$_LANG['apply_73'] = 'Nomor izin usaha (elekronik)';
+$_LANG['apply_74'] = 'Pastikan gambarnya jelas, teksnya terbaca dan ada segel yang jelas.';
+$_LANG['apply_75'] = 'Nomor sertifikat organisasi';
+$_LANG['apply_76'] = 'Foto nomor sertifikat';
+$_LANG['apply_77'] = 'Sertifikat wajib pajak umum';
+$_LANG['apply_78'] = 'Item ini diperlukan ketika perusahaan yang berafiliasi memiliki sertifikat wajib pajak umum';
+$_LANG['apply_79'] = 'Foto sertifikat pajak umum';
+$_LANG['apply_80'] = 'Contoh foto yang disarankan';
+$_LANG['apply_81'] = 'Nama Cabang Bank';
+$_LANG['apply_82'] = 'Versi elektronik dari izin rekening bank';
+$_LANG['apply_83'] = 'Pastikan bahwa gambarnya jelas, teksnya dapat terbaca dan memiliki segel resmi berwarna merah cerah.';
+$_LANG['apply_84'] = 'Ini adalah Akun Penagihan';
+$_LANG['apply_85'] = 'Informasi Akun Penagihan';
+$_LANG['apply_86'] = 'Versi elektronik dari nomor sertifikat pendaftaran pajak:';
+$_LANG['apply_87'] = 'Kode Registrasi Pajak:';
+
+$_LANG['m_f_21'] = 'Selanjutnya';
+$_LANG['m_f_540'] = 'Cara buka Toko';
+$_LANG['m_f_541'] = 'Isi informasi pengguna';
+$_LANG['m_f_542'] = 'Isi informasi toko';
+$_LANG['m_f_543'] = 'Tidak disetujui';
+$_LANG['m_f_544'] = 'Aplikasi Anda tidak disetujui';
+$_LANG['m_f_545'] = 'Mendaftar ulang';
+$_LANG['m_f_546'] = 'Pendaftaran disetujui';
+$_LANG['m_f_547'] = 'Selamat toko Anda sudah terdaftar!<br><br>Silakan masuk ke ';
+$_LANG['m_f_548'] = 'Dashboard Penjual';
+$_LANG['m_f_549'] = ' untuk mengelola toko Anda!';
+$_LANG['m_f_550'] = 'Informasi Perusahaan dan Kontak';
+$_LANG['m_f_551'] = 'Telepon Kontak';
+$_LANG['m_f_552'] = 'Nomor Lisensi Bisnis';
+$_LANG['m_f_553'] = 'Ruang Lingkup Bisnis';
+$_LANG['m_f_554'] = 'Versi Elektronik';
+$_LANG['m_f_555'] = 'Lihat Foto';
+$_LANG['m_f_556'] = 'Sertifikat Kode Organisasi';
+$_LANG['m_f_557'] = 'Kode Organisasi';
+$_LANG['m_f_558'] = 'Sertifikat Wajib Pajak Umum';
+$_LANG['m_f_559'] = 'Informasi Perbankan';
+$_LANG['m_f_560'] = 'Nama Pemilik Rekening';
+$_LANG['m_f_561'] = 'Nomor Rekening Bank Perusahaan';
+$_LANG['m_f_562'] = 'Nama Bank';
+$_LANG['m_f_563'] = 'Kode Cabang Bank';
+$_LANG['m_f_564'] = 'Izin Bank';
+$_LANG['m_f_565'] = 'Informasi Akun Penyelesaian';
+$_LANG['m_f_566'] = 'Sertifikat Pendaftaran Pajak';
+$_LANG['m_f_567'] = 'Nomor NPWP';
+$_LANG['m_f_568'] = 'Simpan Informasi Bisnis';
+$_LANG['m_f_569'] = 'Nama Toko';
+$_LANG['m_f_570'] = 'Level Toko ';
+$_LANG['m_f_571'] = 'Kategori toko';
+$_LANG['m_f_572'] = 'Opini Audit';
+$_LANG['m_f_573'] = 'Status Audit';
+$_LANG['m_f_574'] = 'Dalam peninjauan';
+$_LANG['m_f_575'] = 'Tidak disetujui';
+$_LANG['m_f_576'] = 'Nomor Rekening Bank';
+$_LANG['m_f_577'] = 'Kartu ID Belakang';
+$_LANG['m_f_578'] = 'Bagian Depan KTP';
+$_LANG['m_f_579'] = 'Foto Pegang KTP';
+$_LANG['m_f_580'] = 'Nomor KTP';
+$_LANG['m_f_581'] = 'Nama';
+$_LANG['m_f_582'] = 'Alamat Kontak';
+$_LANG['m_f_583'] = 'Informasi Pribadi';
+$_LANG['m_f_584'] = 'Proses pengecekan';
+$_LANG['m_f_585'] = 'Aplikasi untuk penerimaan telah diajukan, harap tunggu administrator untuk meninjau';
+$_LANG['m_f_586'] = 'Perjanjian Penjual Etokohalal';
+$_LANG['m_f_587'] = 'Saya telah membaca dan menyetujui perjanjian di atas';
+$_LANG['m_f_588'] = '<p>Syarat dan Ketentuan Layanan Etokohalal<br> 
+<br> 1. Kualifikasi Pengguna 
+<br> Layanan Etokohalal hanya dapat mengikat secara hukum berdasarkan undang-undang yang berlaku.
+Kontrak individu disediakan dan digunakan hanya olehnya. Tanpa membatasi hal-hal tersebut di atas, layanan perusahaan tidak tersedia untuk pengguna di bawah usia 17 tahun atau ditangguhkan sementara atau tanpa batas waktu.
+Akun Anda dan nama pengguna tidak boleh ditransfer atau dijual ke pihak lain. Selain itu, Etokohalal berhak untuk menangguhkan atau menghentikan akun Anda atas kebijakannya sendiri. <br> 
+<br> 2. Informasi Anda (termasuk tetapi tidak terbatas) tidak boleh: 
+<br> * Palsu, salah, tidak akurat, atau menyesatkan; 
+<br> * Melanggar hak cipta pihak ketiga mana pun, paten, merek dagang, rahasia dagang atau hak kepemilikan lainnya atau hak penerbitan atau hak privasi; 
+<br> * Melanggar hukum atau peraturan yang berlaku,  yaitu (termasuk tetapi tidak terbatas pada) hukum perlindungan konsumen, persaingan tidak adil, hukum pidana;
+<br> * Konten yang menghina atau mencemarkan nama baik orang lain dan melanggar hak dan kepentingan orang lain; 
+<br> * Mengandung unsur pornografi, perjudian, kekerasan, pembunuhan, teror atau hasutan pada tindak kejahatan; 
+<br> * Berisi virus, trojan horse, worm, spyware dan program sejenisnya yang dapat merusak, mengubah, menghapus, berdampak buruk, secara diam-diam masuk, atau mendapatkan akses tanpa izin ke penggunaan sistem, data, atau data pribadi apa pun; <br> 
+<br> 3. Sangsi 
+<br> Jika keadaan berikut ini terjadi, kami dapat membatasi aktivitas Anda dan menghapus produk Anda, mengeluarkan peringatan tentang tindakan Anda, menangguhkan sementara, menangguhkan atau mengakhiri status pengguna Anda tanpa batas waktu, dan menolak untuk memberikan layanan kepada Anda: 
+<br> (a) Anda melanggar perjanjian ini atau dokumen yang dimasukkan ke dalam perjanjian ini; 
+<br> (b) Etokohalal tidak dapat memverifikasi informasi yang Anda berikan kepada Etokohalal; 
+<br> (c) Tindakan Anda dapat mengakibatkan kerugian atau pelanggaran hukum terhadap pengguna Etokohalal lain atau terhadap Etokohalal. <br> 
+<br> 4. Batasan Tanggung Jawab <br>
+Etokohalal, afiliasi perusahaan dan entitas terkait dalam hal apa pun tidak bertanggung jawab atas kehilangan keuntungan atau keuntungan yang tidak langsung yang timbul dari atau sehubungan dengan platform Etokohalal, layanan Etokohalal atau Perjanjian ini.
+Anda setuju bahwa Anda bertanggung jawab penuh atas legalitas tindakan Anda. Anda setuju bahwa Etokohalal dan semua afiliasi perusahaan dan entitas terkait tidak bertanggung jawab atas legalitas tindakan Anda dan hasil apa pun yang dihasilkan. <br> 
+<br> 5. Hubungan Kerjasama
+<br> Pengguna dan Etokohalal adalah mitra independen. Perjanjian ini tidak dimaksudkan untuk membuat agen, kemitraan, usaha patungan, hubungan karyawan dan pengusaha atau hubungan waralaba. Etokohalal tidak membuat rekomendasi tersurat atau tersirat, janji atau jaminan apa pun untuk pengguna Etokohalal. <br>
+<br> 6. Ketentuan Umum 
+<br> Perjanjian ini diatur oleh hukum Republik Indonesia dalam segala hal. Jika ada ketentuan Perjanjian ini dianggap tidak sah atau tidak dapat dilaksanakan, ketentuan tersebut dapat dihapus dan ketentuan lainnya harus ditegakkan. </p> '; 
+$_LANG['m_f_589'] = 'Nama toko tidak dapat diubah setelah pendaftaran. Silakan isi dengan hati-hati. ';
+$_LANG['m_f_590'] = 'Harap hati-hati memilih kategori toko yang sesuai dengan konten bisnis Anda. Setelah mendaftar, pedagang tidak dapat memodifikasinya. ';
+$_LANG['m_f_591'] = 'Sebelumnya';
+$_LANG['m_f_592'] = 'Nama toko tidak boleh kosong';
+$_LANG['m_f_593'] = 'Level toko tidak boleh kosong';
+$_LANG['m_f_594'] = 'Kategori toko tidak boleh kosong';
+
+$_LANG['m_f_135'] = 'Nama Usaha:';
+$_LANG['m_f_136'] = 'Lokasi Usaha:';
+$_LANG['m_f_137'] = 'Alamat Lengkap Usaha:';
+$_LANG['m_f_138'] = 'Telepon Perusahaan:';
+$_LANG['m_f_139'] = 'Ukuran Perusahaan:';
+$_LANG['m_f_141'] = 'Email: ';
+$_LANG['m_f_142'] = 'Jenis Bisnis: ';
+$_LANG['m_f_145'] = 'Unggah SIUP: ';
+$_LANG['m_f_218'] = 'Alamat Lengkap:';
+$_LANG['m_f_430'] = 'Nama Kontak:';
+
+$_LANG['m_f_1043'] = 'Lisensi bisnis nomor gambar versi elektronik gagal! ';
+$_LANG['m_f_1044'] = 'Organisasi kode sertifikat versi elektronik dari unggahan gambar gagal! ';
+$_LANG['m_f_1045'] = 'Silakan isi bahan aplikasi yang diperlukan dengan hati-hati! ';
+$_LANG['m_f_1047'] = 'Operasi gagal! ';
+$_LANG['m_f_1048'] = 'Upload foto ID genggam gagal! ';
+$_LANG['m_f_1049'] = 'Upload foto identitas gagal! ';
+$_LANG['m_f_1050'] = 'Upload foto identitas gagal! ';
+$_LANG['m_f_1051'] = 'Versi elektronik lisensi rekening bank gagal mengunggah gambar! ';
+$_LANG['m_f_1052'] = 'Nomor sertifikat registrasi pajak versi elektronik dari gambar gagal diunggah! ';
+$_LANG['m_f_1053'] = 'Silakan klik untuk menyetujui perjanjian! ';
+// End of lang apply
+
+//Benefit
+$_LANG['m_f_723'] = 'Jaminan halal MUI';
+$_LANG['m_f_723a'] = 'Produk 100% Halal yang terintegrasi secara lagsung dengan sistem verifikasi halal MUI';
+$_LANG['m_f_724'] = 'Garansi 7x24 jam';
+$_LANG['m_f_724a'] = 'Tokohalal akan mengembalikan uang anda secara penuh, jika barang tidak sesuai dengan deskripsi atau berkualitas buruk';
+$_LANG['m_f_725'] = 'Gratis penukaran';
+$_LANG['m_f_725a'] = 'Gratis biaya penukaran barang 15 hari dari pembelian';
+$_LANG['m_f_726'] = 'Pilihan jasa pengiriman';
+$_LANG['m_f_726a'] = 'Tokohalal menyediakan berbagai pilihan jasa pengiriman dengan jangkauan nasional';
+$_LANG['m_f_727'] = 'Layanan purna jual';
+$_LANG['m_f_727a'] = 'Pertayaan akan ditanggapi 24 jam';

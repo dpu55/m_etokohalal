@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/68ecshop_commin.css" />
+<link href="themesmobile/68ecshopcom_mobile/css/store_joinin_new.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/all.min.css">
+<link rel="stylesheet" href="themesmobile/68ecshopcom_mobile/fontawesome-5.9.0/css/fontawesome.min.css">
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,user.js'}
+<script src="themesmobile/68ecshopcom_mobile/js/jquery-1.9.1.min.js" data-fixed="true"></script>
+{insert_scripts files='jquery.json.js,transport.js'}
+<script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/jq4.js" charset="utf-8"></script>
+</head>
+<body>
+
+<div class="header">
+  <div class="wrapper">
+    <div class="roww">
+      <h2 class="header_logo"><a href="index.php"><img src="themesmobile/68ecshopcom_mobile/images/etokohalal-logo.png" class="pngFix"></a></h2>
+      <ul class="header_menu">
+        <li class="current"><a href="apply.php" class="joinin"><i class="fas fa-marker"></i>Daftar Buka Toko</a></li>
+        <li class=""><a href="{$mydomain}supplier/" class="login"><i class="fas fa-sitemap"></i>Kelola Toko</a></li>
+        <li class=""><a href="#" class="faq"><i class="fas fa-question"></i>Panduan Penjualan</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="header_line"><span></span></div>
+<div class="banner">
+  <div class="wrapper">
+  <div class="user-box">
+    <div class="user-joinin"> {insert name='member_info1'}
+      <dl>
+        <dt>Selamat datang di Etokohalal</dt>
+        <dd>Jika Anda belum bergabung menjadi merchant:<br>
+          Silakan klik "<a href="apply.php" target="_blank">Buka Toko</a>" dan isi form pendaftaran</dd>
+        <dd>Jika toko Anda belum dibuka:<br>
+          Silakan lihat "<a href="apply.php" target="_blank">Status Audit Toko</a>" untuk melihat update status audit toko Anda</dd>
+      </dl>
+      <div class="bottom"><a class="hvr-bounce-in" href="apply.php" target="_blank">Buka Toko</a><a class="hvr-bounce-in" href="apply.php" target="_blank">Status Audit Toko</a></div>
+    </div>
+  </div>
+  </div>
+  <div id="banner">
+    <div id="ctrl1"> <span class="hov"></span> <span></span> <span></span> </div>
+    <div id="img1" class="full-screen-slides" style="overflow:hidden"> <a href="#"><img style="display:block;" src="images/apply/banner01.jpg" alt="" /></a> <a href="#"><img src="images/apply/banner02.jpg" alt="" /></a> <a href="#"><img src="images/apply/banner03.jpg" alt="" /></a> </div>
+  </div>
+</div>
+<div class="indextip">
+  <div class="wrapper">
+    <div class="roww"><span class="content">Platform Etokohalal membantu Anda membuka toko online, mengoperasikan toko, mengatur kegiatan pemasaran, menganalisa data operasional, dan memandu Anda untuk memaksimalkan penjualan. Kami akan melakukan yang terbaik untuk Anda.</span></div>
+  </div>
+</div>
+<div class="wrapper">
+<div class="main mt30">
+  <h2 class="index-title">Into the process</h2>
+  <div class="joinin-index-step">
+  <span class="step hvr-bounce-in"><i class="fas fa-clipboard-list"></i>Isi form informasi Merchant</span>
+  <span class="arrow"></span><span class="step hvr-bounce-in"><i class="fas fa-file-signature"></i>Persetujuan perjanjian Merchant</span>
+  <span class="arrow"></span><span class="step hvr-bounce-in"><i class="fas fa-chalkboard-teacher"></i>Proses pengecekan pendaftaran</span>
+  <!-- <span class="arrow"></span><span class="step hvr-bounce-in"><i class="fas fa-tasks"></i>Pembayaran Merchant</span> -->
+  <span class="arrow"></span><span class="step hvr-bounce-in"><i class="fas fa-store"></i>Buka Toko</span></div>
+  <!--<h2 class="index-title">Admission guide</h2>
+  <div class="joinin-info">
+    <ul class="tabs-nav">
+      <li class="tabs-selected">
+        <h3>Investment direction</h3>
+      </li>
+      <li class="">
+        <h3>Investment standard</h3>
+      </li>
+      <li class="">
+        <h3>Qualification requirements</h3>
+      </li>
+      <li class="">
+        <h3>Standard tariff</h3>
+      </li>
+    </ul>
+    <div class="tabs-panel">
+      <p> <strong>2014 open platform investment direction</strong> </p>
+      <p> <br>
+      </p>
+      <h1> 1.&nbsp;&nbsp;&nbsp; Brand </h1>
+      <p> <br>
+      </p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; International and domestic famous brands<br>
+      <p> &nbsp; &nbsp; &nbsp; &nbsp;The open platform will, as always, maintain the seller's brand interests to the greatest extent, respect the brand tradition and connotation, and welcome the quality brand flag. </p>
+      <p> <br>
+      </p>
+      <p> If the shipyard is stationed, please refer to the “2014 Open Platform Key Recruitment Brand”. </p>
+      <h1> <br>
+      </h1>
+      <h1> 2.&nbsp;&nbsp;&nbsp; Goods </h1>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It can satisfy the high quality and distinctive products of the user group.<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The product configuration broken down according to the category structure. For the category planning, please refer to the “2014 Open Platform Category List”.<br>
+      <h1> 3.&nbsp;&nbsp; Vertical e-commerce </h1>
+      <p> <br>
+      </p>
+      <p> &nbsp; &nbsp; &nbsp; The open platform welcomes vertical e-commerce companies. The open platform is willing to share its premium user base with professional vertical e-commerce companies. </p>
+      <p> <br>
+      </p>
+      <p> And welcome vertical e-commerce to provide users with professional goods and services in this field. </p>
+      <p> <br>
+      </p>
+      <p> <br>
+      </p>
+    </div>
+    <div class="tabs-panel tabs-hide">
+      <p> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> This standard applies to all sellers of platform open platforms except virtual services (including but not limited to travel, hotels, ticketing, top-up, lottery). </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter I Entering</b><b></b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.1&nbsp;&nbsp;&nbsp; The platform open platform has not authorized any agency to conduct agent investment services. The application process and related fee descriptions are based on the official platform of the platform open platform. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.2 &nbsp;&nbsp; The platform open platform has the right to return the seller's application according to other factors including but not limited to brand demand, company operation status, service level and so on. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.3 &nbsp;&nbsp; The platform open platform has the right to require sellers to provide other qualifications during the application and subsequent business stages.</p>
+      <p class="MsoNormal" style="text-align:left;"> 1.4 &nbsp;&nbsp; The platform open platform will combine the development trends of various industries, relevant national regulations and consumer purchase requirements, and update the investment standards from time to time. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5 &nbsp;&nbsp; Sellers must truthfully provide information and information: </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5.1 Please ensure the authenticity, completeness and validity of the relevant qualifications and information provided during the application and subsequent business phases (if the relevant qualifications provided by the seller are provided by third parties, including but not limited to trademark registration certificates, authorizations
+         Etc., please be sure to verify the true and complete integrity of the document first. Once the false qualifications or information are discovered, the platform open platform will no longer cooperate with the seller and have the right to comply with the platform open platform rules and the relevant agreements signed with the seller. deal with; </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5.2&nbsp; The seller shall truthfully provide the main body of the store operation and related information, including but not limited to the actual business entity of the store, the agent operating company and other information;</p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5.3&nbsp; The platform open platform has provisions on seller information and data changes, but if the seller changes the information listed in <span>1.5.2</span>, the platform should be notified in writing 10 days in advance; if the platform is not informed in advance, The platform will be processed according to the platform open platform rules.</p>
+      <p class="MsoNormal" style="text-align:left;"> 1.6&nbsp;&nbsp;&nbsp; The open platform of the platform will not accept the application for the entry of individual industrial and commercial households. The seller must be an officially registered enterprise, and will not accept applications from non-Chinese registered enterprises for the time being. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.7&nbsp;&nbsp;&nbsp; The Platform Open Platform will not accept applications for brand opening that have not obtained the trademark registration certificate or trademark acceptance notice issued by the State Administration of Trademarks, nor accept applications for pure graphic trademarks. If the seller provides a trademark acceptance notice (<span>TM</span> status trademark), the registration application time must be six months.</p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter II Platform Shop Types and Related Requirements</b><b></b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.1&nbsp;&nbsp;&nbsp;&nbsp; Flagship store, the seller's own brand (trademark is <span>R</span> or <span>TM</span> status), or the authorized document issued by the right holder to open the brand flagship store on the platform open platform (authorization The document should be clearly exclusive and irrevocable) and settled in the open platform of the platform. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.1.1&nbsp; Flagship stores can have the following situations: </p>
+      <p class="MsoNormal" style="text-align:left;"> Operate a flagship store of a self-owned brand (trademark <span>R</span> or <span>TM</span>) on the open platform of the platform. (The own brand means that the trademark rights belong to the seller, from Branded sub-brands can be placed in the flagship store, and the trademark owners of the main and sub-brands should be the same actual controller); </p>
+      <p class="MsoNormal" style="text-align:left;"> To operate a flagship store of sellers who have obtained a clear and exclusive authorization for a branded product to enter the open platform of the platform; </p>
+      <p class="MsoNormal" style="text-align:left;"> A flagship store opened by a trademark owner of a store-type brand (service mark); </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.1.2&nbsp; The owner of the store must be a brand (trademark) owner or an authorized company that holds the exclusive authorization document issued by the right holder to open the platform open platform flagship store. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.2&nbsp;&nbsp;&nbsp;&nbsp; A store that is licensed by a seller to hold a brand of another person (trademark <span>R</span> or <span>TM</span>) on a platform open platform. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.2.1&nbsp; Store type: a seller's store that operates one or more authorized branded goods (the trademark owners of multiple authorized brands should be the same actual controller) but has not obtained the exclusive authorization of the flagship store to enter the open platform of the platform; </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.2.2 &nbsp; Authorization documents issued by brand (trademark) rights holders should not be geographically restricted.</p>
+      <p class="MsoNormal" style="text-align:left;"> 2.3&nbsp;&nbsp;&nbsp;&nbsp; A franchise store that operates a platform with two or more others or a private label (trademark <span>R</span> or <span>TM</span>) under the same level of business. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.3.1&nbsp; Franchise stores can have the following situations: </p>
+      <p class="MsoNormal" style="text-align:left;"> A seller's franchise store that operates two or more brands of goods under the same level of category and enters the open platform of the platform; </p>
+      <p class="MsoNormal" style="text-align:left;"> A seller's franchise store that operates the branded goods of others and operates its own branded goods to enter the open platform of the platform under the same level of category. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.4 &nbsp; &nbsp; For detailed descriptions of each type of store naming, please refer to <span> "Platform Open Platform Seller Store Naming Rules".</span> </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter III Application Requirements for Platform Application</b><b></b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 3.1&nbsp;&nbsp;&nbsp; See the <span> "Platform Open Platform Investment Qualification Standards" for the platform open platform application qualification criteria.</span> </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter IV Opening Restrictions</b><b></b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1&nbsp;&nbsp;&nbsp; Brand entry restrictions: </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.1 a brand with the same or similar name as its own brand, channel, business, category, etc.; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.2&nbsp; a brand that includes an industry name or a generic name; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.3&nbsp; a brand containing celebrities and place names; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.4&nbsp; A brand that is the same or similar to a well-known brand. </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.2&nbsp;&nbsp;&nbsp;&nbsp; The business category is restricted, and the categories operated by the sellers should be in line with the relevant standards of the platform open platform. For details, please refer to <span> "Platform Open Platform Business Category Fee List". </span></p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3Store restrictions for the same subject: </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3.1&nbsp; A single store can only correspond to one business model. For the contents of each business model, please refer to the corresponding contract signed with the seller; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3.2&nbsp; If a certain store is opened by the same entity, the total number of business models shall not exceed two, and a written application shall be made to the platform in advance <span>10</span> when the second business model is implemented; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3.3&nbsp; Merchandise Coincidence: Brands and merchandise that are required to operate between stores must not be duplicated.<span>4.3.2</span>Shops approved by the platform are not subject to this restriction. </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.4&nbsp;&nbsp;&nbsp;&nbsp; The same subject re-entered the platform open platform restrictions: </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.4.1&nbsp; Serious violations, qualifications and fraud are cleared by the platform, and permanent restrictions are imposed; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.4.2&nbsp; If the seller voluntarily withdraws from <span>2</span> during the year, it will be restricted to <span>12</span> within the first month from the date of the last completion of the withdrawal. </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.5&nbsp;&nbsp;&nbsp;&nbsp; Renewal Restriction: The renewal application must be completed before <span>3</span> month <span>1</span> day <span>18</span>, <span>3</span> per year <span>20</span> Day <span>18</span> completed the payment of the platform usage fee. If the previous year and the next year's tariffs and information are not replenished, the platform will be <span>3 per year. Span>month<span>31</span>day <span>24</span> terminates store service and removes merchandise.</p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter 5 Platform Open Platform Margin <span>/</span> Platform Usage Fees <span>/</span> Rate Standards</b><b></b></p>
+      <p class="MsoNormal" style="text-align:left;"> 5.1 &nbsp; &nbsp; Margin: The amount that the seller pays to the platform to ensure the store's standard operation and guarantee the quality of goods and services. When the seller defaults or violates the rules, the platform may deduct the corresponding amount of the deposit as the liquidated damages or the compensation to the buyer according to the relevant agreement in the agreement signed with the seller and the platform open platform rules. </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.1.1&nbsp; The replenishment, refund, deduction, etc. of the deposit shall be handled in accordance with the relevant agreements signed by the seller and the platform open platform rules; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.1.2&nbsp; For the margin standards corresponding to each business category of the platform open platform, please refer to the <span> "Platform Open Platform Business Category Fee List".</span> </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2&nbsp;&nbsp;&nbsp;&nbsp; Platform usage fee: The fixed technical service fee paid by the seller when using the platform open platform services according to the relevant agreement signed with the platform. For details of the platform usage fees corresponding to each business category of the platform open platform, see <span> "Platform Open Platform Operation Category Fee List". </span>The corresponding platform usage fee during the renewing of the seller's renewal service shall be paid in one lump sum before <span>3</span> month <span>20</span> day <span>18</span>; Newly signed sellers must pay the platform usage fee for the corresponding service period at the time of application for approval. </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1&nbsp;&nbsp; Platform usage fee settlement: </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.1The seller actively requests to stop the store service and does not return the platform usage fee; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.2The seller will not return the platform usage fee due to violation of the rules or qualifications; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.3The platform usage fee for each store is calculated and paid based on the corresponding service period. The service is opened on the monthly <span>1</span> day to <span>15</span> day (inclusive). The platform usage fee is charged one month in the month of opening. The service is opened on a monthly basis. The <span>16</span> day (inclusive) to the last day of the month, no platform usage fee will be charged for the month of opening; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.4A store with an independent store <span>ID</span> is a store. If the seller has to open multiple stores according to the operation, the corresponding platform usage fee must be paid according to the number of stores. </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.3&nbsp;&nbsp;&nbsp;&nbsp; Rate: The amount that the seller pays to the platform in proportion to the business category in the case of each single transaction (the ratio is called “technical service rate” or “maori guarantee rate” in the relevant agreement signed with the seller). The platform rates for each business model of the platform open platform are detailed in the <span> "Platform Open Platform Business Category Fee List". </span> </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter VI Store Service Period</b><b></b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.1&nbsp;&nbsp;&nbsp;&nbsp; The first service period of each store is from the date of service opening to the first <span>3</span> month <span>31</span>, and the second service period is from <span> 4</span> month <span>1</span> day to next year <span>3</span> month <span>31</span> day, third, fourth... service period By analogy, on a one-year cycle, unless the store or the relevant agreement with the seller is terminated early. </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.2&nbsp;&nbsp;&nbsp;&nbsp; The service opening date of each store of the seller shall be based on the time of the platform notice or system record. </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.3&nbsp;&nbsp;&nbsp;&nbsp; The seller shall submit an application for renewal to Party A on the <span>30</span> day before the expiration of each service period of the store, pay the platform usage fee for the renewal service period and submit all valid qualifications required for its operation, and pass the platform. Review. </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.4&nbsp;&nbsp;&nbsp;&nbsp; If the seller has not submitted an application for renewal or the application has not passed the platform review, the platform open platform will no longer provide the seller with any services of the store from the date of expiration of the store service. </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <a name="help2267" id="help2267"></a><b>Platform Open Platform Investment Standards</b><b></b> </p>
+      <p class="MsoNormal"> <span></span>&nbsp; </p>
+    </div>
+    <div class="tabs-panel tabs-hide">
+      <p> </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <a name="undefined" id="undefined"></a><b>Platform Open Platform Investment Standards</b> </p>
+      <p class="MsoNormal"> <span></span>&nbsp; </p>
+      <p class="MsoNormal" style="text-align:left;"> This standard applies to all sellers of platform open platforms except virtual services (including but not limited to travel, hotels, ticketing, top-up, lottery). </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter I Entering</b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.1&nbsp;&nbsp;&nbsp; The platform open platform has not authorized any agency to conduct agent investment services. The application process and related fee descriptions are based on the official platform of the platform open platform. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.2 &nbsp;&nbsp; The platform open platform has the right to return the seller's application according to other factors including but not limited to brand demand, company operation status, service level and so on. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.3 &nbsp;&nbsp; The platform open platform has the right to require sellers to provide other qualifications during the application and subsequent business stages. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.4 &nbsp;&nbsp; The platform open platform will combine the development trends of various industries, relevant national regulations and consumer purchase requirements, and update the investment standards from time to time. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5 &nbsp;&nbsp; Sellers must truthfully provide information and information: </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5.1 Please ensure the authenticity, completeness and validity of the relevant qualifications and information provided during the application and subsequent business phases (if the relevant qualifications provided by the seller are provided by third parties, including but not limited to trademark registration certificates, authorizations
+         Etc., please be sure to verify the true and complete integrity of the document first. Once the false qualifications or information are discovered, the platform open platform will no longer cooperate with the seller and have the right to comply with the platform open platform rules and the relevant agreements signed with the seller. deal with; </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5.2&nbsp; The seller shall truthfully provide the main body of the store operation and related information, including but not limited to the actual business entity of the store, the agent operating company and other information; </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.5.3&nbsp; The platform open platform has provisions on seller information and data changes, but if the seller changes the information listed in <span>1.5.2</span>, the platform should be notified in writing 10 days in advance; if the platform is not informed in advance, The platform will be processed according to the platform open platform rules. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.6&nbsp;&nbsp;&nbsp; The open platform of the platform will not accept the application for the entry of individual industrial and commercial households. The seller must be an officially registered enterprise, and will not accept applications from non-Chinese registered enterprises for the time being. </p>
+      <p class="MsoNormal" style="text-align:left;"> 1.7&nbsp;&nbsp;&nbsp; The Platform Open Platform will not accept applications for brand opening that have not obtained the trademark registration certificate or trademark acceptance notice issued by the State Administration of Trademarks, nor accept applications for pure graphic trademarks. If the seller provides a trademark acceptance notice (<span>TM</span> status trademark), the registration application time must be six months. </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter II Platform Shop Types and Related Requirements</b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.1&nbsp;&nbsp;&nbsp;&nbsp; Flagship store, the seller's own brand (trademark is <span>R</span> or <span>TM</span> status), or the authorized document issued by the right holder to open the brand flagship store on the platform open platform (authorization The document should be clearly exclusive and irrevocable) and settled in the open platform of the platform. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.1.1&nbsp; Flagship stores can have the following situations: </p>
+      <p class="MsoNormal" style="text-align:left;"> Operate a flagship store of a self-owned brand (trademark <span>R</span> or <span>TM</span>) on the open platform of the platform. (The own brand means that the trademark rights belong to the seller, from Branded sub-brands can be placed in the flagship store, and the trademark owners of the main and sub-brands should be the same actual controller); </p>
+      <p class="MsoNormal" style="text-align:left;"> To operate a flagship store of sellers who have obtained a clear and exclusive authorization for a branded product to enter the open platform of the platform; </p>
+      <p class="MsoNormal" style="text-align:left;"> A flagship store opened by a trademark owner of a store-type brand (service mark); </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.1.2&nbsp; The owner of the store must be a brand (trademark) owner or an authorized company that holds the exclusive authorization document issued by the right holder to open the platform open platform flagship store. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.2&nbsp;&nbsp;&nbsp;&nbsp; A store that is licensed by a seller to hold a brand of another person (trademark <span>R</span> or <span>TM</span>) on a platform open platform. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.2.1&nbsp; Store type: a seller's store that operates one or more authorized branded goods (the trademark owners of multiple authorized brands should be the same actual controller) but has not obtained the exclusive authorization of the flagship store to enter the open platform of the platform; </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.2.2 &nbsp; Authorization documents issued by brand (trademark) rights holders should not be geographically restricted. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.3&nbsp;&nbsp;&nbsp;&nbsp; A franchise store that operates a platform with two or more others or a private label (trademark <span>R</span> or <span>TM</span>) under the same level of business. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.3.1&nbsp; Franchise stores can have the following situations: </p>
+      <p class="MsoNormal" style="text-align:left;"> A seller's franchise store that operates two or more brands of goods under the same level of category and enters the open platform of the platform; </p>
+      <p class="MsoNormal" style="text-align:left;"> A seller's franchise store that operates the branded goods of others and operates its own branded goods to enter the open platform of the platform under the same level of category. </p>
+      <p class="MsoNormal" style="text-align:left;"> 2.4 &nbsp; &nbsp; For detailed descriptions of each type of store naming, please refer to <span> "Platform Open Platform Seller Store Naming Rules".</span> </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter III Application Requirements for Platform Application</b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 3.1&nbsp;&nbsp;&nbsp; See the <span> "Platform Open Platform Investment Qualification Standards" for the platform open platform application qualification criteria.</span> </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter IV Opening Restrictions</b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1&nbsp;&nbsp;&nbsp; Brand entry restrictions: </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.1 a brand with the same or similar name as its own brand, channel, business, category, etc.; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.2&nbsp; a brand that includes an industry name or a generic name; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.3&nbsp; a brand containing celebrities and place names; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.1.4&nbsp; A brand that is the same or similar to a well-known brand. </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.2&nbsp;&nbsp;&nbsp;&nbsp; The business category is restricted, and the categories operated by the sellers should be in line with the relevant standards of the platform open platform. For details, please refer to <span> "Platform Open Platform Business Category Fee List".</span> </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3Store restrictions for the same subject: </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3.1&nbsp; A single store can only correspond to one business model. For the contents of each business model, please refer to the corresponding contract signed with the seller; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3.2&nbsp; If a certain store is opened by the same entity, the total number of business models shall not exceed two, and a written application shall be made to the platform in advance <span>10</span> when the second business model is implemented; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.3.3&nbsp; Merchandise Coincidence: Brands and merchandise that are required to be operated between stores must not be duplicated. Shops that have been approved by the platform under <span>4.3.2</span> are not subject to this restriction. </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.4&nbsp;&nbsp;&nbsp;&nbsp; The same subject re-entered the platform open platform restrictions: </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.4.1&nbsp; Serious violations, qualifications and fraud are cleared by the platform, and permanent restrictions are imposed; </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.4.2&nbsp; If the seller voluntarily withdraws from <span>2</span> during the year, it will be restricted to <span>12</span> within the first month from the date of the last completion of the withdrawal. </p>
+      <p class="MsoNormal" style="text-align:left;"> 4.5&nbsp;&nbsp;&nbsp;&nbsp; Renewal Restriction: The renewal application must be completed before <span>3</span> month <span>1</span> day <span>18</span>, <span>3</span> per year <span>20</span> Day <span>18</span> completed the payment of the platform usage fee. If the previous year and the next year's tariffs and information are not replenished, the platform will be <span>3 per year. Span>month<span>31</span>day <span>24</span> terminates store service and removes merchandise. </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter 5 Platform Open Platform Margin <span>/</span> Platform Usage Fee <span>/</span> Rate Standard</b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.1 &nbsp; &nbsp; Margin: The amount that the seller pays to the platform to ensure the store's standard operation and guarantee the quality of goods and services. When the seller defaults or violates the rules, the platform may deduct the corresponding amount of the deposit as the liquidated damages or the compensation to the buyer according to the relevant agreement in the agreement signed with the seller and the platform open platform rules. </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.1.1&nbsp; The replenishment, refund, deduction, etc. of the deposit shall be handled in accordance with the relevant agreements signed by the seller and the platform open platform rules; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.1.2&nbsp; For the margin standards corresponding to each business category of the platform open platform, please refer to the <span> "Platform Open Platform Business Category Fee List".</span> </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2&nbsp;&nbsp;&nbsp;&nbsp; Platform usage fee: The fixed technical service fee paid by the seller when using the platform open platform services according to the relevant agreement signed with the platform. For details of the platform usage fees corresponding to each business category of the platform open platform, see <span> "Platform Open Platform Operation Category Fee List". </span>The corresponding platform usage fee during the renewing of the seller's renewal service shall be paid in one lump sum before <span>3</span> month <span>20</span> day <span>18</span>; Newly signed sellers must pay the platform usage fee for the corresponding service period at the time of application for approval. </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1&nbsp;&nbsp; Platform usage fee settlement: </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.1The seller actively requests to stop the store service and does not return the platform usage fee; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.2The seller will not return the platform usage fee due to violation of the rules or qualifications; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.3The platform usage fee for each store is calculated and paid based on the corresponding service period. The service is opened on the monthly <span>1</span> day to <span>15</span> day (inclusive). The platform usage fee is charged one month in the month of opening. The service is opened on a monthly basis. The <span>16</span> day (inclusive) to the last day of the month, no platform usage fee will be charged for the month of opening; </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.2.1.4A store with an independent store <span>ID</span> is a store. If the seller has to open multiple stores according to the operation, the corresponding platform usage fee must be paid according to the number of stores. </p>
+      <p class="MsoNormal" style="text-align:left;"> 5.3&nbsp;&nbsp;&nbsp;&nbsp; Rate: The amount that the seller pays to the platform in proportion to the business category in the case of each single transaction (the ratio is called “technical service rate” or “maori guarantee rate” in the relevant agreement signed with the seller). The platform rates for each business model of the platform open platform are detailed in the <span> "Platform Open Platform Business Category Fee List". </span> </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <p class="MsoNormal" style="text-align:left;"> <b>Chapter VI Store Service Period</b> </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.1&nbsp;&nbsp;&nbsp;&nbsp; The first service period of each store is from the date of service opening to the first <span>3</span> month <span>31</span>, and the second service period is from <span> 4</span> month <span>1</span> day to next year <span>3</span> month <span>31</span> day, third, fourth... service period By analogy, on a one-year cycle, unless the store or the relevant agreement with the seller is terminated early. </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.2&nbsp;&nbsp;&nbsp;&nbsp; The service opening date of each store of the seller shall be based on the time of the platform notice or system record. </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.3&nbsp;&nbsp;&nbsp;&nbsp; The seller shall submit an application for renewal to Party A on the <span>30</span> day before the expiration of each service period of the store, pay the platform usage fee for the renewal service period and submit all valid qualifications required for its operation, and pass the platform. Review. </p>
+      <p class="MsoNormal" style="text-align:left;"> 6.4&nbsp;&nbsp;&nbsp;&nbsp; If the seller has not submitted an application for renewal or the application has not passed the platform review, the platform open platform will no longer provide the seller with any services of the store from the date of expiration of the store service. </p>
+      <p class="MsoNormal" style="text-align:left;"> <br>
+      </p>
+      <br>
+    </div>
+    <div class="tabs-panel tabs-hide"><br>
+      <p> </p>
+      <h3 class="help_tit"> <strong>2019 open platform focus on recruiting brands</strong> </h3>
+      <div class="help_box" style="text-align: center">
+        <p> <img src="themesmobile/68ecshopcom_mobile/images/apply/20140505170523_59415.jpg" alt=""> </p>
+      </div>
+      <p> <br>
+      </p>
+    </div>
+  </div>-->
+</div>
+</div>
+</body>
+<!-- #BeginLibraryItem "/library/page_footerindex.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/footer-info.lbi" --><!-- #EndLibraryItem -->  
+<script type="text/javascript" src="themesmobile/68ecshopcom_mobile/js/home_index.js"></script>
+</html>

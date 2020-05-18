@@ -451,7 +451,7 @@ $_LANG['login_success'] = 'Berhasil masuk';
 $_LANG['confirm_login'] = 'Konfirmasi login';
 $_LANG['profile_lnk'] = 'Lihat informasi pribadi saya';
 $_LANG['login_failure'] = 'Nama pengguna atau kata sandi salah';
-$_LANG['relogin_lnk'] = 'Silahkan login kembali';
+$_LANG['relogin_lnk'] = 'Silakan login kembali';
  
 $_LANG['sex'] = 'Jenis Kelamin';
 $_LANG['male'] = 'Laki-laki';
