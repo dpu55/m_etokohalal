@@ -52,7 +52,9 @@ if (!$smarty->is_cached('mall.dwt', $cache_id))
 
     $smarty->assign('categories',      get_categories_tree_supplier()); // 分类树
     
-    //1,2,3对应店铺商品分类中的精品,最新，热门
+    //1,2,3对应店铺商品分类中的精品,最新，热门   
+    // echo "<pre>"; var_dump(get_all_goods()); die(); 
+    $smarty->assign('all_goods',       get_all_goods());
     $smarty->assign('best_goods',      get_supplier_goods(1));    // 精品商品
     $smarty->assign('new_goods',       get_supplier_goods(2));     // 最新商品
     $smarty->assign('hot_goods',       get_supplier_goods(3));     // 热门商品
@@ -132,6 +134,46 @@ function index_get_new_articles()
     }
 
     return $arr;
+}
+
+function get_all_goods(){
+    $sql = "SELECT DISTINCT g.goods_id,g.* FROM ". $GLOBALS['ecs']->table('goods') ." AS g, ". $GLOBALS['ecs']->table('supplier_goods_cat') ." AS gc WHERE g.supplier_id =".$_GET['suppId']." AND gc.goods_id = g.goods_id 
+    AND g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_delete = 0 AND g.is_virtual = 0 
+    ORDER BY g.sort_order, g.last_update DESC LIMIT 10";
+    
+    $result = $GLOBALS['db']->getAll($sql);
+    
+    $goods = array();
+    if($result){
+        foreach ($result AS $idx => $row)
+        {
+            if ($row['promote_price'] > 0)
+            {
+                $promote_price = bargain_price($row['promote_price'], $row['promote_start_date'], $row['promote_end_date']);
+                $goods[$idx]['promote_price'] = $promote_price > 0 ? price_format($promote_price) : '';
+            }
+            else
+            {
+                $goods[$idx]['promote_price'] = '';
+            }
+
+            $goods[$idx]['id']           = $row['goods_id'];
+            $goods[$idx]['name']         = $row['goods_name'];
+            $goods[$idx]['brief']        = $row['goods_brief'];
+            $goods[$idx]['brand_name']   = isset($goods_data['brand'][$row['goods_id']]) ? $goods_data['brand'][$row['goods_id']] : '';
+            $goods[$idx]['goods_style_name']   = add_style($row['goods_name'],$row['goods_name_style']);
+
+            $goods[$idx]['short_name']   = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
+                                               sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
+            $goods[$idx]['short_style_name']   = add_style($goods[$idx]['short_name'],$row['goods_name_style']);
+            $goods[$idx]['market_price'] = price_format($row['market_price']);
+            $goods[$idx]['shop_price']   = price_format($row['shop_price']);
+            $goods[$idx]['thumb']        = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+            $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
+            $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
+        }
+    }
+    return $goods; 
 }
 
 
