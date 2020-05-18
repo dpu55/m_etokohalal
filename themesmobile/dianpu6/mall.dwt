@@ -906,6 +906,9 @@ panda(function () {
  
   <!--recommend_new-->
     <!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem --> 
+
+  <!--all_goods-->
+    <!-- #BeginLibraryItem "/library/recommend_all.lbi" --><!-- #EndLibraryItem --> 
  
  <!--footer--->
 <div style=" height:40px;"></div>
