@@ -195,7 +195,7 @@ cursor: auto;text-align:left; line-height:150%; padding-top:8px; padding-bottom:
 .scroll_hot .bd ul{ width:100%; overflow:hidden; margin:auto;}
 .scroll_hot .bd ul li{ width:33.33%; float:left; overflow:hidden; margin:0px;}
 .scroll_hot .bd ul li .index_pro{ width:95%; overflow:hidden; margin:auto;}
-.scroll_hot .bd ul li .products_kuang { width:100%; height: 6rem; margin:auto;overflow: hidden; position:relative;}
+.scroll_hot .bd ul li .products_kuang { width:100%; height: auto; margin:auto;overflow: hidden; position:relative;}
 .scroll_hot .bd ul li .products_kuang img{width:100% !important; height:auto !important; margin:auto}
 .scroll_hot .bd ul li .goods_name {font-size:12px; width:100%; margin:auto; color:#999;height:29px; overflow:hidden;text-align:left; line-height:16px; margin-top:8px; margin-bottom:8px;
 -webkit-line-clamp: 2;
@@ -247,3 +247,81 @@ box-shadow: 0 0 1px #ccc; text-indent:-100px; overflow:hidden; }
 .floor_body2 ul li .price .price_pro{  width:93%; margin:auto;  display: block;font-size:16px; color: #F23015; height:40px; line-height:40px;text-align:left;}
 .floor_body2 ul li .btns{ position:absolute; display:block;right:5px;height:25px;width:25px;background: #f23; border-radius:50%; bottom:8px;}
 .floor_body2 ul li .btns img{ display:block; width:25px;height:25px; }
+
+/* Benfit */
+.benefit {
+	font: 400 12px "Roboto", sans-serif;
+	color: rgba(51, 51, 51, 0.9);
+	background: #fff none repeat scroll 0 0;
+	-ms-overflow-style: scrollbar;
+	scroll-behavior: smooth;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-webkit-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+	-moz-box-shadow: 0 2px 3px 0 rgba(235, 241, 249, 1);
+}
+.benefit .footer-benefit {
+	width: 100%;
+	min-height: auto;
+	
+	padding: 15px 0 20px;
+}
+.benefit .footer-benefit .list-benefit-flex {
+	/*display: flex;
+	justify-content: space-between;*/
+	width: 100%;
+	text-align: center;
+	display: inline-flex;
+  }
+  .benefit .footer-benefit .list-benefit-flex i {
+	line-height: 1.2;
+	font-size: 40px;
+	margin-bottom: 8px;
+	color: transparent;
+	background: linear-gradient(to right, #00CED1 20%, #93EDC7 100%, #00CED1 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+  }
+  .benefit .footer-benefit .list-benefit-flex i:hover {
+	  background-position: right center;
+  }
+  .benefit .footer-benefit .list-benefit-flex strong h3{
+	line-height: 1.2;
+	text-transform: capitalize;
+	font-weight: 400;
+	width: 100%;
+	font-size: 0.9em;
+  }
+  .list-benefit-flex .col {
+	  width: 18.76%;
+	  margin: .5em auto;
+  }
+  .list-benefit-flex .col .icon-benefit {
+	width: 70%;
+	margin: 0 auto;
+}
+  .list-benefit-flex title-benefit {
+	  width: 100%;
+  }
+.benefit .list-benefit {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+/*efek animasi hover bouce */
+.hvr-bounce-in {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+  }
+  .hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	-webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+	transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }

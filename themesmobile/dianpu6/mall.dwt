@@ -832,7 +832,7 @@ panda(function () {
 </head>
 <body style=" background:#F5F5F5">
 <header>
-      <div class="tab_nav">
+      <div class="eth_v1_mobile">
         <div class="header">
           <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="{$lang.m_f_1046}"></a></div>
           <div class="h-mid">
@@ -849,6 +849,7 @@ panda(function () {
             </aside>
           </div>
         </div>
+        <div style="height: 45px;"></div>
       </div>
       </header>
 <!-- #BeginLibraryItem "/library/up_menu.lbi" --><!-- #EndLibraryItem --> <!--弹出菜单-->

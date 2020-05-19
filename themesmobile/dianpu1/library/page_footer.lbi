@@ -16,6 +16,7 @@
 		<h3></h3>
 	</div>
 	<div class="smc">
+		<p></p>
 		<p class="ar"><a href="#" target="_blank"></a></p>
 	</div>
 </div>
@@ -92,6 +93,6 @@
       {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a><br />
       <!-- 结束ICP 证书{/if} -->
     </div>
-		<div class="authentication"><a href="#" target="_blank" rel="nofollow"><img src="images/footer1.gif" width="108" height="40" alt="经营性网站备案中心"></a> <a href="#" tabindex="-1" id="urlknet" target="_blank" rel="nofollow"> <img alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;" name="CNNIC_seal" border="true" src="images/footer2.gif" width="108" height="40" oncontextmenu="return false;" onclick="CNNIC_change('urlknet')"></a><a href="#" target="_blank" rel="nofollow"><img src="images/footer3.gif" width="108" height="40" alt="朝阳网络警察"></a><a href="#" target="_blank" rel="nofollow"><img src="images/footer4.gif" width="112" height="40"></a></div>
+		<div class="authentication"><a href="#" target="_blank" rel="nofollow"><img src="images/footer1.gif" width="108" height="40" alt=""></a> <a href="#" tabindex="-1" id="urlknet" target="_blank" rel="nofollow"> <img alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;" name="CNNIC_seal" border="true" src="images/footer2.gif" width="108" height="40" oncontextmenu="return false;" onclick="CNNIC_change('urlknet')"></a><a href="#" target="_blank" rel="nofollow"><img src="images/footer3.gif" width="108" height="40" alt="朝阳网络警察"></a><a href="#" target="_blank" rel="nofollow"><img src="images/footer4.gif" width="112" height="40"></a></div>
 	</div>
 </div>

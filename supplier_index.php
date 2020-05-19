@@ -139,7 +139,7 @@ function index_get_new_articles()
 function get_all_goods(){
     $sql = "SELECT DISTINCT g.goods_id,g.* FROM ". $GLOBALS['ecs']->table('goods') ." AS g, ". $GLOBALS['ecs']->table('supplier_goods_cat') ." AS gc WHERE g.supplier_id =".$_GET['suppId']." AND gc.goods_id = g.goods_id 
     AND g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_delete = 0 AND g.is_virtual = 0 
-    ORDER BY g.sort_order, g.last_update DESC LIMIT 10";
+    ORDER BY g.sort_order, g.last_update DESC";
     
     $result = $GLOBALS['db']->getAll($sql);
     

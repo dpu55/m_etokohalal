@@ -44,7 +44,7 @@
     <!--{foreach from=$categories item=cat name=name}-->      
       <dl style="display: none; margin-top:46px; padding-bottom:50px;{if $smarty.foreach.name.first}display: block;{/if}"> 
         <?php
-		 $GLOBALS['smarty']->assign('index_image',get_advlist('分类-'.$GLOBALS['smarty']->_var['cat']['id'].'-促销广告', 1));
+		 $GLOBALS['smarty']->assign('index_image',get_advlist('Cat-'.$GLOBALS['smarty']->_var['cat']['id'].'-PromoAds', 1));
 	  ?>
 	 
         <span>

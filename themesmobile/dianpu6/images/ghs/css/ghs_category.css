@@ -333,7 +333,7 @@ overflow: hidden;
 	float: left;
 	height: 30px;
 	line-height: 30px;
-	padding: 0 5px;
+	padding: 0 .5rem;
 	color: #999;
 	overflow: hidden;
 	width: auto;
@@ -345,4 +345,20 @@ overflow: hidden;
 	float: left;
 	color: #f84c4c;
 	padding: 0 2px 0 4px;
+}
+.btns a.fav {
+	position:absolute;
+	right:8px;
+	top:8px;
+	width:30px;
+	height:30px;
+	text-align:center; 
+	line-height: 30px;
+	font-size: 18px;
+}
+.btns a.fav i:hover {
+	color:#ef4136;
+}
+.btns a.btn-coll-t{
+	color:#ef4136;
 }

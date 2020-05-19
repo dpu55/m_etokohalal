@@ -1465,7 +1465,7 @@ elseif ($_REQUEST['step'] == 'select_pickinfo')
     $suppid = (isset($_REQUEST['sid'])) ? intval($_REQUEST['sid']) : 0;
 	$info = get_pickup_one_info($pid);
 	$result['suppid']      = $suppid;
-	$result['picktxt'] = "<input type='hidden' id='point".$suppid."' name='pickup_point[".$suppid."]' value='".$info['id']."'><span class='ziti'>自提点：</span><span>".$info['shop_name']."</span><a href='javascript:void(0);' onclick='show(\"pop\",".$suppid.")' class='revise'>修改</a>";
+	$result['picktxt'] = "<input type='hidden' id='point".$suppid."' name='pickup_point[".$suppid."]' value='".$info['id']."'><span class='ziti'>Self-pickup point: </span><span>".$info['shop_name']."</span><a href='javascript:void(0);' onclick='show(\"pop\",".$suppid.")' class='revise'>Ubah</a>";
 	echo $json->encode($result);
     exit;
 }
@@ -1545,11 +1545,11 @@ elseif ($_REQUEST['step'] == 'select_shipping')
 			if(isset($consignee['city']) && intval($consignee['city'])>0){
 				$pickinfo = get_pickup_info(intval($consignee['city']),$suppid);
 				if($pickinfo){
-					$result['picktxt'] = "<input type='hidden' id='point".$suppid."' name='pickup_point[".$suppid."]' value='".$pickinfo[0]['id']."'><span class='ziti'>自提点：</span><span>".$pickinfo[0]['shop_name']."</span><a href='javascript:void(0);' onclick='show(\"pop\",".$suppid.")' class='revise'>修改</a>";
+					$result['picktxt'] = "<input type='hidden' id='point".$suppid."' name='pickup_point[".$suppid."]' value='".$pickinfo[0]['id']."'><span class='ziti'>Self-pickup point: </span><span>".$pickinfo[0]['shop_name']."</span><a href='javascript:void(0);' onclick='show(\"pop\",".$suppid.")' class='revise'>Ubah</a>";
 				}
 				foreach($pickinfo as $pkey=>$pval){
 					if($consignee['district'] == $pval['district_id']){
-						$result['picktxt'] = "<input type='hidden' id='point".$suppid."' name='pickup_point[".$suppid."]' value='".$pval['id']."'><span class='ziti'>自提点：</span><span>".$pval['shop_name']."</span><a href='javascript:void(0);' onclick='show(\"pop\",".$suppid.")' class='revise'>修改</a>";
+						$result['picktxt'] = "<input type='hidden' id='point".$suppid."' name='pickup_point[".$suppid."]' value='".$pval['id']."'><span class='ziti'>Self-pickup point: </span><span>".$pval['shop_name']."</span><a href='javascript:void(0);' onclick='show(\"pop\",".$suppid.")' class='revise'>Ubah</a>";
 					}
 				}
 			}

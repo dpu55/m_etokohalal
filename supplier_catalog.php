@@ -21,7 +21,7 @@ if($_REQUEST['act']=='dianpufeilie'){
     
     include_once (ROOT_PATH. 'includes/lib_supplier_common.php');
         $smarty->assign('categories',       get_categories_tree_supplier());  // 分类树
-	$smarty->display('../dianpu1/supplier_catalog.dwt');
+	$smarty->display('../dianpu/supplier_catalog.dwt');
 	exit;
 	}
 //判断是否有ajax请求

@@ -7,7 +7,7 @@
         <li> 
         <a href="{$hotgoods.url}"> <span> 
         <img src="{$option.static_path}{$hotgoods.thumb}" srcset="{$option.static_path}{$hotgoods.thumb}" srcd="{$option.static_path}{$hotgoods.thumb}" loaded="no"> </span> 
-        <span class="p_info">{$hotgoods.name|truncate:15}</span> 
+        <span class="p_info">{$hotgoods.name}</span> 
         <span class="price price-currency-format"><!-- {if $hotgoods.promote_price neq ""} -->{$hotgoods.promote_price} <!-- {else}--> {$hotgoods.shop_price} <!--{/if}--> </span> </a> </li>
        <!-- {/foreach} -->
       </ul>

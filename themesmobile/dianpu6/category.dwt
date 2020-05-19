@@ -34,7 +34,7 @@
       <div class="eth_v1_mobile">
         <div class="header">
           <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)"></a></div>
-          <div class="h-mid">{$lang.all_goods}&nbsp;{$shop_name}&nbsp;{$cat_name}
+          <div class="h-mid">{$lang.search_goods}&nbsp;{$shop_name}&nbsp;{$cat_name}
           </div>
           <div class="h-right">
             <aside class="top_bar">
@@ -50,13 +50,13 @@
   <!--分页-->
 <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
 <div style=" height:30px;"></div> 
-<div class="bottm_nav">
+<!-- <div class="bottm_nav">
  <ul>
  <li class="bian"><a href="supplier_catalog.php?act=dianpufeilie&suppId={$suppid}">{$lang.m_693}</a></li>
  <li class="bian"><a href="supplier.php?act=about&suppId={$suppid}">{$lang.m_694}</a></li>
  <li><a href="tel:{$service_phone}">{$lang.m_695}</a></li>
  </ul>
- </div>
+ </div> -->
 <!-- #BeginLibraryItem "/library/footer_nav_dp6.lbi" --> <!-- #EndLibraryItem -->
 </body>
 </html>

@@ -24,7 +24,7 @@
       <div class="tab_nav">
         <div class="header">
           <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title=""></a></div>
-         <div class="h-mid">{$lang.all_goods} {$cat_name}
+         <div class="h-mid">{$lang.search_goods} {$cat_name}
           </div>
           <div class="h-right">
             <aside class="top_bar">

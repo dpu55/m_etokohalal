@@ -10,7 +10,7 @@
     
     <span> 
     <img src="{$option.static_path}{$bestgoods.thumb}" srcset="{$option.static_path}{$bestgoods.thumb}" srcd="{$option.static_path}{$bestgoods.thumb}" loaded="no"> </span>
-    <span class="p_info">{$bestgoods.name|truncate:15}</span> 
+    <span class="p_info">{$bestgoods.name}</span> 
     <span class="price">
     <!-- {if $bestgoods.promote_price neq ""} --> {$bestgoods.promote_price}  <!-- {else}--> {$bestgoods.shop_price} <!--{/if}--></span> 
     </a> 

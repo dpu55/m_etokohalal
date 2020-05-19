@@ -136,7 +136,7 @@ function clock(key)
               <div class="timerBox" id="jstimerBox{$key}">{$lang.m_56}</div>
                 <img src="{$img_url}{$option.static_path}{$goods.thumb}">
                 </div>
-              <div class="goods_name">{$goods.name|truncate:17}</div>
+              <div class="goods_name">{$goods.name}</div>
               <div class="price">
                 <span class="price_mar">{$goods.market_price}</span>
                 <span class="price_pro">

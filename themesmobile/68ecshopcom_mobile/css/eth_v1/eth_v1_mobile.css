@@ -49,9 +49,9 @@
   text-align: center;
 }
 
-.eth_v1_mobile .header .h-left {
+/* .eth_v1_mobile .header .h-left {
   width: auto;
-}
+} */
 
 .eth_v1_mobile .header .h-left a,
 .eth_v1_mobile .header .h-left i {
@@ -1639,6 +1639,10 @@
 
 .eth_v1_mobile.page-stores .page_guide_slider {
   background-color: #ffffff;
+  width: auto;
+}
+.eth_v1_mobile.page-stores .page_guide_container {
+  width: auto;
 }
 
 .eth_v1_mobile.page-stores .page_guide_item_text a {

@@ -1,13 +1,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- {if $all_goods} -->
 <div class="product_value">
-      <h2>{$lang.m_714}</h2>
+      <h2>{$lang.all_goods}</h2>
       <ul>
       <!--{foreach from=$all_goods item=allgoods}-->
         <li> 
         <a href="{$allgoods.url}"> <span> 
         <img src="{$img_url}{$option.static_path}{$allgoods.thumb}" srcset="{$img_url}{$option.static_path}{$allgoods.thumb}" srcd="{$img_url}{$option.static_path}{$allgoods.thumb}" loaded="no"> </span> 
-        <span class="p_info">{$allgoods.name|truncate:15}</span> 
+        <span class="p_info">{$allgoods.name}</span> 
         <span class="price"><!-- {if $allgoods.promote_price neq ""} -->{$allgoods.promote_price} <!-- {else}--> {$allgoods.shop_price} <!--{/if}--> </span> </a> </li>
        <!-- {/foreach} -->
       </ul>

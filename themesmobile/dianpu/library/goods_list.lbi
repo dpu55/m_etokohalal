@@ -7,8 +7,9 @@
       <!-- {if $goods.goods_id != ""} -->
         <li>
          <a href="{$goods.url}"> 
-          <img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" srcset="{$goods.goods_thumb}" srcd="{$goods.goods_thumb}"> 
-          <p> {$goods.goods_name}  </p>
+          <img src="{$img_url}{$goods.goods_thumb}" alt="{$goods.goods_name}" srcset="{$img_url}{$goods.goods_thumb}" srcd="{$img_url}{$goods.goods_thumb}"> 
+          <p>{$goods.goods_name}</p>
+          <span style="font-size:12px;text-decoration:line-through;color:darkgray;height:20px">{$goods.market_price}</span>
           <span><!--{if $goods.promote_price neq "" } -->{$goods.promote_price}<!--{else}-->{$goods.shop_price}<!--{/if}--></span>
           </a>
         </li>

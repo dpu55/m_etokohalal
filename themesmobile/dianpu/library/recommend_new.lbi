@@ -6,8 +6,8 @@
       <!--{foreach from=$new_goods item=newgoods}-->
         <li> 
         <a href="{$newgoods.url}"> <span> 
-        <img src="{$option.static_path}{$newgoods.thumb}" srcset="{$option.static_path}{$newgoods.thumb}" srcd="{$option.static_path}{$newgoods.thumb}" loaded="no"> </span> 
-        <span class="p_info">{$newgoods.name|truncate:15}</span> 
+        <img src="{$img_url}{$option.static_path}{$newgoods.thumb}" srcset="{$img_url}{$option.static_path}{$newgoods.thumb}" srcd="{$img_url}{$option.static_path}{$newgoods.thumb}" loaded="no"> </span> 
+        <span class="p_info">{$newgoods.name}</span> 
         <span class="price"><!-- {if $newgoods.promote_price neq ""} -->{$newgoods.promote_price} <!-- {else}--> {$newgoods.shop_price} <!--{/if}--> </span> </a> </li>
        <!-- {/foreach} -->
       </ul>

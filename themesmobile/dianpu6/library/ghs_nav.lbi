@@ -16,7 +16,7 @@
 	 <form id="searchForm" name="searchForm" method="get" action="/mobile/supplier.php">
 	 <input type='hidden' name='go' value='search'>
 	 <input type='hidden' name='suppId' value='{$smarty.request.suppId}'>
-        <input class="fl" name="keywords" type="text" id="keyword" value="{$lang.m_669}" onClick="javascript:this.value='';"/>
+       <input class="fl" name="keywords" type="text" id="keyword" value="{$lang.m_669}" onClick="javascript:this.value='';"/>
        <input class="fr"  type="submit" id="btsearch" value="{$lang.search}" />
     </form>
     </div>
