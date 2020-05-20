@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="banner">
   <div id="slider" class="slider" style="overflow: hidden; visibility: visible; list-style: none; position: relative;">
-    <ul id="sliderlist" class="sliderlist" style="position: relative; overflow: hidden; transition: left 600ms ease; -webkit-transition: left 600ms ease; width: 2400px; left: -600px;">
+    <ul id="sliderlist" class="sliderlist" style="position: relative; overflow: hidden; transition: left 600ms ease; -webkit-transition: left 600ms ease; width: auto; left: -600px;">
        <!-- {foreach from=$pictures item=picture name=name}-->
       <li style="float: left; display: block; width: 600px;"><span><a  href="javacript:void(0)"><img title="" width="100%" src="{if $picture.thumb_url}{$img_url}{$picture.img_url}{else}{$img_url}{$picture.img_url}{/if}"></a></span></li>
        <!--{/foreach}-->

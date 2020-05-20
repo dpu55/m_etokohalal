@@ -750,6 +750,7 @@
 .eth_v1_mobile.page-goods .main .s_dianpu {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .eth_v1_mobile.page-goods .main .s_dianpu span {
