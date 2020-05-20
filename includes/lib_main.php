@@ -1422,8 +1422,6 @@ function upload_file($upload, $type)
             $name = $_SESSION['user_id'] . '_' . $name . '.' . $ftype;
 
             $target = $var_path . DATA_DIR . '/' . $type . '/' . $name;
-            
-            die($target);
 
             if (!move_upload_file($upload['tmp_name'], $target))
             {
