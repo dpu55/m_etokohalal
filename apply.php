@@ -347,6 +347,7 @@ if (!$smarty->is_cached($templates, $cache_id))
     $smarty->assign('ur_here',          $position['ur_here'] . '> ' . $topic['title']);     // 当前位置
     
 }
+$smarty->assign('var_path',$var_path);
 $smarty->assign('piclimit',$upload_size_limit);
 $smarty->assign('userid',intval($_SESSION['user_id']));
 $smarty->display('apply.dwt');

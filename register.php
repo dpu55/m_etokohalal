@@ -475,6 +475,10 @@ function action_register ()
 
 			/* 邮箱注册 */
 			$result = register_by_email($username, $password, $email, $other);
+
+			include_once (ROOT_PATH . 'includes/lib_telegram.php');
+			$message = 'Hi, ada 1 member join dengan nama: $username dan email: $email';
+			sendTele($message);
 			
 			if($result)
 			{
@@ -526,6 +530,10 @@ function action_register ()
 
 			/* 手机注册 */
 			$result = register_by_mobile($username, $password, $mobile_phone, $other,$pre_mobile_phone);
+
+			include_once (ROOT_PATH . 'includes/lib_telegram.php');
+			$message = 'Hi, ada 1 member join dengan nama: $username dan telp: '.$mobile_phone;
+			sendTele($message);
 			
 			if($result)
 			{

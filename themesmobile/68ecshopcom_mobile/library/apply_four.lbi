@@ -126,8 +126,8 @@
         <tr>
           <th class="w150">{$lang.m_f_552}<br>
     {$lang.m_f_554}</th>
-          <td colspan="20">{if $supplier.zhizhao}<img src="../data/supplier/{$supplier.zhizhao}" width=50 height=50>&nbsp;&nbsp;
-    <input type="button" onclick="window.open('../data/supplier/{$supplier.zhizhao}');" value="{$lang.m_f_555}">
+          <td colspan="20">{if $supplier.zhizhao}<img src="{$var_path}data/supplier/{$supplier.zhizhao}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.zhizhao}');" value="{$lang.m_f_555}">
     {/if}</td>
         </tr>
       </tbody>
@@ -147,8 +147,8 @@
         <tr>
           <th class="w150">{$lang.m_f_556}<br>
     {$lang.m_f_554}</th>
-          <td>{if $supplier.organization_code_electronic}<img src="../data/supplier/{$supplier.organization_code_electronic}" width=50 height=50>&nbsp;&nbsp;
-    <input type="button" onclick="window.open('../data/supplier/{$supplier.organization_code_electronic}');" value="{$lang.m_f_555}">
+          <td>{if $supplier.organization_code_electronic}<img src="{$var_path}data/supplier/{$supplier.organization_code_electronic}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.organization_code_electronic}');" value="{$lang.m_f_555}">
     {/if}</td>
         </tr>
       </tbody>
@@ -163,8 +163,8 @@
       <tbody>
         <tr>
           <th class="w150">{$lang.m_f_558}</th>
-          <td>{if $supplier.general_taxpayer}<img src="../data/supplier/{$supplier.general_taxpayer}" width=50 height=50>&nbsp;&nbsp;
-    <input type="button" onclick="window.open('../data/supplier/{$supplier.general_taxpayer}');" value="{$lang.m_f_555}">
+          <td>{if $supplier.general_taxpayer}<img src="{$var_path}data/supplier/{$supplier.general_taxpayer}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.general_taxpayer}');" value="{$lang.m_f_555}">
     {/if}</td>
         </tr>
       </tbody>
@@ -196,8 +196,8 @@
         <tr>
           <th class="w150">{$lang.m_f_564}<br>
     {$lang.m_f_554}</th>
-          <td colspan="20">{if $supplier.bank_licence_electronic}<img src="../data/supplier/{$supplier.bank_licence_electronic}" width=50 height=50>&nbsp;&nbsp;
-    <input type="button" onclick="window.open('../data/supplier/{$supplier.bank_licence_electronic}');" value="{$lang.m_f_555}">
+          <td colspan="20">{if $supplier.bank_licence_electronic}<img src="{$var_path}data/supplier/{$supplier.bank_licence_electronic}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.bank_licence_electronic}');" value="{$lang.m_f_555}">
     {/if}</td>
         </tr>
       </tbody>
@@ -249,8 +249,8 @@
         <tr>
           <th class="w150">{$lang.m_f_567}<br>
     {$lang.m_f_554}</th>
-          <td>{if $supplier.tax_registration_certificate_electronic}<img src="../data/supplier/{$supplier.tax_registration_certificate_electronic}" width=50 height=50>&nbsp;&nbsp;
-    <input type="button" onclick="window.open('../data/supplier/{$supplier.tax_registration_certificate_electronic}');" value="{$lang.m_f_555}">
+          <td>{if $supplier.tax_registration_certificate_electronic}<img src="{$var_path}data/supplier/{$supplier.tax_registration_certificate_electronic}" width=50 height=50>&nbsp;&nbsp;
+    <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.tax_registration_certificate_electronic}');" value="{$lang.m_f_555}">
     {/if}</td>
         </tr>
       </tbody>
@@ -347,16 +347,16 @@
             </tr>
             <tr>
               <th class="w150">{$lang.m_f_579}</th>
-              <td>{if $supplier.handheld_idcard}<img src="../data/supplier/{$supplier.handheld_idcard}" width=50 height=50>&nbsp;&nbsp;
-                <input type="button" onclick="window.open('../data/supplier/{$supplier.handheld_idcard}');" value="{$lang.m_f_555}">
+              <td>{if $supplier.handheld_idcard}<img src="{$var_path}data/supplier/{$supplier.handheld_idcard}" width=50 height=50>&nbsp;&nbsp;
+                <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.handheld_idcard}');" value="{$lang.m_f_555}">
                 {/if}</td>
               <th class="w150">{$lang.m_f_578}</th>
-              <td>{if $supplier.idcard_front}<img src="../data/supplier/{$supplier.idcard_front}" width=50 height=50>&nbsp;&nbsp;
-                <input type="button" onclick="window.open('../data/supplier/{$supplier.idcard_front}');" value="{$lang.m_f_555}">
+              <td>{if $supplier.idcard_front}<img src="{$var_path}data/supplier/{$supplier.idcard_front}" width=50 height=50>&nbsp;&nbsp;
+                <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.idcard_front}');" value="{$lang.m_f_555}">
                 {/if}</td>
               <!-- <th class="w150">{$lang.m_f_577}</th>
-              <td>{if $supplier.idcard_reverse}<img src="../data/supplier/{$supplier.idcard_reverse}" width=50 height=50>&nbsp;&nbsp;
-                <input type="button" onclick="window.open('../data/supplier/{$supplier.idcard_reverse}');" value="{$lang.m_f_555}">
+              <td>{if $supplier.idcard_reverse}<img src="{$var_path}data/supplier/{$supplier.idcard_reverse}" width=50 height=50>&nbsp;&nbsp;
+                <input type="button" onclick="window.open('{$var_path}data/supplier/{$supplier.idcard_reverse}');" value="{$lang.m_f_555}">
                 {/if}</td> -->
           </tbody>
         </table>
