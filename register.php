@@ -532,7 +532,7 @@ function action_register ()
 			$result = register_by_mobile($username, $password, $mobile_phone, $other,$pre_mobile_phone);
 
 			include_once (ROOT_PATH . 'includes/lib_telegram.php');
-			$message = 'Hi, ada 1 member join dengan nama: $username dan telp: '.$mobile_phone;
+			$message = 'Hi, ada 1 member join dengan nama: '.$username.' dan telp: '.$mobile_phone;
 			sendTele($message);
 			
 			if($result)
