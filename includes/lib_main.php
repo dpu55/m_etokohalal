@@ -1407,7 +1407,7 @@ function dyna_libs_replace($matches)
  */
 function upload_file($upload, $type)
 {
-    $var_path = '/var/www/vhosts/etokohalal.com/';
+    $var_path = '/var/www/vhosts/etokohalal.com/httpdocs/';
     if (!empty($upload['tmp_name']))
     {
         $ftype = check_file_type($upload['tmp_name'], $upload['name'], '|png|jpg|jpeg|gif|doc|xls|txt|zip|ppt|pdf|rar|docx|xlsx|pptx|');
@@ -1421,7 +1421,8 @@ function upload_file($upload, $type)
 
             $name = $_SESSION['user_id'] . '_' . $name . '.' . $ftype;
 
-            $target = $var_path . DATA_DIR . '/' . $type . '/' . $name;
+            $target2 = $var_path . DATA_DIR . '/' . $type . '/' . $name;
+            $target = ROOT_PATH . DATA_DIR . '/' . $type . '/' . $name;
 
             if (!move_upload_file($upload['tmp_name'], $target))
             {
@@ -1431,6 +1432,7 @@ function upload_file($upload, $type)
             }
             else
             {
+                $ss = copy($target,$target2);
                 return $name;
             }
         }
