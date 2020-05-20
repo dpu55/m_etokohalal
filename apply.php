@@ -297,6 +297,9 @@ if(isset($_POST['do']) && $_POST['do']){
 		}
 		
 		 if ($db->autoExecute($ecs->table('supplier'), $save, 'UPDATE', 'user_id='.$userid) !== false){
+		 	include_once (ROOT_PATH . 'includes/lib_telegram.php');
+			$message = 'Hi, ada 1 member daftar jadi seller dengan nama: '.$supplier_name;
+			sendTele($message);
 		 	header("location:apply.php");
 		 	exit;
 		 }else{
@@ -347,6 +350,7 @@ if (!$smarty->is_cached($templates, $cache_id))
     $smarty->assign('ur_here',          $position['ur_here'] . '> ' . $topic['title']);     // 当前位置
     
 }
+$smarty->assign('var_path',$var_path);
 $smarty->assign('piclimit',$upload_size_limit);
 $smarty->assign('userid',intval($_SESSION['user_id']));
 $smarty->display('apply.dwt');

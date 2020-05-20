@@ -175,7 +175,7 @@
                     <br>
                     <br>
                     {if $supplier.handheld_idcard}
-                    <div><img src="data/supplier/{$supplier.handheld_idcard}" width=240 height=140 id='handheld_idcard_id'></div>
+                    <div><img src="{$var_path}data/supplier/{$supplier.handheld_idcard}" width=240 height=140 id='handheld_idcard_id'></div>
                     {else}
                     </div>
                     <div class="cth-foto"><p>{$lang.apply_80}</p><span id="id-hand-s"></span></div>
@@ -190,7 +190,7 @@
                     <input name="idcard_front" type="file">
                     <br><br>
                     {if $supplier.idcard_front}
-                    <div><img src="data/supplier/{$supplier.idcard_front}" width=240 height=140 id='idcard_front_id'></div>
+                    <div><img src="{$var_path}data/supplier/{$supplier.idcard_front}" width=240 height=140 id='idcard_front_id'></div>
                     {else}
                     </div>
                     <div class="cth-foto"><p>{$lang.apply_80}</p><span id="id-front-s"></span></div>
@@ -206,7 +206,7 @@
                     <input name="idcard_reverse" type="file">
                     <br><br>
                     {if $supplier.idcard_reverse}
-                    <div><img src="data/supplier/{$supplier.idcard_reverse}" width=240 height=140 id='idcard_reverse_id'></div>
+                    <div><img src="{$var_path}data/supplier/{$supplier.idcard_reverse}" width=240 height=140 id='idcard_reverse_id'></div>
                     {else}
                     </div>
                     <div class="cth-foto"><p>{$lang.apply_80}</p><span id="id-back-s"></span></div>
@@ -376,7 +376,7 @@
                 <td>
           <input type="file" name="zhizhao" class="w200" onchange='setImagePreview(this,localImag,preview)' />
                 {if $supplier.zhizhao}<br>
-                <img src="data/supplier/{$supplier.zhizhao}" width=80 height=80 id='zz'>{/if}
+                <img src="{$var_path}data/supplier/{$supplier.zhizhao}" width=80 height=80 id='zz'>{/if}
                   <span class="block">{$lang.apply_74}</span></td>
               </tr>
             </tbody>
@@ -401,7 +401,7 @@
               <tr>
                 <th><i>*</i>{$lang.apply_76}: </th>
                 <td> <input type="file" name="organization_code_electronic" class="w200" />{if $supplier.organization_code_electronic}<br>
-                <img src="data/supplier/{$supplier.organization_code_electronic}" width=80 height=80 id='oce'>{/if}
+                <img src="{$var_path}data/supplier/{$supplier.organization_code_electronic}" width=80 height=80 id='oce'>{/if}
                   <span class="block">{$lang.apply_74}</span></td>
               </tr>
             </tbody>
@@ -421,7 +421,7 @@
               <tr>
                 <th class="w150">{$lang.apply_79}: </th>
                 <td><input type="file" name="general_taxpayer" class="w200" />{if $supplier.general_taxpayer}<br>
-                <img src="data/supplier/{$supplier.general_taxpayer}" width=80 height=80 id='gt'>{/if}
+                <img src="{$var_path}data/supplier/{$supplier.general_taxpayer}" width=80 height=80 id='gt'>{/if}
                   <span class="block">{$lang.apply_74}</span></td>
               </tr>
             </tbody>
