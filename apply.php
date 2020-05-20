@@ -298,7 +298,7 @@ if(isset($_POST['do']) && $_POST['do']){
 		
 		 if ($db->autoExecute($ecs->table('supplier'), $save, 'UPDATE', 'user_id='.$userid) !== false){
 		 	include_once (ROOT_PATH . 'includes/lib_telegram.php');
-			$message = 'Hi, ada 1 member daftar jadi seller dengan nama: '.$supplier_name;
+			$message = 'Hi, ada 1 member daftar jadi seller dengan nama: '.$save['supplier_name'];
 			sendTele($message);
 		 	header("location:apply.php");
 		 	exit;
