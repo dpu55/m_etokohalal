@@ -666,7 +666,7 @@ function insert_supplier_list(){
     $num = 24 - count($ret);
     if($num > 0){
     	for($i=0;$i<$num;$i++){
-    		$ret[] = array('shop_name'=>'虚位以待','shop_logo'=>'./data/supplier/ad.jpg','shop_url'=>'#');
+    		$ret[] = array('shop_name'=>'Tunggu..','shop_logo'=>'./data/supplier/ad.jpg','shop_url'=>'#');
     	}
     }
     

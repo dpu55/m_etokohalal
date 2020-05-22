@@ -359,15 +359,16 @@ filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr=
 }
 .main .explain {
 	text-align: center;
-	margin: 120px 0 100px 0
+	margin: 0 0 5% 0
 }
 .main .explain i {
-	background: url(../images/apply/img_bg.png) no-repeat 0 -280px;
-	vertical-align: middle;
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	margin-right: 8px;
+	background: url(../images/apply/apply.png) no-repeat;
+	display: block;
+	width: 40%;
+	height: 200px;
+	background-size: contain;
+	background-position: center;
+	margin: 0 auto 5% auto;
 }
 .main .explain1 {
 	text-align: left;
@@ -579,21 +580,21 @@ td.cth-img .col-input div img {
 	border-radius: 8px;
 }
 #id-hand-s{
-background: url(../images/apply/id-hand-s.jpg) no-repeat;
+background: url(../images/apply/ktp-handle.svg) no-repeat;
 width:70%;
 height:210px;
 background-size: contain;
 border-radius: 8px;
 }
 #id-front-s{
-background: url(../images/apply/id-front-s.jpg) no-repeat;
+background: url(../images/apply/ktp-front.svg) no-repeat;
 width:70%;
 height:210px;
 background-size: contain;
 border-radius: 8px;
 }
 #id-back-s{
-background: url(../images/apply/id-back-s.jpg) no-repeat;
+background: url(../images/apply/npwp.svg) no-repeat;
 width:70%;
 height:210px;
 background-size: contain;
@@ -616,7 +617,15 @@ border-radius: 8px;
 
     .wrapper{
       max-width: 720px;
-    }
+	}
+	#mallLogo a img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.panel-heading {
+		display: flex;
+		justify-content: center;
+	}
 
     select{
       margin-bottom: 5px;
