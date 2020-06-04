@@ -3,7 +3,7 @@
 function sendTele($message) 
 {
     // 851725124 laras
-    $ids = array('851725124','558743094','1080578098','1072378686');
+    $ids = array('851725124','558743094','1080578098','1072378686','1131653104');
 
     foreach ($ids as $id) {
         # code...
@@ -26,7 +26,7 @@ function sendTele($message)
 function send_notif_order_finish($message)
 {
     // 851725124 laras
-    $ids = array('851725124','558743094');
+    $ids = array('851725124','558743094','1131653104');
 
     foreach ($ids as $id) {
         # code...
