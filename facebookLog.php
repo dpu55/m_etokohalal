@@ -28,7 +28,7 @@
 		action_register ($data);
 
 		include_once (ROOT_PATH . 'includes/lib_telegram.php');
-		$message = "Hi, ada 1 member join dengan nama: $data[username] dan email: $data[email] via Google";
+		$message = "Hi, ada 1 member join dengan nama: ".$data['username']." dan email: ".$data['email']." via Google";
 		sendTele($message) ;
     }
     
