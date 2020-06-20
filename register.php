@@ -477,7 +477,7 @@ function action_register ()
 			$result = register_by_email($username, $password, $email, $other);
 
 			include_once (ROOT_PATH . 'includes/lib_telegram.php');
-			$message = 'Hi, ada 1 member join dengan nama: $username dan email: $email';
+			$message = 'Hi, ada 1 member join dengan nama: '.$username.' dan email: '.$email;
 			sendTele($message);
 			
 			if($result)
