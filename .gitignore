@@ -5,7 +5,7 @@
 202058QAdm/styles/zTree/img/.DS_Store
 bdimages/.DS_Store
 bdimages/upload1/.DS_Store
-data/
+# data/
 data/.DS_Store
 data/supplier/.DS_Store
 includes/.DS_Store
@@ -93,10 +93,10 @@ languages/.DS_Store
 .DS_Store
 *.bak
 *.bak
-data/config.php
-includes/init.php
+# data/config.php
+# includes/init.php
 temp/
-supplier/temp/
-supplier/includes/init.php
-includes/init_supplier.php
-supplier/data/
+# supplier/temp/
+# supplier/includes/init.php
+# includes/init_supplier.php
+# supplier/data/
