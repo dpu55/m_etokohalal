@@ -14,7 +14,7 @@ if (__FILE__ == '') {
 
 }
 // added by wandi
-$img_url = 'https://localhost/etokohalal/';
+$img_url = 'https://eth.dpu21.com/';
 
 /* 取得当前ecshop所在的根目录 */
 

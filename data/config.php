@@ -11,7 +11,7 @@ $db_name   = "kuaq4166_etokohalal_db";
 $db_user   = "kuaq4166_dpu55";
 
 // database password
-$db_pass   = "Nggaktau*()890";
+$db_pass   = "dPu@!234%";
 
 
 $prefix    = "ecs_";
