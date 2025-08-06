@@ -1618,8 +1618,8 @@ $_LANG['m_f_1053'] = 'Silakan klik untuk menyetujui perjanjian! ';
 // End of lang apply
 
 //Benefit
-$_LANG['m_f_723'] = 'Jaminan halal MUI';
-$_LANG['m_f_723a'] = 'Produk 100% Halal yang terintegrasi secara lagsung dengan sistem verifikasi halal MUI';
+$_LANG['m_f_723'] = 'Jaminan halal BPJPH';
+$_LANG['m_f_723a'] = 'Produk 100% Halal yang terintegrasi secara langsung dengan sistem verifikasi halal BPJPH';
 $_LANG['m_f_724'] = 'Garansi 7x24 jam';
 $_LANG['m_f_724a'] = 'Tokohalal akan mengembalikan uang anda secara penuh, jika barang tidak sesuai dengan deskripsi atau berkualitas buruk';
 $_LANG['m_f_725'] = 'Gratis penukaran';
