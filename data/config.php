@@ -3,10 +3,12 @@
 $db_host   = "localhost:3306";
 
 // database name
-$db_name   = "test_etokohalal_db2";
+//$db_name   = "test_etokohalal_db2";
+$db_name   = "kuaq4166_etokohalal_db";
 
 // database username
-$db_user   = "test";
+//$db_user   = "test";
+$db_user   = "kuaq4166_dpu55";
 
 // database password
 $db_pass   = "Nggaktau*()890";
